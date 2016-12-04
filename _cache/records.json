@@ -1,0 +1,40 @@
+{
+  "nextFreeModuleId": 10,
+  "modules": {
+    "byIdentifier": {
+      "multi assets/css/app.css": 0,
+      "node_modules/source-loader/lib/index.js!node_modules/postcss-loader/index.js?!assets/css/app.css": 1,
+      "multi assets/img/5ntkpxqt54y-sai-kiran-anagani.jpg": 0,
+      "node_modules/source-loader/lib/index.js!assets/img/5ntkpxqt54y-sai-kiran-anagani.jpg": 2,
+      "multi js/main": 0,
+      "node_modules/babel-loader/lib/index.js!assets/js/index.js": 3,
+      "multi our-team/adam-chlan.sgr": 0,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!our-team/adam-chlan.sgr": 4,
+      "multi our-team/bud-parr.sgr": 0,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!our-team/bud-parr.sgr": 5,
+      "multi posts/9-26-2016-hello-world.sgr": 0,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-26-2016-hello-world.sgr": 6,
+      "multi posts/9-27-2016-second-post.sgr": 0,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-27-2016-second-post.sgr": 7,
+      "multi posts/9-27-2016-third-post.sgr": 0,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-27-2016-third-post.sgr": 8,
+      "multi views/index.sgr": 0,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!views/index.sgr": 9
+    }
+  },
+  "nextFreeChunkId": 9,
+  "chunks": {
+    "byName": {
+      "assets/css/app.css": 0,
+      "assets/img/5ntkpxqt54y-sai-kiran-anagani.jpg": 1,
+      "js/main": 2,
+      "our-team/adam-chlan.sgr": 3,
+      "our-team/bud-parr.sgr": 4,
+      "posts/9-26-2016-hello-world.sgr": 5,
+      "posts/9-27-2016-second-post.sgr": 6,
+      "posts/9-27-2016-third-post.sgr": 7,
+      "views/index.sgr": 8
+    },
+    "byBlocks": {}
+  }
+}

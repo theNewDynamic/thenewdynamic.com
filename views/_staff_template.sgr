@@ -1,0 +1,7 @@
+extends(src='../views/layout.sgr')
+  main(role='main' id='{{ pageId }}')
+    h1 {{ title }}
+    block(name='content')
+
+  block(name='javascript')
+    script(src='js/main.js' defer)

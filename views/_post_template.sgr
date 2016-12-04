@@ -1,0 +1,11 @@
+extends(src='../views/layout.sgr')
+  block(name='hero')
+    div.pa5.bg-red budd
+  main(role='main' id='{{ pageId }}')
+    h1 {{ title }}
+    date {{ date }}
+    small by: {{ author }}
+    block(name='content')
+
+  block(name='javascript')
+    script(src='js/main.js' defer)
