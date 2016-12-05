@@ -29,7 +29,10 @@ module.exports = {
     return cssStandards({
       webpack: ctx,
       minify: true,
-      warnForDuplicates: false // cssnano includes autoprefixer
+      // warnForDuplicates: false // cssnano includes autoprefixer
+      features: {
+        autoprefixer: false
+      }
     })
   }
 }

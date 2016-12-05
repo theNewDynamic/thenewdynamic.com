@@ -4,3 +4,18 @@
 
 /* local styles */
 .bud {color:blue}
+
+.avenir-heavy {
+  font-family: 'AvenirNextLTW01-Heavy','AvenirNextLTW01-Regular', 'avenir next', avenir,
+               sans-serif;
+}
+.copy {
+  font-family: Georgia;
+}
+
+.copy h1, .copy h2, .copy h3 {
+  font-family: 'Avenir next', avenir;
+}
+.grow:hover, .grow-large:hover {
+  z-index: 10000;
+}

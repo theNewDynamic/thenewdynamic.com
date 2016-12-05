@@ -4,6 +4,6 @@ id: 'bios-adam-chlan'
 date: 2016-11-30
 ---
 
-extends(src='../views/_staff_template.sgr')
+extends(src='_staff_template.sgr')
   block(name='content')
     .body(md) 'Stupid things!' Alice began in a loud, indignant voice, but she stopped  hastily, for the White Rabbit cried out, 'Silence in the court!' and the  King put on his spectacles and looked anxiously round, to make out who  was talking.

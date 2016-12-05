@@ -1,11 +1,7 @@
-extends(src='../views/layout.sgr')
+extends(src='layout.sgr')
   block(name='content')
-    h1 My Cool Blog
-
-    ul
-      each(loop='post in _pages.posts[0].posts')
-        li
-          a(href='{{ post._path }}') {{ post.title }}
-
-    if(condition='_pages.posts[1]')
-      a(href='{{ _pages.posts[1].path }}') Next Page &raquo;
+    div.flex.justify-between
+      div.w-25.bg-blue.pa4.f2.fw1.white.tc.grow-large A dedicated web team for the cost of one employee
+      div.w-25.bg-black.pa4.f2.fw1.white.tc.grow-large No upfront fees
+      div.w-25.bg-yellow.pa4.f2.fw1.black.tc.grow-large No minimums
+      div.w-25.bg-black.pa4.f2.fw1.white.tc.grow-large So your web presence is always up-to-date

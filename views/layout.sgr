@@ -1,14 +1,31 @@
 doctype html
 html
-  include(src='../views/partials/_head.sgr')
-  body(role='document').w-100.vh-100.sans-serif.helvetica.ba.bw0.bw5-ns.b--black-70
-    include(src='../views/partials/_header.sgr')
+  head
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
+      meta(name='description' content='')
+      meta(name='author' content='budparr')
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block(name='title')
+      title Title of Your Site, yo
+
+    block(name='stylesheets')
+      link(rel='stylesheet' href='/css/app.css')
+
+    block(name='head_scripts')
+      script(src='//fast.fonts.net/jsapi/a7c955db-f9a0-444a-8551-54c5f5798bf7.js')
+
+
+  body(role='document').w-100.vh-100.sans-serif.avenir
+    include(src='partials/_header.sgr')
     block(name='hero')
-      include(src='../views/partials/_hero.sgr')
-    main(role='main' id='{{ pageId }}').cf.pa3.pa4-m.pa5-l.mw9.center
-      block(name='content')
+      include(src='partials/_hero.sgr')
+    block(name='main')
+      main(role='main' id='{{ pageId }}').cf.pa3.pa4-m.pa5-l.mw9.center
+        block(name='content')
 
     block(name='javascript')
-      script(src='js/main.js' defer)
+      script(src='/js/main.js' defer)
       script(src='https://pepper.swat.io/embed.js?eyJwb3NpdGlvbiI6InJpZ2h0IiwiY29sb3IiOiI0QTkwRTIiLCJjdXN0b21Db2xvciI6ZmFsc2UsImljb24iOiJlbWFpbCIsInByb25vdW4iOiJ1cyIsImxhbmd1YWdlIjoiZW4iLCJicmFuZGVkIjpmYWxzZSwiaW50cm9UZXh0IjoiTmVlZCBoZWxwPyBHb3QgUXVlc3Rpb25zPyBHZXQgaW4gdG91Y2ghIiwiY2hhbm5lbHMiOltbInR3aXR0ZXIiLCJ0aGVOZXdEeW5hbWljIiwic29jaWFsIl0sWyJwaG9uZSIsIjIxMiA2OTktMTg0OSIsImNsYXNzaWMiXSxbImVtYWlsIiwiaW5mb0B0aGVuZXdkeW5hbWljLmNvbSIsImNsYXNzaWMiXV19' defer)
-  

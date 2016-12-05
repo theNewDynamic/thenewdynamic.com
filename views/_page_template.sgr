@@ -1,7 +1,1 @@
-extends(src='../views/layout.sgr')
-
-  h1 Posts: Page {{ _currentPage.page }}
-  ul
-    each(loop='post in _currentPage.posts')
-      li
-        a(href='{{ post._path }}') {{ post.title }}
+extends(src='layout.sgr')

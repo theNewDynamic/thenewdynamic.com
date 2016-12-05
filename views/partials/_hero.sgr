@@ -1,17 +1,14 @@
-header.w-100.cf.dn.db-ns
+header.w-100.cf.dn.db-m.db-l.vh-75.bg-blue
   div.pa5.pv5-m.pt7-l.w-two-thirds.fl
-    h5.fw2.f4.mb0
-      span web design
+    h3.mb0.primary-color.o-40 Welcome to
+    h1.avenir-heavy.f2.f-subheadline-l.fw2.mt0.mb0.lh-title.primary-color.fw9 the New Dynamic
+    h5.fw2.f4.mt2.white
+      span your always-on web team
+      span.pl3.o-50 |
+      span.pl3 design
       span.pl3 development
       span.pl3 consulting
-      span.pl3 services
-    h1.f2.f-subheadline-l.fw2.mt0.lh-title.primary-color.fw9 the New Dynamic
   div.pa6.fl.w-third-m
-    a(href="#").link.f6.f4-l.mb2.db.blue How We Work
-    a(href="#").link.f6.f4-l.mb2.db.blue Pricing
-    a(href="#").link.f6.f4-l.mb2.db.blue Get Started
-
-
-    //a(href="/").f6.no-underline.grow.dib.v-mid.bg-blue.white.ba.b--blue.ph3.pv2.mb3 Find out More
-  // video(style="z-index: -1000;" autoplay muted loop).absolute.w-100.h-auto.top-0.right-0.left-0
-  //   source(src="/video/MVI_0358.mp4.mp4" type="video/mp4")
+    a(href="/about-us/how-we-work").link.f6.f4-l.mb2.db.white.dim.ttl How We Work
+    a(href="#").link.f6.f4-l.mb2.db.white.dim.ttl Pricing
+    a(href="#").link.f6.f4-l.mb2.db.white.dim.ttl Get Started

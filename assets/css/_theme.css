@@ -1,2 +1,11 @@
-.dark-primary-color {color: var(--dark-primary-color)}
+.dark-primary-color {background-color: var(--dark-primary-color)}
 .primary-color { color: #9E9595;}
+
+
+
+
+
+:root {
+  --blue:  #183F63;
+  --light-blue:  #96ccff;
+}

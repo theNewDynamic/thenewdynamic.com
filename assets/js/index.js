@@ -1,1 +1,26 @@
-console.log('you can use ES6 here : )')
+var h = document.getElementById('navBar')
+// var readout = document.getElementById('readout')
+var stuck = false
+var stickPoint = -550 // getDistance()
+
+function getDistance () {
+  var topDist = h.offsetTop
+  return topDist
+}
+if (document.getElementById('navBar')) {
+  window.onscroll = function (e) {
+    var distance = getDistance() - window.pageYOffset
+    var offset = window.pageYOffset
+    // readout.innerHTML = 'stickpoint' + stickPoint + ' distance  ' + distance + ' offset ' + offset + ' stuck  ' + stuck
+    if ((distance <= stickPoint) && !stuck) {
+      h.style.opacity = 1
+      h.style.position = 'fixed'
+      h.style.top = '0px'
+      stuck = true
+    } else if (stuck && (offset <= -1 * stickPoint)) {
+      h.style.opacity = 0
+      h.style.position = 'static'
+      stuck = false
+    }
+  }
+}

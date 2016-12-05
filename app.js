@@ -10,6 +10,14 @@ const locals = {}
 const collections = new Collections({
   addDataTo: locals,
   collections: {
+    about: {
+      files: 'about-us/**',
+      paginate: {
+        perPage: 3,
+        template: 'views/_page_template.sgr',
+        output: (n) => `posts/page${n}.html`
+      }
+    },
     posts: {
       files: 'posts/**',
       permalink: (p) => {
@@ -43,26 +51,27 @@ module.exports = {
   ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md'],
   reshape: (ctx) => {
     return htmlStandards({
+      root: 'views',
       webpack: ctx,
       locals: collections.locals(ctx, Object.assign({ pageId: pageId(ctx) }, locals))
     })
   },
   postcss: (ctx) => {
-    return cssStandards({ webpack: ctx, parser: false })
-    // return cssStandards({
-    //   webpack: ctx,
-    //   parser: false,
-    //   minify: true,
-    //   browsers: '> 1%, last 2 versions, Firefox ESR',
-    //   features: {
-    //     autoprefixer: false
-    //   },
-    //   rucksack: {
-    //     autoprefixer: false,
-    //     fallbacks: false,
-    //     reporter: false
-    //   }
-    // })
+    // return cssStandards({ webpack: ctx, parser: false })
+    return cssStandards({
+      webpack: ctx,
+      parser: false,
+      minify: true,
+      browsers: '> 1%, last 2 versions, Firefox ESR',
+      features: {
+        autoprefixer: false
+      },
+      rucksack: {
+        autoprefixer: false,
+        fallbacks: false,
+        reporter: false
+      }
+    })
   },
   babel: { presets: [jsStandards] },
   plugins: [
