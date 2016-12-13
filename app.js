@@ -12,6 +12,7 @@ const collections = new Collections({
   collections: {
     about: {
       files: 'about-us/**',
+      permalink: (p) => { return { permalinkyo: 'extra!' } },
       paginate: {
         perPage: 3,
         template: 'views/_page_template.sgr',
@@ -53,7 +54,8 @@ module.exports = {
     return htmlStandards({
       root: 'views',
       webpack: ctx,
-      locals: collections.locals(ctx, Object.assign({ pageId: pageId(ctx) }, locals))
+      locals: collections.locals(ctx, Object.assign({ pageId: pageId(ctx) }, locals)),
+      minify: false
     })
   },
   postcss: (ctx) => {

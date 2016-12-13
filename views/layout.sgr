@@ -13,19 +13,21 @@ html
 
     block(name='stylesheets')
       link(rel='stylesheet' href='/css/app.css')
+      link(rel='stylesheet' href='https://cloud.typography.com/7044452/6889372/css/fonts.css')
+
 
     block(name='head_scripts')
       script(src='//fast.fonts.net/jsapi/a7c955db-f9a0-444a-8551-54c5f5798bf7.js')
 
 
-  body(role='document').w-100.vh-100.sans-serif.avenir
-    include(src='partials/_header.sgr')
+
+  body(role='document').w-100.vh-100.avenirTK.gotham.fw3
+    block(name='topnav')
     block(name='hero')
       include(src='partials/_hero.sgr')
     block(name='main')
       main(role='main' id='{{ pageId }}').cf.pa3.pa4-m.pa5-l.mw9.center
         block(name='content')
-
     block(name='javascript')
       script(src='/js/main.js' defer)
       script(src='https://pepper.swat.io/embed.js?eyJwb3NpdGlvbiI6InJpZ2h0IiwiY29sb3IiOiI0QTkwRTIiLCJjdXN0b21Db2xvciI6ZmFsc2UsImljb24iOiJlbWFpbCIsInByb25vdW4iOiJ1cyIsImxhbmd1YWdlIjoiZW4iLCJicmFuZGVkIjpmYWxzZSwiaW50cm9UZXh0IjoiTmVlZCBoZWxwPyBHb3QgUXVlc3Rpb25zPyBHZXQgaW4gdG91Y2ghIiwiY2hhbm5lbHMiOltbInR3aXR0ZXIiLCJ0aGVOZXdEeW5hbWljIiwic29jaWFsIl0sWyJwaG9uZSIsIjIxMiA2OTktMTg0OSIsImNsYXNzaWMiXSxbImVtYWlsIiwiaW5mb0B0aGVuZXdkeW5hbWljLmNvbSIsImNsYXNzaWMiXV19' defer)

@@ -1,20 +1,11 @@
-if(condition="(pageId) === 'index'")
-  nav#navBar.w-100.border-box.pv3.ph5-l.bg-white
-    div.flex
-      a(href="/").db.dtc-l.v-mid.mid-gray.link.dim.w-100.w-25-l.tc.tl-l.mb2.mb0-l
-        h1.f3.ma0 the New Dynamic
+nav.w-100.border-box.pv3.ph5-l.bg-white
+  div.flex
+    a(href="/").db.dtc-l.v-mid.mid-gray.link.dim.w-100.w-25-l.tc.tl-l.mb2.mb0-l
+      h1.f3.ma0 the New Dynamic
 
-      div.db.dtc-l.v-mid.w-100.w-75-l.tc.tr-l
-        a(href="/about-us/how-we-work").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l How We Work
-        a(href="#").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l Pricing
-        a(href="#").link.dim.dark-gray.f6.f5-l.dib Get Started
-else
-  nav.w-100.border-box.pv3.ph5-l.bg-white
-    div.flex
-      a(href="/").db.dtc-l.v-mid.mid-gray.link.dim.w-100.w-25-l.tc.tl-l.mb2.mb0-l
-        h1.f3.ma0 the New Dynamic
-
-      div.db.dtc-l.v-mid.w-100.w-75-l.tc.tr-l
-        a(href="/about-us/how-we-work").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l How We Work
-        a(href="#").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l Pricing
-        a(href="#").link.dim.dark-gray.f6.f5-l.dib Get Started
+    div.db.dtc-l.v-mid.w-100.w-75-l.tc.tr-l
+      a(href="/about-us/how-we-work").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l How We Work
+      a(href="/about-us/how-we-work").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l Services
+      a(href="#").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l Pricing
+      a(href="#").link.dim.dark-gray.f6.f5-l.dib.mr3.mr4-l Get Started
+      a(href="#").link.dim.dark-gray.f6.f5-l.dib Articles

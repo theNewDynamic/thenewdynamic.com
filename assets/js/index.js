@@ -13,12 +13,12 @@ if (document.getElementById('navBar')) {
     var offset = window.pageYOffset
     // readout.innerHTML = 'stickpoint' + stickPoint + ' distance  ' + distance + ' offset ' + offset + ' stuck  ' + stuck
     if ((distance <= stickPoint) && !stuck) {
-      h.style.opacity = 1
+      h.style.display = 'block'
       h.style.position = 'fixed'
       h.style.top = '0px'
       stuck = true
     } else if (stuck && (offset <= -1 * stickPoint)) {
-      h.style.opacity = 0
+      h.style.display = 'none'
       h.style.position = 'static'
       stuck = false
     }

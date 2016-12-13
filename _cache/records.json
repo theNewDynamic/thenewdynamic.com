@@ -1,5 +1,5 @@
 {
-  "nextFreeModuleId": 13,
+  "nextFreeModuleId": 14,
   "modules": {
     "byIdentifier": {
       "multi about-us/how-we-work.sgr": 0,
@@ -14,21 +14,23 @@
       "node_modules/source-loader/lib/index.js!assets/img/baked.png": 5,
       "multi js/main": 0,
       "node_modules/babel-loader/lib/index.js!assets/js/index.js": 6,
+      "multi npm-debug.log": 0,
+      "node_modules/source-loader/lib/index.js!npm-debug.log": 7,
       "multi our-team/adam-chlan.sgr": 0,
-      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!our-team/adam-chlan.sgr": 7,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!our-team/adam-chlan.sgr": 8,
       "multi our-team/bud-parr.sgr": 0,
-      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!our-team/bud-parr.sgr": 8,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!our-team/bud-parr.sgr": 9,
       "multi posts/9-26-2016-hello-world.sgr": 0,
-      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-26-2016-hello-world.sgr": 9,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-26-2016-hello-world.sgr": 10,
       "multi posts/9-27-2016-second-post.sgr": 0,
-      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-27-2016-second-post.sgr": 10,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-27-2016-second-post.sgr": 11,
       "multi posts/9-27-2016-third-post.sgr": 0,
-      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-27-2016-third-post.sgr": 11,
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-27-2016-third-post.sgr": 12,
       "multi views/index.sgr": 0,
-      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!views/index.sgr": 12
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!views/index.sgr": 13
     }
   },
-  "nextFreeChunkId": 12,
+  "nextFreeChunkId": 13,
   "chunks": {
     "byName": {
       "about-us/how-we-work.sgr": 0,
@@ -37,12 +39,13 @@
       "assets/img/baked-2.png": 3,
       "assets/img/baked.png": 4,
       "js/main": 5,
-      "our-team/adam-chlan.sgr": 6,
-      "our-team/bud-parr.sgr": 7,
-      "posts/9-26-2016-hello-world.sgr": 8,
-      "posts/9-27-2016-second-post.sgr": 9,
-      "posts/9-27-2016-third-post.sgr": 10,
-      "views/index.sgr": 11
+      "npm-debug.log": 6,
+      "our-team/adam-chlan.sgr": 7,
+      "our-team/bud-parr.sgr": 8,
+      "posts/9-26-2016-hello-world.sgr": 9,
+      "posts/9-27-2016-second-post.sgr": 10,
+      "posts/9-27-2016-third-post.sgr": 11,
+      "views/index.sgr": 12
     },
     "byBlocks": {}
   }

@@ -1,7 +1,8 @@
 header(style="background-image: url('/img/baked-2.png');").w-100.cover.bg-left.bg-top-l.relative
   div.tc-l.bg-black-80.pv2.pv5-m.pv6-l
     h1.f2.f1-l.fw2.white-90.mb0.lh-title {{ title }}
-      h2(md).fw1.f3.white-80.mt3.mb4 {{ subtitle === true ? (subtitle) : '' }}
+    if(condition="'subtitle'")
+      h2(md).fw1.f3.white-80.mt3.mb4 {{ subtitle }}
     a(href="/").f6.no-underline.grow.dib.v-mid.bg-blue.white.ba.b--blue.ph3.pv2.mb3 Find out More
   // video(style="z-index: -1000;" autoplay muted loop).absolute.w-100.h-auto.top-0.right-0.left-0
   //   source(src="/video/MVI_0358.mp4.mp4" type="video/mp4")
