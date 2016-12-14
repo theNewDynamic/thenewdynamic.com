@@ -1,5 +1,5 @@
 {
-  "nextFreeModuleId": 16,
+  "nextFreeModuleId": 15,
   "modules": {
     "byIdentifier": {
       "multi about-us/how-we-work.sgr": 0,
@@ -29,12 +29,10 @@
       "multi posts/9-27-2016-third-post.sgr": 0,
       "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!node_modules/spike-collections/lib/frontmatter_loader.js!posts/9-27-2016-third-post.sgr": 13,
       "multi views/index.sgr": 0,
-      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!views/index.sgr": 14,
-      "multi assets/img/unrkg2jh1j0-olu-eletu.jpg": 0,
-      "node_modules/source-loader/lib/index.js!assets/img/unrkg2jh1j0-olu-eletu.jpg": 15
+      "node_modules/source-loader/lib/index.js!node_modules/reshape-loader/lib/index.js!views/index.sgr": 14
     }
   },
-  "nextFreeChunkId": 15,
+  "nextFreeChunkId": 14,
   "chunks": {
     "byName": {
       "about-us/how-we-work.sgr": 0,
@@ -50,8 +48,7 @@
       "posts/9-26-2016-hello-world.sgr": 10,
       "posts/9-27-2016-second-post.sgr": 11,
       "posts/9-27-2016-third-post.sgr": 12,
-      "views/index.sgr": 13,
-      "assets/img/unrkg2jh1j0-olu-eletu.jpg": 14
+      "views/index.sgr": 13
     },
     "byBlocks": {}
   }
