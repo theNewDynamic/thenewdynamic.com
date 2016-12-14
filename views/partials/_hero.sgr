@@ -1,15 +1,15 @@
-header.w-100.cf.dn.db-m.db-l.vh-75.bg-blue
-  div.pa5.pv5-m.pt7-l.w-two-thirds.fl
+header.w-100.cf.db.vh-75.bg-blue
+  div.pa4.pv5-m.pt7-l.w-two-thirds-ns.fl
     h3.mb0.primary-color.o-40 Welcome to
-    h1.avenir-heavyTK.verlag.fw8.f-headline-l.mt0.mb0.lh-title.primary-color the New Dynamic
-    h5.fw2.f4.mt2.white
-      span We are your "always on" web team.
-      span.pl3.o-50 |
-      span.pl3 design
-      span.pl3 development
-      span.pl3 consulting
-  div.pa6.fl.w-third-m
-    a(href="/about-us/how-we-work").link.f6.f4-l.mb2.db.white.dim.ttl How We Work
-    a(href="#").link.f6.f4-l.mb2.db.white.dim.ttl Services
-    a(href="#").link.f6.f4-l.mb2.db.white.dim.ttl Pricing
-    a(href="#").link.f6.f4-l.mb2.db.white.dim.ttl Get Started
+    h1.verlag.fw8.f1.f-headline-ns.mt0.mb0.lh-title.primary-color the New Dynamic
+    h5.fw2.f5.f4-ns.mt2.white
+      span.lh-copy We are your "always on" web team; your dedicated, personal, down-to-earth, say-what-we-mean, show-our-work, out-in-the-open team that you never have to worry about, producing great work, being accountable, focused, easy and adaptable. &#8251;
+      // span.pl3.o-50 |
+      // span.pl3 design
+      // span.pl3 development
+      // span.pl3 consulting
+  div.pa4.pa6-ns.fl-ns.w-third-ns
+    a(href="/about-us/how-we-work").link.f3.f6-n2.f4-l.mb2.db-ns.white.dim.ttl.mr4 How We Work
+    a(href="#").link.f3.f6-n2.f4-l.mb2.db-ns.white.dim.ttl.mr4 Services
+    a(href="#").link.f3.f6-n2.f4-l.mb2.db-ns.white.dim.ttl.mr4 Pricing
+    a(href="#").link.f3.f6-n2.f4-l.mb2.db-ns.white.dim.ttl.mr4 &#10003; Get Started

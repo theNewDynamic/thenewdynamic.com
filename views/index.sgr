@@ -1,9 +1,9 @@
 extends(src='layout.sgr')
   block(name='content')
-    div.flex.justify-between.verlag.fw4
-      div.w-25.bg-blue.pa4.f2.fw1.white.tc.grow-large A dedicated web team for a predictable monthly cost.
-      div.w-25.bg-black.pa4.f2.fw1.white.tc.grow-large Our subscription model holds us accountable and never limits your scope.
-      div.w-25.bg-yellow.pa4.f2.fw1.black.tc.grow-large Scale up or down as you need.
-      div.w-25.bg-black.pa4.f2.fw1.white.tc.grow-large So your web presence is always up-to-date
+    div.flex-ns.justify-between.verlag.fw4
+      div.w-25-ns.bg-blue.pa4.f2.fw1.white.tc A dedicated web team for a predictable monthly cost.
+      div.w-25-ns.bg-black.pa4.f2.fw1.white.tc Our subscription model holds us accountable and never limits your scope.
+      div.w-25-ns.bg-yellow.pa4.f2.fw1.black.tc Scale up or down as you need.
+      div.w-25-ns.bg-black.pa4.f2.fw1.white.tc So your web presence is always up-to-date
 
     div(md).cf.

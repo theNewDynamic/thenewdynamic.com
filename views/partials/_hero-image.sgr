@@ -1,5 +1,5 @@
-header(style="background-image: url('/img/baked-2.png');").w-100.cover.bg-left.bg-top-l.relative
-  div.tc-l.bg-black-80.pv2.pv5-m.pv6-l
+header(style="background-image: url('/img/unrkg2jh1j0-olu-eletu.jpg');").w-100.cover.bg-left.bg-top-l.relative
+  div.tc-l.bg-black-60.pv2.pv5-m.pv6-l
     h1.f2.f1-l.fw2.white-90.mb0.lh-title {{ title }}
     if(condition="'subtitle'")
       h2(md).fw1.f3.white-80.mt3.mb4 {{ subtitle }}
