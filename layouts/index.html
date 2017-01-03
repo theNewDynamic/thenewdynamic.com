@@ -1,0 +1,161 @@
+{{ define "nav" }}
+  <!-- empty -->
+{{ end }}
+{{ define "hero" }}
+     {{ partial "hero" . }}
+{{ end }}
+
+
+{{ define "main" }}
+<main class="cf pa5 pa4-l f4 tc center measure-wide lh-copy gray">
+  {{ .Content }}
+</main>
+
+
+
+<!--
+  TODO: Make these flow evenly on mobile (copy/image copy/image)
+-->
+<div class="flex-ns flex-wrap center tc mb6">
+
+{{ $.Scratch.Add "level-1" "brand-font w-100 w-50-ns flex-ns flex-column justify-between bg-near-white baTK b--light-gray" }}
+{{ $.Scratch.Add "level-1-heading" "f1" }}
+{{ $.Scratch.Add "level-1-para" "f4 silver ph2 ph5-ns pv4 lh-copy" }}
+{{ $.Scratch.Add "level-2" "pt4 pb3 ph4 mid-gray" }}
+{{ $.Scratch.Add "level-3" "flex-ns flex-wrap" }}
+{{ $.Scratch.Add "level-3a" "w-100 w-50-ns pt4 pb4 ph5 lh-copy bg-gold baTK b--light-gray" }}
+{{ $.Scratch.Add "level-3b" "w-100 w-50-ns pt4 pb4 ph5 lg-copy bg-light-blue bl b--light-gray" }}
+{{ $.Scratch.Add "level-1a" "w-100 w-50-ns bg-moon-gray cover pv5 bg-top" }}
+{{ $.Scratch.Add "level-1a-image" "w-90 w-75-ns shadow-2 grow" }}
+
+
+  <div class="{{ $.Scratch.Get "level-1" }}">
+
+    <div class="{{ $.Scratch.Get "level-2" }}">
+      <h2 class="{{ $.Scratch.Get "level-1-heading" }}">Ongoing design and development</h2>
+        <p class="{{ $.Scratch.Get "level-1-para" }}">
+          One word: Observe. We design, and observe how you and your audience use your site. Then we iterate on our original design, seeking continuous improvement.
+        </p>
+    </div>
+
+    <div class="{{ $.Scratch.Get "level-3" }}">
+      <div class="{{ $.Scratch.Get "level-3a" }}">
+        <h3 class="mb1">The old model</h3>
+        Build a site and disappear.
+      </div>
+      <div class="{{ $.Scratch.Get "level-3b" }}">
+        <h3 class="mb1">The new model</h3>
+        Always on, always accountable.
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="{{ $.Scratch.Get "level-1a" }}" data="background-image: url(/uploads/ictj-overlay-900x817.jpg)">
+
+    <img src="/uploads/aba-icc-800x500.jpg" alt="" class="{{ $.Scratch.Get "level-1a-image" }}">
+
+  </div>
+
+
+
+<!-- == 2 == -->
+
+
+
+<div class="{{ $.Scratch.Get "level-1a" }}" data="background-image: url(/uploads/retroreport-org-video-major-malfunction-lessons-from-challenger-900wx1026h.jpg)">
+  <!-- &nbsp; -->
+<img src="/uploads/retro-report-800x911.jpg" alt="" class="{{ $.Scratch.Get "level-1a-image" }}">
+
+</div>
+
+<div class="{{ $.Scratch.Get "level-1" }}">
+
+  <div class="{{ $.Scratch.Get "level-2" }}">
+    <h2 class="{{ $.Scratch.Get "level-1-heading" }}">Predictable, transparent pricing.</h2>
+    <p class="{{ $.Scratch.Get "level-1-para" }}">
+      The single point of discomfort: Talking about budget. We decided to do away with it altogether. We post our prices and you can hire us for as long as you need, or scale our fee up or down as it suits you.
+    </p>
+  </div>
+
+  <div class="{{ $.Scratch.Get "level-3" }}">
+    <div class="{{ $.Scratch.Get "level-3a" }}">
+      <h3 class="mb1">The old model</h3>
+      Wildly inaccurate budets, padding, conflicts of interest.
+    </div>
+    <div class="{{ $.Scratch.Get "level-3b" }}">
+      <h3 class="mb1">The new model</h3>
+      Simplicity.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- == 3 === -->
+<div class="{{ $.Scratch.Get "level-1" }}">
+
+  <div class="{{ $.Scratch.Get "level-2" }}">
+    <h2 class="{{ $.Scratch.Get "level-1-heading" }}">Dedicated consultants for every account.</h2>
+    <p class="{{ $.Scratch.Get "level-1-para" }}">
+      It's not enough to just have a point of contact. Your dedicated consultant is the person who insures you have a voice.
+    </p>
+  </div>
+
+  <div class="{{ $.Scratch.Get "level-3" }}">
+    <div class="{{ $.Scratch.Get "level-3a" }}">
+      <h3 class="mb1">The old model</h3>
+      Drop a support ticket. Hope for the best.
+    </div>
+    <div class="{{ $.Scratch.Get "level-3b" }}">
+      <h3 class="mb1">The new model</h3>
+        Humans.
+    </div>
+  </div>
+
+</div>
+
+
+<div class="{{ $.Scratch.Get "level-1a" }}" data="background-image: url(/uploads/ndbooks-800w.jpg)">
+  <!-- &nbsp; -->
+  <img src="/uploads/ndbooks-700x890.jpg" alt="" class="{{ $.Scratch.Get "level-1a-image" }}">
+</div>
+
+
+
+<!-- == 4 = -->
+
+
+<div class="{{ $.Scratch.Get "level-1a" }}" data="background-image: url(/uploads/placeit.jpg)">
+  <!-- &nbsp; -->
+      <img src="/uploads/icjt-800x803.jpg" alt="" class="{{ $.Scratch.Get "level-1a-image" }}">
+</div>
+
+<div class="{{ $.Scratch.Get "level-1" }}">
+
+  <div class="{{ $.Scratch.Get "level-2" }}">
+    <h2 class="{{ $.Scratch.Get "level-1-heading" }}">Meaningful, <br /> content-driven<br />  design.</h2>
+    <p class="{{ $.Scratch.Get "level-1-para" }}">
+      copy
+    </p>
+  </div>
+
+  <div class="{{ $.Scratch.Get "level-3" }}">
+    <div class="{{ $.Scratch.Get "level-3a" }} ">
+      <h3 class="mb1">The old model</h3>
+      Months of Photoshop mockups. Skyrotting bills.
+    </div>
+    <div class="{{ $.Scratch.Get "level-3b" }}">
+    <h3 class="mb1">The new model</h3>
+      Design real websites with real content.
+    </div>
+  </div>
+
+</div>
+
+
+
+</div>
+
+{{ end }}
