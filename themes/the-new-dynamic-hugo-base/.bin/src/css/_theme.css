@@ -1,0 +1,21 @@
+.sans-serif {font-family: var(--brand-font)}
+
+
+
+
+.bg-primary-color { background-color: var(--primary-color)}
+.bg-light-primary-color { background-color: var(--light-primary-color)}
+.bg-lightest-primary-color { background-color: var(--lightest-primary-color)}
+
+.bg-dark-accent-color { background-color: var(--dark-accent-color)}
+.bg-accent-color { background-color: var(--accent-color)}
+.bg-light-accent-color { background-color: var(--light-accent-color)}
+.bg-lightest-accent-color { background-color: var(--lightest-accent-color)}
+
+
+
+.text-on-primary-color { color: var(--text-on-primary-color)}
+.primary-text-color { color: var(--primary-text-color)}
+.secondary-text-color { color: var(--secondary-text-color)}
+.disabled-text-color { color: var(--disabled-text-color)}
+.divider-color { color: var(--divider-color)}

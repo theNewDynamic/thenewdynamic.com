@@ -1,4 +1,4 @@
-theme = "the-new-dynamic-hugo-base-theme"
+theme = "the-new-dynamic-hugo-base"
 DefaultContentLanguage = "en"
 languageCode = "en-us"
 baseurl = "/"

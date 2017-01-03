@@ -1,0 +1,48 @@
+:root {
+
+  --brand-fontTK: 'Montserrat',-apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+
+  --brand-font: 'Poppins', 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+
+
+
+    --dark-primary-color:          rgb(0,94,158);
+    --primary-color:               rgba(0,94,158, 0.9);
+    --light-primary-color:         rgb(0,137,207);
+    --lightest-primary-color:      rgb(0,161,228);
+
+    --dark-accent-color:           rgb(90,90,90);
+    --accent-color:                rgb(120,120,120);
+    --light-accent-color:          rgb(170,170,170);
+    --lightest-accent-color:       rgb(210,210,210);
+
+
+
+    --text-on-primary-color:        var(--white);
+    --primary-text-color:           rgb(90,90,90);
+    --secondary-text-color:         rgb(120,120,120);
+    --disabled-text-color:          rgb(170,170,170);
+    --divider-color:                rgb(170,170,170);
+
+}
+
+
+
+/*
+--primary-color-dark:           var(--palette-Blue-700);
+--primary-color:                var(--palette-Blue-500);
+--primary-color-light:          var(--palette-Blue-100);
+--text-primary-color:           var(--palette-White-500);
+--accent-color:                 var(--palette-Pink-A200);
+--light-accent-color:           var(--palette-Pink-A100);
+--dark-accent-color:            var(--palette-Pink-A400);
+--primary-text-color:           var(--palette-Grey-900);
+--secondary-text-color:         var(--palette-Grey-600);
+--disabled-text-color:          var(--palette-Grey-400);
+--divider-color:                var(--palette-Grey-400);
+--warn-color
+
+References:
+https://material.angularjs.org/latest/Theming/01_introduction
+
+https://www.polymer-project.org/1.0/*/
