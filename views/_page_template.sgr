@@ -1,5 +1,0 @@
-extends(src='layout.sgr')
-  block(name='topnav')
-    include(src='partials/_header.sgr')
-  block(name='hero')
-    include(src='partials/_hero-image.sgr')
