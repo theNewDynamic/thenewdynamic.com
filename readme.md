@@ -2,11 +2,11 @@ a work in progress.
 
 
 ```
-$git clone x
+$ git clone https://github.com/theNewDynamic/thenewdynamic.com.git
 
-$git submodule init
+$ git submodule init
 
-$git submodule update
+$ git submodule update
 ```
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
@@ -14,4 +14,4 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 To update submodule
 
-`$git submodule update --remote`
+`$ git submodule update --remote`
