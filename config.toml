@@ -12,6 +12,8 @@ paginate = 3
 title = "the New Dynamic"
 weight = 1
 
+
 [params]
 
   hero_copy = "A dedicated web team for mission-driven organizations. "
+  black = "bg-near-black"

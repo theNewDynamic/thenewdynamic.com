@@ -3,9 +3,9 @@
   --brand-fontTK: 'Montserrat',-apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 
   --brand-font: 'Poppins', 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  --serif:   'Playfair Display', georgia, times, serif;
 
-
-
+    --near-black:                  #1a1a1a;
     --dark-primary-color:          rgb(0,94,158);
     --primary-color:               rgba(0,94,158, 0.9);
     --light-primary-color:         rgb(0,137,207);

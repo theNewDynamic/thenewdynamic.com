@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main class="cf pa3 pa4-m pa5-l mw9 serif w-60-l center">
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+
+  {{ if .Params.repeater }}
+    <h1>Core Services</h1>
+    {{ range .Params.repeater }}
+      {{ $.Scratch.Add "i" 1 }}
+       {{ $i := $.Scratch.Get "i" }}
+
+
+         {{ if modBool $i 2 }}
+          <h3>{{ .heading }}</h3>
+         {{ .copy }} -   {{ .icon }}  <br>
+
+        {{ else }}
+          <h3>{{ .heading }}</h3>
+        {{ .icon }} - {{ .copy }}<br>
+        {{ end }}
+
+    {{ end }}
+
+  {{ end }}
+
+
+</main>
+{{ end }}

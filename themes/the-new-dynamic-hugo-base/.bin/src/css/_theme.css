@@ -1,6 +1,5 @@
 .sans-serif {font-family: var(--brand-font)}
-
-
+.serif {font-family: var(--serif)}
 
 
 .bg-primary-color { background-color: var(--primary-color)}

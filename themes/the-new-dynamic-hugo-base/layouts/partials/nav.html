@@ -1,9 +1,13 @@
-<nav class="flex-ns justify-between bb b--white-10 bg-black">
-  <a class="f3 link white-70 hover-white no-underline flex items-center pa3" href="/">
+{{ $currentPage := . }}
+<nav class="flex-ns items-baseline {{ .Site.Params.black }}">
+  <a class="f3 fw7 link brand-font white hover-white no-underline flex items-center pa3" href="/">
     {{ .Site.Title }}
   </a>
   <div class="pa3 flex items-center">
-    <a class="f6 link dib white dim mr3 mr4-ns" href="#0">About</a>
-    <a class="f6 link dib white dim mr3 mr4-ns" href="#0">Sign In</a>
+    {{ range .Site.Menus.main }}
+      <a href="{{.URL}}" class="f5 fw3 link dib white-60 dim mr3 mr4-ns{{ if $currentPage.IsMenuCurrent "main" . }} white{{ end }}">
+        {{ .Name }}
+      </a>
+    {{end}}
   </div>
 </nav>
