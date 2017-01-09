@@ -1,0 +1,3 @@
+[build]
+  command = "hugo_0.18"
+  publish = "public"
