@@ -7,10 +7,5 @@
   "author": "budparr",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {
-    "cssnano": "^3.9.1",
-    "postcss-cssnext": "^2.9.0",
-    "postcss-import": "^9.0.0",
-    "tachyons": "4.6.1"
-  }
+  "devDependencies": {}
 }
