@@ -1,5 +1,6 @@
 +++
 title = "About Hugo"
+draft = "true"
 date = "2014-04-09"
 +++
 
