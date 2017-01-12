@@ -1,8 +1,8 @@
-.sans-serif {font-family: var(--brand-font)}
-.serif {font-family: var(--serif)}
-
+.sans-serif {font-family: var(--sans-serif)}
+.brand-font {font-family: var(--brand-font);font-weight: 800;}
 
 .bg-primary-color { background-color: var(--primary-color)}
+.hover-bg-primary-color:hover { background-color: var(--primary-color)}
 .bg-light-primary-color { background-color: var(--light-primary-color)}
 .bg-lightest-primary-color { background-color: var(--lightest-primary-color)}
 

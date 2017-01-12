@@ -1,6 +1,6 @@
 +++
 title = "About Hugo"
-draft = "true"
+draft = "false"
 date = "2014-04-09"
 +++
 

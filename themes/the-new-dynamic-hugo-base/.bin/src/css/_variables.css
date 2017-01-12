@@ -1,9 +1,9 @@
 :root {
 
-  --brand-fontTK: 'Montserrat',-apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  --sans-serif: 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 
-  --brand-font: 'Poppins', 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-  --serif:   'Playfair Display', georgia, times, serif;
+  --brand-font: "Verlag A", "Verlag B", 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+
 
     --near-black:                  #1a1a1a;
     --dark-primary-color:          rgb(0,94,158);
