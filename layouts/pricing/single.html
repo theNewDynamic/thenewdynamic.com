@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{ $.Scratch.Add "boxClasses" "dtc pa4 bt bb bl w-33" }}
+{{ $.Scratch.Add "boxCopyClasses" "db dtc-ns bg-rfed v-mid w-100" }}
+{{ $.Scratch.Add "boxImageClasses" "db v-mid-ns center tc" }}
+{{ $.Scratch.Add "ImageClasses" "w-100" }}
+
+  <main class="cf pa3 pa4-m pa5-l mw9 w-70-l center">
+    <h2 class="brand-font f1 fw8">
+      {{ .Title }}
+    </h2>
+    {{ .Content }}
+    {{ if .Params.pricing }}
+
+
+        <div class="dt br">
+
+          {{ range .Params.pricing }}
+
+              <div class="{{ $.Scratch.Get "boxClasses" }}">
+                <!-- <div class="{{ $.Scratch.Get "boxImageClasses" }}">
+                  <img src="{{ .icon }}" alt="icon for {{ .Heading }}" class="w-50" />
+                </div> -->
+
+                <div class="{{ $.Scratch.Get "boxCopyClasses" }} pr3-ns tc">
+                  <h3>
+                    {{ .heading }}
+                  </h3>
+                  <p class="lh-copy">
+                    {{ .copy }}
+                  </p>
+                  <div class="f3 dark-gray lh-copy">
+                    {{ .price }}
+                  </div>
+                  <div class="gray f4">
+                    {{ .price_qualifier }}
+                  </div>
+                </div>
+
+
+
+              </div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </main>
+{{ end }}
