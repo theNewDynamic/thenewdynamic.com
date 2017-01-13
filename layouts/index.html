@@ -18,14 +18,11 @@
       {{ range .Params.boxes }}
         {{ $.Scratch.Add "i" 1 }}
         {{ $i := $.Scratch.Get "i" }}
+
         {{ if modBool $i 2 }}
-
-
           {{ partial "home-page-boxes-image" . }}
           {{ partial "home-page-boxes" . }}
-
         {{ else }}
-
         {{ partial "home-page-boxes" . }}
         {{ partial "home-page-boxes-image" . }}
 
@@ -36,27 +33,7 @@
   {{ end }} <!-- END if params.boxes -->
 
   <div id="find-out-more" class="w-75 tc center">
-    <!-- Change the width and height values to suit you best -->
     {{ partial "form-getting-started.html" .}}
-    <!-- BEGIN Podio web form -->
-    <div class="pa4">
-    <!-- <script src="https://podio.com/webforms/17586698/1182080.js" defer></script>
-    <script type="text/javascript" defer>
-      _podioWebForm.render("1182080")
-    </script>
-
-    <noscript>
-      <a href="https://podio.com/webforms/17586698/1182080" target="_blank">Please fill out the form</a>
-    </noscript> -->
-    </div>
-      <!-- <div class="podio-webform-container">
-      A webform by Podio - <a href="https://podio.com" class="podio-webform-inner" rel="nofollow">click here</a> to get yours
-      </div> -->
-    <!-- END Podio web form -->
-
-
-
-
   </div>
 
 {{ end }}
