@@ -23,9 +23,8 @@
           {{ partial "home-page-boxes-image" . }}
           {{ partial "home-page-boxes" . }}
         {{ else }}
-        {{ partial "home-page-boxes" . }}
-        {{ partial "home-page-boxes-image" . }}
-
+          {{ partial "home-page-boxes" . }}
+          {{ partial "home-page-boxes-image" . }}
         {{ end }}
 
       {{ end }}
@@ -33,7 +32,8 @@
   {{ end }} <!-- END if params.boxes -->
 
   <div id="find-out-more" class="w-75 tc center">
-    {{ partial "form-getting-started.html" .}}
+    <!-- {{ partial "form-getting-started.html" .}} -->
+    {{ partial "form-podio.html" . }}
   </div>
 
 {{ end }}

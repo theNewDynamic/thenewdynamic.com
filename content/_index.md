@@ -1,6 +1,5 @@
 ---
 title: home
-foo: 'barsky'
 boxes:
   - heading: 'Ongoing design and development'
     copy: 'One word: Observe. <br> We build and then observe how you and your audience use your site, iterating on our original design, seeking continuous improvement with real-world use.'

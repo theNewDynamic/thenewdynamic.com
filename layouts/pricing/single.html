@@ -5,10 +5,12 @@
 {{ $.Scratch.Add "ImageClasses" "w-100" }}
 
   <main class="cf pa3 pa4-m pa5-l mw9 w-70-l center">
-    <h2 class="brand-font f1 fw8">
+    <h2 class="brand-font f1 fw8 dark-gray">
       {{ .Title }}
     </h2>
-    {{ .Content }}
+    <div class="lh-copy f3 mid-gray">
+      {{ .Content }}
+    </div>
     {{ if .Params.pricing }}
 
 
@@ -34,6 +36,13 @@
                   <div class="gray f4">
                     {{ .price_qualifier }}
                   </div>
+                  {{ if .features }}
+                    <ul class="">
+                      <li>
+                        {{ split .features "," }}
+                      </li>
+                    </ul>
+                  {{ end }}
                 </div>
 
 
@@ -43,5 +52,8 @@
         </div>
       </div>
     {{ end }}
+    <div class="lh-copy pv2">
+      {{ .Params.afterForm }}
+    </div>
   </main>
 {{ end }}

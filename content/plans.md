@@ -1,6 +1,6 @@
 ---
 title: Our Plans
-draft: false
+draft: true
 type: pricing
 menu:
   main:
@@ -11,6 +11,7 @@ pricing:
   icon: /uploads/noun_684458.svg
   price: $2,600
   price_qualifier: per month per concurrent site.
+  features: ['a great thing', 'another great thing']
 - heading: "Pro"
   copy: ""
   icon: /uploads/noun_684458.svg
@@ -21,7 +22,8 @@ pricing:
   icon: /uploads/noun_684458.svg
   price: $5,600+
   price_qualifier: per month per concurrent site.
+afterForm: 'There are no upfront fees. Payments are made one month in advance, and are non-refundable. After an initial period of more active development (typically six months to one year) you may want to scale your fee down or up to whatever you and we deem together to be manageable for you and optimal for your web presence. '
 
 ---
 
-'Stupid tngs!' Alice began in a loud, indignant voice, but she stopped  hastily, for the White Rabbit cried out, 'Silence in the court!' and the  King put on his spectacles and looked anxiously round, to make out who  was talking.
+Our fee structure suits our desire to work with you on an ongoing basis. Our goal is to be flexible and responsive to your needs and always be available to you, yet be mindful of your budget.
