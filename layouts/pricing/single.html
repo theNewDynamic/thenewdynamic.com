@@ -1,11 +1,11 @@
 {{ define "main" }}
-{{ $.Scratch.Add "boxClasses" "dtc pa4 bt bb bl w-33" }}
-{{ $.Scratch.Add "boxCopyClasses" "db dtc-ns bg-rfed v-mid w-100" }}
+{{ $.Scratch.Add "boxClasses" "dtc v-top pa4 bt bb bl b--primary-color w-33" }}
+{{ $.Scratch.Add "boxCopyClasses" "db dtc-ns v-mid w-100" }}
 {{ $.Scratch.Add "boxImageClasses" "db v-mid-ns center tc" }}
 {{ $.Scratch.Add "ImageClasses" "w-100" }}
 
   <main class="cf pa3 pa4-m pa5-l mw9 w-70-l center">
-    <h2 class="brand-font f1 fw8 dark-gray">
+      <h2 class="brand-font f1 fw8 dark-gray primary-color">
       {{ .Title }}
     </h2>
     <div class="lh-copy f3 mid-gray">
@@ -14,7 +14,7 @@
     {{ if .Params.pricing }}
 
 
-        <div class="dt br">
+        <div class="dt v-top br b--primary-color ">
 
           {{ range .Params.pricing }}
 
@@ -24,7 +24,7 @@
                 </div> -->
 
                 <div class="{{ $.Scratch.Get "boxCopyClasses" }} pr3-ns tc">
-                  <h3>
+                  <h3 class="black">
                     {{ .heading }}
                   </h3>
                   <p class="lh-copy">
@@ -38,14 +38,14 @@
                   </div>
                   {{ if .features }}
                     <ul class="">
-                      <li>
-                        {{ split .features "," }}
-                      </li>
+                      {{ range .features }}
+                        <li class="list tl mb2 f6">
+                          {{ . | markdownify }}
+                        </li>
+                      {{ end }}
                     </ul>
                   {{ end }}
                 </div>
-
-
 
               </div>
           {{ end }}

@@ -7,6 +7,7 @@
           {{ .Title }}
           {{end}}
    </title>
+
   </head>
   <body class="w-100 vh-100 sans-serif {{ .Type }}">
     {{ block "nav" . }}{{ partial "nav" . }}{{ end }}
@@ -14,6 +15,6 @@
 
     {{- block "main" . -}}{{ end }}
     {{ block "footer" . }}{{- partial "footer" . -}}{{ end }}
-    {{ block "scripts" . }}{{ end }}
+    {{ block "scripts" . }}{{- partial "scripts" . -}}{{ end }}
   </body>
 </html>

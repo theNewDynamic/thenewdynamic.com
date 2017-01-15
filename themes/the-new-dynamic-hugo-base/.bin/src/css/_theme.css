@@ -1,15 +1,18 @@
 .sans-serif {font-family: var(--sans-serif)}
 .brand-font {font-family: var(--brand-font);font-weight: 800;}
 
+.primary-color { color: var(--primary-color)}
 .bg-primary-color { background-color: var(--primary-color)}
 .hover-bg-primary-color:hover { background-color: var(--primary-color)}
-.bg-light-primary-color { background-color: var(--light-primary-color)}
-.bg-lightest-primary-color { background-color: var(--lightest-primary-color)}
+.b--primary-color { border-color: var(--primary-color); }
 
-.bg-dark-accent-color { background-color: var(--dark-accent-color)}
+.bg-primary-color-light { background-color: var(--primary-color-light)}
+.bg-primary-color-lightest { background-color: var(--primary-color-lightest)}
+
+.bg-accent-color-dark { background-color: var(--accent-color-dark)}
 .bg-accent-color { background-color: var(--accent-color)}
-.bg-light-accent-color { background-color: var(--light-accent-color)}
-.bg-lightest-accent-color { background-color: var(--lightest-accent-color)}
+.bg-accent-color-light { background-color: var(--accent-color-light)}
+.bg-accent-color-lightest { background-color: var(--accent-color-lightest)}
 
 
 
@@ -18,3 +21,10 @@
 .secondary-text-color { color: var(--secondary-text-color)}
 .disabled-text-color { color: var(--disabled-text-color)}
 .divider-color { color: var(--divider-color)}
+
+/*
+.bg-light-blue {background-color:#0076B2;}
+.br-light-blue {border-color: #0076B2;}
+.blue {
+  color: #0076B2;
+  }*/
