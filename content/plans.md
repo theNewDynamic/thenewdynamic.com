@@ -1,6 +1,6 @@
 ---
 title: Our Plans
-draft: false
+draft: true
 type: pricing
 menu:
   main:
