@@ -1,6 +1,6 @@
-<header class="w-100 cf db flex-l">
+<header class="w-100 cf db vh-75-l flex-l bg-bottofm bg-right" style="background-image:url(/uploads/Fibonacci_spiral.svg);">
 
-  <div class="w-100 w-two-thirds-l bg-black cover bg-center" style="background-image:url(/uploads/placeit.jpg);">
+  <div class="w-100 w-two-thirds-l bg-black cover bg-center" style="background-image:url(/uploads/placeit.jpg);" >
     <div class="pl4 pl5-ns pt3 pb5 pr4 pv5-m pt7-l bg-black-70 w-100 h-100">
 
       <h3 class="mb0 o-40 white-80">
@@ -8,7 +8,7 @@
       </h3>
 
       <h1 class="brand-font fw8 f1 f-5-ns mt0 mb0 lh-title white">
-        the New Dynamic
+        {{ .Site.Title}}
       </h1>
 
       <h5 class="fw3 f5 f4-ns mt2 white">
@@ -24,12 +24,15 @@
       </div>
 </div>
   </div>
-
-  <div class="flex-m pl4 pl5-m pl4-l pt4 pt6-l pb3 pb6-l w-100 w-third-l bg-primary-color">
-    <a href="#how-we-work" class="db di-m db-l link f3 f6-n2 f3-l mb4 mr4-m white dim ttl"> How We Work</a>
-    <!-- <a href="/services/"            class="db di-m db-l link f3 f6-n2 f3-l mb4 mr4-m white dim ttl"> Services</a>
-    <a href="/prices/"              class="db di-m db-l link f3 f6-n2 f3-l mb4 mr4-m white dim ttl"> Pricing</a> -->
-    <a href="#find-out-more" class="db db-l link f3 f6-n2 f3-l mb4 white dim ttl"> &#10003; Find out More</a>
+<!-- style="background-color:#ca9d49;" -->
+{{ $.Scratch.Add "linkclasses" "db di-m pa3 f3 w-50 db-l link f3 f6-n2 f3-l mb3 mr4-m text-on-primary-color dim ttl" }}
+  <div class="flex-m pl4 pl5-m pl4-l pt4 pt6-l pb3 pb6-l w-100 w-third-l bg-primary-color bg- o-90">
+    <a href="#how-we-work" class="{{ $.Scratch.Get "linkclasses" }}"> How We Work</a>
+    <!-- <a href="/services/"            class="{{ $.Scratch.Get "linkclasses" }}"> Services</a>
+    <a href="/prices/"              class="{{ $.Scratch.Get "linkclasses" }}"> Plans</a> -->
+    <a href="#find-out-more" class="{{ $.Scratch.Get "linkclasses" }}"> &#10003; Find out More</a>
   </div>
 
 </header>
+<!-- style="background-color:#232323; -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
+clip-path: polygon(100% 0, 0 0, 0 100%);" -->

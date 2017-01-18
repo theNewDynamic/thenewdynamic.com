@@ -17,3 +17,5 @@ weight = 1
 
   hero_copy = "The dedicated web team for mission-driven organizations. "
   black = "bg-near-black"
+  nav_side_button_close_color = "#FFF"
+  nav_side_button_menu_color  = "#FFF"

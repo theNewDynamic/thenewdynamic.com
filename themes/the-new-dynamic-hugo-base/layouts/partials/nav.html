@@ -1,13 +1,14 @@
 {{ $currentPage := . }}
-<nav class="flex-ns items-baseline bg-primary-color fixed w-100 mb7">
-  <a class="f3 fw8 link brand-font white hover-white no-underline flex items-center pa3" href="/">
+<nav class="flex-ns items-baseline bg-primary-colorTK bg-white fixed w-100 cf mb5">
+  <a class="f3 fw8 link brand-font text-on-primary-colorTK primary-color black dim no-underline flex items-center pa3" href="/">
     {{ .Site.Title }}
   </a>
-  <div class="pa3 flex items-center">
+  <div class="pa3 dn flex-ns items-center">
     {{ range .Site.Menus.main }}
-      <a href="{{.URL}}" class="f5 fw3 link dib white-60 dim mr3 mr4-ns{{ if $currentPage.IsMenuCurrent "main" . }} white{{ end }}">
+      <a href="{{.URL}}" class="f5 link dib white-80TK dark-gray dim mr3 mr4-ns{{ if $currentPage.IsMenuCurrent "main" . }} bb{{ end }}">
         {{ .Name }}
       </a>
     {{end}}
   </div>
+  {{ partial "nav-side-button-open" . }}
 </nav>

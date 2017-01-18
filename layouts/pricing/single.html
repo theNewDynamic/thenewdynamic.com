@@ -1,55 +1,40 @@
 {{ define "main" }}
-{{ $.Scratch.Add "boxClasses" "dtc v-top pa4 bt bb bl b--primary-color w-33" }}
-{{ $.Scratch.Add "boxCopyClasses" "db dtc-ns v-mid w-100" }}
-{{ $.Scratch.Add "boxImageClasses" "db v-mid-ns center tc" }}
-{{ $.Scratch.Add "ImageClasses" "w-100" }}
 
   <main class="cf pa3 pa4-m pa5-l mw9 w-70-l center">
-      <h2 class="brand-font f1 fw8 dark-gray primary-color">
-      {{ .Title }}
-    </h2>
-    <div class="lh-copy f3 mid-gray">
-      {{ .Content }}
-    </div>
+    {{ partial "page-top.html" .}}
+
     {{ if .Params.pricing }}
-
-
-        <div class="dt v-top br b--primary-color ">
-
-          {{ range .Params.pricing }}
-
-              <div class="{{ $.Scratch.Get "boxClasses" }}">
-                <!-- <div class="{{ $.Scratch.Get "boxImageClasses" }}">
+      <div class="db w-100 dt-ns v-top br b--primary-color ">
+        {{ range .Params.pricing }}
+          <div class="dtc-ns w-100 v-top pa4 bt bb bl b--primary-color w-33-ns">
+                <!-- <div class="db v-mid-ns center tc">
                   <img src="{{ .icon }}" alt="icon for {{ .Heading }}" class="w-50" />
                 </div> -->
-
-                <div class="{{ $.Scratch.Get "boxCopyClasses" }} pr3-ns tc">
-                  <h3 class="black">
-                    {{ .heading }}
-                  </h3>
-                  <p class="lh-copy">
-                    {{ .copy }}
-                  </p>
-                  <div class="f3 dark-gray lh-copy">
-                    {{ .price }}
-                  </div>
-                  <div class="gray f4">
-                    {{ .price_qualifier }}
-                  </div>
-                  {{ if .features }}
-                    <ul class="">
-                      {{ range .features }}
-                        <li class="list tl mb2 f6">
-                          {{ . | markdownify }}
-                        </li>
-                      {{ end }}
-                    </ul>
-                  {{ end }}
-                </div>
-
+            <div class="db dtc-ns v-mid w-100 pr3-ns tc">
+              <h3 class="blackf" style="color: #295584;">
+                {{ .heading }}
+              </h3>
+              <p class="lh-copy">
+                {{ .copy }}
+              </p>
+              <div class="f3 dark-gray lh-copy">
+                {{ .price }}
               </div>
-          {{ end }}
-        </div>
+              <div class="gray f4">
+                {{ .price_qualifier }}
+              </div>
+              {{ if .features }}
+                <ul class="">
+                  {{ range .features }}
+                    <li class="list tl mb2 f6">
+                      {{ . | markdownify }}
+                    </li>
+                  {{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
       </div>
     {{ end }}
     <div class="lh-copy pv2">

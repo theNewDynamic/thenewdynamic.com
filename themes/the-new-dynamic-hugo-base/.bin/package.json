@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "uglifyjs": "uglifyjs --compress --output ./../static/js/app.min.js 'src/js/side-nav.js'",
     "copy": "copyfiles -f node_modules/tachyons-print/css/tachyons-print.min.css ./../static/css",
     "build:css": "postcss -c 'src/css/postcss.config.js'",
     "hotbuild:css": "copyfiles -f src/assets/css/* public/assets/css",
