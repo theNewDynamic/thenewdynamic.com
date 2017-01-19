@@ -6,7 +6,6 @@ menu:
   main:
     weight: 1
 date: 2017-01-19T03:02:04.676Z
-Display Title: How we work now
 ---
 
 You learn a few things doing the same thing for 15 years. You learn what works and what doesn't; you learn your strengths and weaknesses, and you learn what really matters.
