@@ -1,13 +1,20 @@
 ---
 title: How We Work
-display_title: 'How We Work, A Manifesto'
-draft: true
+date: '2017-01-19T03:02:04+00:00'
+display_title: How We Work, A Manifesto
+Display Title: How we work now
 menu:
   main:
+<<<<<<< HEAD
     weight: 1
 date: 2017-01-19T03:02:04.676Z
 ---
+=======
+    weight: 0
+draft: true
+>>>>>>> origin/master
 
+---
 You learn a few things doing the same thing for 15 years. You learn what works and what doesn't; you learn your strengths and weaknesses, and you learn what really matters.
 
 We've built the New Dynamic around a few ideas and aspirations, some of them ours, some we've learned from methodologies like agile software development, and "Lean UX."

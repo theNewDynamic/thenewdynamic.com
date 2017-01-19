@@ -1,7 +1,9 @@
 ---
 title: Get Started
-draft: true
+type: page
 menu:
   main:
-    weight: 10
+    weight: 3
+draft: true
+
 ---
