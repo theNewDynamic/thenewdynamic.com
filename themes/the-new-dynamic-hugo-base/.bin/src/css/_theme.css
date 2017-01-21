@@ -21,7 +21,7 @@
 .secondary-text-color { color: var(--secondary-text-color)}
 .disabled-text-color { color: var(--disabled-text-color)}
 .divider-color { color: var(--divider-color)}
-
+.min-vh-75-l { min-height: 75vh; }
 /*
 .bg-light-blue {background-color:#0076B2;}
 .br-light-blue {border-color: #0076B2;}

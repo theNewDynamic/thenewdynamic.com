@@ -1,5 +1,6 @@
 ---
 title: Our Plans
+draft: true
 type: pricing
 pricing:
 - heading: Basic
@@ -34,7 +35,7 @@ afterForm: 'There are no upfront fees. Payments are made one month in advance, a
 menu:
   main:
     weight: 2
-draft: true
+
 
 ---
 Our fee structure suits our desire to work with you on an ongoing basis. Our goal is to be flexible and responsive to your needs and always be available to you, yet be mindful of your budget.

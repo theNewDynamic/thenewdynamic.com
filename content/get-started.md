@@ -1,6 +1,6 @@
 ---
 title: Get Started
-type: page
+draft: true
 menu:
   main:
     weight: 3

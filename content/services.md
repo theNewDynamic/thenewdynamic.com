@@ -1,5 +1,6 @@
 ---
 title: Our Services
+draft: true
 type: repeater
 repeater:
 - heading: Content Strategy
@@ -37,7 +38,7 @@ repeater_2:
 menu:
   main:
     weight: 1
-draft: true
+
 
 ---
 Our domain of expertise is web design and development. In and around that there are quite a few elements to create successful websites.
