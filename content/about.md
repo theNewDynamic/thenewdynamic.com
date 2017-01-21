@@ -2,7 +2,7 @@
 date = "2014-04-09T00:00:00+00:00"
 title = "About Hugo"
 type = "page"
-draft: true
+draft = true
 +++
 Hugo is a static site engine written in Go.
 
