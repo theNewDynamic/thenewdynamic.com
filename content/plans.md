@@ -1,6 +1,6 @@
 ---
 title: Our Plans
-draft: true
+draft: false
 type: pricing
 pricing:
 - heading: Basic

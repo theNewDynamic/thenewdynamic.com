@@ -9,7 +9,10 @@ theme = "the-new-dynamic-hugo-base"
 title = "the New Dynamic"
 weight = 1
 [params]
+
+
 black = "bg-near-black"
 hero_copy = "The dedicated web team for mission-driven organizations. "
+
 nav_side_button_close_color = "#FFF"
 nav_side_button_menu_color = "#FFF"

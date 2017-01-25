@@ -1,6 +1,6 @@
 ---
 title: How We Work
-draft: true
+draft: false
 date: '2017-01-19T03:02:04+00:00'
 display_title: How We Work, A Manifesto
 menu:

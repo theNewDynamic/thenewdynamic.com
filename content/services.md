@@ -1,6 +1,6 @@
 ---
 title: Our Services
-draft: true
+draft: false
 type: repeater
 repeater:
 - heading: Content Strategy
