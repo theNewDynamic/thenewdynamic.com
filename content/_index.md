@@ -22,14 +22,14 @@ boxes:
   image: "/uploads/screenshot-work-ndbooks.jpg"
   client: New Directions Publishing
   old_model: Drop a support ticket. Hope for the best.
-  new_model: Humans you can actually speak&nbsp;to.
+  new_model: Humans you can actually speak to.
 - heading: Purposeful design
   copy: Cookie-cutter sites don’t exist here. We design around your specific needs
     and content. If you lead with powerful content, the rest will follow.
   image: "/uploads/screenshot-work-iliadx-950x594.jpg"
   client: Royal Kingdom of the Netherlands
   old_model: Generic Photoshop templates.
-  new_model: Meaningful design with real content.
+  new_model: Meaningful design with real&nbsp;content.
 type: page
 
 ---
