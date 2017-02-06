@@ -17,12 +17,12 @@ boxes:
   old_model: Inaccurate, skyrocketing invoices.
   new_model: Simple, predictable pricing.
 - heading: Dedicated consultants
-  copy: It's not enough to just have a point of contact. Your dedicated consultant
-    is the person who insures you have a voice.
+  copy: Anyone can have a ‘point of contact’. With us, you get more. Your dedicated
+    consultant will make sure you have a voice at every stage of the relationship.
   image: "/uploads/screenshot-work-ndbooks.jpg"
   client: New Directions Publishing
   old_model: Drop a support ticket. Hope for the best.
-  new_model: Humans.
+  new_model: Humans you can actually speak to.
 - heading: Meaningful  design
   copy: There is no cookie-cutter approach. We design around your needs and your content.
     Lead with content and everything follows.
