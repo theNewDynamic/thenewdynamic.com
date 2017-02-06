@@ -1,8 +1,8 @@
 DefaultContentLanguage = "en"
+MetaDataFormat = "json"
 author = "Bud Parr"
 baseurl = "/"
 canonifyurls = true
-MetaDataFormat = "json"
 copyright = "Copyright (c) 2008 - 2014, Bud Parr; all rights reserved."
 languageCode = "en-us"
 paginate = 3
@@ -10,10 +10,7 @@ theme = "the-new-dynamic-hugo-base"
 title = "the New Dynamic"
 weight = 1
 [params]
-
-
 black = "bg-near-black"
-hero_copy = "The dedicated web team for mission-driven organizations. "
-
+hero_copy = "A mission-driven web team for your mission-driven organization"
 nav_side_button_close_color = "#FFF"
 nav_side_button_menu_color = "#FFF"
