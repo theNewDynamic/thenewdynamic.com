@@ -1,7 +1,20 @@
 {{ define "main" }}
+<main class="cf ph3 ph-ns pv3 pv4-m pv5-l mw9 measure-wide f4 dark-gray center lh-copy">
+    <!-- TODO: This 'mt5' on the title should be at a higher level, but using flex in the nav prevents it -->
+    {{ if .Params.display_title }}
+      <h1 class="primary-color mt5">
+        {{ .Params.display_title }}
+      </h1>
+    {{ else }}
+      <h1 class="primary-color mt5">
+        {{ .Title }}
+      </h1>
+    {{ end }}
 
-some List content here
-{{ .Title }}
-{{ .Content }}
 
+  <div class="nested-copy-line-height mid-gray">
+    {{ .Content }}
+
+  </div>
+</main>
 {{ end }}

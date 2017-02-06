@@ -41,7 +41,7 @@ afterForm: 'There are no upfront fees. Payments are made one month in advance, a
 menu:
   main:
     weight: 2
-draft: false
+draft: true
 
 ---
 ## Choose your preferred plan – We’ll take care of the rest
