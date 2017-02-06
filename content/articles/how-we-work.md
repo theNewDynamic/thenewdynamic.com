@@ -1,36 +1,26 @@
 ---
 title: How We Work
-draft: true
 date: '2017-01-19T03:02:04+00:00'
 display_title: How We Work, A Manifesto
 menu:
   main:
     weight: 1
-date: 2017-01-19T03:02:04.676Z
+
 ---
+**Simple approach**
 
-You learn a few things doing the same thing for 15 years. You learn what works and what doesn't; you learn your strengths and weaknesses, and you learn what really matters.
+Our approach is simple – we believe that an organization’s web presence is best served with a dedicated design and development team, rather than starting from scratch every few years. Ongoing observation, collaboration and continuous improvement of your site over time is the key to keeping your site engaging for your audience.
 
-We've built the New Dynamic around a few ideas and aspirations, some of them ours, some we've learned from methodologies like agile software development, and "Lean UX."
+We focus on people over process. Clarity over confusion. Outcomes over paperwork.
 
-- Great design is iterative. It doesn't magically happen on a whiteboard. It's a process that takes humility and acceptance that insight comes from observation, collaboration, and continuous improvement over time.
+**Efficient technologies**
 
-- Pricing in our industry is wildly variant, confusing and inequitable for mission-driven organizations.
+We use methodologies and modern tools of application development to create static-HTML sites. They’re incredibly fast, simple and flexible and they deliver a level of performance that traditional CMS sites cannot. What are the benefits? More efficient workflow, minimal software and server upkeep and more dollars for design and ongoing site improvement.
 
-- Communication is the #1 barrier to making every project as good as it can be.
+Static-HTML sites. Designed and developed to better adapt to changing technology and business landscapes.
 
-- Accountability is earned with every touch-point, not with a mountain of paperwork.
+**Affordable plans**
 
+Because of efficiencies gained in building static-HTML sites, we’re able to offer fixed-rate services through three unique monthly plans. This type of fee structure suits our desire to work with you on an ongoing basis. We firmly believe that’s the key to building and maintaining a site that serves your needs and the needs of your audience.
 
-We've addressed these issues by developing a way of working that's designed to be like we were your in-house web design and development team, but without the overhead.
-
-1. Every account gets a dedicated consultant.   
-
-2. We charge one-month at a time at, a rate that makes sense for you and the work you need done.  
-
-3. We use tools and methodologies to be as efficient as possible, passing the savings on to you.  
-
-4. We work on an ongoing basis as your team to constantly improve your website based on your needs and the needs of your audience.  
-
-
-We're purists, we're passionate about our work and we love working with organizations whose work we value.
+A pricing model that is simple, effective and scalable to your level of need.
