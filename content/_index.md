@@ -37,4 +37,4 @@ type: page
 ---
 We’ve learned a lot about creating websites over the past 15 years. <span style="letter-spacing: 0.01em;">We know what works and doesn’t work for mission-focused organizations. </span><span style="letter-spacing: 0.01em;">Now, we’ve taken our learning and applied it to every piece of our new company.</span>
 
-From the way we work to the way we price our services, <span style="letter-spacing: 0.01em;">the New Dynamic is a new kind of web development firm. [Get to know us.](https://thenewdynamic.typeform.com/to/EdbdYw)</span>
+From the way we work to the way we price our services, <span style="letter-spacing: 0.01em;">the New Dynamic is a new kind of web development firm. [Get to know us](mailto:welcome@thenewdynamic.com).</span>
