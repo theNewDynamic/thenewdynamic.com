@@ -27,10 +27,11 @@
 <!-- style="background-color:#ca9d49;" -->
 {{ $.Scratch.Add "linkclasses" "db di-m pa3 f3 w-50 db-l link f3 f6-n2 f3-l mb3 mr4-m text-on-primary-color dim ttl" }}
   <div class="flex-m pl4 pl5-m pl4-l pt4 pt6-l pb3 pb6-l min-vh-75-l w-100 w-third-l bg-primary-color bg- o-90">
-    <a href="#how-we-work" class="{{ $.Scratch.Get "linkclasses" }}"> How We Work</a>
-    <!-- <a href="/services/"            class="{{ $.Scratch.Get "linkclasses" }}"> Services</a>
-    <a href="/plans/"              class="{{ $.Scratch.Get "linkclasses" }}"> Plans</a> -->
-    <a href="#find-out-more" class="{{ $.Scratch.Get "linkclasses" }}"> &#10003; Find out More</a>
+    {{ range .Site.Menus.main }}
+      <a href="{{.URL}}" class="{{ $.Scratch.Get "linkclasses" }}">
+        {{ .Name }}
+      </a>
+    {{end}}
   </div>
 
 </header>
