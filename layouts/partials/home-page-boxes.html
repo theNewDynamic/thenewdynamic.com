@@ -11,11 +11,11 @@
   <div class="level-3 flex-ns flex-wrap">
     <div class="level-3a w-100 w-50-ns pv4 ph5 lh-copy bg-gold">
       <h3 class="mb1">The old model</h3>
-      {{ .old_model }}
+      {{ .old_model | markdownify }}
     </div>
     <div class="level-3b w-100 w-50-ns pv4 ph5 lg-copy bg-primary-color text-on-primary-color">
       <h3 class="mb1">the New Dynamic</h3>
-      {{ .new_model }}
+      {{ .new_model | markdonwnify }}
     </div>
   </div>
 
