@@ -1,7 +1,7 @@
 ---
 title: How We Work
 date: '2017-01-19T03:02:04+00:00'
-display_title: How We Work, A Manifesto
+display_title: How We Work
 menu:
   main:
     weight: 1
