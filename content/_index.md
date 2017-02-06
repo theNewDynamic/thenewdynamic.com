@@ -22,7 +22,7 @@ boxes:
   image: "/uploads/screenshot-work-ndbooks.jpg"
   client: New Directions Publishing
   old_model: Drop a support ticket. Hope for the best.
-  new_model: Humans you can actually speak to.
+  new_model: Humans you can actually speak&nbsp;to.
 - heading: Purposeful design
   copy: Cookie-cutter sites don’t exist here. We design around your specific needs
     and content. If you lead with powerful content, the rest will follow.
