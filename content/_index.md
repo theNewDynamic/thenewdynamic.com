@@ -3,13 +3,12 @@ title: home
 date: '2017-01-19T03:02:04+00:00'
 boxes:
 - heading: Ongoing design and development
-  copy: 'One word: Observe. <br> We build and then observe how you and your audience
-    use your site, iterating on our original design, seeking continuous improvement
-    with real-world use.'
+  copy: We don’t create your site, then bid adieu. We observe how your audience uses
+    your site and seek continuous improvement with real-world use.
   image: "/uploads/screenshot-work-aba_icc.jpg"
   client: American Bar Association Center for Human Rights
   old_model: Build a site and disappear.
-  new_model: Always on, always accountable.
+  new_model: Observe and improve. Repeat.
 - heading: Predictable, transparent pricing
   copy: 'The single point of discomfort: Talking about budget. We decided to do away
     with it altogether. We post our prices and you can hire us for as long as you
