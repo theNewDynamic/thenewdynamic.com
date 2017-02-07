@@ -21,7 +21,7 @@ Our approach is simple – we believe that an organization’s web presence is b
 
 ## Efficient technologies
 
-We use methodologies and modern tools of application development to create static-HTML sites. They’re incredibly fast, simple and flexible and they deliver a level of performance that traditional CMS sites cannot. What are the benefits? More efficient workflow, minimal software and server upkeep and more dollars for design and ongoing site improvement.
+We use methodologies and modern tools of application development to create static-HTML sites and apps. They’re incredibly fast, simple and flexible and they deliver a level of performance that traditional CMS sites cannot. What are the benefits? More efficient workflow, minimal software and server upkeep and more dollars for design and ongoing site improvement.
 
 **Static-HTML sites. Designed and developed to better adapt to changing technology and business landscapes.**
 
