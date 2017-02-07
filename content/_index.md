@@ -28,7 +28,7 @@ boxes:
     and content. If you lead with powerful content, the rest will follow.
   image: "/uploads/screenshot-work-iliadx-950x594.jpg"
   client: Royal Kingdom of the Netherlands
-  old_model: Generic Photoshop templates.
+  old_model: Endless expensive Photoshop mockups.
   new_model: Meaningful design with real&nbsp;content.
 type: page
 
