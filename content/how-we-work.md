@@ -29,6 +29,6 @@ We use methodologies and modern tools of application development to create stati
 
 ## Affordable plans
 
-Because of efficiencies gained in building static-HTML sites, we’re able to offer fixed-rate services through three unique monthly plans. This type of fee structure suits our desire to work with you on an ongoing basis. We firmly believe that’s the key to building and maintaining a site that serves your needs and the needs of your audience.
+Because of efficiencies gained in our process, we’re able to offer fixed-rate services through three unique monthly plans. This type of fee structure suits our desire to work with you on an ongoing basis. We firmly believe that’s the key to building and maintaining a site that serves your needs and the needs of your audience.
 
 **A pricing model that is simple, effective and scalable to your level of need.**
