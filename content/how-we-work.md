@@ -1,7 +1,8 @@
 ---
 title: How We Work
 date: '2017-01-19T03:02:04+00:00'
-display_title: "How we work: Simply. Efficiently. Affordably."
+display_title: 'How we work: Simply. Efficiently. Affordably.'
+type: page
 menu:
   main:
     weight: 1
