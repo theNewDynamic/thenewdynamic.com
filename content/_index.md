@@ -3,7 +3,7 @@ title: home
 date: '2017-01-19T03:02:04+00:00'
 boxes:
 - heading: Ongoing development
-  copy: We don’t create your site, then bid adieu. We observe how your audience uses
+  copy: We don’t create your site, then bid *adieu*. We observe how your audience uses
     your site and seek continuous improvement with real-world use.
   image: "/uploads/screenshot-work-aba_icc.jpg"
   client: American Bar Association Center for Human Rights
