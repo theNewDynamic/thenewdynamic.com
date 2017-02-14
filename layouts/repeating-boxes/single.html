@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{ $.Scratch.Add "classBox" "mv5 dt flexTK center pt0 pb3 pv3-m pv3-ns bg-grayTK" }}
+{{ $.Scratch.Add "classBoxInner" "db dtc-ns v-mid w-100 w-30-ns" }}
+{{ $.Scratch.Add "classHeading" "black f2 nb3" }}
+{{ $.Scratch.Add "classCopy" "db dtc-ns v-mid w-100 w-50-ns bg-white shadow-5 pa4" }}
+{{ $.Scratch.Add "classTagline" "db dtc-ns v-mid-ns b black w-25 v-mid ph4 primary-color" }}
+
+
+<main class="cf ph3 ph-ns pv3 pv4-m pv5-l mw9 {{ .Site.Params.classSiteWidth }} f4 dark-gray center lh-copy">
+  <h1 class="primary-color tc mt5">
+    {{ .Title }}
+  </h1>
+  <div class="nested-copy-line-height mid-gray measure-wide tc center">
+    {{ .Content }}
+  </div>
+
+
+  {{ if .Params.repeater }}
+
+
+      {{ range .Params.repeater }}
+        {{ $.Scratch.Add "i" 1 }}
+        {{ $i := $.Scratch.Get "i" }}
+        {{ if modBool $i 2 }}
+
+          <div class="{{ $.Scratch.Get "classBox" }}">
+
+            <div class="{{ $.Scratch.Get "classTagline" }}">
+              {{.tagline}}
+            </div>
+
+            <div class="{{ $.Scratch.Get "classBoxInner" }} pl3-ns">
+              <h3 class="{{ $.Scratch.Get "classHeading" }}">
+                {{ .heading }}
+              </h3>
+              <p class="{{ $.Scratch.Get "classCopy" }}">
+                {{ .copy }}
+              </p>
+            </div>
+
+          </div>
+
+        {{ else }}
+
+          <div class="{{ $.Scratch.Get "classBox" }}">
+
+            <div class="{{ $.Scratch.Get "classBoxInner" }} pr3-ns">
+              <h3 class="{{ $.Scratch.Get "classHeading" }}">
+                {{ .heading }}
+              </h3>
+              <p class="{{ $.Scratch.Get "classCopy" }}">
+                {{ .copy }}
+              </p>
+            </div>
+
+            <div class="{{ $.Scratch.Get "classTagline" }}">
+              {{.tagline}}
+            </div>
+
+          </div>
+
+        {{ end }}
+      {{ end }}
+
+
+  {{ end }}
+
+
+
+
+</main>
+{{ end }}
