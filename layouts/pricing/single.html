@@ -1,50 +1,32 @@
 {{ define "main" }}
 
-  <main class="cf pa3 pa4-m pa5-l mw9 w-70-l center">
     {{ partial "page-top.html" .}}
 
     {{ if .Params.pricing }}
-      <div class="db w-100 dt-ns v-top br b--primary-color ">
-        {{ range .Params.pricing }}
-          <div class="dtc-ns w-100 v-top pa4 bt bb bl b--primary-color w-33-ns">
-                <!-- <div class="db v-mid-ns center tc">
-                  <img src="{{ .icon }}" alt="icon for {{ .Heading }}" class="w-50" />
-                </div> -->
-            <div class="db dtc-ns v-mid w-100 pr3-ns tc">
-              <h3 class="blackf" style="color: #295584;">
-                {{ .heading }}
-              </h3>
-              <p class="lh-copy">
-                {{ .copy }}
-              </p>
-              <div class="f3 dark-gray lh-copy">
-                {{ .price }}
-              </div>
-              <div class="gray f4">
-                {{ .price_qualifier }}
-              </div>
-              {{ if .features }}
-                <ul class="">
-                  {{ range .features }}
-                    <li class="list tl mb2 f6">
-                      {{ . | markdownify }}
-                    </li>
-                  {{ end }}
-                </ul>
-              {{ end }}
-            </div>
-          </div>
-        {{ end }}
+      <div class="db w-100 dt-nsTK flex-ns mt5 v-top b--primary-color">
+
+          {{ partial "pricing" .}}
+
       </div>
     {{ end }}
-    <div class="lh-copy pv2">
-      {{ .Params.afterForm }}
+
+    <div class="lh-copy tc pv2">
+      {{ .Params.afterForm | markdownify }}
+    </div>
+
+
+    <div class="pv4">
+      <h2 class="f2 primary-color">
+        Frequently Asked Questions
+      </h2>
+      {{ partial "faqs" .}}
     </div>
 
     <div id="find-out-more" class="mw-100 tc center">
-      <a class="typeform-share link dib mv4 bg-primary-color pv2 ph3 link hover-bg-black white br2" href="https://thenewdynamic.typeform.com/to/EdbdYw" data-mode="2" target="_blank">Thanks for listening. Click here to Get in touch.</a>
-        {{ partial "form-typeform-drawer.html" . }}
+      <a class=" link dib mv4 bg-primary-color pv2 ph3 link hover-bg-black white br2" href="/contact/">Thanks for reading. Click here to Get in touch.</a>
+
     </div>
 
-  </main>
+  </main> <!-- closed from partial page-top -->
+
 {{ end }}

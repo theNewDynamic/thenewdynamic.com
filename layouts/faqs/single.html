@@ -1,21 +1,26 @@
 {{ define "main" }}
-{{ $.Scratch.Add "classBox" "mv5 dt flexTK center" }}
+{{ $.Scratch.Add "classBox" "mv6 center w-100" }}
 
-  {{ $.Scratch.Add "classBoxInner" "db dtc-ns w-100 w-30-ns" }}
-    {{ $.Scratch.Add "classHeading" "lh-title black f2 nb3" }}
-    {{ $.Scratch.Add "classCopy" "db dtc-ns v-mid w-100 bg-white shadow-5 pa4" }}
+  {{ $.Scratch.Add "classBoxInner" "w-100" }}
+    {{ $.Scratch.Add "classHeading" "lh-title black f3 mb2 v-base" }}
+    {{ $.Scratch.Add "classCopy" "bg-white f4 shadow-5 pa4 relative" }}
+    {{ $.Scratch.Add "classBoxGraphic" "absolute top-0 left-0 h2 nl2 nt2" }}
 
-  {{ $.Scratch.Add "classTagline" "dtc-ns b black w-25-ns v-mid pl4 pr5 primary-color" }}
+  {{ $.Scratch.Add "classTagline" "b black w-25-ns v-mid pl4 pr5 primary-color" }}
   {{ $.Scratch.Add "classTaglineMobile" "dn-ns b black w-100 mt4 primary-color" }}
 
 {{ partial "page-top" .}}
 
   {{ if .Params.repeater }}
 
+
+
+
+
       {{ range .Params.repeater }}
         {{ $.Scratch.Add "i" 1 }}
         {{ $i := $.Scratch.Get "i" }}
-        {{ if modBool $i 2 }}
+        {{ if modBool $i 20 }}
 
           <div class="{{ $.Scratch.Get "classBox" }}">
 
@@ -30,8 +35,8 @@
               <div class="dn-ns {{ $.Scratch.Get "classTaglineMobile" }}">
                 {{.tagline}}
               </div>
-              <p class="{{ $.Scratch.Get "classCopy" }}">
-                {{ .copy }}
+              <p class="{{ $.Scratch.Get "classCopy" }} relative">
+                <img src="/images/check-blue.svg" alt="" class="{{ $.Scratch.Get "classBoxGraphic" }}">  {{ .copy }}
               </p>
             </div>
 
@@ -51,8 +56,8 @@
               <div class="dn-ns {{ $.Scratch.Get "classTaglineMobile" }}">
                 {{.tagline}}
               </div>
-              <p class="{{ $.Scratch.Get "classCopy" }}">
-                {{ .copy }}
+              <p class="{{ $.Scratch.Get "classCopy" }} relative">
+                  <img src="/images/check-blue.svg" alt="" class="{{ $.Scratch.Get "classBoxGraphic" }}"> {{ .copy }}
               </p>
             </div>
 
@@ -72,4 +77,9 @@
 
 
 </main>
+<style media="screen">
+  .w-48-ns {
+    width: 48%;
+  }
+</style>
 {{ end }}
