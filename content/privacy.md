@@ -1,6 +1,7 @@
 ---
 title: We Respect your Privacy
 type: page
+foo: bar
 ---
 
 We will never sell, rent or share your personal information with a 3rd party, especially your email addresses and phone numbers, without your express permission, unless required by law.
