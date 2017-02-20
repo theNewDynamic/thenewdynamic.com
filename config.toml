@@ -9,6 +9,13 @@ paginate = 3
 theme = "the-new-dynamic-hugo-base"
 title = "the New Dynamic"
 weight = 1
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+
 [params]
 classSiteWidth = "w-90 w-70-l center"
 black = "bg-near-black"

@@ -17,4 +17,19 @@
 
   </div>
 </main>
+
+
+<section id="menu">
+    <ul>
+        {{ range $key, $taxonomy := .Site.Taxonomies.series }}
+        <li> {{ $key }} </li>
+        <ul>
+            {{ range $taxonomy.Pages }}
+            <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </ul>
+</section>
+
 {{ end }}
