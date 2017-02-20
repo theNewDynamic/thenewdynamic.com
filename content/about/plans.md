@@ -1,5 +1,4 @@
 ---
-series: mickey
 afterForm: "### The Basics\nNo upfront fees\n&bull; Pay on monthly basis\n\nScale
   up/down for your needed support level &bull; Never an obligation to continue "
 draft: true
