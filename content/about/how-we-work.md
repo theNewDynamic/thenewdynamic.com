@@ -33,6 +33,7 @@ repeater:
   tagline: A pricing model that is simple, effective and scalable to your level of
     need.
 title: 'How we work: Simply. Efficiently. Affordably.'
+draft: false
 type: repeating-boxes
 ---
 
