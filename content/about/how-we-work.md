@@ -1,5 +1,4 @@
 ---
-series: knockout
 date: 2017-01-19T03:02:04+00:00
 menu:
   main:
