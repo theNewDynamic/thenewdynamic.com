@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>{{ .Site.Title }} | {{block "titleHead" .}}{{ .Title }}{{end}}</title>
      {{- partial "head.html" . -}}
-      <title>
-          {{block "titleHead" .}}
-          {{ .Title }}
-          {{end}}
-   </title>
+
   </head>
   <body class="w-100 vh-100 sans-serif bg-near-white {{ .Type }}">
     {{ block "nav" . }}{{- partial "nav" . -}}{{ end }}
