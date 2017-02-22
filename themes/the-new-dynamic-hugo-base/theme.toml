@@ -11,7 +11,7 @@ features = ["", ""]
 min_version = 0.18
 
 [author]
-  name = "Bud Parr"
+  name = "Bud Parffr"
   homepage = "https://github.com/budparr"
 
 # If porting an existing theme
@@ -19,7 +19,3 @@ min_version = 0.18
   name = ""
   homepage = ""
   repo = ""
-
-  [params]
-
-    hero_copy = "yo We are your 'always on' web team; your dedicated, personal, down-to-earth, say-what-we-mean, show-our-work, out-in-the-open team that you never have to worry about; producing great work, being accountable, focused, easy and adaptable. &#8251;"
