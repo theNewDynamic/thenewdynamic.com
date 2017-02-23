@@ -1,5 +1,5 @@
 DefaultContentLanguage = "en"
-MetaDataFormat = "json"
+MetaDataFormat = "yaml"
 author = "Bud Parr"
 baseurl = "/"
 canonifyurls = true
