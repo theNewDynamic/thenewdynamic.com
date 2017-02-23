@@ -4,16 +4,12 @@
   "title": "articles yo",
   "tags": "",
   "amp": {
-    "elements": [
-
-    ]
+    "elements": ""
   },
   "article": {
     "lead": "",
     "category": "",
-    "related": [
-
-    ]
+    "related": ""
   },
   "author": {
     "name": "",
