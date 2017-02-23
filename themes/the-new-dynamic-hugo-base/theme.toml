@@ -11,7 +11,7 @@ features = ["", ""]
 min_version = 0.18
 
 [author]
-  name = "Bud Parffr"
+  name = "Bud Parr"
   homepage = "https://github.com/budparr"
 
 # If porting an existing theme
