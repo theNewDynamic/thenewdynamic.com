@@ -16,7 +16,7 @@ repeater:
     continuous site improvement.
   heading: Efficient technologies
   icon: "/uploads/noun_654674.svg"
-  tagline: Your website – designed and developed to better adapt to changing technology
+  tagline: Your website—designed and developed to better adapt to changing technology
     and business landscapes.
 - copy: Because of process efficiencies, we’re able to offer affordable, fixed-rate
     services through three unique monthly plans. This type of fee structure empowers
@@ -35,4 +35,4 @@ menu:
     weight: 1
 
 ---
-At the New Dynamic, you’ll find a team of passionate individuals who truly enjoy working with mission-driven organizations. Compared to other web development firms, we do things differently. And we think that’s good for us—and more importantly for our clients.
+The New Dynamic is a team of passionate individuals who truly enjoy working with mission-driven organizations. Compared to other web development firms, we do things differently.
