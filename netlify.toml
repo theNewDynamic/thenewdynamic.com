@@ -1,5 +1,5 @@
 [build]
-  command = "hugo_0.18"
+  command = "hugo_0.20.1"
   publish = "public"
 
 HUGO_ENV = "development"
