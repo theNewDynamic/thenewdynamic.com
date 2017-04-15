@@ -1,5 +1,5 @@
 [build]
-  command = "HUGO_ENV=developmenty hugo"
+  command = "hugo"
   publish = "public"
 
 
