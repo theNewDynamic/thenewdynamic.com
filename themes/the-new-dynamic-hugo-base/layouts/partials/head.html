@@ -7,6 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
  {{ .Hugo.Generator }}
+    {{ if eq (getenv "HUGO_ENV") "production" }}
+        <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+      {{ else }}
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      {{ end }}
+ 
 {{- partial "icons" . -}}
  {{- partial "seo/main" . -}}
  <link href='/css/main.min.css?20170223v1' rel='stylesheet' type="text/css" />
