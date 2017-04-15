@@ -1,5 +1,7 @@
 [build]
-  command = "HUGO_ENV=development hugo_0.19"
+  command = "hugo_0.19"
   publish = "public"
 
 
+[template.environment]
+  HUGO_ENV = "developmyo"
