@@ -1,7 +1,7 @@
 [build]
-  command = "hugo_0.19"
+  command = "HUGO_ENV=developmenty hugo"
   publish = "public"
 
 
-[template.environment]
-  HUGO_ENV = "developmyo"
+[context.production.environment]
+  HUGO_VERSION = "0.20"
