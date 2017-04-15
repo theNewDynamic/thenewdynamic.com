@@ -2,4 +2,4 @@
   command = "hugo_0.19"
   publish = "public"
 
-HUGO_ENV = "development"
+[HUGO_ENV.development]
