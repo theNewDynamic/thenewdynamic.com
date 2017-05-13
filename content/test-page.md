@@ -9,6 +9,13 @@ image_gallery:
 isbn:
 - '9889888'
 - '9870908898'
+gallery_with_captions:
+- caption: test 3
+  image: "/uploads/2017/02/01/Screen Shot 2017-01-31 at 9.24.22 PM.png"
+- caption: test 2
+  image: "/uploads/screenshot-work-ndbooks-950x594.jpg"
+- caption: ouoiu
+  image: "/uploads/screenshot-work-retroreport-900x563.jpg"
 draft: true
 
 ---
