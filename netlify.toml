@@ -7,4 +7,4 @@
   HUGO_ENV = "production"
 
 # https://www.netlify.com/blog/2017/04/11/netlify-plus-hugo-0.20-and-beyond/
-# https://www.netlify.com/docs/continuous-deployment/#deploy-contexts  
+# https://www.netlify.com/docs/continuous-deployment/#deploy-contexts
