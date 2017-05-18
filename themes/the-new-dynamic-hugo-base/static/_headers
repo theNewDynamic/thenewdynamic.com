@@ -4,4 +4,3 @@
   Content-Security-Policy: script-src www.thenewdynamic.com www.google-analytics.com
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Transfer-Encoding: chunked
