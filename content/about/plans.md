@@ -1,7 +1,7 @@
 ---
 afterForm: "### The Basics\nNo upfront fees\n&bull; Pay on monthly basis\n\nScale
   up/down for your needed support level &bull; Never an obligation to continue "
-draft: true
+draft: false
 faqs:
 - copy: We consider our pricing structure to be very different from other firms –
     in a good way, of course. As a client of the New Dynamic, you choose a plan that
