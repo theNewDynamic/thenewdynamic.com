@@ -6,9 +6,12 @@
 {{ end }}
 
 {{ define "main" }}
+
+{{ with .Content }}
   <main class="cf pa5 pa4-l f4 tc center measure-wide nested-links lh-copy gray link" >
-    {{ .Content }}
+    {{ . }}
   </main>
+{{ end }}
   <!--
     TODO: Make these flow evenly on mobile (copy/image copy/image)
   -->

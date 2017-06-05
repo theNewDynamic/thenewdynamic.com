@@ -33,6 +33,3 @@ boxes:
 type: page
 
 ---
-Creating websites for over 15 years has taught us many things.  We’ve applied that learning to a new kind of web development firm for mission-driven organizations.  Introducing the New Dynamic.
-
-We help you achieve a website that informs and engages  your audience – without all the complexity and frustration  that often comes with creating a new site.  [Get to know us](/contact/).
