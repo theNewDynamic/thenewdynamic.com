@@ -14,9 +14,9 @@ repeater:
   copy: Our clients tend to be organizations whose web presence is critical to their
     success and whose needs evolve over time. If you desire to have a dedicated web
     team but you don't want the expense/hassle of having one in-house, then you are
-    a likely candidate for our services. If, on the other hand, you need a simple
+    a likely candidate for our services. <!-- If, on the other hand, you need a simple
     website (one that, for instance, doesn't require content modeling or information
-    architecture), then you are likely better off with a lower-cost service provider.
+    architecture), then you are likely better off with a lower-cost service provider. -->
   icon: "/uploads/noun_654674.svg"
 - heading: What plans do you offer?
   copy: We offer three primary price plans. Payments are made one month in advance

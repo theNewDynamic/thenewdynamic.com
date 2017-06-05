@@ -17,7 +17,7 @@
   -->
   {{ if .Params.boxes }}
 
-    <div id="how-we-work" class="flex-ns flex-wrap center tc mb6">
+    <div id="how-we-work" class="flex-ns flex-wrap center tc">
       {{ range .Params.boxes }}
         {{ $.Scratch.Add "i" 1 }}
         {{ $i := $.Scratch.Get "i" }}
@@ -34,9 +34,9 @@
     </div>
   {{ end }} <!-- END if params.boxes -->
 
-  <div id="find-out-more" class="mw-100 tc center">
-    <a class="typeform-share link dib mv4 bg-primary-color pv2 ph3 link hover-bg-black white br2" href="/contact/" data-mode="2" target="_blank">Thanks for listening. Click here to Get in touch.</a>
 
-  </div>
+    <a class="bg-primary-color center db f1 hover-bg-blue link typeform-share link mt4 ph3 pv6 tc w-100 white" href="/contact/" data-mode="2" target="_blank">Click here to Get in touch.</a>
+
+
 
 {{ end }}

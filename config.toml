@@ -19,6 +19,6 @@ weight = 1
 [params]
 classSiteWidth = "w-90 w-70-l center"
 black = "bg-near-black"
-hero_copy = "A mission-driven web team for your mission-driven organization"
+hero_copy = "A driven web team for your growing organization"
 nav_side_button_close_color = "#FFF"
 nav_side_button_menu_color = "#FFF"
