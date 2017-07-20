@@ -14,7 +14,7 @@ faqs:
 - copy: Our clients tend to be organizations whose web presence is critical to their
     success and whose needs evolve over time. If you desire to have a dedicated web
     team but you don't want the expense/hassle of having one in-house, then you are
-    a likely candidate for our services. 
+    a likely candidate for our services.
   heading: How do I know this is right for me?
   icon: /uploads/noun_654674.svg
 - copy: We offer three primary price plans. Payments are made one month in advance
@@ -99,7 +99,7 @@ subtitle: Choose your preferred plan – We’ll take care of the rest
 title: Our Plans
 type: pricing
 ---
-## Core Advisory Services
+## Core Managed Sites
 
 
 <!-- Pricing within the website industry can be wildly variant, confusing and inequitable for organizations. That’s why we’ve taken a new approach to pricing. We offer three unique monthly plans that allow us to be responsive to your needs, yet mindful of your budget. -->
