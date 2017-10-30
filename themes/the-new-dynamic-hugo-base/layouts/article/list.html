@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main class="cf ph3 ph-ns pv3 pv4-m pv5-l mw9 measure-wide f4 dark-gray center lh-copy min-vh-100">
+
+    {{ if .Params.display_title }}
+      <h1 class="primary-colorTK black mt5 brandd-font">
+        {{ .Params.display_title }}
+      </h1>
+    {{ else }}
+      <h1 class="primary-color mt5">
+        {{ .Title }}
+      </h1>
+    {{ end }}
+  <div class="lh-copy mid-gray serif">
+    {{ .Content }}
+  </div>
+
+
+{{range .Data.Pages}}
+  <div class=" mid-gray serif">
+    <h2>{{ .Title }}</h2>
+    <div class="lh-copy"> 
+    {{.Summary}}
+    </div>
+    <a href="{{.URL}}" class="br2 dib mt3 link white ph3 pv2 bg-primary-color hover-blue hover-bg-white">read more</a>
+
+  </div>
+  {{end}}
+</main>
+{{ end }}
