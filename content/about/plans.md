@@ -99,7 +99,7 @@ subtitle: Choose your preferred plan – We’ll take care of the rest
 title: Our Plans
 type: pricing
 ---
-## Core Managed Sites
+For organizations who choose our Agile Pricing Model, these are prices for our ongoing managed sites. 
 
 
 <!-- Pricing within the website industry can be wildly variant, confusing and inequitable for organizations. That’s why we’ve taken a new approach to pricing. We offer three unique monthly plans that allow us to be responsive to your needs, yet mindful of your budget. -->

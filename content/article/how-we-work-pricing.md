@@ -1,7 +1,7 @@
 ---
 Title: Why Choose our Pricing Model
 date: '2017-10-23T22:45:15+00:00'
-draft: false
+draft: true
 ---
 After estimating hundreds of projects over the years I've found pricing one of the most difficult subjects and the one thing that pits clients against firms rather than have them truly be partners. Here are four observations I've made:
 
