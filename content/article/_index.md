@@ -1,6 +1,6 @@
 ---
 title: Articles
-draft: true
+draft: false
 menu:
   main:
     name: Articles
