@@ -32,9 +32,9 @@ Here’s what we’ve done to address these issues:
 
 **We pass that savings on to you.**
 
-We’ve analyzed years of data on the time it takes to do a wide variety of tasks to understand what they cost and have developed a general model of pricing.  That model also takes into account the efficiencies we’ve gained from our workflow mentioned above.
+We’ve analyzed years of data on the time it takes to do a wide variety of tasks to understand what they cost and have developed a general model of pricing. That model also takes into account the efficiencies we’ve gained from our workflow mentioned above.
 
-You’ll find on our pricing page a base rate of $2,600 per month. Even though we quote prices in months, we think of our price as a unit, so you could conceivably have two or more units in a month, or a half-unit in a month, depending on the amount or complexity of work you need done. Everything flows from there.
+You’ll find on our pricing page a base rate of $2,600 per month and everything is a multiple of that amount. Even though we quote prices in months, we think of our price as a unit, so you could conceivably have two or more units in a month, or a half-unit in a month, depending on the amount or complexity of work you need done, or increase your plan to increase velocity. Everything flows from there.
 
 In fact, even if you have a set budget, you can easily see if we fit for you, because you can assume that your project is:
 
