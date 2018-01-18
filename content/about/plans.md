@@ -86,14 +86,14 @@ pricing:
   - Ecommerce Development
   heading: Pro
   icon: /uploads/noun_684458.svg
-  price: 3,700
+  price: 3,900
   price_qualifier: per month per concurrent site.
 - copy: ""
   features:
   - '### Everything in the Basic and Pro Plans, but customized for larger projects or web apps.'
-  heading: Enterprise
+  heading: Apps & Enterprise
   icon: /uploads/noun_684458.svg
-  price: 5,600+
+  price: 6,500+
   price_qualifier: per month per concurrent site.
 subtitle: Choose your preferred plan – We’ll take care of the rest
 title: Our Plans
