@@ -4,7 +4,7 @@
 border: 0;
 padding: 20px 20px 20px 50px;
 background: #eee; -->
-<form name="contact" action="thank-you" data-netlify="true" netlify>
+<form name="contact" action="/contact/thank-you/" method="POST" data-netlify="true" netlify>
 
   <div class="relative bg-white bb b--white">
     <input type="text" id="first_name" name="first_name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" " />
@@ -66,10 +66,6 @@ form > div > input[type="email"]:valid{
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 20px 20px;
-}
-form > div > input[type="text"]:valid + label,
-form > div > input[type="email"]:valid + label{
-opacity: 0;
 }
 
 form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
