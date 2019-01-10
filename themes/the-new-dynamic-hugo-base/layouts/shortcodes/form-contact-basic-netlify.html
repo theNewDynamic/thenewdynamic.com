@@ -4,7 +4,7 @@
 border: 0;
 padding: 20px 20px 20px 50px;
 background: #eee; -->
-<form name="contact" action="thank-you" netlify>
+<form name="contact" action="thank-you" data-netlify="true" netlify>
 
   <div class="relative bg-white bb b--white">
     <input type="text" id="first_name" name="first_name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" " />
@@ -39,6 +39,8 @@ background: #eee; -->
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">Message</label>
 
   </div>
+
+  <div class="mv2" data-netlify-recaptcha="true"></div>
 
   <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-blck bg-animate bg-gold" type="submit" value="Send" />
 
