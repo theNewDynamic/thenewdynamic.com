@@ -36,7 +36,7 @@ background: #eee; -->
   <div class="relative bg-whit">
     <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-describedby="comment-desc"></textarea>
 
-    <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">Message</label>
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">Your Message</label>
 
   </div>
 
@@ -71,10 +71,7 @@ form > div > input[type="text"]:valid + label,
 form > div > input[type="email"]:valid + label{
 opacity: 0;
 }
-form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
-form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
-background: pink;
-}
+
 form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
 form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label {
 opacity: 0;
