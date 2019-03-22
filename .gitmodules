@@ -1,0 +1,3 @@
+[submodule "src/components/layout_module-base"]
+	path = src/components/layout_module-base
+	url = https://github.com/theNewDynamic/hugo-layout_module-base-2019.git
