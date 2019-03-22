@@ -14,3 +14,5 @@ Google Analytics:
 > For customers who use Google Analytics Advertising Features, Google advertising cookies are used to enable features, such as Remarketing, for products like AdWords on the Google Display Network. For more information about how Google uses advertising cookies, visit the Google Advertising Privacy FAQ. To manage settings for these cookies and opt-out of these features, visit the Ads Settings.
 
 For more information, including information on how to opt-out of Google Analytics, see their [Data Privacy and Security](https://support.google.com/analytics/topic/2919631?hl=en&ref_topic=1008008) page.
+
+Thanks!
