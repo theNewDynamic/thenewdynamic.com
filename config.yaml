@@ -1,7 +1,3 @@
-title: The New Dynamic
 themesDir: src
-theme:
-- code
-# - tnd-forms
+theme: code
 
-# Global Settings. Env specific settings in the the config folder
