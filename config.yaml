@@ -1,8 +1,9 @@
 title: The New Dynamic
 themesDir: src/components
 theme:
-- hugo-layout_module-base-2019
-# - tnd-seo
+- layout_module-base
+- tnd-seo
+- base
 # - tnd-forms
 
 # Global Settings. Env specific settings in the the config folder
