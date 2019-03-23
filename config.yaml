@@ -1,9 +1,7 @@
 title: The New Dynamic
-themesDir: src/components
+themesDir: src
 theme:
-- layout_module-base
-- tnd-seo
-- base
+- code
 # - tnd-forms
 
 # Global Settings. Env specific settings in the the config folder
