@@ -1,0 +1,73 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: include
+  name: defaults
+  label: defaults
+  template: partial-default
+- name: subtitle
+  label: Subtitle
+  type: textarea
+  hidden: false
+  default: 
+- type: include
+  name: date
+  label: date
+  template: partial-date
+- type: field_group_list
+  name: editions
+  label: Editions
+  fields:
+  - type: text
+    name: isbn
+    label: ISBN
+  - type: select
+    name: binding
+    config:
+      source:
+        type: simple
+      options:
+      - paperback
+      - hardcover
+      - ebook
+      - special
+    label: Binding
+  - type: text
+    name: publisher
+    label: Publisher
+  - type: textarea
+    label: Description
+    name: description
+    config:
+      wysiwyg: ''
+    description: Optional, e.g. UK Edition
+  - type: datetime
+    name: date
+    label: Publication Date
+  - type: file
+    name: cover_image
+    label: Cover Image
+    description: Required for the top (most recent) edition
+  config:
+    labelField: isbn
+  description: The topmost edition will show its cover on the site
+- type: field_group_list
+  name: buy_links_external
+  label: External Buy Links
+  fields:
+  - type: text
+    name: name
+    label: Name
+  - type: text
+    name: link
+    label: Link
+  - type: text
+    description: e.g. https:www.example.com/page/
+  description: Optional
+  hidden: true
+- type: file
+  name: featured_image
+  label: Featured Image
+  description: Optional (may not be in use)
+  hidden: true

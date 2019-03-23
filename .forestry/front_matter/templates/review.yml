@@ -1,0 +1,31 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: include
+  name: defaults
+  label: defaults
+  template: partial-default
+- type: include
+  name: date
+  label: date
+  template: partial-date
+- name: attribution
+  label: Attribution
+  type: text
+  hidden: false
+  default: ''
+- type: select
+  name: book
+  config:
+    source:
+      type: pages
+      section: book
+  label: Book
+- type: boolean
+  name: featured
+  label: Featured
+- type: include
+  name: weight
+  label: weight
+  template: partial-weight

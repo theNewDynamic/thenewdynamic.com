@@ -1,0 +1,24 @@
+---
+hide_body: false
+fields:
+- type: include
+  name: defaults
+  label: defaults
+  template: partial-default
+- type: include
+  name: date
+  label: date
+  template: partial-date
+- name: show_time
+  label: Show time
+  type: boolean
+  hidden: false
+  default: true
+- type: include
+  name: image
+  label: image
+  template: partial-images-w-credit 
+- type: include
+  name: venue
+  label: venue
+  template: partial-venue
