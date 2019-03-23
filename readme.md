@@ -1,17 +1,10 @@
 a work in progress.
 
+todo
 
-```
-$ git clone https://github.com/theNewDynamic/thenewdynamic.com.git
+- [ ] Confirm that nested components work
+- [ ] Run asset pipeline (presumably, package.json goes in route, and paths need to reflect that)
+- [ ] test in forestry
+- [ ] test on netlify
 
-$ git submodule init
-
-$ git submodule update
-```
-
-https://git-scm.com/book/en/v2/Git-Tools-Submodules
-
-
-To update submodule
-
-`$ git submodule update --remote`
+n.b. I believe all modules will need to be public, while the content directory can be private
