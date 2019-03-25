@@ -1,6 +1,7 @@
 ---
 title: home
 date: '2017-01-19T03:02:04Z'
+description: howdy
 boxes:
 - heading: Ongoing development
   copy: We don’t create your site, then bid *adieu*. We observe how your audience
@@ -34,3 +35,5 @@ type: page
 
 ---
 #### The New Dynamic designs and builds fully-managed websites and multi-site platforms for organizations of all sizes.
+
+
