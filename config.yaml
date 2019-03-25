@@ -1,3 +1,14 @@
-themesDir: src
-theme: code
 
+title: The New Dynamic
+#config files are to be found in the ./config/ folder. This file makes Forestry happy.
+
+configDir: src/code/_config
+themesDir: src/code/components
+assetDir: src/code/assetsDir
+layoutDir: src/code/layouts
+staticDir: src/code/static
+
+
+theme:
+- layout_module-base
+- tnd-seo
