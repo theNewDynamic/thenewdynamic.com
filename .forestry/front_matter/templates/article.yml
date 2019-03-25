@@ -1,4 +1,5 @@
 ---
+label: article
 hide_body: true
 fields:
 - type: include

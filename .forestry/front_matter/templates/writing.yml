@@ -1,8 +1,5 @@
 ---
-pages:
-- writing/sue-grafton-was-a-master-at-subverting-the-detective-novel.md
-- writing/qanda-with-david-mamet.md
-- writing/example.md
+label: writing
 hide_body: true
 fields:
 - type: include

@@ -1,7 +1,6 @@
 ---
 label: partial-weight
 hide_body: false
-is_partial: true
 fields:
 - type: number
   name: weight
