@@ -1,6 +1,6 @@
 ---
+label: review
 hide_body: false
-is_partial: false
 fields:
 - type: include
   name: defaults

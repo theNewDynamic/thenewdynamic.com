@@ -1,7 +1,6 @@
 ---
 label: Image with Credit
 hide_body: false
-is_partial: true
 fields:
 - type: field_group_list
   fields:
