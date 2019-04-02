@@ -3,8 +3,8 @@ label: Payment Schedule
 hide_body: true
 fields:
 - type: text
-  name: heading
-  label: Heading
+  name: title
+  label: Title
 - type: datetime
   name: date
   label: Date
