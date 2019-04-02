@@ -11,5 +11,6 @@ schedules:
     column_2: 2nd
   - column_1: B
     column_2: 3rd
+draft: true
 
 ---
