@@ -32,6 +32,12 @@ boxes:
   old_model: Endless expensive Photoshop mockups.
   new_model: Meaningful design with real&nbsp;content.
 type: page
+payment_schedule:
+- template: payment-schedule
+  heading: Pyament schedule
+  rows:
+  - '2'
+  - '1'
 
 ---
 #### The New Dynamic designs and builds fully-managed websites and multi-site platforms for organizations of all sizes.
