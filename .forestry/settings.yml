@@ -5,6 +5,13 @@ admin_path: admin
 webhook_url: 
 sections:
 - type: directory
+  path: content/state
+  label: States
+  create: all
+  match: "**/*"
+  templates:
+  - payment-schedule
+- type: directory
   path: content/article
   label: Articles
   create: all
