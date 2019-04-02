@@ -8,3 +8,5 @@ fields:
 - type: blocks
   name: payment_schedule
   label: Payment Schedule
+  template_types:
+  - payment-schedule
