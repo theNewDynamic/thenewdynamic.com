@@ -8,3 +8,10 @@ fields:
 - type: list
   name: rows
   label: Rows
+- type: field_group_list
+  name: schedule
+  label: schedule
+  fields:
+  - type: list
+    name: rows
+    label: rows
