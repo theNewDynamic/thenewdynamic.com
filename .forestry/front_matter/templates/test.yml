@@ -10,3 +10,5 @@ fields:
   label: Payment Schedule
   template_types:
   - payment-schedule
+pages:
+- content/alabama.md
