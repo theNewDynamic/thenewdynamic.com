@@ -1,4 +1,10 @@
 ---
 label: Payment Schedule
 hide_body: true
-fields: []
+fields:
+- type: text
+  name: heading
+  label: Heading
+- type: list
+  name: rows
+  label: Rows
