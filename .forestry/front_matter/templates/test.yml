@@ -1,4 +1,10 @@
 ---
 label: test
 hide_body: true
-fields: []
+fields:
+- type: text
+  name: title
+  label: Title
+- type: blocks
+  name: payment_schedule
+  label: Payment Schedule
