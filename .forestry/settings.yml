@@ -15,8 +15,7 @@ sections:
   create: all
   match: "*"
   templates:
-  - default
-  - home
+  - test
 - type: directory
   path: content/about
   label: About
