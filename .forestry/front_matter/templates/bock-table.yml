@@ -25,3 +25,8 @@ fields:
     label: Column 2
   config:
     labelField: column_1
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: table--2-columns
