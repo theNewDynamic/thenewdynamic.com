@@ -12,13 +12,9 @@ fields:
   - type: datetime
     name: date
     label: Date
-  - type: field_group_list
-    name: blocks
+  - type: blocks
+    template_types:
+    - bock-text
+    - bock-table
     label: Blocks
-    fields:
-    - type: blocks
-      template_types:
-      - bock-text
-      - bock-table
-      label: Block
-      name: block
+    name: blocks
