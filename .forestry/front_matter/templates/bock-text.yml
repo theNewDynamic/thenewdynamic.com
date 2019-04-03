@@ -1,7 +1,6 @@
 ---
 label: 'Bock: Text'
 hide_body: true
-display_field: copy
 fields:
 - type: textarea
   name: copy
@@ -10,3 +9,8 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+- type: text
+  label: layout
+  name: layout
+  hidden: true
+  default: text
