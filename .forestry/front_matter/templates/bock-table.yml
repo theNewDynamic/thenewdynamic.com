@@ -1,4 +1,27 @@
 ---
 label: 'Bock: Table'
 hide_body: true
-fields: []
+display_field: headers
+fields:
+- type: field_group
+  name: headers
+  label: Headers
+  fields:
+  - type: text
+    name: column_1
+    label: Column 1
+  - type: text
+    name: column_2
+    label: Column 2
+- type: field_group_list
+  name: rows
+  label: Rows
+  fields:
+  - type: text
+    name: column_1
+    label: Column_1
+  - type: text
+    name: column_2
+    label: Column 2
+  config:
+    labelField: column_1
