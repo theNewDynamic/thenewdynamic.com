@@ -2,6 +2,9 @@
 label: Payment Schedule 2
 hide_body: true
 fields:
+- type: text
+  name: title
+  label: Title
 - type: field_group
   name: payment_schedule
   label: Payment Schedule
