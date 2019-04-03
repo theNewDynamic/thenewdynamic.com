@@ -1,4 +1,21 @@
 ---
 label: Payment Schedule 2
 hide_body: true
-fields: []
+fields:
+- type: field_group
+  name: payment_schedule
+  label: Payment Schedule
+  fields:
+  - type: datetime
+    name: date
+    label: Date
+  - type: field_group_list
+    name: blocks
+    label: Blocks
+    fields:
+    - type: blocks
+      template_types:
+      - bock-text
+      - bock-table
+      label: Block
+      name: block
