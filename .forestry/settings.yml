@@ -11,6 +11,7 @@ sections:
   match: "*"
   templates:
   - payment-schedule
+  - payment-schedule-2
 - type: directory
   path: content/article
   label: Articles
