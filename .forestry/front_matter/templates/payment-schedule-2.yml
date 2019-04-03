@@ -18,3 +18,5 @@ fields:
     - bock-table
     label: Blocks
     name: blocks
+pages:
+- content/state/colorado-test.md
