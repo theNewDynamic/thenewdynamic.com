@@ -39,5 +39,3 @@ fields:
       label: Column 2
     config:
       labelField: column_1
-pages:
-- content/state/colorado.md
