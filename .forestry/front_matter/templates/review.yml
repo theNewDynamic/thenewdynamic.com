@@ -6,6 +6,8 @@ fields:
   name: defaults
   label: defaults
   template: partial-default
+  config:
+    template: partial-default
 - type: include
   name: date
   label: date
