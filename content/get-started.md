@@ -1,8 +1,8 @@
 ---
-draft: true
+title: Get Started
 menu:
   main:
-    weight: 3
-title: Get Started
----
+    weight: 4
+draft: true
 
+---

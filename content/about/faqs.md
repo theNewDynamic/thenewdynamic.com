@@ -60,7 +60,11 @@ repeater:
 menu:
   main:
     name: FAQs
-    weight: 10
+    weight: 7
+  secondary:
+    name: FAQ
+    weight: 1
+    parent: Our Services
 draft: true
 
 ---

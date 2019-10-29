@@ -2,7 +2,7 @@
 title: Articles
 menu:
   main:
-    weight: 10
+    weight: 6
 
 ---
 this too is awesome.

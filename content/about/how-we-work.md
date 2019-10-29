@@ -32,9 +32,10 @@ type: repeating-boxes
 menu:
   main:
     name: How We Work
-    weight: 1
+    weight: 2
   secondary:
     name: How Secondary Work
     weight: 1
+
 ---
 The New Dynamic is a team of passionate individuals who truly enjoy working with mission-driven organizations. Compared to other web development firms, we do things differently.
