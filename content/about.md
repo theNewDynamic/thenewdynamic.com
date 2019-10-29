@@ -1,10 +1,15 @@
 ---
-date: 2014-04-09T00:00:00+00:00
-draft: true
+date: '2014-04-09T00:00:00.000+00:00'
 title: About Hugo
 type: page
----
+menu:
+  secondary:
+    name: Another FAQ Child
+    weight: 1
+    parent: FAQ
+draft: true
 
+---
 Hugo is a static site engine written in Go.
 
 
