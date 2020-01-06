@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}" class="no-js">
+  <head>
+    {{ partial "head/styles" . }}
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    {{ block "main" . }}
+      
+    {{ end }}
+  </body>
+</html>

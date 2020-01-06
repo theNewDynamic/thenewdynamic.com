@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="container pt-10">
+    {{ range .Pages }}
+      <div>
+        {{ .Render "head" }}
+        <div class="my-4">
+          {{ .Summary }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

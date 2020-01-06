@@ -1,0 +1,57 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import "fonts.css";
+
+:root{
+  font-size: 14px;
+}
+@screen md{
+  :root{
+    font-size: 18px;
+  }
+}
+
+@variants hover {
+  .text-gradient{
+    /* standard gradient background */
+    background: linear-gradient(
+      to top right,
+      rgb(51,12,91), rgb(226,55,46)
+    );
+  
+    /* clip hackery */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bg-gradient{
+    background: linear-gradient(
+      to top right,
+      rgb(51,12,91), rgb(229,56,48)
+    );
+  }
+  .bg-gradient-horizontal{
+    background: linear-gradient(
+      to right,
+      rgb(51,12,91), rgb(229,56,48)
+    );
+  }
+}
+
+@screen md{
+  .homegrid{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.container{
+  max-width: 1080px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}

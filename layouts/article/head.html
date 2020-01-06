@@ -1,0 +1,13 @@
+<h2 class="text-3xl font-bold">
+  <a href="{{ .RelPermalink }}" class="hover:text-gradient">{{ .Title }}</a>
+</h2>
+<time class="" datetime="{{ .Date }}">{{ dateFormat "Written on January 2, 2006" .Date }}</time> 
+{{ if ne .Lastmod .Date }}
+<div class="text-sm">
+	{{ $format := cond (eq (.Date.Format "2006") (.Lastmod.Format "2006") ) "January 2" "January 2, 2006" }}
+	<time datetime="{{ .Lastmod }}">Last modified on {{ .Lastmod.Format $format }}</time>
+</div>
+{{ end }}
+{{ with .ReadingTime }}
+&middot; <small>{{ . }} {{ i18n "minutes_read" . }}.</small>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ with .Params.cards }}
+    <div class="homegrid my-4">
+      {{ range . }}
+        <div class="py-4 px-6 mb-4 md:mb-0 bg-gray-300">
+          <div class="text-2xl text-center mb-1">
+            {{ .title }}
+          </div>
+          <div class="text-sm">
+            {{ .text }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    {{ end }}

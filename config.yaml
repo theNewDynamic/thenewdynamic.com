@@ -1,14 +1,1 @@
----
 title: The New Dynamic
-configDir: src/code/_config
-themesDir: src/code/components
-assetDir: src/code/assetsDir
-layoutDir: src/code/layouts
-staticDir: src/code/static
-theme:
-- layout_module-base
-- tnd-seo
-menu:
-  main:
-  - name: Get in Touch
-    weight: 5

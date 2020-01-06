@@ -1,0 +1,9 @@
+{{ range partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
+<link 
+  rel="stylesheet" 
+  href="{{ .RelPermalink }}"
+  {{ with .Data.Integrity }}
+  integrity="{{ . }}"
+  {{ end }}
+>
+{{ end }}
