@@ -1,7 +1,7 @@
 {{ $styles := slice }}
 {{ with resources.Get "style.css" }}
   {{ $style := . | resources.PostCSS }}
-  {{ if eq (getenv "HUGO_ENV") "production" }}
+  {{ if eq (getenv "NODE_ENV") "production" }}
     {{ $style = $style | minify | fingerprint }}
   {{ end }}
   {{ $styles = $styles | append $style }}
