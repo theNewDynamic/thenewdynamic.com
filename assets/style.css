@@ -1,4 +1,10 @@
+/* 
+  Imports go to the top
+  https://tailwindcss.com/docs/using-with-preprocessors/#build-time-imports 
+*/
+
 @import "fonts.css";
+
 @tailwind base;
 
 @tailwind components;
