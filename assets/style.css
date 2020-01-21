@@ -1,10 +1,11 @@
+@import "fonts.css";
 @tailwind base;
 
 @tailwind components;
 
 @tailwind utilities;
 
-@import "fonts.css";
+
 
 :root{
   font-size: 14px;
@@ -39,4 +40,8 @@
       rgb(51,12,91), rgb(229,56,48)
     );
   }
+}
+
+body {
+  @apply font-sans;
 }

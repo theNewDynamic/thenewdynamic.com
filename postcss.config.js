@@ -1,5 +1,8 @@
 module.exports = {
   plugins: [
+    require('postcss-import')({
+      path: ["assets/"],
+    }), 
     require('tailwindcss')("./assets/tailwindcss.config.js"),
     require('autoprefixer'),
     ...(process.env.NODE_ENV !== "development"
