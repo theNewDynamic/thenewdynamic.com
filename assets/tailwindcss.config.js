@@ -20,11 +20,15 @@ module.exports = {
         ]
       },
       opacity: {
-        '70': '0.7',
+        "70": "0.7"
       },
       width: {
-        '60%': '60%;'
+        "60%": "60%;"
       }
+    },
+    container: {
+      center: true,
+      padding: "1rem"
     }
-  },
-}
+  }
+};
