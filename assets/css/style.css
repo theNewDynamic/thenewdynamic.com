@@ -3,7 +3,7 @@
   https://tailwindcss.com/docs/using-with-preprocessors/#build-time-imports 
 */
 
-@import "fonts.css";
+@import "fonts";
 
 @tailwind base;
 
@@ -23,7 +23,7 @@
 }
 
 @variants hover {
-  .text-gradient{
+  .text-gradient {
     /* standard gradient background */
     background: linear-gradient(
       to top right,
@@ -49,5 +49,5 @@
 }
 
 body {
-  @apply font-sans;
+  @apply font-sans text-gray-900 ;
 }
