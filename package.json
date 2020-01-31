@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "hugo": "bin/hugo version && bin/hugo serve --gc --disableFastRender ",
-    "gethugo": "bash hugo.sh",
+    "gethugo": "bash get-hugo.sh",
     "build": "NODE_ENV=production bin/hugo --gc --minify",
     "deploy": "yarn build",
     "start": "yarn hugo"
