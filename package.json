@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "hugo": "hugo serve --gc --disableFastRender ",
-    "build": "NODE_ENV=production hugo --gc --minify",
+    "hugo": "bin/hugo version && bin/hugo serve --gc --disableFastRender ",
+    "gethugo": "bash hugo.sh",
+    "build": "NODE_ENV=production bin/hugo --gc --minify",
     "deploy": "yarn build",
     "start": "yarn hugo"
   },
@@ -16,6 +17,13 @@
     "tailwindcss": "^1.2.0-canary.5"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3.0"
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "axios": "^0.19.2",
+    "download-github-release": "^0.3.2",
+    "tar": "^6.0.1"
+  },
+  "hugo": {
+    "version": "0.63.1",
+    "extended": "true"
   }
 }
