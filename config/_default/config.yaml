@@ -1,1 +1,7 @@
 DefaultContentLanguage: en
+
+module:
+  imports:
+  - path: github.com/theNewDynamic/tnd-assets-js/quicklink
+  - path: github.com/theNewDynamic/tnd-assets-js/lazysizes
+
