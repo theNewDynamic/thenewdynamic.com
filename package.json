@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "hugo": "bin/hugo version && bin/hugo serve --gc --disableFastRender ",
+    "hugo": "bin/hugo* version && bin/hugo* serve --gc --disableFastRender ",
     "gethugo": "bash get-hugo.sh",
-    "build": "NODE_ENV=production bin/hugo --gc --minify",
+    "build": "NODE_ENV=production bin/hugo* --gc --minify",
     "deploy": "yarn build",
     "start": "yarn hugo"
   },
@@ -21,7 +21,7 @@
     "axios": "^0.19.2"
   },
   "hugo": {
-    "version": "0.63.1",
+    "version": "0.64.0",
     "extended": "true"
   }
 }
