@@ -1,5 +1,5 @@
 {{ $styles := slice }}
-{{ with resources.Get "style.css" }}
+{{ with resources.Get "css/style.css" }}
   {{ $style := . | resources.PostCSS }}
   {{ if eq (getenv "NODE_ENV") "production" }}
     {{ $style = $style | minify | fingerprint }}
