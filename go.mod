@@ -8,7 +8,7 @@ go 1.12
 //	github.com/theNewDynamic/tnd-assets-js/quicklink => /Users/{replace_with_path}/tnd-assets-js/quicklink
 //)
 
-require (
-	github.com/theNewDynamic/tnd-assets-js/lazysizes v0.0.0-20200204152038-be80d33eaebc // indirect
-	github.com/theNewDynamic/tnd-assets-js/quicklink v0.0.0-20200204152038-be80d33eaebc // indirect
-)
+// require (
+// 	github.com/theNewDynamic/tnd-assets-js/lazysizes v0.0.0-20200204152038-be80d33eaebc // indirect
+// 	github.com/theNewDynamic/tnd-assets-js/quicklink v0.0.0-20200204152038-be80d33eaebc // indirect
+// )

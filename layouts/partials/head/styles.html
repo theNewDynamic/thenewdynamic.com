@@ -7,8 +7,3 @@
   {{ end }}
 >
 {{ end }}
-
-
-{{ $quicklink := resources.Get "dist/quicklink/index.js" }}
-{{ $lazysizes := resources.Get "dist/lazysizes/index.js" }}
-{{ $js := slice $quicklink $lazysizes | resources.Concat "js/bundle.js" }}
