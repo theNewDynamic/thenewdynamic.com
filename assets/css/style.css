@@ -3,21 +3,18 @@
   https://tailwindcss.com/docs/using-with-preprocessors/#build-time-imports 
 */
 
-@import "fonts";
-
+/* purgecss start ignore */
 @tailwind base;
-
 @tailwind components;
+/* purgecss end ignore */
 
 @tailwind utilities;
 
-
-
-:root{
+:root {
   font-size: 14px;
 }
-@screen md{
-  :root{
+@screen md {
+  :root {
     font-size: 18px;
   }
 }
@@ -27,27 +24,26 @@
     /* standard gradient background */
     background: linear-gradient(
       to top right,
-      rgb(51,12,91), rgb(226,55,46)
+      rgb(51, 12, 91),
+      rgb(226, 55, 46)
     );
-  
+
     /* clip hackery */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .bg-gradient{
+  .bg-gradient {
     background: linear-gradient(
       to top right,
-      rgb(51,12,91), rgb(229,56,48)
+      rgb(51, 12, 91),
+      rgb(229, 56, 48)
     );
   }
-  .bg-gradient-horizontal{
-    background: linear-gradient(
-      to right,
-      rgb(51,12,91), rgb(229,56,48)
-    );
+  .bg-gradient-horizontal {
+    background: linear-gradient(to right, rgb(51, 12, 91), rgb(229, 56, 48));
   }
 }
 
 body {
-  @apply font-sans text-gray-900 ;
+  @apply font-sans text-gray-900;
 }
