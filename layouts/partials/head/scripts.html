@@ -1,0 +1,15 @@
+{{ $assets := .Site.Data.assets }}  
+
+{{ with $assets.main }}
+	<script type="text/javascript" src="{{ print .js | default "/dist/main.js" }}" {{ with .jsIntegrity }}integrity="{{ print . }}" crossorigin="anonymous"{{ end }} defer></script>
+{{ end }}
+
+
+{{/* 
+    
+    
+// pull in fonts without webpack, but use "require"
+// see if we can minimize webpack but still get babel ? don't think so
+
+
+    */}}
