@@ -7,3 +7,12 @@
   {{ end }}
 >
 {{ end }}
+
+
+
+{{ $font := resources.Get "typeface-mark/index.css" }}
+{{ with $font }}
+  {{ $font := . | resources.Minify }}  
+    <link rel="stylesheet" href="{{ $font.RelPermalink }}">
+{{ end }}
+
