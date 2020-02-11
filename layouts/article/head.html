@@ -1,13 +1,28 @@
-<h2 class="text-3xl font-bold">
-  <a href="{{ .RelPermalink }}" class="hover:text-gradient">{{ .Title }}</a>
-</h2>
-<time class="" datetime="{{ .Date }}">{{ dateFormat "Written on January 2, 2006" .Date }}</time> 
-{{ if ne .Lastmod .Date }}
-<div class="text-sm">
-	{{ $format := cond (eq (.Date.Format "2006") (.Lastmod.Format "2006") ) "January 2" "January 2, 2006" }}
-	<time datetime="{{ .Lastmod }}">Last modified on {{ .Lastmod.Format $format }}</time>
+<div class="sm:grid grid-cols-2 gap-8">
+	<div class="bg-purple-800TK bg-gray-700 text-white font-light text-2xl mb-2 h-64 flex flex-col justify-center rounded">
+		<div class="p-8">
+			<span class="font-serif inline-block -ml-4 pr-1">“</span>{{ .Description | default .Summary | truncate 100 }}
+		</div>
+	</div>
+	<div>
+		<h2 class="text-3xl leading-tight mb-4">
+			<a href="{{ .RelPermalink }}" class="">
+				{{ .Title }}
+			</a>
+		</h2>
+		<time class="text-gray-600" datetime="{{ .Date }}">
+			{{ dateFormat "Published January 2, 2006" .Date }}
+		</time>
+		{{ if ne .Lastmod .Date }}
+			<div class="text-sm text-gray-600 my-2">
+				{{ $format := cond (eq (.Date.Format "2006") (.Lastmod.Format "2006") ) "January 2" "January 2, 2006" }}
+			<time datetime="{{ .Lastmod }}">
+				Updated {{ .Lastmod.Format $format }}
+			</time>
+		</div>
+		{{ end }} 
+		{{ with .ReadingTime }}
+		<small class="text-gray-600 block">{{ . }} {{ i18n "minutes_read" . }}.</small>
+		{{ end }}
+	</div>
 </div>
-{{ end }}
-{{ with .ReadingTime }}
-&middot; <small>{{ . }} {{ i18n "minutes_read" . }}.</small>
-{{ end }}

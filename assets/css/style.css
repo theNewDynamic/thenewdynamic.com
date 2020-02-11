@@ -45,5 +45,5 @@
 }
 
 body {
-  @apply font-sans text-gray-900;
+  @apply font-sans text-gray-800 bg-notwhite-500;
 }
