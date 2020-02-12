@@ -1,7 +1,13 @@
 DefaultContentLanguage: en
 
-# module:
-#   imports:
-#   - path: github.com/theNewDynamic/tnd-assets-js/quicklink
-#   - path: github.com/theNewDynamic/tnd-assets-js/lazysizes
+social:
+  twitter: theNewDynamic
+
+module:
+  imports:
+    - path: github.com/theNewDynamic/hugo-component-tnd-forms
+      imports:
+        - source: layouts
+          target: layouts
+    - path: github.com/theNewDynamic/hugo-module-socials
 

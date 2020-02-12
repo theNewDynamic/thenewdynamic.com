@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <div class="container">
+    {{ .Render "head" }}
+    <div class="md:grid grid-cols-2 gap-4">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-black">{{ i18n "our_offices" }}</h2>
+        <div class="my-4">
+          {{ range site.Params.addresses }}
+            <div class="my-4">
+              {{ . }}
+            </div>
+          {{ end }}
+        </div>
+        <a href="" class="my-8 lowercase inline-block bg-gradient hover:bg-gradient-horizontal rounded px-4 py-2 text-2xl text-white no-underline">
+          {{ i18n "book_apt" }}
+        </a>
+      </div>
+      <div class="text-sm">
+        <h2 class="text-3xl md:text-4xl font-black">{{ i18n "online_presence" }}</h2>
+        <div class="socials my-4">
+          {{ partial "socials/follow.html" . }}
+        </div>
+        <div class="my-8">
+          {{ partial "tnd-forms/form" "contact-test" }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

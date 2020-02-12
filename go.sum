@@ -1,2 +1,4 @@
-github.com/theNewDynamic/tnd-assets-js/lazysizes v0.0.0-20200204152038-be80d33eaebc/go.mod h1:Ajb6AmMVakBmgL1uqXJmZGurh+/cuBPwgUHxq2rcH08=
-github.com/theNewDynamic/tnd-assets-js/quicklink v0.0.0-20200204152038-be80d33eaebc/go.mod h1:IvS02V0QAUgV9Ub41sWUrYQ32WA2wiI5c83rEs5rZzI=
+github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3ace85 h1:XjcuEyQhENGWOL9/Z4JfbdADdvslI8hONno6AAfe4EQ=
+github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3ace85/go.mod h1:78sVAcrQDeMCF5ABqDNTdvgEFhLpTTO/20zEO8NZ4IA=
+github.com/theNewDynamic/hugo-module-socials v0.1.0 h1:crplX/y82vab+Bojw18WJcylFA2xUYFFJ/U9yJigpHo=
+github.com/theNewDynamic/hugo-module-socials v0.1.0/go.mod h1:WnOlHwZ3AAf0aYJEx2lcc0+3KCIRYTEOhj1mByXsiR8=

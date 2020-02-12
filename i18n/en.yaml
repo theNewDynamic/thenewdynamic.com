@@ -2,3 +2,11 @@
   translation: 
     one: "minute read"
     other: "minutes read"
+- id: our_offices
+  translation: Brick & Mortar
+- id: online_presence
+  translation: Online
+- id: leave_note
+  translation: Leave a note
+- id: book_apt
+  translation: Book an appointment

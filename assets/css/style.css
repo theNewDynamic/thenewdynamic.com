@@ -47,3 +47,11 @@
 body {
   @apply font-sans text-gray-800 bg-notwhite-500;
 }
+
+.socials a{
+  display: inline-block;
+  width: 3rem;
+}
+.socials svg{
+  width: 100%;
+}
