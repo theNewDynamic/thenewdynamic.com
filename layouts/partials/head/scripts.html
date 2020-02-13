@@ -9,19 +9,3 @@
 {{ with $assets.main }}
 	<script type="text/javascript" src="{{ print .js | default "/js/main.js" }}" {{ with .jsIntegrity }}integrity="{{ print . }}" crossorigin="anonymous"{{ end }} defer></script>
 {{ end }}
-
-
-
-{{ $path := "typeface-mark" }}
-  {{ $files := readDir (printf "./assets/%s%s" $path "/files/" ) }}
-  {{ range $files }}
-  
-    {{/*  We use woff2 by default, but "woff" is better for older browsers  */}}
-    {{ if in .Name "woff2" }}  
-      {{ $file := resources.Get (printf "%s/files/%s" $path .Name) }}    
-      
-      <link rel="prefetch" href="{{ $file.RelPermalink }}" as="font" crossorigin>  
-    {{ end }}
-
-{{ end }}
-
