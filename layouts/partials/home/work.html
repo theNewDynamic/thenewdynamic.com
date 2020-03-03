@@ -1,14 +1,19 @@
 <div class="max-w-xl mx-auto">
   {{ with .GetPage "how-we-work" }}
   <h3 class="font-bold text-4xl">{{ .Title }}</h3>
-  <div class="tnd-statements">
+  <div class="">
     {{ with .Params.points }}
       {{ range . }}
         <div class="tnd-statement">
-          <div class=" flex items-center my-16">
+          <div class=" flex items-center mt-16 mb-8">
             <div class="tnd-statement__title w-disk">
               <div class="bg-{{ .color }} rounded-full relative overflow-hidden w-full pb-full shadow-md">
-                <div class="absolute w-full h-full flex items-center justify-center">
+                <div class="absolute flex items-center justify-center w-full h-full z-0">
+                  <div class="w-60% opacity-25 pl-1">
+                    {{ partial "svg/logo-white.svg" . }}
+                  </div>
+                </div>
+                <div class="absolute z-10 w-full h-full flex items-center justify-center">
                   <div class="font-bold text-white text-center lowercase font-3xl px-4">
                     {{ .title }}
                   </div>

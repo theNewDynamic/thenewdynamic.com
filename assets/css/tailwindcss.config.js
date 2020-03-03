@@ -48,6 +48,7 @@ module.exports = {
 			},
 			width: {
 				"60%": "60%",
+				"80%": "80%",
 				"disk": "300px"
 			},
 			spacing: {
