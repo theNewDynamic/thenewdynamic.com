@@ -47,7 +47,11 @@ module.exports = {
 				"70": "0.7"
 			},
 			width: {
-				"60%": "60%;"
+				"60%": "60%",
+				"disk": "300px"
+			},
+			spacing: {
+				"full": "100%"
 			}
 		},
 		container: {

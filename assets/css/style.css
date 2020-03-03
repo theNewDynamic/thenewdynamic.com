@@ -55,3 +55,31 @@ body {
 .socials svg{
   width: 100%;
 }
+
+.canvas{
+  border-radius: 50%;
+  width: 350px;
+  height:350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas svg{
+  width:60%;
+  margin: 0 auto;
+  fill: white;
+}
+
+.tnd-statement:nth-child(odd) .tnd-statement__title{
+  @apply order-2 pl-4;
+}
+.tnd-statement:nth-child(odd) .tnd-statement__intro{
+  @apply order-1;
+}
+.tnd-statement:nth-child(even) .tnd-statement__title{
+  @apply order-1 pr-4;
+}
+.tnd-statement:nth-child(even) .tnd-statement__intro{
+  @apply order-2;
+}

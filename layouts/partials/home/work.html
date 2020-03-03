@@ -1,0 +1,31 @@
+<div class="max-w-xl mx-auto">
+  {{ with .GetPage "how-we-work" }}
+  <h3 class="font-bold text-4xl">{{ .Title }}</h3>
+  <div class="tnd-statements">
+    {{ with .Params.points }}
+      {{ range . }}
+        <div class="tnd-statement">
+          <div class=" flex items-center my-16">
+            <div class="tnd-statement__title w-disk">
+              <div class="bg-{{ .color }} rounded-full relative overflow-hidden w-full pb-full shadow-md">
+                <div class="absolute w-full h-full flex items-center justify-center">
+                  <div class="font-bold text-white text-center lowercase font-3xl px-4">
+                    {{ .title }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tnd-statement__intro font-bold">
+              {{ .intro }}
+            </div>
+            
+          </div>
+          <div class="max-w-md mx-auto">
+            {{ .body }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
+</div>
