@@ -15,10 +15,9 @@
     >
   {{ end }}
 {{ end }}
-{{ range resources.Match "fonts/**/*.woff2" }}
+{{ range resources.Match "fonts/**/*.woff*" }}
 <link rel="prefetch" href="{{ .RelPermalink }}" as="font" crossorigin>
 {{ end }}
-
 
 
 {{ with $font := resources.Get "fonts/index.css"  }}
