@@ -9,5 +9,5 @@ module:
       imports:
         - source: layouts
           target: layouts
-    - path: github.com/theNewDynamic/hugo-module-socials
+    - path: github.com/theNewDynamic/hugo-module-tnd-socials
 
