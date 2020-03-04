@@ -23,6 +23,6 @@
 
 {{ with $font := resources.Get "fonts/index.css"  }}
   {{ with resources.Minify . }}
-    <style>{{ .Content }}</style>
+    <style>{{ .Content | safeCSS }}</style>
  {{ end }}   
 {{ end }}
