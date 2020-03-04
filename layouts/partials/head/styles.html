@@ -19,9 +19,10 @@
 <link rel="prefetch" href="{{ .RelPermalink }}" as="font" crossorigin>
 {{ end }}
 
-{{/* REGIS: You removed the below, I replaced. If it can be covered with the styles above that's fine, but fonts weren't working. */}}
-{{ $font := resources.Get "fonts/index.css" }}
-{{ with $font }}
-  {{ $font := . | resources.Minify }}  
-    <link rel="stylesheet" href="{{ $font.RelPermalink }}">
+
+
+{{ with $font := resources.Get "fonts/index.css"  }}
+  {{ with resources.Minify . }}
+    <style>{{ .Content }}</style>
+ {{ end }}   
 {{ end }}
