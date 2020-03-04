@@ -1,0 +1,5 @@
+{{ $title := .Title }}
+{{ with .Params.hero.text }}
+  {{ $title = . }}
+{{ end }}
+<h1 class="text-5xl font-normal pt-10 mb-16">{{ $title }}</h1>

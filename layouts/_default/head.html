@@ -1,7 +1,0 @@
-{{ $title := .Title }}
-{{ with .Params.hero.text }}
-  {{ $title = . }}
-{{ end }}
-<h2 class="text-3xl md:text-5xl font-bold text-center py-20 text-gradient">
-  {{ $title }}
-</h2>

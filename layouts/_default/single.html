@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="container">
-    {{ .Render "head" }}
+    {{ partial "page-header.html" . }}
     <div class="my-4 user-content">
       {{ .Content }}
     </div>

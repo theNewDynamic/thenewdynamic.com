@@ -12,10 +12,12 @@
 
 :root {
 	font-size: 14px;
+	--headerHeight: 68px;
 }
 @screen md {
 	:root {
 		font-size: 16px;
+		--headerHeight: 78px;
 	}
 }
 
@@ -72,6 +74,7 @@ small,
 
 body {
 	@apply font-sans text-gray-800 bg-notwhite-500;
+	padding-top: var(--headerHeight);
 }
 
 .socials a {
