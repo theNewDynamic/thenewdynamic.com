@@ -1,4 +1,5 @@
 DefaultContentLanguage: en
+baseURL: https://www.thenewdynamic.com
 
 social:
   twitter: theNewDynamic
