@@ -1,8 +1,15 @@
 DefaultContentLanguage: en
-baseURL: https://www.thenewdynamic.com
 
+params:
+  tnd_server:
+    use_aliases: true
 social:
   twitter: theNewDynamic
+
+outputs:
+  home:
+    - HTML
+    - netlify_redir
 
 module:
   imports:
@@ -11,4 +18,5 @@ module:
         - source: layouts
           target: layouts
     - path: github.com/theNewDynamic/hugo-module-tnd-socials
+    - path: github.com/theNewDynamic/hugo-module-tnd-server
 
