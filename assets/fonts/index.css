@@ -1,32 +1,32 @@
 @font-face {
   font-family: "Mark";
   font-weight: 900;
-  src: url("./fonts/files/1ab8369b-873d-483f-a927-464e1d16e1d4.woff2") format("woff2"),
-    url("./fonts/files/d55eb20c-e9fb-4911-91af-30bb4442c36c.woff") format("woff");
+  src: url("/fonts/files/1ab8369b-873d-483f-a927-464e1d16e1d4.woff2") format("woff2"),
+    url("/fonts/files/d55eb20c-e9fb-4911-91af-30bb4442c36c.woff") format("woff");
 }
 @font-face {
   font-family: "Mark";
   font-weight: 700;
   font-style: italic;
-  src: url("./fonts/files/6e8e8927-5a98-49ae-9123-db1798ec6d92.woff2") format("woff2"),
-    url("./fonts/files/dbe0788d-533f-4e84-b346-1f68c19853f9.woff") format("woff");
+  src: url("/fonts/files/6e8e8927-5a98-49ae-9123-db1798ec6d92.woff2") format("woff2"),
+    url("/fonts/files/dbe0788d-533f-4e84-b346-1f68c19853f9.woff") format("woff");
 }
 @font-face {
   font-family: "Mark";
   font-weight: 700;
-  src: url("./fonts/files/41c8162d-c2a6-49b0-8139-8bebab187588.woff2") format("woff2"),
-    url("./fonts/files/4fe94f2e-7892-4785-9663-0350a7adf8c0.woff") format("woff");
+  src: url("/fonts/files/41c8162d-c2a6-49b0-8139-8bebab187588.woff2") format("woff2"),
+    url("/fonts/files/4fe94f2e-7892-4785-9663-0350a7adf8c0.woff") format("woff");
 }
 @font-face {
   font-family: "Mark";
   font-weight: 400;
   font-style: italic;
-  src: url("./fonts/files/92d26a85-ea20-4552-bb3c-99a60834c026.woff2") format("woff2"),
-    url("./fonts/files/d6d343a4-2018-4e17-9f75-93a29f4d6212.woff") format("woff");
+  src: url("/fonts/files/92d26a85-ea20-4552-bb3c-99a60834c026.woff2") format("woff2"),
+    url("/fonts/files/d6d343a4-2018-4e17-9f75-93a29f4d6212.woff") format("woff");
 }
 @font-face {
   font-family: "Mark";
   font-weight: 400;
-  src: url("./fonts/files/e6beefbb-4014-4efa-961b-7762af9aefef.woff2") format("woff2"),
-    url("./fonts/files/5b4bd9d6-75be-4d76-8292-7f6434b9e997.woff") format("woff");
+  src: url("/fonts/files/e6beefbb-4014-4efa-961b-7762af9aefef.woff2") format("woff2"),
+    url("/fonts/files/5b4bd9d6-75be-4d76-8292-7f6434b9e997.woff") format("woff");
 }
