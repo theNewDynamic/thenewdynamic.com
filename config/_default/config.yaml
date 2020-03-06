@@ -3,6 +3,10 @@ DefaultContentLanguage: en
 params:
   tnd_redirects:
     use_aliases: true
+    redirects:
+      - source: /services/
+        target: /article/
+        country: ca
 
 social:
   twitter: theNewDynamic
