@@ -1,8 +1,9 @@
 DefaultContentLanguage: en
 
 params:
-  tnd_server:
+  tnd_redirects:
     use_aliases: true
+
 social:
   twitter: theNewDynamic
 
@@ -18,5 +19,5 @@ module:
         - source: layouts
           target: layouts
     - path: github.com/theNewDynamic/hugo-module-tnd-socials
-    - path: github.com/theNewDynamic/hugo-module-tnd-server
+    - path: github.com/theNewDynamic/hugo-module-tnd-redirects
 
