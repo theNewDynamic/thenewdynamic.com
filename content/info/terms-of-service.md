@@ -1,17 +1,17 @@
 ---
-title: The New Dynamic Terms of Service
+title: The New Dynamic Terms of Service & Statement of Work
 ---
 
 
 
 
-This STATEMENT OF WORK (“SOW”) and all of the written and printed parts hereof, together with the attached terms and conditions and any referenced and/or attached schedules and/or exhibits, constitute the agreement (“Agreement”) between The New Dynamic LLC (“Company”) and the client identified in the payment system (“Client”).
+This STATEMENT OF WORK (“SOW”) and all of the written and printed parts hereof, together with the attached terms and conditions and any referenced and/or attached schedules and/or exhibits, constitute the agreement (“Agreement”) between The New Dynamic LLC (“Company”) and the client identified in the payment system (“Client”) according to their subscription plan.
 
 
 
 #### DESCRIPTION OF SERVICES:
 
-Ongoing Website development   
+Ongoing Website development     
 Content & User Experience strategy  
 Misc. Consulting  
 Project Management and Meetings  
@@ -22,8 +22,11 @@ Performance and downtime troubleshooting
 24/7 Email-based tech support (Mon-Fri 9-5 for non-emergencies)  
 
 
-
 By execution of this SOW, Company and Client agree to all the terms of the Agreement, including, without limitation, the terms and conditions set forth in the Agreement and any exhibits and/or schedules referenced and/or attached, which terms and conditions constitute a material part of this SOW. The Agreement and SOW constitute the complete, entire and exclusive agreement between the parties with respect to the subject matter hereof, supersedes all prior or contemporaneous agreements, undertakings, warranties, representations and/or negotiations between the parties, and may only be modified by a writing signed by both parties. This SOW may be executed in counterparts, by electronic transmission, by facsimile, PDF or in the original, each of which shall be deemed an original, and all of which, when taken together, will constitute one and the same instrument.
+
+#### Fees, Expenses, and Payment
+
+Specified in subscription form.
 
 #### TERMS AND CONDITIONS
 
@@ -31,11 +34,11 @@ These Terms And Conditions (together with the statement(s) of work attached her
 
 ##### 1. Services 
 
-Client hereby retains the Company to perform website consulting and/or maintenance services (“Services”) in connection with the website(s) (collectively, “Websites”) as set forth on each SOW, and the Company hereby agrees to provide such Services to Client.
+Client hereby retains the Company to perform website consulting and/or maintenance services (“Services”) in connection with the website(s) (collectively, “Websites”) as set forth on each subscription, and the Company hereby agrees to provide such Services to Client.
 
 ##### 2. Compensation
 
-(a) The cost and payment schedule for Services is set forth on the applicable SOW.  
+(a) The cost and payment schedule for Services is set forth on the applicable subscription.  
 (b) Charges do not include third party expenses and disbursements, including but not limited to third party software programs, which may be required to run the Websites. Client shall pay separately for any third party software programs and updates thereof.  
 (c) Company reserves the right to charge late fees on overdue accounts.  
 (d) Any additional work or material revisions beyond initial scope set forth on the SOW will be charged on an hourly basis for services performed that have been approved in advance by Client.  
@@ -61,7 +64,7 @@ Acknowledging that the Services contemplated under this Agreement necessarily in
 
 ##### 7. Term and Termination
 
-(a) This Agreement shall commence upon the Effective Date set forth on the SOW and shall remain effective until the Services are completed and delivered unless earlier terminated hereunder.
+(a) This Agreement shall commence upon the Effective Date set forth on the subscription agreement and shall remain effective until the Services are completed and delivered unless earlier terminated hereunder.
 
 (b) This Agreement may be terminated at any time by either party upon thirty (30) days’ written notice, or the mutual agreement of the parties. In the event of termination, Company shall be compensated for the Services performed through the date of termination in the amount of (i) any advance payment, (ii) a prorated portion of the fees due, or (iii) hourly fees for work performed by Company or Company’s subcontractors as of the date of termination, whichever is greater.
 
@@ -71,9 +74,9 @@ Acknowledging that the Services contemplated under this Agreement necessarily in
 
 (a) Notices. Any notice, offer or demand given under this Agreement, shall be in writing and delivered, postage prepaid, by certified or registered mail, return receipt requested or by email (with proof of receipt), to the party from whom it is intended at the address set forth above, and shall be deemed given three (3) days after the date it is mailed or upon receipt if emailed.
 
-(b) Assignment.No party may assign or subcontract its rights or obligations under this Agreement without the prior written consent of the other parties, which consent shall not be unreasonably withheld.
+(b) Assignment. No party may assign or subcontract its rights or obligations under this Agreement without the prior written consent of the other parties, which consent shall not be unreasonably withheld.
 
-(c) Force Majeure. No party shall be liable for failure to comply with any of the terms of this Agreement to the extent that such failure was caused by fire, flood, earthquake, storm damage, power-outage, war, insurrection, government restrictions, or other causes beyond that party’s control; provided, however, the non-performing party commences performance within 30 days of the cessation of the event causing non-performance.
+(c) Force Majeure. No party shall be liable for failure to comply with any of the terms of this Agreement to the extent that such failure was caused by fire, flood, earthquake, storm damage, power-outage, war, insurrection, pandemic, government restrictions, or other causes beyond that party’s control; provided, however, the non-performing party commences performance within 30 days of the cessation of the event causing non-performance.
 
 (d) Governing Law; Venue. This Agreement shall be governed by, enforced and interpreted and construed in accordance with, the laws of the State of New York, without regard to principles of conflict of laws. The parties hereto agree that any legal suit, action, or proceeding arising out of or relating to this Agreement shall be brought exclusively in the Supreme Court of New York, County of New York, or the U.S. District Court for the Southern District of New York, as the case may be. The parties hereto hereby accept the jurisdiction and venue of such courts for the purpose of any such action or proceeding.
 
