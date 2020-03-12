@@ -26,7 +26,7 @@ By execution of this SOW, Company and Client agree to all the terms of the Agree
 
 #### Fees, Expenses, and Payment
 
-Specified in subscription form.
+Amount and period specified in subscription form. Payments are non-refundable. Subscription can be canceled with 14 days advance notice.
 
 #### TERMS AND CONDITIONS
 
