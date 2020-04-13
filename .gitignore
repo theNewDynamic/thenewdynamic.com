@@ -27,3 +27,6 @@ public
 
 /junit.xml
 partials/structure/stylesheet.html
+
+# Hugo
+hugo_stats.json

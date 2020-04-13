@@ -9,6 +9,9 @@ params:
 social:
   twitter: theNewDynamic
 
+build:
+  writeStats: true
+
 outputs:
   home:
     - HTML

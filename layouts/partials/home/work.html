@@ -1,6 +1,10 @@
 <div class="max-w-3xl mx-auto">
   {{ with .GetPage "how-we-work" }}
-  <h2 class="font-bold">{{ .Title }}</h2>
+  {{ $color := "text" }}
+  {{ with "blue" }}
+    {{ $color = print $color "-" . "-500"  }}
+  {{ end }}
+  <h2 class="font-bold {{ $color }}">{{ .Title }}</h2>
   <div class="">
     {{ with .Params.points }}
       {{ range . }}
