@@ -1,0 +1,18 @@
+{{ $currentPage := . }}
+{{/* TODO: 
+    remove `&raquo;` from last entry
+    */}}
+
+<ol  class="nav navbar-nav">
+    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+  </ol>
+  {{ define "breadcrumbnav" }}
+  {{ if .p1.Parent }}
+  {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+  {{ else if not .p1.IsHome }}
+  {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+  {{ end }}
+  <li  class="inline-block text-sm text-gray-600{{ if eq .p1 .p2 }} active{{ end }}">
+    <a href="{{ .p1.Permalink }}" class="">{{ .p1.Title }} &raquo;</a>
+  </li>
+  {{ end }}

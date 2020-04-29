@@ -11,12 +11,9 @@ Thumbs.db
 nbproject/
 public
 
-# Vagrant
-.vagrant/
-
 # FE Setup
 .bin/node_modules/
-/node_modules/
+node_modules/
 /npm-debug.log.*
 /npm-debug.log
 /npm-debug.log*
