@@ -1,0 +1,27 @@
+<div x-data="{ open: false }">
+{{ partial "nav-mobile-button.html" . }}
+<!-- Off-canvas menu for mobile -->
+<div x-show="open" @click.away="open = false" style="display: none;">
+	<div class="fixed inset-0 flex z-40">
+		<div class="fixed inset-0">
+			<div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+		</div>
+		<div class="relative flex-1 flex flex-col max-w-xs w-full bg-white">
+			<div class="absolute top-0 right-0 -mr-14 p-1">
+				{{ partial "nav-mobile-button-close.html" . }}
+			</div>
+			<div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+				<div class="flex-shrink-0 flex items-center px-4">
+					{{ site.Title }}
+				</div>
+				<nav class="mt-5 px-2">
+          {{ partial "nav-menu.html" . }}     
+				</nav>
+			</div>
+		</div>
+		<div class="flex-shrink-0 w-14">
+			<!-- Force sidebar to shrink to fit close icon -->
+		</div>
+	</div>
+</div>
+</div>

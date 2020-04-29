@@ -1,6 +1,6 @@
 ---
 title: Atoms
 weight: 2
-icon: 
+icon: folder
 ---
 

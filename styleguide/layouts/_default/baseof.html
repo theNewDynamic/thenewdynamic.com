@@ -7,9 +7,9 @@
   </head>
   <body>  
     <div class="h-screen flex overflow-hidden bg-gray-100">
-      {{ partial "navigation.html" . }}  
+      {{ partial "nav.html" . }}  
       <div class="flex flex-col w-0 flex-1 overflow-hidden">            
-        {{ partial "navigation-button.html" . }}
+        {{ partial "nav-mobile.html" . }}
           <main class="flex-1 relative z-0 overflow-y-auto pt-2 pb-6 focus:outline-none md:py-6" tabindex="0">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               <h1 class="text-2xl font-semibold text-gray-900">{{ .Title }}</h1>
@@ -17,7 +17,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               {{ partial "breadcrumbs.html" . }}
               <div class="py-4">      
-                <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">            
+                <div class="border-4 border-dashed border-gray-200 rounded-lg p-16">            
                   {{ block "main" . }}
                     {{ partial "base.html" . }}
                   {{ end }}

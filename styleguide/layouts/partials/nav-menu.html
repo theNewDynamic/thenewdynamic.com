@@ -1,0 +1,20 @@
+{{ $current_section := .Section }}
+<ul>
+  {{ range site.Sections }}
+    <li x-data="{ open: false }">
+      <a @click="open = true" href="{{ .RelPermalink }}" class="group flex items-center px-2 py-2 text-md leading-5 font-medium text-gray-900 rounded-md hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150">
+        {{ partial (printf "svg/%s.svg" (.Params.icon | default "folder")) . }}
+        {{.Title}}
+      </a>  
+      {{ with $entries := (where (.Site.RegularPages) "Section" (print .Section)) }}
+        <ul{{ if ne $current_section  (index $entries 0).Section}} x-show="open" @click.away="open = false" style="display: none;"{{ end }} class="mb-4 pl-10">                              
+          {{ range . }}                  
+            <a href="{{ .URL }}" class="block px-2 py-1 text-gray-800 text-sm bg-gray-100 border-b border-white hover:bg-primary-400">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </li>     
+{{ end }}
+</ul>
