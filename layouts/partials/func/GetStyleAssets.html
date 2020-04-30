@@ -14,8 +14,8 @@
 
 {{ range $style_assets }}
   {{ $style := . }}
-  {{ if eq (getenv "NODE_ENV") "production" }}
-    {{ $style = dict "type" .type "style" (.style | minify | fingerprint) }}
+  {{ if ne site.IsServer }}
+    {{ $style = dict "type" .type "style" (.style | minify | fingerprint | resources.PostProcess) }}
   {{ end }}
   {{ $return = $return | append $style }}
 {{ end }}

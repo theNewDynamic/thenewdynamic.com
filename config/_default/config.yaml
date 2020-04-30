@@ -1,7 +1,8 @@
 title: The New Dynamic
 baseURL: https://www.thenewdynamic.com
 DefaultContentLanguage: en
-
+build:
+  writeStats: true
 params:
   tnd_redirects:
     use_aliases: true
