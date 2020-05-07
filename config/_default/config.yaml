@@ -2,6 +2,11 @@ title: The New Dynamic
 baseURL: https://www.thenewdynamic.com
 DefaultContentLanguage: en
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   tnd_redirects:
     use_aliases: true
@@ -20,9 +25,7 @@ outputs:
 module:
   imports:
     - path: github.com/theNewDynamic/hugo-component-tnd-forms
-      imports:
-        - source: layouts
-          target: layouts
     - path: github.com/theNewDynamic/hugo-module-tnd-socials
     - path: github.com/theNewDynamic/hugo-module-tnd-redirects
-
+    - path: github.com/theNewDynamic/hugo-module-tnd-styleguide
+      
