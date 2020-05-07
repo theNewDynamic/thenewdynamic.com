@@ -1,15 +1,15 @@
 [build]
 publish = "public"
-command = "hugo -e netlify --minify"
+command = "hugo --minify -e netlify"
 
 [context]
 
 [context.production]
 
-[context.production.environment]
-HUGO_VERSION = "0.69.2"
-HUGO_ENV = "production"
-GO_VERSION = "1.14"
+    [context.production.environment]
+    HUGO_VERSION = "0.69.0"
+    HUGO_ENV = "production"
+    GO_VERSION = "1.14"
 
 [context.deploy-preview]
 command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
@@ -23,6 +23,11 @@ command = "hugo --gc --minify -b $DEPLOY_URL"
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.66.0"
 
+  [context.master]
+  command = "hugo --minify -e netlify -b $DEPLOY_URL"
+
+    [context.master.environment]
+    HUGO_VERSION = "0.70.0"
 [[headers]]
 for = "/*"
 

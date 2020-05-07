@@ -1,4 +1,3 @@
-
 {{ $style_assets := slice }}
 {{ $return := slice }}
 
@@ -14,7 +13,7 @@
 
 {{ range $style_assets }}
   {{ $style := . }}
-  {{ if ne site.IsServer }}
+  {{ if not site.IsServer }}  
     {{ $style = dict "type" .type "style" (.style | minify | fingerprint | resources.PostProcess) }}
   {{ end }}
   {{ $return = $return | append $style }}
