@@ -8,8 +8,8 @@
 		"version": "auto-changelog -p --template keepachangelog --unreleased true",
 		"hugo": "HUGO_ENV=development bin/hugo* server -D --gc --navigateToChanged --noHTTPCache",
 		"hugo-prod": "HUGO_ENV=production bin/hugo* --gc --minify",
-		"webpack": "HUGO_ENV=development webpack --mode=development --progress --colors --watch",
-		"webpack-prod": "HUGO_ENV=production webpack --mode=production",
+		"webpack": "webpack --mode=development --progress --colors --watch",
+		"webpack-prod": "webpack --mode=production",
 		"clean": "rm -rf public/ static/dist resources",
 		"deploy": "run-s webpack-prod hugo-prod",
 		"start": "run-p webpack hugo"
