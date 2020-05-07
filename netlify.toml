@@ -27,8 +27,7 @@ command = "hugo --minify -e netlify"
   command = "hugo --minify -e netlify -b $DEPLOY_URL"
 
     [context.master.environment]
-    HUGO_VERSION = "0.69.0"
-    NODE_ENV = "production"
+    HUGO_VERSION = "0.70.0"
 [[headers]]
 for = "/*"
 

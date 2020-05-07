@@ -6,10 +6,10 @@
 	"scripts": {
 		"gethugo": "bash get-hugo.sh",
 		"version": "auto-changelog -p --template keepachangelog --unreleased true",
-		"hugo": "NODE_ENV=development bin/hugo* server -D --gc --navigateToChanged --noHTTPCache",
-		"hugo-prod": "NODE_ENV=production bin/hugo* --gc --minify",
-		"webpack": "NODE_ENV=development webpack --mode=development --progress --colors --watch",
-		"webpack-prod": "NODE_ENV=production webpack --mode=production",
+		"hugo": "HUGO_ENV=development bin/hugo* server -D --gc --navigateToChanged --noHTTPCache",
+		"hugo-prod": "HUGO_ENV=production bin/hugo* --gc --minify",
+		"webpack": "HUGO_ENV=development webpack --mode=development --progress --colors --watch",
+		"webpack-prod": "HUGO_ENV=production webpack --mode=production",
 		"clean": "rm -rf public/ static/dist resources",
 		"deploy": "run-s webpack-prod hugo-prod",
 		"start": "run-p webpack hugo"
@@ -22,7 +22,7 @@
 		"tailwindcss": "^1.2.0"
 	},
 	"hugo": {
-		"version": "0.69.0",
+		"version": "0.70.0",
 		"extended": "true"
 	},
 	"devDependencies": {
