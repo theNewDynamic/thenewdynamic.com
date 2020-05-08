@@ -6,5 +6,5 @@ require (
 	github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3ace85 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-redirects v1.1.0 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-socials v0.1.1 // indirect
-	github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200507191808-8fbbabc9e772 // indirect
+	github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200508142149-b8830b963549 // indirect
 )

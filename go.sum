@@ -4,9 +4,5 @@ github.com/theNewDynamic/hugo-module-tnd-redirects v1.1.0 h1:1+cP+DuvjxYL7eBMkHv
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.1.0/go.mod h1:UG+i6GOMCwA+ZbpQ9DXX8ImoW4IEY0tKfJ0/EiUZLLg=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.1 h1:Zk4H2TZE2TUCehiMhgEuUzGEPqoDm0J4tcB8PFgsAfw=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.1/go.mod h1:7WIDUEYoiQVRZVPYPXpTLhSh+J25fPYJuCGNsYby3DM=
-github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200507155818-d0565bc7101b h1:Of0ZG1TCkq+dfWf50Yh6wKW73hqQMGKTUUDqPyvP8DQ=
-github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200507155818-d0565bc7101b/go.mod h1:iHPteGK+nyJ+md0+JJ5vPunkV+CAGZKGd2euh8VqtQA=
-github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200507174011-3f2c440893b1 h1:fskQwjNx7NqQLve7PnuTcloKmxtzjQ6RCCrKMp+SQDA=
-github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200507174011-3f2c440893b1/go.mod h1:iHPteGK+nyJ+md0+JJ5vPunkV+CAGZKGd2euh8VqtQA=
-github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200507191808-8fbbabc9e772 h1:ZV/ymSnttPstEk50qpPj2HyP5/OOxBrCft0JnPGnltM=
-github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200507191808-8fbbabc9e772/go.mod h1:iHPteGK+nyJ+md0+JJ5vPunkV+CAGZKGd2euh8VqtQA=
+github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200508142149-b8830b963549 h1:g88knscjhQCTqonrd2i4MbB7lbSx/5CJ2oyZNBr8oV8=
+github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200508142149-b8830b963549/go.mod h1:iHPteGK+nyJ+md0+JJ5vPunkV+CAGZKGd2euh8VqtQA=
