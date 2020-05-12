@@ -21,7 +21,7 @@ module.exports = {
     require("postcss-import")({
       path: ["assets/css"]
     }),
-    require("tailwindcss")("./assets/css/tailwindcss.config.js"),
+    require("tailwindcss")("./assets/css/tailwind.config.js"),
     require("autoprefixer"),
     ...(process.env.HUGO_ENV !== "development" ? [purgecss] : [])
   ]

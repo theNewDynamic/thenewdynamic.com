@@ -4,24 +4,24 @@ command = "hugo --minify -e netlify"
 
 [context]
 
-  [context.production]
+[context.production]
 
     [context.production.environment]
     HUGO_VERSION = "0.69.0"
     HUGO_ENV = "production"
     GO_VERSION = "1.14"
 
-  [context.deploy-preview]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+[context.deploy-preview]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
-    [context.deploy-preview.environment]
-    HUGO_VERSION = "0.66.0"
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.66.0"
 
-  [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_URL"
+[context.branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_URL"
 
-    [context.branch-deploy.environment]
-    HUGO_VERSION = "0.66.0"
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.66.0"
 
   [context.master]
   command = "hugo --minify -e netlify -b $DEPLOY_URL"
@@ -31,11 +31,11 @@ command = "hugo --minify -e netlify"
 [[headers]]
 for = "/*"
 
-  [headers.values]
-  Content-Security-Policy = "upgrade-insecure-requests"
-  Strict-Transport-Security = "max-age=15768000"
-  X-Xss-Protection = "1; mode=block"
-  X-Frame-Options = "DENY"
-  X-Content-Type-Options = "nosniff"
-  Referrer-Policy = "strict-origin-when-cross-origin"
-  Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
+[headers.values]
+Content-Security-Policy = "upgrade-insecure-requests"
+Strict-Transport-Security = "max-age=15768000"
+X-Xss-Protection = "1; mode=block"
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
