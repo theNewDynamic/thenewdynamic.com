@@ -1,0 +1,10 @@
+body.theme-default .text-theme{
+	@apply text-black;
+}
+
+body.theme-default .bg-theme{
+	@apply bg-gray-100;
+}
+body.theme-default .bg-map{
+	background-image:url(../images/map.svg);
+}

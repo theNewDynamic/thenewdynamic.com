@@ -1,8 +1,8 @@
-<header class="py-6 flex fixed z-50 w-full top-0 items-center bg-gray-100">
+<header class="py-6 flex z-50 w-full top-0 items-center absolute top-0">
   <div class="container flex items-center justify-between">
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center">
       <div class="w-6 md:w-8">{{ partial "svg/logo-compressed.svg" . }}</div>
-      <div class="text-xl lg:text-xl md:text-xl ml-3">
+      <div class="text-theme text-xl lg:text-xl md:text-xl ml-3">
         The New Dynamic
       </div>
     </a>
@@ -13,11 +13,7 @@
     </div>
     <nav class="hidden lg:block text-lg flex items-center">
       {{ range site.Menus.main }}
-        {{ if eq "contact" .Page.File.BaseFileName }}
-          <a class="text-base bg-black dark:bg-white text-white hover:bg-gradient pl-4 pr-3 pb-1 rounded inline-block lowercase" href="{{ .URL }}">{{ .Name }}</a>
-        {{ else }}
-          <a class="text-base  hover:text-gradient inline-block px-3 pb-1 rounded lowercase" href="{{ .URL }}">{{ .Name }}</a>
-        {{ end }}
+        <a class="text-base text-theme hover:text-theme-gradient inline-block px-3 pb-1 rounded lowercase" href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
     </nav>
   </div>

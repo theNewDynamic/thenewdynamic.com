@@ -1,0 +1,26 @@
+{{/*
+  GetCSSTheme
+  Return the css theme class based on potential page paraemter. Returns default if parameter is
+  set but does not match any css theme file.
+
+  @author @regisphilibert
+
+  @context Page (.)
+
+  @return String (default: default-theme)
+
+  @access public
+
+  @example - Go Template
+    {{ partial "path" context }}
+    {{ partialCached "path" context "variant" }}
+*/}}
+{{ $return := "theme-default" }}
+{{ with $theme := .Params.theme }}
+  {{/* We check if the site holds a css/themes/css matching the parameter */}}
+  {{ with resources.Get (printf "css/themes/%s.css" .) }}
+  {{ $return = print "theme-" $theme }}
+  {{ end }}
+{{ end }}
+
+{{ return $return }}
