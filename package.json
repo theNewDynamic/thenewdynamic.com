@@ -4,9 +4,12 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
+		"cms": "npx netlify-cms-proxy-server",
+		"dev:cms": "run-p cms hugo-cms",
 		"gethugo": "bash get-hugo.sh",
 		"version": "auto-changelog -p --template keepachangelog --unreleased true",
 		"hugo": "HUGO_ENV=development bin/hugo* server -D --gc --navigateToChanged --noHTTPCache",
+		"hugo-cms": "HUGO_ENV=development bin/hugo* server -D --gc --noHTTPCache",
 		"hugo-prod": "HUGO_ENV=production bin/hugo* --gc --minify",
 		"webpack": "webpack --mode=development --progress --colors --watch",
 		"webpack-prod": "webpack --mode=production",
@@ -17,6 +20,7 @@
 	"dependencies": {
 		"@fullhuman/postcss-purgecss": "^2.1.2",
 		"autoprefixer": "^9.7.3",
+		"netlify-cms": "^2.10.48",
 		"postcss-cli": "^7.1.0",
 		"postcss-import": "^12.0.1",
 		"tailwindcss": "^1.4.0"

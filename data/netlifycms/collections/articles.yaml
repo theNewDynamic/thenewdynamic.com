@@ -1,0 +1,12 @@
+name: "articles"
+label: "Articles"
+folder: "content/en/article"
+filter: { field: "exclude_collection" }
+create: true
+editor:
+  preview: false
+fields:
+  - import field title
+  - import field date
+  - import field description
+
