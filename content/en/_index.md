@@ -9,7 +9,7 @@ blocks:
       - title: Simple approach
         intro: >-
           Dedicated experts who embrace people over process. Clarity over
-          confusion. Outcomes over paperwork.
+          confusion. Outcomes over paperwork
         body: >-
           Starting a new website from scratch every few years is a daunting
           task. So we offer a simpler approach – using a dedicated design and
