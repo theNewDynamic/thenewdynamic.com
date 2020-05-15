@@ -11,6 +11,9 @@ command = "hugo --minify -e netlify"
     HUGO_ENV = "production"
     GO_VERSION = "1.14"
 
+    [context.deploy-preview.environment]
+    HUGO_VERSION = "0.70.0"
+
 [context.deploy-preview]
 command = "hugo --minify -e netlify -b $DEPLOY_PRIME_URL"
 
