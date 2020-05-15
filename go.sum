@@ -1,3 +1,5 @@
+github.com/theNewDynamic/hugo-component-tnd-blocks v0.0.0-20200409205143-7ec59035f115 h1:+Q1NjfRFcWc3Z4t7e6DNRGVNi+bRY88bA9BbiUwA3Eo=
+github.com/theNewDynamic/hugo-component-tnd-blocks v0.0.0-20200409205143-7ec59035f115/go.mod h1:VnztlqJpuK/eTa1KFBvyNCg3OgBGIwCxfccBMLJY3LM=
 github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3ace85 h1:XjcuEyQhENGWOL9/Z4JfbdADdvslI8hONno6AAfe4EQ=
 github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3ace85/go.mod h1:78sVAcrQDeMCF5ABqDNTdvgEFhLpTTO/20zEO8NZ4IA=
 github.com/theNewDynamic/hugo-module-tnd-netlify-cms v0.0.0-20200428172315-1b6c3063a595 h1:A1cOqTyX+ufYyQQUsu4VQvBAMdvmJGau2kS+8FGZOVI=

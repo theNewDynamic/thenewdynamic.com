@@ -1,9 +1,9 @@
 name: "pages"
 label: "Pages"
 files:
-  - name: "work"
-    label: "How We Work"
-    file: "content/en/how-we-work.md"
+  - name: "home"
+    label: "Homepage"
+    file: "content/en/_index.md"
     fields:
       - import field title
       - {
@@ -12,12 +12,4 @@ files:
           widget: "markdown",
           required: false,
         }
-      - label: "Points"
-        name: "points"
-        widget: "list"
-        fields:
-          - import field title
-          - label: Intro
-            name: intro
-            widget: text
-          - import field body
+      - import field blocks
