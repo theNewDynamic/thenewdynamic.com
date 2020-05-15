@@ -1,0 +1,10 @@
+label: "List of Points"
+name: "points"
+widget: "object"
+fields:
+  - import field title
+  - import field block_points_point
+  - label: Layout
+    name: layout
+    widget: hidden
+    default: points
