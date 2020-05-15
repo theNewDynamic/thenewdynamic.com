@@ -12,13 +12,6 @@ files:
           widget: "markdown",
           required: false,
         }
-      - label: "Articles"
-        name: "related_articles"
-        widget: "relation"
-        collection: "articles"
-        searchFields: ["title"]
-        valueField: "{{date}}"
-        displayFields: ["title"]
       - label: "Points"
         name: "points"
         widget: "list"
