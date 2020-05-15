@@ -3,8 +3,6 @@ title: "Hugo, the scope, the context and the dot"
 date: 2018-02-05T15:32:27-05:00
 lastmod: 2019-08-16T17:32:27-05:00
 description: Let's try and understand the impact of the scope/context within our templates and partials.
-slug: 'hugo-the-scope-the-context-and-the-dot'
-
 ---
 
 __Why is my variable not available here or there?__ 🙄

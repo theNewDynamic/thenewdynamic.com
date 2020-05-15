@@ -1,0 +1,16 @@
+name: "articles"
+label: "Articles"
+label_singular: "Article"
+description: This is what we do best. Writing blog posts.
+folder: "content/en/article"
+filter: { field: "exclude_collection" }
+create: true
+sortableFields: ['title']
+
+editor:
+  preview: false
+fields:
+  - import field title
+  - import field date
+  - import field description
+

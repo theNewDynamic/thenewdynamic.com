@@ -1,0 +1,23 @@
+name: "pages"
+label: "Pages"
+files:
+  - name: "work"
+    label: "How We Work"
+    file: "content/en/how-we-work.md"
+    fields:
+      - import field title
+      - {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          required: false,
+        }
+      - label: "Points"
+        name: "points"
+        widget: "list"
+        fields:
+          - import field title
+          - label: Intro
+            name: intro
+            widget: text
+          - import field body
