@@ -23,7 +23,7 @@
 		"netlify-cms": "^2.10.48",
 		"postcss-cli": "^7.1.0",
 		"postcss-import": "^12.0.1",
-		"tailwindcss": "^1.4.0"
+		"tailwindcss": "^1.4.6"
 	},
 	"hugo": {
 		"version": "0.70.0",
