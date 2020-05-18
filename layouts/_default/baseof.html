@@ -9,7 +9,7 @@
     {{ partial "head/styles" . }}
     {{ partial "head/scripts" . }}
   </head>
-  <body>
+  <body class="{{ partial "func/GetCSSTheme" . }}">
     {{ partial "header.html" . }}
     {{ block "main" . }}
     {{ end }}

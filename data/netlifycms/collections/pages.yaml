@@ -1,0 +1,15 @@
+name: "pages"
+label: "Pages"
+files:
+  - name: "home"
+    label: "Homepage"
+    file: "content/en/_index.md"
+    fields:
+      - import field title
+      - {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          required: false,
+        }
+      - import field blocks

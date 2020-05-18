@@ -1,0 +1,5 @@
+label: "Images"
+name: "images"
+widget: "list"
+fields:
+  - { label: "Image", name: "image", widget: "image" }

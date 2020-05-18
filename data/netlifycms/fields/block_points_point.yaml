@@ -1,0 +1,19 @@
+label: Point
+name: points
+widget: list
+fields:
+  - import field title
+  - label: "Color"
+    name: "color"
+    widget: "select"
+    options:
+    - label: Primary
+      value: primary-500
+    - label: Secondary
+      value: secondary-500
+    - label: Tertiary
+      value: tertiary-500
+  - label: Intro
+    name: intro
+    widget: text
+  - import field body

@@ -4,7 +4,11 @@
     {{ partial "home/hero.html" . }}
     <div class="py-16 bg-white">
       <div class="container">
-        {{ partial "home/work.html" . }}
+        {{ with .Params.blocks }}
+          {{ range . }}
+            {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $ "variant" "home") }}
+          {{ end }}
+        {{ end }}
       </div>
     </div>
   </div>

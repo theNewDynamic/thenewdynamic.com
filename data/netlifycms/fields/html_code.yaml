@@ -1,0 +1,4 @@
+label: HTML
+name: html_code
+widget: code
+default_language: html

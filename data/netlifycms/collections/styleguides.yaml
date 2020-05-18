@@ -1,0 +1,17 @@
+name: "styleguides"
+label: "Styleguide"
+folder: "content/en/styleguide"
+filter: { field: "exclude_collection" }
+create: true
+summary: '{{filename}} - {{title}}'
+editor:
+  preview: false
+fields:
+  - import field title
+  - label: "Code Examples"
+    name: "code_examples"
+    widget: "list"
+    summary: '{{fields.image}}'
+    field: 
+      - import field title
+      - import field html_code

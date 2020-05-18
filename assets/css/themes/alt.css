@@ -1,0 +1,13 @@
+body.theme-alt .text-theme{
+	@apply text-white;
+}
+body.theme-alt .bg-map{
+	background-image:url(../images/map-alt.svg);
+}
+body.theme-alt .text-theme-primary{
+	@apply text-tertiary-500;
+}
+
+body.theme-alt .bg-theme{
+	@apply bg-barossa-500;
+}
