@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
 show_preview_links: true
+publish_mode: editorial_workflow
 local_backend: true
 use_graphql: true
+
 media_folder: static/uploads
 public_folder: /uploads
 slug:
