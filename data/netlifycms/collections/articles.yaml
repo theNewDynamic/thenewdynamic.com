@@ -7,8 +7,6 @@ filter: { field: "exclude_collection" }
 create: true
 sortableFields: ['title']
 
-editor:
-  preview: false
 fields:
   - import field title
   - import field date
