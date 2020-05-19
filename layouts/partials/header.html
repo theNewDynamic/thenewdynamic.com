@@ -1,8 +1,8 @@
-<header class="py-6 flex z-50 w-full items-center absolute top-0">
+<header class="py-6 flex z-50 w-full items-center">
   <div class="container flex items-center justify-between">
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center">
       <div class="w-6 md:w-8">{{ partial "svg/logo-compressed.svg" . }}</div>
-      <div class="text-theme text-xl lg:text-xl md:text-xl ml-3">
+      <div class="text-black text-xl lg:text-xl md:text-xl ml-3">
         The New Dynamic
       </div>
     </a>
@@ -13,7 +13,7 @@
     </div>
     <nav class="hidden lg:block text-lg flex items-center">
       {{ range site.Menus.main }}
-        <a class="text-base text-theme hover:text-theme-gradient inline-block px-3 pb-1 rounded lowercase" href="{{ .URL }}">{{ .Name }}</a>
+        <a class="text-base hover:text-theme-gradient inline-block px-3 pb-1 rounded lowercase" href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
     </nav>
   </div>
