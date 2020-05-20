@@ -1,0 +1,121 @@
+<div x-data="modal()" x-cloak>
+	<button
+		@click="open()
+          $nextTick(() => $refs.modalCloseButton.focus())"
+	>
+		<svg class="-mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+			<path
+				d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+			/>
+			<path d="M0 0h24v24H0z" fill="none" />
+		</svg>
+	</button>
+
+	<div
+		style="z-index: 10000;"
+		class="absolute inset-0 z-50 w-full h-full mx-auto overflow-y-auto bg-black bg-opacity-75 shadow-lg"
+		x-show="isOpen"
+		x-transition:enter="transition ease-out duration-200"
+		x-transition:enter-start="opacity-0"
+		x-transition:enter-end="opacity-100"
+		x-transition:leave="transition ease-out duration-200"
+		x-transition:leave-start="opacity-100"
+		x-transition:leave-end="opacity-0"
+	>
+		<div class="w-screen mx-auto overflow-y-auto">
+			<div class="px-8 py-8 bg-white">
+				<button
+					class="absolute px-3 pt-2 pb-1 mt-4 text-sm text-white bg-blue-500 rounded top-2 right-2 hover:bg-blue-400"
+					@click="close()"
+					x-ref="modalCloseButton"
+				>
+					Close
+					<svg
+            fill="currentColor"
+						class="inline-block mb-1 ml-1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						width="22"
+						height="22"
+					>
+						<path
+							d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+						/>
+						<path d="M0 0h24v24H0z" fill="none" />
+					</svg>
+				</button>
+
+				<form
+					class="max-w-5xl mx-auto mt-16"
+					id="search-box"
+					action="{{ "search-results" | relURL }}"
+					method="get"
+					role="search"
+				>
+					<label
+						for="email"
+						class="block mb-1 text-base font-medium leading-5 text-gray-600 clip"
+						>Search the Site</label
+					>
+					<div class="relative mt-1 rounded-md shadow-sm">
+						<div
+							class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+						>
+							<svg
+								class="w-5 h-5 text-gray-400"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								width="48"
+								height="48"
+							>
+								<path
+									d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+								/>
+								<path d="M0 0h24v24H0z" fill="none" />
+							</svg>
+						</div>
+						<input
+							id="searchbox"
+							class="block w-full pl-10 form-input sm:text-3xl sm:leading-5"
+							name="query"
+							placeholder="Search Here"
+						/>
+					</div>
+        </form>
+        
+
+        <div class="max-w-5xl py-16 mx-auto text-gray-800 results">
+          <p class="text-2xl font-bold">Results</p>
+            results go here
+        </div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>	
+	function modal() {
+		const body = document.body;
+		const searchBox = document.getElementById("searchbox");
+		return {
+			isOpen: false,
+			open() {
+        (this.isOpen = true),
+        // relative assists absolute positioning of search modal
+        // over-flow-hidden keeps body from scrolling when modal active
+          body.classList.add("relative", "overflow-hidden"),
+          // setTimeout is required for focus to work on Chromium
+          setTimeout(() => {
+            // focus/selects puts the cursor in the search form on initiation. 
+						searchBox.focus();
+						searchBox.select();
+					}, 100);
+			},
+			close() {
+				(this.isOpen = false),
+					body.classList.remove("relative", "overflow-hidden");
+			},
+		};
+	}
+</script>

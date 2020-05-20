@@ -15,6 +15,22 @@
 @import "themes/default.css";
 @import "themes/alt.css";
 
+/* ALPINE JS CLASS */
+[x-cloak] {
+	display: none;
+}
+
+/* A11y https://a11yproject.com/posts/how-to-hide-content/ */
+.clip {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap; /* added line */
+}
+
 :root {
 	font-size: 14px;
 	--headerHeight: 68px;
@@ -25,7 +41,6 @@
 		--headerHeight: 78px;
 	}
 }
-
 
 h1 {
 	margin-top: 0;
@@ -81,7 +96,7 @@ small,
 body {
 	@apply font-sans text-gray-800 bg-notwhite-500;
 }
-.hero{
+.hero {
 	padding-top: var(--headerHeight);
 }
 .socials a {
@@ -108,7 +123,7 @@ body {
 }
 
 .tnd-statement:nth-child(odd) .tnd-statement__title {
-	@apply order-1 pr-6 ;
+	@apply order-1 pr-6;
 }
 .tnd-statement:nth-child(odd) .tnd-statement__intro {
 	@apply order-2;
