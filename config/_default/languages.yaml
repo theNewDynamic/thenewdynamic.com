@@ -2,3 +2,7 @@ en:
   languageName: English
   weight: 1
   contentDir: content/en
+fr:
+  languageName: Français
+  weight: 2
+  contentDir: content/fr

@@ -1,0 +1,15 @@
+
+{{ with partial "func/GetLangItems" . }}
+<div x-data="{ active: false }" @click="active = !active" class="xl:absolute w-24 m-4 bg-gray-200 rounded  right-0 top-0">
+  <div class="flex items-center justify-between py-2 px-2 uppercase">
+    {{ partial "svg/globe.svg" $ }} {{ site.Language.Lang }} {{ partial "svg/chevron-down.svg" $ }}
+  </div>
+  <div x-show="active">
+    {{ range . }}
+      <a href="{{ .permalink }}" class="block py-2 px-4">
+        {{ .label }}
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

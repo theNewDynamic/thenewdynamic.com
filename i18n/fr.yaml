@@ -1,0 +1,16 @@
+- id: home_hero_title
+  translation: Donnez à votre site une dimension globale
+- id: home_hero_subtitle
+  translation: Bienvenue dans la nouvelle dynamique
+- id: minutes_read
+  translation: 
+    one: "minute de lecture"
+    other: "minutes de lecture"
+- id: our_offices
+  translation: Nos bureaux
+- id: online_presence
+  translation: En ligne
+- id: leave_note
+  translation: Laissez nous une note
+- id: book_apt
+  translation: Prendre rendez-vous

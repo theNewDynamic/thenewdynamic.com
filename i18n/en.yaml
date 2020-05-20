@@ -1,3 +1,7 @@
+- id: home_hero_title
+  translation: Give your Website a Global Reach
+- id: home_hero_subtitle
+  translation: Welcome to The New Dynamic
 - id: minutes_read
   translation: 
     one: "minute read"

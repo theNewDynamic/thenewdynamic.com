@@ -1,4 +1,4 @@
-<header class="z-50 flex items-center w-full py-6">
+<header class="z-50 relative flex items-center w-full py-6 xl:pr-32">
   <div class="container flex items-center justify-between">
     
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center">
@@ -20,6 +20,9 @@
       {{ end }}
       <div class="inline-block">
         {{ partial "modal.html" . }}
+      </div>
+      <div class="inline-block">
+        {{ partial "lang-switch" . }}
       </div>
     </nav>
 

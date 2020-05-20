@@ -1,0 +1,41 @@
+{{/*
+  GetLangItems
+  This retrieves the items to be listed in the language switcher, using as Permalink for each items, either the language homepage, or 
+  the language page translation if found.
+
+  @author @regisphilibert
+
+  @context Page (.)
+
+  @return Slice of Maps
+    - String (.label)
+      String (.permalink)
+
+  @access public
+
+  @example - Go Template
+  {{ range partial "func/GetLangItems" . }}
+    <a href="{{ .permalink }}">{{ .label }}</a>
+  {{ end }}
+*/}}
+{{ $current := site.Language.Lang }}
+{{ $languages := slice }}
+{{ range $site := site.Sites }}
+  {{ $lang := .Language.Lang }}
+  {{ if ne $lang $current }}
+    {{ $permalink := .Home.RelPermalink }}
+    {{ $translation := false }}
+    {{ with where $.Translations "Lang" $lang }}
+      {{ with index . 0 }}
+        {{ $translation = . }}
+      {{ end }}
+    {{ end }}
+    {{ with $translation }}
+      {{ $permalink = .RelPermalink }}
+    {{ end }}
+    {{ $language := dict "label" $site.Language.LanguageName "permalink" $permalink }}
+    {{ $languages = $languages | append $language }}
+  {{ end }}
+{{ end }}
+
+{{ return $languages }}
