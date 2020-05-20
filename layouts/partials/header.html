@@ -1,20 +1,27 @@
-<header class="py-6 flex z-50 w-full items-center">
+<header class="z-50 flex items-center w-full py-6">
   <div class="container flex items-center justify-between">
+    
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center">
       <div class="w-6 md:w-8">{{ partial "svg/logo-compressed.svg" . }}</div>
-      <div class="text-black text-xl lg:text-xl md:text-xl ml-3">
+      <div class="ml-3 text-xl text-black lg:text-xl md:text-xl">
         The New Dynamic
       </div>
     </a>
-    <div class="lg:hidden flex flex-col justify-between">
-      <div class="bg-gradient-horizontal h-1 w-10"></div>
-      <div class="bg-gradient-horizontal h-1 w-10 my-1 ml-1"></div>
-      <div class="bg-gradient-horizontal h-1 w-10"></div>
+
+    <div class="flex flex-col justify-between lg:hidden">
+      <div class="w-10 h-1 bg-gradient-horizontal"></div>
+      <div class="w-10 h-1 my-1 ml-1 bg-gradient-horizontal"></div>
+      <div class="w-10 h-1 bg-gradient-horizontal"></div>
     </div>
-    <nav class="hidden lg:block text-lg flex items-center">
+    
+    <nav class="flex items-center hidden text-lg lg:block">
       {{ range site.Menus.main }}
-        <a class="text-base hover:text-theme-gradient inline-block px-3 pb-1 rounded lowercase" href="{{ .URL }}">{{ .Name }}</a>
+        <a class="inline-block px-3 pb-1 text-base lowercase rounded hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
+      <div class="inline-block">
+        {{ partial "modal.html" . }}
+      </div>
     </nav>
+
   </div>
 </header>
