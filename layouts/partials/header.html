@@ -1,4 +1,4 @@
-<header class="z-50 relative flex items-center w-full py-6 xl:pr-32">
+<header class="z-50 flex items-center w-full py-6 xl:pr-32">
   <div class="container flex items-center justify-between">
     
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center">
@@ -19,7 +19,7 @@
         <a class="inline-block px-3 pb-1 text-base lowercase rounded hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
       <div class="inline-block">
-        {{ partial "modal.html" . }}
+        {{ partial "modal-search.html" . }}
       </div>
       <div class="inline-block">
         {{ partial "lang-switch" . }}
