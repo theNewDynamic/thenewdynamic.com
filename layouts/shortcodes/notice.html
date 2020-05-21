@@ -1,0 +1,19 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $s := newScratch }}
+{{ $s.Set "icon_type" "fas" }}
+{{ with .Get "icon" }}
+	{{ if in (slice "github") .  }}
+		{{ $s.Set "icon_type" "fab" }}
+	{{ end }}
+{{ end }}
+<div class="border border-t-2 bg-primary-100">
+	<div class="font-bold">
+    {{ with .Get "title" }}
+			{{ . | markdownify }}
+		{{ end }}
+		
+	</div>
+	<div class="">
+		{{ .Inner | markdownify }}
+	</div>
+</div>

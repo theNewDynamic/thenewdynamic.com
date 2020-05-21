@@ -6,6 +6,14 @@ Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus aucto
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 
+![Image of restaurant terrasse](/uploads/aix_1.jpg "Aix famous restaurant")
+
 Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
+{{< youtube w7Ft2ymGmfc >}}
+
 Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor.
+
+{{% notice title="Bonjour" %}}
+C'est un test! [Google](https://google.com)
+{{% /notice %}}
