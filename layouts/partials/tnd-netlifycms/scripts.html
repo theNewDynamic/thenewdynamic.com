@@ -2,11 +2,13 @@
 {{ with resources.Get "css/style.css" }}
   {{ $style = . | resources.PostCSS }} 
 {{ end }}
+<script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
 <script>
   {{ with $style }}
   CMS.registerPreviewStyle("{{ $style.Permalink }}");
   {{ end }}
   {{ with resources.Match "netlifycms/**/*.js" }}
-    {{ (. | resources.Concat "netlifycms.js").Content | safeJS }}
+    {{ $bundle := resources.Concat "netlifycms.js" . | babel (dict "config" "babel.config.json") }}
+    {{ $bundle.Content | safeJS }}
   {{ end }}
 </script>

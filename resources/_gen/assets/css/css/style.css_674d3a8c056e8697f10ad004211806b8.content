@@ -1221,12 +1221,6 @@ video {
   background-color: rgba(229, 231, 235, var(--bg-opacity));
 }
 
-.hover\:bg-gray-300:hover {
-  --bg-opacity: 1;
-  background-color: #d2d6dc;
-  background-color: rgba(210, 214, 220, var(--bg-opacity));
-}
-
 .hover\:bg-gray-400:hover {
   --bg-opacity: 1;
   background-color: #9fa6b2;
@@ -1251,22 +1245,10 @@ video {
   background-color: rgba(104, 117, 245, var(--bg-opacity));
 }
 
-.hover\:bg-primary-300:hover {
-  --bg-opacity: 1;
-  background-color: #D69DAF;
-  background-color: rgba(214, 157, 175, var(--bg-opacity));
-}
-
 .hover\:bg-primary-400:hover {
   --bg-opacity: 1;
   background-color: #B75474;
   background-color: rgba(183, 84, 116, var(--bg-opacity));
-}
-
-.hover\:bg-primary-500:hover {
-  --bg-opacity: 1;
-  background-color: #980A38;
-  background-color: rgba(152, 10, 56, var(--bg-opacity));
 }
 
 .focus\:bg-gray-200:focus {
@@ -2119,12 +2101,6 @@ video {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
-.hover\:text-gray-100:hover {
-  --text-opacity: 1;
-  color: #f4f5f7;
-  color: rgba(244, 245, 247, var(--text-opacity));
-}
-
 .hover\:text-gray-300:hover {
   --text-opacity: 1;
   color: #d2d6dc;
@@ -2605,11 +2581,6 @@ body {
   .lg\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
   }
 
   .lg\:px-8 {
