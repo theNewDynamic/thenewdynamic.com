@@ -1,28 +1,36 @@
-<header class="z-50 relative flex items-center w-full py-6 xl:pr-32">
-  <div class="container flex items-center justify-between">
+<header class="z-50 flex items-center w-full lg:py-6">
+  <div class="max-w-screen-xl mx-auto w-full flex flex-wrap lg:flex-no-wrap items-center justify-between">
     
-    <a href="{{ site.Home.RelPermalink }}" class="flex items-center">
-      <div class="w-6 md:w-8">{{ partial "svg/logo-compressed.svg" . }}</div>
-      <div class="ml-3 text-xl text-black lg:text-xl md:text-xl">
+    <a href="{{ site.Home.RelPermalink }}" class="flex lg:order-1 items-center py-4 pl-4">
+      <div class="w-6 xl:w-8">{{ partial "svg/logo-compressed.svg" . }}</div>
+      <div class="ml-3 text-xl text-black">
         The New Dynamic
       </div>
     </a>
-
-    <div class="flex flex-col justify-between lg:hidden">
-      <div class="w-10 h-1 bg-gradient-horizontal"></div>
-      <div class="w-10 h-1 my-1 ml-1 bg-gradient-horizontal"></div>
-      <div class="w-10 h-1 bg-gradient-horizontal"></div>
-    </div>
     
-    <nav class="flex items-center hidden text-lg lg:block">
-      {{ range site.Menus.main }}
-        <a class="inline-block px-3 pb-1 text-base lowercase rounded hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-      <div class="inline-block">
-        {{ partial "modal.html" . }}
+    {{ partial "lang-switch" . }}
+
+    <nav x-data="{ nav_slide: false }" class="w-full bg-gray-100 flex-shrink-0 flex flex-wrap sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent items-center text-sm md:text-base lowercase">
+      {{ $menu_critical := first 2 site.Menus.main }}
+      {{ $menu_rest := symdiff $menu_critical site.Menus.main }}
+      <div class="w-full sm:w-auto flex-shrink-0 sm:flex-shrink flex items-center justify-between">
+        {{ range $menu_critical }}
+          <a class="block px-4 py-2 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        <div @click="nav_slide = !nav_slide" class="flex sm:hidden items-center px-4 py-2 ml-auto mr-0"> 
+          <span class="inline-block pb-1" x-text="nav_slide ? 'close' : 'more'"></span> <span class="ml-4">{{ partial "svg/chevron-down.svg" $ }}</span>
+        </div>
       </div>
-      <div class="inline-block">
-        {{ partial "lang-switch" . }}
+      <div x-bind:class="{ 'hidden': !nav_slide }" class="border-t sm:border-t-0 border-gray-200 w-full sm:w-auto flex sm:flex flex-wrap flex-shrink-0 sm:flex-shrink block items-center">
+        {{ range $menu_rest }}
+          <a class="block px-4 py-4 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        <div class="w-full hidden px-4 pb-4">
+          <input type="text">
+        </div>
+      </div>
+      <div class="hidden lg:block">
+        {{ partial "modal.html" . }}
       </div>
     </nav>
 
