@@ -14,3 +14,4 @@ slug:
 collections:
 - import collection pages
 - import collection articles
+- import collection persons

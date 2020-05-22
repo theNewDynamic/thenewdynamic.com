@@ -11,5 +11,6 @@ fields:
   - import field title
   - import field date
   - import field description
+  - import field authors
   - import field body
 
