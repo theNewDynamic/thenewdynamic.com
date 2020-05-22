@@ -1,4 +1,4 @@
-<div x-data="modal()" x-cloak>
+<div x-data="modalSearch()" x-cloak>
 	<button
 		@click="open()
           $nextTick(() => $refs.modalCloseButton.focus())"
@@ -95,7 +95,7 @@
 </div>
 
 <script>	
-	function modal() {
+	function modalSearch() {
 		const body = document.body;
 		const searchBox = document.getElementById("searchbox");
 		return {
