@@ -1,6 +1,8 @@
 ---
 title: This is a new post to be reviewed
 date: 2020-05-18T14:37:32.812Z
+authors:
+  - persons/regis-philibert.md
 ---
 Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.
 
