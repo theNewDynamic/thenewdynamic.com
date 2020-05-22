@@ -3,8 +3,9 @@ title: Toward a Better Pricing Model for Digital Services
 draft: false
 date: 2017-04-09T00:00:00.000Z
 description: We've decided that to be long-term partners with our clients…
-authors:
-  - persons/bud-parr.md
+authors: 
+- persons/bud-parr.md
+- persons/regis-philibert.md
 ---
 After estimating hundreds of projects over the years we've found pricing one of the most difficult aspects of working in digital services, and the one thing that pits clients against firms rather than truly be partners.
 
