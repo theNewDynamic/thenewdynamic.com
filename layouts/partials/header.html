@@ -21,7 +21,7 @@
           <span class="inline-block pb-1" x-text="nav_slide ? 'close' : 'more'"></span> <span class="ml-4">{{ partial "svg/chevron-down.svg" $ }}</span>
         </div>
       </div>
-      <div x-bind:class="{ 'hidden': !nav_slide }" class="flex flex-wrap items-center flex-shrink-0 block w-full border-t border-gray-200 sm:border-t-0 sm:w-auto sm:flex sm:flex-shrink hover:shadow">
+      <div x-bind:class="{ 'hidden': !nav_slide }" class="flex flex-wrap items-center flex-shrink-0 block w-full border-t border-gray-200 sm:border-t-0 sm:w-auto sm:flex sm:flex-shrink">
         {{ range $menu_rest }}
           <a class="block px-4 py-4 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
