@@ -6,6 +6,19 @@ blocks:
     layout: points
     title: How We Work
     points:
+      - title: Bulletproof technology
+        intro: >-
+          Your website—designed and developed to better adapt to changing
+          technology and business landscapes.
+        body: >-
+          We use methodologies and modern tools of application development to
+          create static-HTML sites and apps. They’re fast, simple, flexible and
+          deliver a level of performance that traditional CMS sites cannot. The
+          benefits? More efficient workflow with minimal software and server
+          upkeep. And more of your dollars for continuous site improvement. 
+          
+          [READ MORE](/)
+        color: primary-500
       - title: Simple approach
         intro: >-
           Dedicated experts who embrace people over process. Clarity over
@@ -16,17 +29,6 @@ blocks:
           development team that manages your web presence through ongoing
           observation, collaboration and continuous improvement over time.
           That’s the key to keeping your site engaging for your audience.
-        color: primary-500
-      - title: Bulletproof technology
-        intro: >-
-          Your website—designed and developed to better adapt to changing
-          technology and business landscapes.
-        body: >-
-          We use methodologies and modern tools of application development to
-          create static-HTML sites and apps. They’re fast, simple, flexible and
-          deliver a level of performance that traditional CMS sites cannot. The
-          benefits? More efficient workflow with minimal software and server
-          upkeep. And more of your dollars for continuous site improvement.
         color: secondary-500
       - title: Transparent pricing
         intro: >-
