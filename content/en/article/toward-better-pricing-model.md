@@ -1,7 +1,8 @@
 ---
 title: Toward a Better Pricing Model for Digital Services
 draft: false
-date: 2017-04-09T00:00:00.000Z
+categories: ["for Site Owners"]
+date: 2017-04-09T00:00:00+00:00
 description: We've decided that to be long-term partners with our clients…
 authors: 
 - persons/bud-parr.md

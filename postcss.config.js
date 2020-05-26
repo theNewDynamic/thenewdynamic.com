@@ -7,6 +7,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 	whitelist: [
 		"transition",
 		"duration-200",
+		"duration-75",
 		"ease-out",
 		"opacity-0",
 		"opacity-100",

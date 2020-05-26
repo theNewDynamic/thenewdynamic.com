@@ -1,6 +1,7 @@
 {{ define "main" }}
   <div class="container">
     {{ partial "page-header.html" . }}
+    <div class="my-4 rich-text">
     {{ with .Params.authors }}
       {{ range . }}
         {{ with site.GetPage . }}
@@ -13,6 +14,7 @@
         {{ end }}
       {{ end }}
     {{ end }}
+    </div>
     <div class="my-4 user-content">
       {{ .Content }}
     </div>
