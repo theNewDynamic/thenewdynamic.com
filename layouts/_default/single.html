@@ -2,6 +2,20 @@
   <div class="container">
     {{ partial "page-header.html" . }}
     <div class="my-4 rich-text">
+    {{ with .Params.authors }}
+      {{ range . }}
+        {{ with site.GetPage . }}
+          <div class="p-4 bg-gray-100">
+            <div class="tex-lg">{{ .Title }}</div>
+            {{ with .Params.twitter_handle }}
+              <div>@{{ . }}</div>
+            {{ end }}
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    </div>
+    <div class="my-4 user-content">
       {{ .Content }}
     </div>
   </div>

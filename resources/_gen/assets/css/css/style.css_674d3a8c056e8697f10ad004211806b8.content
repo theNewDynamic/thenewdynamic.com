@@ -897,150 +897,6 @@ video {
   border-color: transparent;
 }
 
-.h1 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 3rem;
-}
-
-@media (min-width: 640px) {
-  .h1 {
-    font-size: 4rem;
-  }
-}
-
-.h2 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 2.25rem;
-}
-
-@media (min-width: 640px) {
-  .h2 {
-    font-size: 3rem;
-  }
-}
-
-.h3 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 2.25rem;
-}
-
-.h4 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.875rem;
-}
-
-.h5 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.5rem;
-}
-
-.h6 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.25rem;
-}
-
-.link {
-  font-weight: 700;
-  color: #76a9fa;
-}
-
-.link:hover {
-  color: #1c64f2;
-  text-decoration: underline;
-}
-
-.rich-text {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.625;
-}
-
-.rich-text > * + * {
-  margin-top: 1em;
-  color: #374151;
-}
-
-.rich-text h1 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 3rem;
-}
-
-@media (min-width: 640px) {
-  .rich-text h1 {
-    font-size: 4rem;
-  }
-}
-
-.rich-text h2 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 2.25rem;
-}
-
-@media (min-width: 640px) {
-  .rich-text h2 {
-    font-size: 3rem;
-  }
-}
-
-.rich-text h3 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 2.25rem;
-}
-
-.rich-text h4 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.875rem;
-}
-
-.rich-text h5 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.5rem;
-}
-
-.rich-text h6 {
-  font-weight: 700;
-  line-height: 1.25;
-  font-size: 1.25rem;
-}
-
-.rich-text ul {
-  margin-left: 2rem;
-  list-style-type: disc;
-}
-
-.rich-text ol {
-  list-style-type: decimal;
-}
-
-.rich-text a {
-  font-weight: 700;
-  color: #76a9fa;
-}
-
-.rich-text a:hover {
-  color: #1c64f2;
-  text-decoration: underline;
-}
-
-.rich-text b, .rich-text strong {
-  font-weight: 700;
-}
-
-.rich-text i, .rich-text em {
-  font-style: italic;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1353,16 +1209,16 @@ video {
   background-color: rgba(61, 30, 25, var(--bg-opacity));
 }
 
-.hover\:bg-black:hover {
-  --bg-opacity: 1;
-  background-color: #000000;
-  background-color: rgba(0, 0, 0, var(--bg-opacity));
-}
-
 .hover\:bg-gray-100:hover {
   --bg-opacity: 1;
   background-color: #f4f5f7;
   background-color: rgba(244, 245, 247, var(--bg-opacity));
+}
+
+.hover\:bg-gray-200:hover {
+  --bg-opacity: 1;
+  background-color: #e5e7eb;
+  background-color: rgba(229, 231, 235, var(--bg-opacity));
 }
 
 .hover\:bg-gray-400:hover {
@@ -1660,6 +1516,10 @@ video {
   font-size: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+}
+
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -1678,6 +1538,11 @@ video {
 
 .m-4 {
   margin: 1rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .my-4 {
@@ -2101,11 +1966,6 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-}
-
 .inset-0 {
   top: 0;
   right: 0;
@@ -2152,6 +2012,10 @@ video {
 
 .shadow-lg {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover\:shadow:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .hover\:shadow-none:hover {
@@ -2222,12 +2086,6 @@ video {
   --text-opacity: 1;
   color: #5850ec;
   color: rgba(88, 80, 236, var(--text-opacity));
-}
-
-.text-tertiary-500 {
-  --text-opacity: 1;
-  color: #CC6554;
-  color: rgba(204, 101, 84, var(--text-opacity));
 }
 
 .group:hover .group-hover\:text-gray-500 {
@@ -2363,16 +2221,8 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.col-span-11 {
-  grid-column: span 11 / span 11;
-}
-
 .transition {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-}
-
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .ease-out {
@@ -2383,20 +2233,12 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.duration-75 {
-  transition-duration: 75ms;
-}
-
 .duration-150 {
   transition-duration: 150ms;
 }
 
 .duration-200 {
   transition-duration: 200ms;
-}
-
-.duration-700 {
-  transition-duration: 700ms;
 }
 
 body.theme-default .text-theme{
@@ -2472,6 +2314,10 @@ h2 {
   font-size: 3.157em;
 }
 
+h3 {
+  font-size: 2.369em;
+}
+
 h4 {
   font-size: 1.777em;
 }
@@ -2545,6 +2391,10 @@ body {
 
   .sm\:border-t-0 {
     border-top-width: 0;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:inline {
@@ -2626,6 +2476,10 @@ body {
 }
 
 @media (min-width: 768px) {
+
+  .md\:block {
+    display: block;
+  }
 
   .md\:flex {
     display: flex;
@@ -2739,10 +2593,6 @@ body {
 
   .lg\:order-3 {
     order: 3;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
   }
 
   .lg\:py-4 {
