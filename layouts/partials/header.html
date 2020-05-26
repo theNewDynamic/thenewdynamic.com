@@ -10,20 +10,22 @@
     
     {{ partial "lang-switch" . }}
 
+    {{ $menu_items := partialCached "func/GetMainMenuItems" . "func/GetMainMenuItems" }}
     <nav x-data="{ nav_slide: false }" class="flex flex-wrap items-center flex-shrink-0 w-full text-sm lowercase bg-gray-100 sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent md:text-base">
-      {{ $menu_critical := first 2 site.Menus.main }}
-      {{ $menu_rest := symdiff $menu_critical site.Menus.main }}
-      <div class="flex items-center justify-between flex-shrink-0 w-full sm:w-auto sm:flex-shrink">
-        {{ range $menu_critical }}
+      <div class=" sm:hidden flex items-center justify-between flex-shrink-0 w-full sm:w-auto sm:flex-shrink">
+        {{/* Only Menu Items set as critical are displayed here */}}
+        {{ range where $menu_items "critical" "eq" true }}
           <a class="block px-4 py-2 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         <div @click="nav_slide = !nav_slide" class="flex items-center px-4 py-2 ml-auto mr-0 sm:hidden"> 
           <span class="inline-block pb-1" x-text="nav_slide ? 'close' : 'more'"></span> <span class="ml-4">{{ partial "svg/chevron-down.svg" $ }}</span>
         </div>
       </div>
-      <div x-bind:class="{ 'hidden': !nav_slide }" class="flex flex-wrap items-center flex-shrink-0 block w-full border-t border-gray-200 sm:border-t-0 sm:w-auto sm:flex sm:flex-shrink hover:shadow">
-        {{ range $menu_rest }}
-          <a class="block px-4 py-4 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
+      {{/* Here we iterate on the full main menu */}}
+      <div x-bind:class="{ 'hidden': !nav_slide }" class="flex flex-wrap items-center flex-shrink-0 block w-full border-t border-gray-200 sm:border-t-0 sm:w-auto sm:flex sm:flex-shrink">
+        {{ range $menu_items }}
+          {{/* Making sure the critical call ones displayed above on mobile, are hidden in this section on mobile. */}}
+          <a class="{{ if .critical }}hidden sm:block{{ else }}block{{ end }} px-4 py-4 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         <div class="hidden w-full px-4 pb-4">
           <input type="text">

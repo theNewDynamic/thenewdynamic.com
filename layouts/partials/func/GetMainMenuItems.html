@@ -1,0 +1,22 @@
+{{/*
+  GetMainMenuItems
+  Retrieves the Items from the Main Menu with the "critical" boolean logic added.
+
+  @author @regisphiliber
+
+  @context Any (.)
+
+  @access public
+
+  @example - Go Template
+    {{ $menu_items := partialCached "func/GetMainMenuItems" . "func/GetMainMenuItems" }}
+*/}}
+
+{{ $items := slice }}
+{{ range site.Menus.main }}
+  {{/* Adding "critical" to the Pre setting of the menu item sets it to critical */}}
+  {{ $item := dict "Name" .Name "URL" .URL "critical" (eq .Pre "critical")}}
+  {{ $items = $items | append $item }}
+{{ end }}
+
+{{ return $items }}
