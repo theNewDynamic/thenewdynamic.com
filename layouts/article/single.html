@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div id="article">
+	<div class="container max-w-3xl pageheading text-tertiary-500">
+		{{ partial "page-header.html" . }}
+	</div>
+
+	<div
+		class="sticky top-0 hidden w-full text-white transition duration-700 ease-in headings bg-tertiary-500"
+	>
+		<div class="container max-w-3xl p-4">
+      {{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}} 
+      {{ with .Title }} :<span class="inline-block ml-4 altheading"
+				>{{ . }}</span
+			>
+			{{ end }}
+		</div>
+	</div>
+
+	<div class="container max-w-3xl mb-16">
+		<div class="col-span-11 rich-text">
+			{{ .Content }}
+		</div>
+	</div>
+</div>
+
+{{ end }}
