@@ -38,6 +38,7 @@ module.exports = {
 				extends: "heading",
 				fontSize: theme("fontSize.xl"),
 			},
+
 			link: {
 				fontWeight: theme("fontWeight.bold"),
 				color: theme("colors.blue.400"),
@@ -48,7 +49,7 @@ module.exports = {
 			},
 			richText: {
 				fontWeight: theme("fontWeight.normal"),
-				fontSize: theme("fontSize.base"),
+				fontSize: theme("fontSize.lg"),
 				lineHeight: theme("lineHeight.relaxed"),
 				"> * + *": {
 					marginTop: "1em",
@@ -87,6 +88,15 @@ module.exports = {
 				},
 				"i, em": {
 					fontStyle: "italic",
+				},
+				pre: {
+					borderRadius: theme("borderRadius.md"),
+					fontSize: theme("fontSize.base"),
+					overflow: theme("overflow.scroll"),
+					padding: "18px",
+				},
+				code: {
+					whitespace: theme("whitespace.pre-wrap"),
 				},
 			},
 		}),
@@ -130,7 +140,7 @@ module.exports = {
 	},
 	plugins: [
 		require("@tailwindcss/ui"),
-		require("tailwindcss-typography")({			
+		require("tailwindcss-typography")({
 			componentPrefix: "", // the prefix to use for text style classes
 		}),
 	],
