@@ -29,3 +29,6 @@ partials/structure/stylesheet.html
 
 # Hugo
 hugo_stats.json
+
+# Local Netlify folder
+.netlify
