@@ -1,28 +1,25 @@
 {{ define "main" }}
-<div id="article">
-  
-	<div class="w-full py-8 bg-barossa-500 pageheading">
+<article>  
+  <div id="pageheading" class="w-full py-8 bg-barossa-500">
     <div class="container max-w-6xl pb-8 mt-12 text-gray-100 duration-200 ease-in transtion hover:text-barossa-400">
       {{ partial "article-header.html" . }}
-    </div>
-  
+    </div>  
   </div>
-	<div class="sticky top-0 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-barossa-500">
-		<div class="container max-w-3xl p-4">
-			{{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}}
-			{{ with .Title }} :<span class="inline-block ml-4 altheading">{{ . }}</span>{{ end }}
-		</div>
-	</div>
-
-	<div class="container max-w-3xl mt-8 mb-16">
-		<div class="col-span-11 rich-text">
-			{{ .Content }}
+  {{/* The sticky class below must follow directly after the pageheadding div above for its interaction to work "js/intersection-observer.js" */}}
+  <div class="sticky top-0 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-barossa-500">
+    <div class="container max-w-3xl p-4">
+      {{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}}
+      {{ with .Title }} :<span class="inline-block ml-4 altheading">{{ . }}</span>{{ end }}
+    </div>
+  </div>
+  <div class="container max-w-3xl mt-8 mb-16">
+    <div class="col-span-11 rich-text">
+      {{ .Content }}
     </div>
     <div class="my-16">
       {{ partial "prev-next-in-section.html" . }}
     </div>
   </div>
-  
-</div>
+</article>
 
 {{ end }}
