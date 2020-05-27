@@ -14,3 +14,9 @@
   translation: Laissez nous une note
 - id: book_apt
   translation: Prendre rendez-vous
+- id: recent_articles
+  translation: Recent Articles
+- id: previous
+  translation: Previous  
+- id: next
+  translation: Next      

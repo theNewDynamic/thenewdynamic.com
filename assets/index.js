@@ -45,13 +45,12 @@ const heading = document.querySelectorAll(".pageheading");
 let observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		const target = entry.target.nextElementSibling;
-		console.log("inf", entry.intersectionRatio);
+	
+		console.log("inf", target);
 		if (entry.intersectionRatio > 0) {
-			target.classList.add('hidden');
-			//header.classList.add("hidden");
+			target.classList.add('opacity-0');			
 		} else {
-			target.classList.remove("hidden");
-			//header.classList.remove("hidden");
+			target.classList.remove("opacity-0");			
 		}
 	});
 });
