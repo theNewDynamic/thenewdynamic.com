@@ -134,3 +134,19 @@ body {
 .tnd-statement:nth-child(even) .tnd-statement__intro {
 	@apply order-1;
 }
+
+@screen -sm{
+	.mobile-nav{
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		top:0;
+		left:0;
+		transition: top 200ms ease-out, opacity 200ms ease-out, z-index 0ms 200ms;
+	}
+	.mobile-nav.active{
+		top: 100%;
+		opacity: 1;
+		z-index: 0;
+	}
+}
