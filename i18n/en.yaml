@@ -5,7 +5,7 @@
 - id: minutes_read
   translation:
     one: "minute read"
-    other: "minutes read"
+    other: "minute read"
 - id: our_offices
   translation: Brick & Mortar
 - id: online_presence
