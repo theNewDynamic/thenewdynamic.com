@@ -2625,10 +2625,31 @@ body {
   order: 1;
 }
 
+@media (max-width: 638px){
+  .mobile-nav{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top:0;
+    left:0;
+    transition: top 200ms ease-out, opacity 200ms ease-out, z-index 0ms 200ms;
+  }
+
+  .mobile-nav.active{
+    top: 100%;
+    opacity: 1;
+    z-index: 0;
+  }
+}
+
 @media (min-width: 640px) {
 
-  .sm\:border-t-0 {
-    border-top-width: 0;
+  .sm\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .sm\:border-0 {
+    border-width: 0;
   }
 
   .sm\:block {
@@ -2706,6 +2727,10 @@ body {
 
   .sm\:pl-3 {
     padding-left: 0.75rem;
+  }
+
+  .sm\:static {
+    position: static;
   }
 
   .sm\:w-auto {

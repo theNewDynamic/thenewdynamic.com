@@ -102,6 +102,9 @@ module.exports = {
 		}),
 		extend: {
 			colors,
+			screens: {
+				'-sm': {'max': '638px'}
+			},
 			minHeight: {
 				"80v": "80vh",
 			},
