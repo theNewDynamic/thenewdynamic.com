@@ -143,7 +143,7 @@ body {
 		opacity: 0;
 		top:0;
 		left:0;
-		transition: top 200ms ease-out, opacity 200ms ease-out, z-index 0ms 200ms;
+		transition: top 200ms ease-in-out, opacity 200ms ease-in-out;
 	}
 	.mobile-nav.active{
 		top: 100%;
