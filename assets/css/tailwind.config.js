@@ -96,7 +96,7 @@ module.exports = {
 					padding: "18px",
 				},
 				code: {
-					whitespace: theme("whitespace.pre-wrap"),
+					"white-space": "pre-wrap",
 				},
 			},
 		}),

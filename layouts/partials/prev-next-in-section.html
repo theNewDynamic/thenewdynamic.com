@@ -1,0 +1,53 @@
+{{/*
+  Display the previous and next entry in section
+
+  @author @regisphilibert
+
+  @context Page (Page)
+
+  @example - Go Template
+    {{ partial "_components/prev-next-in-section.html" . }}
+*/}}
+{{ if or .PrevInSection .NextInSection }}
+  <div class="mb-4 text-3xl font-bold border-b-2 rich-text">
+    {{ i18n "recent_articles" }}
+  </div>
+  {{ with .PrevInSection }}
+    {{ template "prev_next_item" (dict "label" "previous" "Page" .) }}
+  {{ end }}
+  {{ with .NextInSection }}
+    {{ template "prev_next_item" (dict "label" "next" "Page" .) }}
+  {{ end }}
+{{ end }}
+
+<script>
+  document.body.onkeyup = function(e){
+    {{ with .PrevInSection }}
+      if (e.keyCode == '37') { window.location = '{{ .Permalink }}'; }
+    {{ end }}
+    {{ with .NextInSection }}
+      if (e.keyCode == '39') { window.location = '{{ .Permalink }}'; }
+    {{ end }}
+  };
+</script>
+
+{{/*
+  Outputs a Previous or Next line based on .label
+  @context Map
+    - label (String)
+    - Page (Page)
+
+  @example - See above
+*/}}
+{{ define "prev_next_item" }}
+<div class="flex mb-2">
+  <div class="w-16 mr-4 flex-no-shrink">
+    {{ i18n .label }}:
+  </div>
+  <div>
+    <a href="{{ .Page.Permalink }}" class="no-underline color-inherit hover:underline hover:text-primary-color">
+      {{ .Page.Title }}
+    </a>
+  </div>
+</div>
+{{ end }}

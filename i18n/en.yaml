@@ -3,7 +3,7 @@
 - id: home_hero_subtitle
   translation: Welcome to The New Dynamic
 - id: minutes_read
-  translation: 
+  translation:
     one: "minute read"
     other: "minutes read"
 - id: our_offices
@@ -14,3 +14,9 @@
   translation: Leave a note
 - id: book_apt
   translation: Book an appointment
+- id: recent_articles
+  translation: Recent Articles
+- id: previous
+  translation: Previous
+- id: next
+  translation: Next

@@ -1,20 +1,22 @@
-<div class="sm:grid grid-cols-2 gap-8">
-	<div class="bg-purple-800TK bg-gray-700 text-white font-light text-2xl mb-2 h-64 flex flex-col justify-center rounded">
-		<div class="p-8">
-			<span class="font-serif inline-block -ml-4 pr-1">“</span>{{ .Description | default .Summary | truncate 100 }}
+<div class="grid-cols-2 gap-8 sm:grid">
+	<div class="pattern-dots-md">
+	<div class="flex flex-col justify-center h-64 mb-2 font-serif text-2xl font-light text-white transform -translate-x-5 -translate-y-5 rounded bg-barossa-400">
+		<div class="p-8 text-3xl">
+			<span class="inline-block pr-1 -ml-4 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
 		</div>
 	</div>
+</div>
 	<div>
-		<h2 class="text-3xl leading-tight mb-4">
-			<a href="{{ .RelPermalink }}" class="">
+		<h2 class="mb-4 text-5xl font-bold leading-tight">
+			<a href="{{ .RelPermalink }}" class="color-inherit text-shadow-lg">
 				{{ .Title }}
 			</a>
 		</h2>
-		<time class="text-gray-600" datetime="{{ .Date }}">
+		<time class="opacity-75 color-inherit" datetime="{{ .Date }}">
 			{{ dateFormat "Published January 2, 2006" .Date }}
 		</time>
 		{{ if ne .Lastmod .Date }}
-			<div class="text-sm text-gray-600 my-2">
+			<div class="my-2 text-sm opacity-75 color-inherit">
 				{{ $format := cond (eq (.Date.Format "2006") (.Lastmod.Format "2006") ) "January 2" "January 2, 2006" }}
 			<time datetime="{{ .Lastmod }}">
 				Updated {{ .Lastmod.Format $format }}
@@ -22,7 +24,8 @@
 		</div>
 		{{ end }} 
 		{{ with .ReadingTime }}
-		<small class="text-gray-600 block">{{ . }} {{ i18n "minutes_read" . }}.</small>
+		<small class="block opacity-75 color-inherit">{{ . }} {{ i18n "minutes_read" . }}.</small>
 		{{ end }}
 	</div>
 </div>
+

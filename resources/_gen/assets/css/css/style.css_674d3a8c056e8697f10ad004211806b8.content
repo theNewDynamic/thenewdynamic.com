@@ -957,7 +957,7 @@ video {
 
 .rich-text {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.625;
 }
 
@@ -1041,6 +1041,16 @@ video {
   font-style: italic;
 }
 
+.rich-text pre {
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  padding: 18px;
+}
+
+.rich-text code {
+  white-space: pre-wrap;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1093,12 +1103,6 @@ video {
   --bg-opacity: 1;
   background-color: #4b5563;
   background-color: rgba(75, 85, 99, var(--bg-opacity));
-}
-
-.bg-gray-700 {
-  --bg-opacity: 1;
-  background-color: #374151;
-  background-color: rgba(55, 65, 81, var(--bg-opacity));
 }
 
 .bg-gray-800 {
@@ -1353,6 +1357,24 @@ video {
   background-color: rgba(61, 30, 25, var(--bg-opacity));
 }
 
+.bg-barossa-400 {
+  --bg-opacity: 1;
+  background-color: #786979;
+  background-color: rgba(120, 105, 121, var(--bg-opacity));
+}
+
+.bg-barossa-500 {
+  --bg-opacity: 1;
+  background-color: #362038;
+  background-color: rgba(54, 32, 56, var(--bg-opacity));
+}
+
+.hover\:bg-black:hover {
+  --bg-opacity: 1;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
+}
+
 .hover\:bg-gray-100:hover {
   --bg-opacity: 1;
   background-color: #f4f5f7;
@@ -1492,6 +1514,10 @@ video {
 
 .border-t-2 {
   border-top-width: 2px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-t {
@@ -1654,6 +1680,10 @@ video {
   font-size: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+}
+
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -1687,6 +1717,11 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .my-20 {
@@ -1741,6 +1776,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .mb-4 {
@@ -1825,6 +1864,10 @@ video {
 
 .max-w-5xl {
   max-width: 64rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
 }
 
 .max-w-7xl {
@@ -2008,6 +2051,10 @@ video {
   padding-top: 2rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -2100,6 +2147,11 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .inset-0 {
   top: 0;
   right: 0;
@@ -2176,6 +2228,12 @@ video {
   color: rgba(0, 0, 0, var(--text-opacity));
 }
 
+.text-gray-100 {
+  --text-opacity: 1;
+  color: #f4f5f7;
+  color: rgba(244, 245, 247, var(--text-opacity));
+}
+
 .text-gray-300 {
   --text-opacity: 1;
   color: #d2d6dc;
@@ -2218,12 +2276,6 @@ video {
   color: rgba(88, 80, 236, var(--text-opacity));
 }
 
-.text-tertiary-500 {
-  --text-opacity: 1;
-  color: #CC6554;
-  color: rgba(204, 101, 84, var(--text-opacity));
-}
-
 .group:hover .group-hover\:text-gray-500 {
   --text-opacity: 1;
   color: #6b7280;
@@ -2254,6 +2306,12 @@ video {
   color: rgba(22, 30, 46, var(--text-opacity));
 }
 
+.hover\:text-barossa-400:hover {
+  --text-opacity: 1;
+  color: #786979;
+  color: rgba(120, 105, 121, var(--text-opacity));
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -2264,6 +2322,10 @@ video {
 
 .no-underline {
   text-decoration: none;
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
 }
 
 .tracking-tight {
@@ -2296,6 +2358,10 @@ video {
 
 .w-14 {
   width: 3.5rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .w-24 {
@@ -2361,6 +2427,25 @@ video {
   grid-column: span 11 / span 11;
 }
 
+.transform {
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.-translate-x-5 {
+  --transform-translate-x: -1.25rem;
+}
+
+.-translate-y-5 {
+  --transform-translate-y: -1.25rem;
+}
+
 .transition {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
 }
@@ -2387,10 +2472,6 @@ video {
 
 .duration-200 {
   transition-duration: 200ms;
-}
-
-.duration-700 {
-  transition-duration: 700ms;
 }
 
 body.theme-default .text-theme{
@@ -2429,6 +2510,11 @@ body.theme-alt .bg-theme{
   --bg-opacity: 1;
   background-color: #362038;
   background-color: rgba(54, 32, 56, var(--bg-opacity));
+}
+
+.pattern-dots-md {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: calc(10 * 1px) calc(10 * 1px);
 }
 
 /* ALPINE JS CLASS */
