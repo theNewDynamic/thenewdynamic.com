@@ -1584,6 +1584,10 @@ video {
   flex-shrink: 0;
 }
 
+.font-sans {
+  font-family: Mark, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .font-serif {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -1834,6 +1838,10 @@ video {
   margin-left: -1rem;
 }
 
+.-ml-6 {
+  margin-left: -1.5rem;
+}
+
 .-mr-14 {
   margin-right: -3.5rem;
 }
@@ -2051,6 +2059,10 @@ video {
   padding-top: 2rem;
 }
 
+.pr-8 {
+  padding-right: 2rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -2065,6 +2077,10 @@ video {
 
 .pb-12 {
   padding-bottom: 3rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
 }
 
 .pb-full {

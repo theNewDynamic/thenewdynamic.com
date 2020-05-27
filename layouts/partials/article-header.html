@@ -1,8 +1,8 @@
 <div class="grid-cols-2 gap-8 sm:grid">
 	<div class="pattern-dots-md">
-	<div class="flex flex-col justify-center h-64 mb-2 font-serif text-2xl font-light text-white transform -translate-x-5 -translate-y-5 rounded bg-barossa-400">
-		<div class="p-8 text-3xl">
-			<span class="inline-block pr-1 -ml-4 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
+	<div class="flex flex-col justify-center h-64 mb-2 font-serif text-2xl font-light leading-tight text-white transform -translate-x-5 -translate-y-5 rounded bg-barossa-400">
+		<div class="py-8 pl-12 pr-8 text-3xl">
+			<span class="inline-block pr-1 -ml-6 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
 		</div>
 	</div>
 </div>
