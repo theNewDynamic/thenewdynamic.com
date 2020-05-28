@@ -1051,6 +1051,16 @@ video {
   white-space: pre-wrap;
 }
 
+.rich-text blockquote {
+  background-color: #f4f5f7;
+  border-radius: 0.375rem;
+  color: #000000;
+  font-size: 2.25rem;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  padding: 2rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1361,12 +1371,6 @@ video {
   --bg-opacity: 1;
   background-color: #786979;
   background-color: rgba(120, 105, 121, var(--bg-opacity));
-}
-
-.bg-barossa-500 {
-  --bg-opacity: 1;
-  background-color: #362038;
-  background-color: rgba(54, 32, 56, var(--bg-opacity));
 }
 
 .hover\:bg-black:hover {
@@ -2310,10 +2314,10 @@ video {
   color: rgba(22, 30, 46, var(--text-opacity));
 }
 
-.hover\:text-barossa-400:hover {
+.hover\:text-tertiary-400:hover {
   --text-opacity: 1;
-  color: #786979;
-  color: rgba(120, 105, 121, var(--text-opacity));
+  color: #DB9387;
+  color: rgba(219, 147, 135, var(--text-opacity));
 }
 
 .uppercase {
@@ -2535,6 +2539,29 @@ body.theme-alt .bg-theme{
   white-space: nowrap; /* added line */
 }
 
+/* Fancy Blockquotes */
+
+.rich-text blockquote {
+  background-image: radial-gradient(#cc6554 0.5px, transparent 0.5px),
+		radial-gradient(#cc6554 0.5px, transparent 0.5px);
+  background-size: calc(20 * 0.5px) calc(20 * 0.5px);
+  background-position: 0 0, calc(10 * 0.5px) calc(10 * 0.5px);
+}
+
+@media (min-width: 1024px) {
+  .rich-text blockquote:nth-of-type(3n + 1) {
+    margin-left: -200px;
+    margin-right: 200px;
+  }
+
+  .rich-text blockquote:nth-of-type(4n + 3) {
+    margin-left: 200px;
+    margin-right: -200px;
+  }
+}
+
+/* END Fancy Blockquotes */
+
 :root {
   font-size: 14px;
   --headerHeight: 68px;
@@ -2629,17 +2656,17 @@ body {
   order: 1;
 }
 
-@media (max-width: 638px){
-  .mobile-nav{
+@media (max-width: 638px) {
+  .mobile-nav {
     position: absolute;
     z-index: -1;
     opacity: 0;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     transition: top 200ms ease-in-out, opacity 200ms ease-in-out;
   }
 
-  .mobile-nav.active{
+  .mobile-nav.active {
     top: 100%;
     opacity: 1;
     z-index: 0;
