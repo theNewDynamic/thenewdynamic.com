@@ -98,12 +98,21 @@ module.exports = {
 				code: {
 					"white-space": "pre-wrap",
 				},
+				blockquote: {
+					backgroundColor: theme("colors.gray.100"),
+					borderRadius: theme("borderRadius.md"),
+					color: theme("colors.black"),
+					fontSize: theme("fontSize.4xl"),
+					fontFamily: theme("fontFamily.serif"),
+					fontWeight: theme("fontWeight.bold"),
+					padding: theme("padding.8"),
+				},
 			},
 		}),
 		extend: {
 			colors,
 			screens: {
-				'-sm': {'max': '638px'}
+				"-sm": { max: "638px" },
 			},
 			minHeight: {
 				"80v": "80vh",
