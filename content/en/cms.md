@@ -1,6 +1,6 @@
 ---
 title: TND CMS
-layout: netlifycms
+type: netlifycms
 outputs:
   - HTML
   - netlifycms_config
