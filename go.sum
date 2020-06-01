@@ -4,6 +4,8 @@ github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3a
 github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3ace85/go.mod h1:78sVAcrQDeMCF5ABqDNTdvgEFhLpTTO/20zEO8NZ4IA=
 github.com/theNewDynamic/hugo-module-tnd-netlify-cms v0.1.2 h1:VwnNuynBWOK83qgwvektjj7+AzZF9bKXF0+VuumgT4s=
 github.com/theNewDynamic/hugo-module-tnd-netlify-cms v0.1.2/go.mod h1:qZ98q8trzEc2KAeObCm/YZXKFjm/xt4ACjACq8BZCvM=
+github.com/theNewDynamic/hugo-module-tnd-netlify-cms v0.1.3 h1:MzaBtJ7gIvyz4K1BdkCw8pWk61/ZL+yMsEWV5u4OX5I=
+github.com/theNewDynamic/hugo-module-tnd-netlify-cms v0.1.3/go.mod h1:qZ98q8trzEc2KAeObCm/YZXKFjm/xt4ACjACq8BZCvM=
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.1.0 h1:1+cP+DuvjxYL7eBMkHv654GPClw7NfPVE1n+M9B5KQs=
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.1.0/go.mod h1:UG+i6GOMCwA+ZbpQ9DXX8ImoW4IEY0tKfJ0/EiUZLLg=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.1 h1:Zk4H2TZE2TUCehiMhgEuUzGEPqoDm0J4tcB8PFgsAfw=
