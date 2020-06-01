@@ -16,6 +16,24 @@
 @import "themes/alt.css";
 @import "patterns.css";
 
+/* STICKY FOOTER */
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-container {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex-shrink: 0;
+}
+
 /* ALPINE JS CLASS */
 [x-cloak] {
 	display: none;
