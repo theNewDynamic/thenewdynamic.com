@@ -2533,6 +2533,25 @@ body.theme-alt .bg-theme{
   background-size: calc(10 * 1px) calc(10 * 1px);
 }
 
+/* STICKY FOOTER */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
 /* ALPINE JS CLASS */
 
 /* A11y https://a11yproject.com/posts/how-to-hide-content/ */
