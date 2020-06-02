@@ -17,7 +17,8 @@ blocks:
           benefits? More efficient workflow with minimal software and server
           upkeep. And more of your dollars for continuous site improvement. 
           
-          [READ MORE](/)
+          
+          [READ MORE &rarr;](/article/bulletproof-technology/)
         color: primary-500
       - title: Simple approach
         intro: >-
