@@ -1692,10 +1692,6 @@ video {
   font-size: 3rem;
 }
 
-.text-6xl {
-  font-size: 4rem;
-}
-
 .leading-5 {
   line-height: 1.25rem;
 }
