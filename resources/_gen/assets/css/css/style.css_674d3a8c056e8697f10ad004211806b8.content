@@ -1367,10 +1367,10 @@ video {
   background-color: rgba(61, 30, 25, var(--bg-opacity));
 }
 
-.bg-barossa-400 {
+.bg-barossa-500 {
   --bg-opacity: 1;
-  background-color: #786979;
-  background-color: rgba(120, 105, 121, var(--bg-opacity));
+  background-color: #362038;
+  background-color: rgba(54, 32, 56, var(--bg-opacity));
 }
 
 .hover\:bg-black:hover {
@@ -1588,12 +1588,6 @@ video {
   flex-shrink: 0;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .font-serif {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -1708,6 +1702,10 @@ video {
 
 .leading-9 {
   line-height: 2.25rem;
+}
+
+.leading-none {
+  line-height: 1;
 }
 
 .leading-tight {
@@ -1867,10 +1865,6 @@ video {
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .max-w-md {
@@ -2101,18 +2095,6 @@ video {
 
 .pl-12 {
   padding-left: 3rem;
-}
-
-.pr-16 {
-  padding-right: 4rem;
-}
-
-.pr-24 {
-  padding-right: 6rem;
-}
-
-.pr-32 {
-  padding-right: 8rem;
 }
 
 .pb-full {
@@ -2502,6 +2484,10 @@ video {
   --transform-scale-x: 1;
   --transform-scale-y: 1;
   transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.-translate-x-2 {
+  --transform-translate-x: -0.5rem;
 }
 
 .-translate-x-5 {
@@ -2953,20 +2939,16 @@ body {
     order: 3;
   }
 
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-  }
-
   .lg\:text-5xl {
     font-size: 3rem;
   }
 
   .lg\:text-6xl {
     font-size: 4rem;
+  }
+
+  .lg\:-ml-6 {
+    margin-left: -1.5rem;
   }
 
   .lg\:py-4 {
@@ -2991,6 +2973,14 @@ body {
   .lg\:grid-cols-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
   }
+
+  .lg\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .lg\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -3014,13 +3004,5 @@ body {
 
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .xl\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .xl\:col-span-3 {
-    grid-column: span 3 / span 3;
   }
 }
