@@ -1588,6 +1588,12 @@ video {
   flex-shrink: 0;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .font-serif {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -1720,6 +1726,11 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .my-8 {
@@ -1858,8 +1869,16 @@ video {
   max-width: 20rem;
 }
 
+.max-w-sm {
+  max-width: 24rem;
+}
+
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .max-w-xl {
@@ -1970,6 +1989,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2077,6 +2101,18 @@ video {
 
 .pl-12 {
   padding-left: 3rem;
+}
+
+.pr-16 {
+  padding-right: 4rem;
+}
+
+.pr-24 {
+  padding-right: 6rem;
+}
+
+.pr-32 {
+  padding-right: 8rem;
 }
 
 .pb-full {
@@ -2306,6 +2342,12 @@ video {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.hover\:text-gray-100:hover {
+  --text-opacity: 1;
+  color: #f4f5f7;
+  color: rgba(244, 245, 247, var(--text-opacity));
+}
+
 .hover\:text-gray-300:hover {
   --text-opacity: 1;
   color: #d2d6dc;
@@ -2322,6 +2364,10 @@ video {
   --text-opacity: 1;
   color: #DB9387;
   color: rgba(219, 147, 135, var(--text-opacity));
+}
+
+.italic {
+  font-style: italic;
 }
 
 .uppercase {
@@ -2408,6 +2454,10 @@ video {
   z-index: 10;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -2433,6 +2483,10 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .col-span-11 {
@@ -2871,15 +2925,6 @@ body {
   .md\:w-3\/5 {
     width: 60%;
   }
-
-  .md\:gap-8 {
-    grid-gap: 2rem;
-    gap: 2rem;
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1024px) {
@@ -2906,6 +2951,14 @@ body {
 
   .lg\:order-3 {
     order: 3;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
   }
 
   .lg\:text-5xl {
@@ -2965,5 +3018,9 @@ body {
 
   .xl\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
   }
 }
