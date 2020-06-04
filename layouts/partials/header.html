@@ -4,7 +4,7 @@
     
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center py-4 pl-4 lg:order-1">
       <div class="w-6 xl:w-8">{{ partial "svg/logo-compressed.svg" . }}</div>
-      <div class="ml-3 text-xl text-black">
+      <div class="ml-3 text-2xl text-black">
         The New Dynamic
       </div>
     </a>
@@ -12,8 +12,8 @@
     {{ partial "lang-switch" . }}
 
     {{ $menu_items := partialCached "func/GetMainMenuItems" . "func/GetMainMenuItems" }}
-    <nav x-data="{ nav_slide: false }" class="relative sm:static flex flex-wrap items-center flex-shrink-0 w-full text-sm lowercase bg-gray-100 sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent md:text-base">
-      <div class="flex items-center justify-between flex-shrink-0 w-full  sm:hidden sm:w-auto sm:flex-shrink">
+    <nav x-data="{ nav_slide: false }" class="relative z-10 flex flex-wrap items-center flex-shrink-0 w-full text-lg lowercase bg-gray-200 sm:static sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent md:text-base">
+      <div class="flex items-center justify-between flex-shrink-0 w-full sm:hidden sm:w-auto sm:flex-shrink">
         {{/* Only Menu Items set as critical are displayed here */}}
         {{ range where $menu_items "critical" "eq" true }}
           <a class="block px-4 py-2 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
@@ -23,17 +23,19 @@
         </div>
       </div>
       {{/* Here we iterate on the full main menu */}}
-      <div x-bind:class="{ 'active': nav_slide }" class="mobile-nav bg-gray-100 sm:bg-transparent flex flex-wrap items-center flex-shrink-0 block w-full border-t border-b border-gray-200 sm:border-0 sm:w-auto sm:flex sm:flex-shrink">
+      <div x-bind:class="{ 'active': nav_slide }" class="flex flex-wrap items-center flex-shrink-0 block w-full bg-gray-200 border-t border-b border-gray-200 mobile-nav sm:bg-transparent sm:border-0 sm:w-auto sm:flex sm:flex-shrink">
         {{ range $menu_items }}
           {{/* Making sure the critical call ones displayed above on mobile, are hidden in this section on mobile. */}}
-          <a class="{{ if .critical }}hidden sm:block{{ else }}block{{ end }} px-4 py-4 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="{{ if .critical }}hidden sm:block{{ else }}block{{ end }} px-4 py-6 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
-        <div class="hidden w-full px-4 pb-4">
-          <input type="text">
+        <div class="w-full px-4 pb-4 my-6 sm:hidden">
+          <div class="relative mt-1 rounded-md shadow-sm">
+            {{ partial "search/form-input.html" . }} 
+          </div>
         </div>
       </div>
       <div class="hidden lg:block">
-        {{ partial "modal-search.html" . }}
+        {{ partial "search/modal.html" . }}
       </div>
     </nav>
 

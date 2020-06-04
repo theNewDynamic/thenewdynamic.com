@@ -3,7 +3,13 @@
 		@click="open()
           $nextTick(() => $refs.modalCloseButton.focus())"
 	>
-		<svg class="-mb-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+		<svg
+			class="-mb-1"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+		>
 			<path
 				d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
 			/>
@@ -31,7 +37,7 @@
 				>
 					Close
 					<svg
-            fill="currentColor"
+						fill="currentColor"
 						class="inline-block mb-1 ml-1"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
@@ -74,40 +80,38 @@
 								<path d="M0 0h24v24H0z" fill="none" />
 							</svg>
 						</div>
-						<input
-							id="searchbox"
+            <input
+              id="searchbox"
 							class="block w-full pl-10 form-input sm:text-3xl sm:leading-5"
 							name="query"
 							placeholder="Search Here"
 						/>
 					</div>
-        </form>
-        
+				</form>
 
-        <div class="max-w-5xl py-16 mx-auto text-gray-800 results">
-          <p class="text-2xl font-bold">Results</p>
-            results go here
-        </div>
-
+				<div class="max-w-5xl py-16 mx-auto text-gray-800 results">
+					<p class="text-2xl font-bold">Results</p>
+					results go here
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<script>	
+<script>
 	function modalSearch() {
 		const body = document.body;
 		const searchBox = document.getElementById("searchbox");
 		return {
 			isOpen: false,
 			open() {
-        (this.isOpen = true),
-        // relative assists absolute positioning of search modal
-        // over-flow-hidden keeps body from scrolling when modal active
-          body.classList.add("relative", "overflow-hidden"),
-          // setTimeout is required for focus to work on Chromium
-          setTimeout(() => {
-            // focus/selects puts the cursor in the search form on initiation. 
+				(this.isOpen = true),
+					// relative assists absolute positioning of search modal
+					// over-flow-hidden keeps body from scrolling when modal active
+					body.classList.add("relative", "overflow-hidden"),
+					// setTimeout is required for focus to work on Chromium
+					setTimeout(() => {
+						// focus/selects puts the cursor in the search form on initiation.
 						searchBox.focus();
 						searchBox.select();
 					}, 100);

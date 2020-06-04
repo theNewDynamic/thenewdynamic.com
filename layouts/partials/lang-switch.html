@@ -5,14 +5,14 @@
     {{ partial "svg/globe.svg" $ }} {{ site.Language.Lang }} {{ partial "svg/chevron-down.svg" $ }}
   </div>
   <div x-show="active"
-  	x-transition:enter="transition ease-out duration-200"
+  	x-transition:enter="transition ease-out duration-75"
 		x-transition:enter-start="opacity-0"
 		x-transition:enter-end="opacity-100"
 		x-transition:leave="transition ease-out duration-75"
 		x-transition:leave-start="opacity-100"
 		x-transition:leave-end="opacity-0">
     {{ range . }}
-      <a href="{{ .permalink }}" class="absolute block max-w-full py-2 pl-2 pr-6 bg-gray-200 rounded rounded-t-none hover:text-white hover:bg-black" style="top:83%">
+      <a href="{{ .permalink }}" class="absolute z-30 block max-w-full py-2 pl-2 pr-6 bg-gray-200 rounded rounded-t-none hover:text-white hover:bg-black" style="top:83%">
         {{ .label }}
       </a>
     {{ end }}

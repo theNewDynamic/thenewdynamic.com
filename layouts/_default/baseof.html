@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.LanguageCode | default "en" }}" class="no-js">
   <head>
+    {{ partial "head/meta.html" . }}
     {{ if eq (getenv "HUGO_ENV") "production" }}
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     {{ else }}
