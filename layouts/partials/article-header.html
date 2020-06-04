@@ -1,13 +1,13 @@
 <div class="grid-cols-2 gap-8 sm:grid">
 	<div class="pattern-dots-md">
-	<div class="flex flex-col justify-center h-64 mb-2 font-serif text-2xl font-light leading-tight text-white transform -translate-x-5 -translate-y-5 rounded bg-barossa-400">
-		<div class="py-8 pl-12 pr-8 text-3xl">
-			<span class="inline-block pr-1 -ml-6 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
-		</div>
+		<div class="flex flex-col justify-center h-64 mb-2 font-serif text-2xl font-light leading-tight text-white transform -translate-x-2 -translate-y-5 rounded lg:-translate-x-5 bg-barossa-500">
+			<div class="py-8 pl-12 pr-8 text-3xl">
+				<span class="inline-block pr-1 -ml-6 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
+			</div>
 	</div>
 </div>
 	<div>
-		<h2 class="mb-4 text-5xl font-bold leading-tight">
+		<h2 class="mb-4 text-4xl font-bold leading-tight lg:text-5xl">
 			<a href="{{ .RelPermalink }}" class="color-inherit text-shadow-lg">
 				{{ .Title }}
 			</a>
@@ -28,4 +28,3 @@
 		{{ end }}
 	</div>
 </div>
-
