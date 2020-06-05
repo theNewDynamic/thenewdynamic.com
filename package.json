@@ -11,7 +11,7 @@
 		"hugo": "HUGO_ENV=development bin/hugo* server -D --gc --navigateToChanged --noHTTPCache",
 		"hugo-cms": "HUGO_ENV=development bin/hugo* server -D --gc --noHTTPCache",
 		"hugo-prod": "HUGO_ENV=production bin/hugo* --gc --minify",
-		"netlify-dev": "netlify dev -l -c 'npm run hugo'",
+		"netlify-dev": "netlify dev -l",
 		"webpack": "webpack --mode=development --progress --colors --watch",
 		"webpack-prod": "webpack --mode=production",
 		"clean": "rm -rf public/ static/dist resources",
