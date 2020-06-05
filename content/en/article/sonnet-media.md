@@ -1,6 +1,6 @@
 ---
 title: Welcome to The New Dynamic
-description: This is the year we threw out the rule book
+description: Sonnet Media becomes the New Dynamic
 date: 2019-12-31T14:37:32.812Z
 ---
 
