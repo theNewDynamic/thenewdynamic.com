@@ -2,6 +2,10 @@
 publish = "public"
 command = "hugo --minify -e netlify"
 
+[dev]
+  framework = "hugo" # or "#static" to force a static server
+  command = "npm run start"
+
 [context]
 
 [context.production]
