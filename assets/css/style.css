@@ -107,9 +107,7 @@ body {
 	}
 }
 
-body {
-	@apply font-sans text-gray-800 bg-notwhite-500;
-}
+
 .hero {
 	padding-top: var(--headerHeight);
 }

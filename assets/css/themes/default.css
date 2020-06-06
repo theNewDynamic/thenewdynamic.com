@@ -3,7 +3,7 @@ body.theme-default .text-theme{
 }
 
 body.theme-default .bg-theme{
-	@apply bg-gray-100;
+	@apply bg-white;
 }
 body.theme-default .bg-map{
 	background-image:url(../images/map.svg);

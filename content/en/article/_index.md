@@ -1,5 +1,5 @@
 ---
-title: Articles & Events
+title: Articles
 exclude_collection: true
 menu:
   main: 
