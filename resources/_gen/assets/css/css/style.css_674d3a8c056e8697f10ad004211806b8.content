@@ -2964,10 +2964,6 @@ body {
     padding-bottom: 4rem;
   }
 
-  .lg\:pl-0 {
-    padding-left: 0;
-  }
-
   .lg\:w-auto {
     width: auto;
   }
@@ -2993,10 +2989,6 @@ body {
 
   .xl\:mt-0 {
     margin-top: 0;
-  }
-
-  .xl\:pl-0 {
-    padding-left: 0;
   }
 
   .xl\:gap-8 {
