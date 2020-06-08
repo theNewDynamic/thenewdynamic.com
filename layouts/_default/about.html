@@ -1,11 +1,11 @@
-{{ define "main" }}
 <div class="container">
-  {{ partial "page-header.html" . }}   
-  <div class="my-4">      
-    {{ with .Params.intro }}
-      {{ partial "page-intro" ($.RenderString .) }}
-    {{ end }}
+      {{ partial "page-header.html" . }}   
+      <div class="my-4">      
+        {{ with .Params.intro }}
+          {{ partial "page-intro" ($.RenderString .) }}
+        {{ end }}
 
+  
 
 
     <section class="pb-24 text-gray-700 body-font">
