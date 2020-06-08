@@ -13,5 +13,6 @@ slug:
   sanitize_replacement: "_"
 collections:
 - import collection pages
+- import collection regular-pages
 - import collection articles
 - import collection persons

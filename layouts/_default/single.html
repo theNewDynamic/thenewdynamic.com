@@ -1,7 +1,10 @@
 {{ define "main" }}
   <div class="container">
-    {{ partial "page-header.html" . }}   
-    <div class="my-4">      
+    {{ partial "page-header.html" . }} 
+    <div class="my-4">
+      {{ with .Params.intro }}
+        {{ partial "page-intro" ($.RenderString .) }}
+      {{ end }}
       <div class="max-w-5xl text-3xl text-gray-700 rich-text">
         {{ .Content }}
       </div>

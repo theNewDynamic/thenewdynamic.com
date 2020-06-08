@@ -1,0 +1,16 @@
+name: "regular-pages"
+label: "Regular Pages"
+label_singular: "Regular Page"
+description: The regular pages.
+folder: "content/en"
+filter: { field: "exclude_collection" }
+create: true
+sortableFields: ['title']
+
+fields:
+  - import field title
+  - import field intro
+  - import field description
+  - import field body
+  - import field blocks
+

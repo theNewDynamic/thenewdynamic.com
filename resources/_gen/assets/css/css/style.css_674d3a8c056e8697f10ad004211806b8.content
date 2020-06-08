@@ -2033,6 +2033,11 @@ video {
   padding-bottom: 4rem;
 }
 
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
 .pt-0 {
   padding-top: 0;
 }

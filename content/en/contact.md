@@ -3,6 +3,7 @@ title: Get in touch
 hero:
   text: We'd Like to Hear from You
 layout: contact
+exclude_collection: true
 menu:
   main: 
     weight: 4
