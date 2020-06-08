@@ -4,7 +4,7 @@ description: Sonnet Media becomes the New Dynamic
 date: 2019-12-31T14:37:32.812Z
 ---
 
-We started Sonnet Media in 2001 fresh from our enthusiasm with blogging and the rise of a better web. Sonnet Media's name—besides reflecting our enthusiasm for arts & culture—recognized the idea of "Code is Poetry" of a sort, or more specifically that both code and poetry have structure yet both are more beautiful when one breaks the rules a bit. 
+We started Sonnet Media in 2002 fresh from our enthusiasm with blogging and the rise of a better web. Sonnet Media's name—besides reflecting our enthusiasm for arts & culture—recognized the idea of "Code is Poetry" of a sort, or more specifically that both code and poetry have structure yet both are more beautiful when one breaks the rules a bit. 
 
 Fast forward to 2013. This is the year we threw out the rule book entirely. We fundamentally changed the way we build websites. See our post on [Bulletproof Technology](/article/bulletproof-technology/) for more on the details, but in short, we started building sites that are fun for us to build and radically improve the performance, security and cost of our sites. 
 
