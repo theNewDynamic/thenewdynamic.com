@@ -1,3 +1,4 @@
+{{ define "main" }}
 <div class="container">
       {{ partial "page-header.html" . }}   
       <div class="my-4">      
@@ -74,7 +75,7 @@
             {{ $position := sub 1 (mod $i 2) }}
             <div class="flex-wrap mb-16 sm:flex">
               <div class="w-full sm:w-1/2 order-{{ $position }}">
-                <div class="p-4 lg:p-16">
+                <div class="py-4 sm:px-4 lg:px-16 lg:py-12">
                   {{ with .heading }}
                     <h3 class="pb-4 text-4xl font-bold leading-none">{{.}}</h3>
                   {{ end }}                    

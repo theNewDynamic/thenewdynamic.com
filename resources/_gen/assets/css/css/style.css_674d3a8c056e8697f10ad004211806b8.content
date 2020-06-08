@@ -1600,14 +1600,6 @@ video {
   order: 1;
 }
 
-.order-2 {
-  order: 2;
-}
-
-.order-3 {
-  order: 3;
-}
-
 .font-serif {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -1864,10 +1856,6 @@ video {
   margin-top: 3rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -1992,10 +1980,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-16 {
-  padding: 4rem;
 }
 
 .py-1 {
@@ -2831,10 +2815,6 @@ body {
     flex-shrink: 1;
   }
 
-  .sm\:order-1 {
-    order: 1;
-  }
-
   .sm\:text-3xl {
     font-size: 1.875rem;
   }
@@ -2875,8 +2855,8 @@ body {
     padding: 0.5rem;
   }
 
-  .sm\:p-16 {
-    padding: 4rem;
+  .sm\:p-4 {
+    padding: 1rem;
   }
 
   .sm\:py-2 {
@@ -2887,6 +2867,11 @@ body {
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .sm\:px-6 {
@@ -2900,10 +2885,6 @@ body {
 
   .sm\:pl-3 {
     padding-left: 0.75rem;
-  }
-
-  .sm\:pb-4 {
-    padding-bottom: 1rem;
   }
 
   .sm\:static {
@@ -2979,10 +2960,6 @@ body {
 
   .md\:mb-12 {
     margin-bottom: 3rem;
-  }
-
-  .md\:p-16 {
-    padding: 4rem;
   }
 
   .md\:py-6 {
@@ -3064,9 +3041,19 @@ body {
     padding-right: 2rem;
   }
 
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .lg\:w-auto {
@@ -3098,10 +3085,6 @@ body {
 
   .xl\:mt-0 {
     margin-top: 0;
-  }
-
-  .xl\:pb-4 {
-    padding-bottom: 1rem;
   }
 
   .xl\:gap-8 {
