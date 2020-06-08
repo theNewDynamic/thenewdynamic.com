@@ -7,11 +7,13 @@
       {{ end }}
       <div class="max-w-5xl text-3xl text-gray-700 rich-text">
         {{ .Content }}
-      </div>
+      </div>      
       {{ with .Params.blocks }}
-        {{ range . }}
+        <div class="my-32">
+          {{ range . }}
           {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $) }}
         {{ end }}
+        </div>
       {{ end }}
     </div>
   </div>
