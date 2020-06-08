@@ -1,22 +1,15 @@
 {{ define "main" }}
   <div class="container">
-    {{ partial "page-header.html" . }}
-    <div class="my-4 rich-text">
-    {{ with .Params.authors }}
-      {{ range . }}
-        {{ with site.GetPage . }}
-          <div class="p-4 bg-gray-100">
-            <div class="tex-lg">{{ .Title }}</div>
-            {{ with .Params.twitter_handle }}
-              <div>@{{ . }}</div>
-            {{ end }}
-          </div>
+    {{ partial "page-header.html" . }}   
+    <div class="my-4">      
+      <div class="max-w-5xl text-3xl text-gray-700 rich-text">
+        {{ .Content }}
+      </div>
+      {{ with .Params.blocks }}
+        {{ range . }}
+          {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $) }}
         {{ end }}
       {{ end }}
-    {{ end }}
-    </div>
-    <div class="my-4 user-content">
-      {{ .Content }}
     </div>
   </div>
 {{ end }}

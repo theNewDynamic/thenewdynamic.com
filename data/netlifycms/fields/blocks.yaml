@@ -3,3 +3,4 @@ label: Blocks
 widget: list
 types:
   - import field block_points
+  - import field block_repos

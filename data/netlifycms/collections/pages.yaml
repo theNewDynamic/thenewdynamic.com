@@ -13,3 +13,15 @@ files:
           required: false,
         }
       - import field blocks
+  - name: "opensource"
+    label: "Open Source"
+    file: "content/en/open-source.md"
+    fields:
+      - import field title
+      - {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          required: false,
+        }
+      - import field blocks
