@@ -9,14 +9,14 @@
           </div>
       </div>
       {{ end }}
-      <h2 class="mb-2 text-2xl font-bold leading-tight md:text-3xl">{{ .title }}</h2>
+      <h2 class="my-2 text-2xl font-bold leading-tight md:text-3xl">{{ .title }}</h2>
       {{ with .body }}
-        <div class="">
+        <div class="text-gray-600">
           {{ . | markdownify }}
         </div>
       {{ end }}
       <div class="absolute bottom-0 left-0 flex items-center justify-between w-full px-4 pb-2 mt-2">
-        <div class="text-xs text-gray-600">
+        <div class="text-xs text-gray-500">
           {{ .type }}
         </div>
         <div class="w-4 fill-current">
