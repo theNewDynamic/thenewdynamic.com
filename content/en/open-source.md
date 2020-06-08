@@ -1,11 +1,6 @@
 ---
 title: Open Source Contributions
-description: Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam
-  eget risus varius blandit sit amet non magna. Donec id elit non mi porta
-  gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cum sociis
-  natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada
-  magna mollis euismod.
+description: Free and open source software is core to how we work. We use open source software and we contribute back to the software we use and create our own software for others to use. 
 blocks:
   - type: repos
     layout: repos
