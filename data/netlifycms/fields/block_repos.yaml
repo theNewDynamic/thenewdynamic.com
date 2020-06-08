@@ -1,0 +1,34 @@
+label: "List of GitHub Repositories"
+name: "repos"
+widget: "object"
+fields:
+  - import field title
+  - label: Repositories
+    name: repos
+    widget: list
+    fields:
+    - import field title
+    - label: "URL"
+      name: "url"
+      widget: "string"
+      required: false
+    - import field body
+    - label: "Status"
+      name: "status"
+      widget: "select"
+      options:
+      - Beta
+      - Alpha
+      - Production
+      required: false
+    - label: "Type"
+      name: "type"
+      widget: "select"
+      options:
+      - Hugo Theme
+      - Hugo Module
+      required: false
+  - label: Layout
+    name: layout
+    widget: hidden
+    default: repos

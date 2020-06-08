@@ -1,23 +1,17 @@
 {{ define "main" }}
   <div class="container">
     {{ partial "page-header.html" . }}
-    {{/* 
-        TODO: wire up categories
-      <div class="mb-16">
-      <div class="inline-flex">
-        <button class="px-4 py-2 mr-2 text-lg text-gray-800 bg-gray-300 rounded hover:bg-gray-400">
-          For Developers
-        </button>
-        <button class="px-4 py-2 mr-2 text-lg text-gray-800 bg-gray-300 rounded hover:bg-gray-400">
-          For Site Owners
-        </button>
-      </div>
-    </div> */}}
+    <div class="my-4">
+      {{ with .Content }}
+        {{ partial "page-intro" . }}
+      {{ end }}  
 
-    {{ range .Pages }}
-      <div class="container mt-16 mb-16">
-        {{ partial "article-header.html" . }}
-      </div>
-    {{ end }}
+
+      {{ range .Pages }}
+        <div class="container mt-16 mb-16">
+          {{ partial "article-header.html" . }}
+        </div>
+      {{ end }}
+    </div>
   </div>
 {{ end }}
