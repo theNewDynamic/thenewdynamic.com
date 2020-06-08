@@ -6,7 +6,7 @@
       <div class="container relative text-black">
         <div>          
           <h1 class="z-40 text-5xl font-black text-center lg:text-6xl">Welcome to The New Dynamic</h1>
-          {{ with .Params.blocks }}
+        {{ with .Params.blocks }}
           {{ range . }}
             {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $ "variant" "home") }}
           {{ end }}
