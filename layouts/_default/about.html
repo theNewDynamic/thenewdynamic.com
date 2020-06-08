@@ -1,69 +1,100 @@
 {{ define "main" }}
 <div class="container">
-    {{ partial "page-header.html" . }}   
-    <div class="my-4">      
-      {{ with .Params.intro }}
-        {{ partial "page-intro" ($.RenderString .) }}
-      {{ end }}
+  {{ partial "page-header.html" . }}
+  <div class="my-4">
+    {{ with .Params.intro }}
+      {{ partial "page-intro" ($.RenderString .) }}
+    {{ end }}
 
 
-<section class="pb-24 text-gray-700 body-font">
-  <div class="container px-5 mx-auto">  
-    <h3 class="my-8 text-3xl">Our Core Team</h3> 
-    <div class="flex flex-wrap -m-2">
-      <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-        <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
-          <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full" src="/uploads/bud.jpeg">
-          <div class="flex-grow">
-            <h2 class="font-medium text-gray-900 title-font">Bud Parr</h2>
-            <p class="text-gray-500">Design, Development</p>
+    <section class="pb-24 text-gray-700 body-font">
+      <div class="container px-5 mx-auto">
+        <h3 class="my-8 text-3xl">Our Core Team</h3>
+        <div class="flex flex-wrap -m-2">
+          <div class="w-full p-2 lg:w-1/3 md:w-1/2">
+            <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
+                src="/uploads/bud.jpeg">
+              <div class="flex-grow">
+                <h2 class="font-medium text-gray-900 title-font">Bud Parr</h2>
+                <p class="text-gray-500">Design, Development</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full p-2 lg:w-1/3 md:w-1/2">
+            <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
+                src="/uploads/regis.jpeg">
+              <div class="flex-grow">
+                <h2 class="font-medium text-gray-900 title-font">Régis Philibert</h2>
+                <p class="text-gray-500">Lead Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full p-2 lg:w-1/3 md:w-1/2">
+            <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
+                src="/uploads/adam.png">
+              <div class="flex-grow">
+                <h2 class="font-medium text-gray-900 title-font">Adam Chlan</h2>
+                <p class="text-gray-500">Developer and Customer Support</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full p-2 lg:w-1/3 md:w-1/2">
+            <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
+                src="/uploads/rory.jpeg">
+              <div class="flex-grow">
+                <h2 class="font-medium text-gray-900 title-font">Rory Bernstein</h2>
+                <p class="text-gray-500">Project Manager</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full p-2 lg:w-1/3 md:w-1/2">
+            <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
+                src="/uploads/tanner.jpeg">
+              <div class="flex-grow">
+                <h2 class="font-medium text-gray-900 title-font">Tanner Smith</h2>
+                <p class="text-gray-500">Developer</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-        <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
-          <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full" src="/uploads/regis.jpeg">
-          <div class="flex-grow">
-            <h2 class="font-medium text-gray-900 title-font">Régis Philibert</h2>
-            <p class="text-gray-500">Lead Developer</p>
-          </div>
+    </section>
+
+    {{ with .Params.boxes }}
+      <section class="pb-24 text-gray-700 body-font">
+        <div class="container px-5 mx-auto">              
+          <h3 class="my-8 text-3xl">Our Work</h3>                
+          {{range $i, $box := .}}
+            {{ $position := sub 1 (mod $i 2) }}
+            <div class="flex-wrap mb-16 sm:flex">
+              <div class="w-full sm:w-1/2 order-{{ $position }}">
+                <div class="p-4 lg:p-16">
+                  {{ with .heading }}
+                    <h3 class="pb-4 text-4xl font-bold leading-none">{{.}}</h3>
+                  {{ end }}                    
+                  {{ with .copy }}
+                    {{. | markdownify }}
+                  {{ end }}
+                </div>
+              </div>
+              <div class="w-full sm:w-1/2 sm:mb-0">
+                <div class="sm:p-2">
+                  {{ with .image }}
+                    <img src="{{.}}" alt="work image" class="border" >
+                  {{ end }}              
+                </div>
+              </div>            
+            </div>
+          {{ end }}        
         </div>
-      </div>
-      <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-        <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
-          <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full" src="/uploads/adam.png">
-          <div class="flex-grow">
-            <h2 class="font-medium text-gray-900 title-font">Adam Chlan</h2>
-            <p class="text-gray-500">Developer and Customer Support</p>
-          </div>
-        </div>
-      </div>
-      <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-        <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
-          <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full" src="/uploads/rory.jpeg">
-          <div class="flex-grow">
-            <h2 class="font-medium text-gray-900 title-font">Rory Bernstein</h2>
-            <p class="text-gray-500">Project Manager</p>
-          </div>
-        </div>
-      </div>
-      <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-        <div class="flex items-center h-full p-4 border border-gray-200 rounded-lg">
-          <img alt="team" class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full" src="/uploads/tanner.jpeg">
-          <div class="flex-grow">
-            <h2 class="font-medium text-gray-900 title-font">Tanner Smith</h2>
-            <p class="text-gray-500">Developer</p>
-          </div>
-        </div>
-      </div>
-    
-     
-      
-    
-    </div>
+      </section>
+    {{ end }}
+
   </div>
-</section>
-
-    </div>
-  </div>
+</div>
 {{ end }}
