@@ -2315,6 +2315,12 @@ video {
   color: rgba(244, 245, 247, var(--text-opacity));
 }
 
+.text-gray-200 {
+  --text-opacity: 1;
+  color: #e5e7eb;
+  color: rgba(229, 231, 235, var(--text-opacity));
+}
+
 .text-gray-300 {
   --text-opacity: 1;
   color: #d2d6dc;
@@ -2369,16 +2375,46 @@ video {
   color: rgba(88, 80, 236, var(--text-opacity));
 }
 
+.text-primary-200 {
+  --text-opacity: 1;
+  color: #E5C2CD;
+  color: rgba(229, 194, 205, var(--text-opacity));
+}
+
 .text-primary-300 {
   --text-opacity: 1;
   color: #D69DAF;
   color: rgba(214, 157, 175, var(--text-opacity));
 }
 
+.text-primary-400 {
+  --text-opacity: 1;
+  color: #B75474;
+  color: rgba(183, 84, 116, var(--text-opacity));
+}
+
 .text-primary-500 {
   --text-opacity: 1;
   color: #980A38;
   color: rgba(152, 10, 56, var(--text-opacity));
+}
+
+.text-primary-600 {
+  --text-opacity: 1;
+  color: #890932;
+  color: rgba(137, 9, 50, var(--text-opacity));
+}
+
+.text-secondary-500 {
+  --text-opacity: 1;
+  color: #FBCB41;
+  color: rgba(251, 203, 65, var(--text-opacity));
+}
+
+.text-tertiary-500 {
+  --text-opacity: 1;
+  color: #CC6554;
+  color: rgba(204, 101, 84, var(--text-opacity));
 }
 
 .group:hover .group-hover\:text-gray-500 {
@@ -2606,6 +2642,10 @@ video {
   transition-duration: 200ms;
 }
 
+.bg-gradient-tr-primary {
+  background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
+}
+
 body.theme-default .text-theme {
   --text-opacity: 1;
   color: #000000;
@@ -2640,6 +2680,7 @@ body.theme-alt .text-theme {
 }
 
 body.theme-alt .bg-map {
+  background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
   background-image: url(../images/map-alt.svg);
 }
 
@@ -2649,16 +2690,16 @@ body.theme-alt .text-theme-primary {
   color: rgba(204, 101, 84, var(--text-opacity));
 }
 
-.bg-theme {
-  background: linear-gradient(
+body.theme-alt .bg-theme {
+  background: url(../images/map-alt.svg), linear-gradient(
 		52deg,
 		#410252 0%,
 		#63004c 16%,
 		#810045 33%,
 		#9f003e 50%,
 		#bc0435 66%,
-		#da0c2b 83%,
-		#f8141d 100%
+		#AE0C40 83%,
+		#980A38 100%
 	);
 }
 

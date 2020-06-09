@@ -1,12 +1,12 @@
 {{ define "main" }}
 <article>  
-  <div id="pageheading" class="w-full py-8 bg-theme ">
+  <div id="pageheading" class="w-full py-8 TKbg-theme bg-gradient-tr-primary">
     <div class="container max-w-6xl pb-8 mt-12 text-gray-100 duration-200 ease-in transtion hover:text-primary-400">
       {{ partial "article-header.html" . }}
     </div>  
   </div>
   {{/* The sticky class below must follow directly after the pageheadding div above for its interaction to work "js/intersection-observer.js" */}}
-  <div class="sticky top-0 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-theme ">
+  <div class="sticky top-0 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-gradient-tr-primary">
     <div class="container max-w-3xl p-4">
       {{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}}
       {{ with .Title }} :<span class="inline-block ml-4 altheading">{{ . }}</span>{{ end }}
