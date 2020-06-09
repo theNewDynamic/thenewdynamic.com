@@ -17,7 +17,8 @@
 @import "patterns.css";
 
 /* STICKY FOOTER */
-html, body {
+html,
+body {
 	height: 100%;
 }
 
@@ -50,9 +51,8 @@ body {
 	white-space: nowrap; /* added line */
 }
 
-
 /* Fancy Blockquotes */
-.rich-text blockquote {	
+.rich-text blockquote {
 	background-image: radial-gradient(#cc6554 0.5px, transparent 0.5px),
 		radial-gradient(#cc6554 0.5px, transparent 0.5px);
 	background-size: calc(20 * 0.5px) calc(20 * 0.5px);
@@ -97,16 +97,20 @@ body {
 	}
 	.bg-gradient {
 		background: linear-gradient(
-			to top right,
-			rgb(51, 12, 91),
-			rgb(229, 56, 48)
+			52deg,
+			#410252 0%,
+			#63004c 16%,
+			#810045 33%,
+			#9f003e 50%,
+			#bc0435 66%,
+			#da0c2b 83%,
+			#f8141d 100%
 		);
 	}
 	.bg-gradient-horizontal {
 		background: linear-gradient(to right, rgb(51, 12, 91), rgb(229, 56, 48));
 	}
 }
-
 
 .hero {
 	padding-top: var(--headerHeight);
