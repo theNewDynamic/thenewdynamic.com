@@ -96,7 +96,7 @@ A website’s software and all of its files typically sit on a single server. If
 
 Because of the way we prebuild our website, we can put the entirely of the site’s content on a Content Delivery Network (CDN) and accelerate everything.
 
-How a Content Delivery Network Works
+### How a Content Delivery Network Works
 
 A CDN essentially duplicates your website files and makes them available on multiple servers all over the world. The site is delivered to the user from the server located closest to them.
 

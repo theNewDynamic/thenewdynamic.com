@@ -2,6 +2,22 @@ const colors = require("./colors.json");
 
 module.exports = {
 	theme: {
+		linearGradientColors: {
+			// defaults to {}
+			tmd: "#f00",
+			"red-blue": ["#f00", "#00f"],
+			"red-green-blue": ["#f00", "#0f0", "#00f"],
+			primary: [
+				"#410252 0%",
+				"#63004c, 16%",
+				"#810045 33%",
+				"#9f003e 50%",
+				"#bc0435 66%",
+				"#AE0C40 83%",
+				"#980A38 100%",
+			],
+			"black-white-with-stops": ["#000", "#000 45%", "#fff 55%", "#fff"],
+		},
 		textStyles: (theme) => ({
 			heading: {
 				output: false,
@@ -152,6 +168,7 @@ module.exports = {
 	},
 	plugins: [
 		require("@tailwindcss/ui"),
+		require("tailwindcss-gradients"),
 		require("tailwindcss-typography")({
 			componentPrefix: "", // the prefix to use for text style classes
 		}),
