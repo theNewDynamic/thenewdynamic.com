@@ -2606,42 +2606,60 @@ video {
   transition-duration: 200ms;
 }
 
-body.theme-default .text-theme{
+body.theme-default .text-theme {
   --text-opacity: 1;
   color: #000000;
   color: rgba(0, 0, 0, var(--text-opacity));
 }
 
-body.theme-default .bg-theme{
-  --bg-opacity: 1;
-  background-color: #ffffff;
-  background-color: rgba(255, 255, 255, var(--bg-opacity));
+/* body.theme-default .bg-theme{
+	@apply bg-white;
+} */
+
+body.theme-default .bg-theme {
+  background-color: linear-gradient(
+		52deg,
+		#410252 0%,
+		#63004c 16%,
+		#810045 33%,
+		#9f003e 50%,
+		#bc0435 66%,
+		#da0c2b 83%,
+		#f8141d 100%
+	);
 }
 
-body.theme-default .bg-map{
-  background-image:url(../images/map.svg);
+body.theme-default .bg-map {
+  background-image: url(../images/map.svg);
 }
 
-body.theme-alt .text-theme{
+body.theme-alt .text-theme {
   --text-opacity: 1;
   color: #ffffff;
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
-body.theme-alt .bg-map{
-  background-image:url(../images/map-alt.svg);
+body.theme-alt .bg-map {
+  background-image: url(../images/map-alt.svg);
 }
 
-body.theme-alt .text-theme-primary{
+body.theme-alt .text-theme-primary {
   --text-opacity: 1;
   color: #CC6554;
   color: rgba(204, 101, 84, var(--text-opacity));
 }
 
-body.theme-alt .bg-theme{
-  --bg-opacity: 1;
-  background-color: #362038;
-  background-color: rgba(54, 32, 56, var(--bg-opacity));
+.bg-theme {
+  background: linear-gradient(
+		52deg,
+		#410252 0%,
+		#63004c 16%,
+		#810045 33%,
+		#9f003e 50%,
+		#bc0435 66%,
+		#da0c2b 83%,
+		#f8141d 100%
+	);
 }
 
 .pattern-dots-md {
@@ -2651,7 +2669,8 @@ body.theme-alt .bg-theme{
 
 /* STICKY FOOTER */
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -2719,9 +2738,14 @@ body {
 
 .hover\:bg-gradient:hover {
   background: linear-gradient(
-			to top right,
-			rgb(51, 12, 91),
-			rgb(229, 56, 48)
+			52deg,
+			#410252 0%,
+			#63004c 16%,
+			#810045 33%,
+			#9f003e 50%,
+			#bc0435 66%,
+			#da0c2b 83%,
+			#f8141d 100%
 		);
 }
 
@@ -2853,10 +2877,6 @@ body {
 
   .sm\:p-2 {
     padding: 0.5rem;
-  }
-
-  .sm\:p-4 {
-    padding: 1rem;
   }
 
   .sm\:py-2 {
@@ -3025,10 +3045,6 @@ body {
 
   .lg\:mb-40 {
     margin-bottom: 10rem;
-  }
-
-  .lg\:p-16 {
-    padding: 4rem;
   }
 
   .lg\:py-4 {
