@@ -1,7 +1,12 @@
 ---
 title: This is a new post to be reviewed
 date: 2020-05-18T14:37:32.812Z
-description: A basic test by RP (signed in to CMS with a non GH account)
+description: >-
+  A basic test by RP (signed in to CMS with a non GH account) (Commited by
+  @regisphilibert)
+
+
+  A second basic test from incognito window signed in with regisphilibert@gmail.com (not a GitHub registered email)
 authors:
   - persons/regis-philibert.md
 ---
