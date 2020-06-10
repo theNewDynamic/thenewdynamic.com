@@ -175,6 +175,9 @@ module.exports = {
 			padding: "1rem",
 		},
 	},
+	variants: {
+		borderWidth: ["responsive", "hover", "focus"],
+	},
 	plugins: [
 		require("@tailwindcss/ui"),
 		require("tailwindcss-gradients"),

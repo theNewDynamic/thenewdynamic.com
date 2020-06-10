@@ -1249,6 +1249,12 @@ video {
   border-color: rgba(37, 47, 63, var(--border-opacity));
 }
 
+.hover\:border-primary-500:hover {
+  --border-opacity: 1;
+  border-color: #B50337;
+  border-color: rgba(181, 3, 55, var(--border-opacity));
+}
+
 .focus\:border-blue-300:focus {
   --border-opacity: 1;
   border-color: #a4cafe;
@@ -1472,6 +1478,11 @@ video {
   margin: -0.5rem;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1482,14 +1493,19 @@ video {
   margin-bottom: 1rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .my-16 {
@@ -1694,6 +1710,11 @@ video {
   padding: 1rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1727,11 +1748,6 @@ video {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .px-6 {
@@ -2102,6 +2118,12 @@ video {
   color: rgba(203, 79, 115, var(--text-opacity));
 }
 
+.hover\:text-primary-500:hover {
+  --text-opacity: 1;
+  color: #B50337;
+  color: rgba(181, 3, 55, var(--text-opacity));
+}
+
 .italic {
   font-style: italic;
 }
@@ -2268,6 +2290,10 @@ video {
   transition-duration: 200ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .bg-gradient-br-primary-light {
   background-image: linear-gradient(to bottom right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
 }
@@ -2313,8 +2339,6 @@ body.theme-alt .bg-map {
   background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
   background-image: url(../images/map-alt.svg);
 }
-
-/* todo: do this */
 
 body.theme-alt .bg-theme {
   background: url(../images/map-alt.svg),
@@ -2523,6 +2547,11 @@ body {
     line-height: 2.5rem;
   }
 
+  .sm\:my-1 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
   .sm\:mt-0 {
     margin-top: 0;
   }
@@ -2547,9 +2576,9 @@ body {
     padding: 0.5rem;
   }
 
-  .sm\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+  .sm\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .sm\:py-4 {
