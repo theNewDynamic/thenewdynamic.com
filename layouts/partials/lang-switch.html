@@ -2,7 +2,7 @@
 {{ with partial "func/GetLangItems" . }}
 <div x-data="{ active: false }" @click="active = !active" class="relative top-0 right-0 w-24 m-4 bg-gray-100 rounded lg:order-3">
   <div class="flex items-center justify-between px-2 py-2 text-sm uppercase rounded shadow hover:text-white hover:bg-black hover:shadow-none">
-    {{ partial "svg/globe.svg" $ }} {{ site.Language.Lang }} {{ partial "svg/chevron-down.svg" $ }}
+    <span class="fill-black w-4">{{ partial "tnd-icons/icon" "globe" }}</span> {{ site.Language.Lang }} {{ partial "svg/chevron-down.svg" $ }}
   </div>
   <div x-show="active"
   	x-transition:enter="transition ease-out duration-75"

@@ -2314,8 +2314,6 @@ body.theme-alt .bg-map {
   background-image: url(../images/map-alt.svg);
 }
 
-/* todo: do this */
-
 body.theme-alt .bg-theme {
   background: url(../images/map-alt.svg),
 		linear-gradient(
