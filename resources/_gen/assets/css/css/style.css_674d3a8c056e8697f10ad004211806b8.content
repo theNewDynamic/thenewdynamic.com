@@ -1159,56 +1159,56 @@ video {
 
 .bg-primary-100 {
   --bg-opacity: 1;
-  background-color: #F5E7EB;
-  background-color: rgba(245, 231, 235, var(--bg-opacity));
+  background-color: #F8E6EB;
+  background-color: rgba(248, 230, 235, var(--bg-opacity));
 }
 
 .bg-primary-200 {
   --bg-opacity: 1;
-  background-color: #E5C2CD;
-  background-color: rgba(229, 194, 205, var(--bg-opacity));
+  background-color: #EDC0CD;
+  background-color: rgba(237, 192, 205, var(--bg-opacity));
 }
 
 .bg-primary-300 {
   --bg-opacity: 1;
-  background-color: #D69DAF;
-  background-color: rgba(214, 157, 175, var(--bg-opacity));
+  background-color: #E19AAF;
+  background-color: rgba(225, 154, 175, var(--bg-opacity));
 }
 
 .bg-primary-400 {
   --bg-opacity: 1;
-  background-color: #B75474;
-  background-color: rgba(183, 84, 116, var(--bg-opacity));
+  background-color: #CB4F73;
+  background-color: rgba(203, 79, 115, var(--bg-opacity));
 }
 
 .bg-primary-500 {
   --bg-opacity: 1;
-  background-color: #d80f2b;
-  background-color: rgba(216, 15, 43, var(--bg-opacity));
+  background-color: #B50337;
+  background-color: rgba(181, 3, 55, var(--bg-opacity));
 }
 
 .bg-primary-600 {
   --bg-opacity: 1;
-  background-color: #890932;
-  background-color: rgba(137, 9, 50, var(--bg-opacity));
+  background-color: #A30332;
+  background-color: rgba(163, 3, 50, var(--bg-opacity));
 }
 
 .bg-primary-700 {
   --bg-opacity: 1;
-  background-color: #5B0622;
-  background-color: rgba(91, 6, 34, var(--bg-opacity));
+  background-color: #6D0221;
+  background-color: rgba(109, 2, 33, var(--bg-opacity));
 }
 
 .bg-primary-800 {
   --bg-opacity: 1;
-  background-color: #440519;
-  background-color: rgba(68, 5, 25, var(--bg-opacity));
+  background-color: #510119;
+  background-color: rgba(81, 1, 25, var(--bg-opacity));
 }
 
 .bg-primary-900 {
   --bg-opacity: 1;
-  background-color: #2E0311;
-  background-color: rgba(46, 3, 17, var(--bg-opacity));
+  background-color: #360111;
+  background-color: rgba(54, 1, 17, var(--bg-opacity));
 }
 
 .bg-primary-2-100 {
@@ -1321,26 +1321,26 @@ video {
 
 .bg-tertiary-100 {
   --bg-opacity: 1;
-  background-color: #FAF0EE;
-  background-color: rgba(250, 240, 238, var(--bg-opacity));
+  background-color: #FBEDEA;
+  background-color: rgba(251, 237, 234, var(--bg-opacity));
 }
 
 .bg-tertiary-200 {
   --bg-opacity: 1;
-  background-color: #F2D9D4;
-  background-color: rgba(242, 217, 212, var(--bg-opacity));
+  background-color: #F5D1CB;
+  background-color: rgba(245, 209, 203, var(--bg-opacity));
 }
 
 .bg-tertiary-300 {
   --bg-opacity: 1;
-  background-color: #EBC1BB;
-  background-color: rgba(235, 193, 187, var(--bg-opacity));
+  background-color: #EFB5AC;
+  background-color: rgba(239, 181, 172, var(--bg-opacity));
 }
 
 .bg-tertiary-400 {
   --bg-opacity: 1;
-  background-color: #DB9387;
-  background-color: rgba(219, 147, 135, var(--bg-opacity));
+  background-color: #E47E6E;
+  background-color: rgba(228, 126, 110, var(--bg-opacity));
 }
 
 .bg-tertiary-500 {
@@ -1351,26 +1351,26 @@ video {
 
 .bg-tertiary-600 {
   --bg-opacity: 1;
-  background-color: #B85B4C;
-  background-color: rgba(184, 91, 76, var(--bg-opacity));
+  background-color: #C2402B;
+  background-color: rgba(194, 64, 43, var(--bg-opacity));
 }
 
 .bg-tertiary-700 {
   --bg-opacity: 1;
-  background-color: #7A3D32;
-  background-color: rgba(122, 61, 50, var(--bg-opacity));
+  background-color: #822B1D;
+  background-color: rgba(130, 43, 29, var(--bg-opacity));
 }
 
 .bg-tertiary-800 {
   --bg-opacity: 1;
-  background-color: #5C2D26;
-  background-color: rgba(92, 45, 38, var(--bg-opacity));
+  background-color: #612016;
+  background-color: rgba(97, 32, 22, var(--bg-opacity));
 }
 
 .bg-tertiary-900 {
   --bg-opacity: 1;
-  background-color: #3D1E19;
-  background-color: rgba(61, 30, 25, var(--bg-opacity));
+  background-color: #41150E;
+  background-color: rgba(65, 21, 14, var(--bg-opacity));
 }
 
 .hover\:bg-black:hover {
@@ -1405,8 +1405,8 @@ video {
 
 .hover\:bg-primary-400:hover {
   --bg-opacity: 1;
-  background-color: #B75474;
-  background-color: rgba(183, 84, 116, var(--bg-opacity));
+  background-color: #CB4F73;
+  background-color: rgba(203, 79, 115, var(--bg-opacity));
 }
 
 .focus\:bg-gray-200:focus {
@@ -2377,14 +2377,14 @@ video {
 
 .text-primary-300 {
   --text-opacity: 1;
-  color: #D69DAF;
-  color: rgba(214, 157, 175, var(--text-opacity));
+  color: #E19AAF;
+  color: rgba(225, 154, 175, var(--text-opacity));
 }
 
 .text-primary-500 {
   --text-opacity: 1;
-  color: #d80f2b;
-  color: rgba(216, 15, 43, var(--text-opacity));
+  color: #B50337;
+  color: rgba(181, 3, 55, var(--text-opacity));
 }
 
 .group:hover .group-hover\:text-gray-500 {
@@ -2425,8 +2425,8 @@ video {
 
 .hover\:text-primary-400:hover {
   --text-opacity: 1;
-  color: #B75474;
-  color: rgba(183, 84, 116, var(--text-opacity));
+  color: #CB4F73;
+  color: rgba(203, 79, 115, var(--text-opacity));
 }
 
 .italic {
@@ -2612,32 +2612,12 @@ video {
   transition-duration: 200ms;
 }
 
-.bg-gradient-tr-primary-light {
-  background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
-}
-
-.bg-gradient-r-primary-light {
-  background-image: linear-gradient(to right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
-}
-
 .bg-gradient-br-primary-light {
   background-image: linear-gradient(to bottom right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
 }
 
-.bg-gradient-tl-primary-light {
-  background-image: linear-gradient(to top left, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
-}
-
-.bg-gradient-t-primary {
-  background-image: linear-gradient(to top, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
-}
-
 .bg-gradient-tr-primary {
   background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
-}
-
-.bg-gradient-r-primary {
-  background-image: linear-gradient(to right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
 }
 
 body.theme-default .text-theme {
@@ -2677,6 +2657,8 @@ body.theme-alt .bg-map {
   background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
   background-image: url(../images/map-alt.svg);
 }
+
+/* todo: do this */
 
 body.theme-alt .bg-theme {
   background: url(../images/map-alt.svg),
