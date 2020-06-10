@@ -4,7 +4,7 @@
     
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center py-8 pl-4 sm:py-4 lg:order-1">
       <div class="w-12">{{ partial "svg/logo-solid.svg" . }}</div>
-      <div class="ml-3 text-xl text-black">
+      <div class="ml-3 text-xl text-black hover:text-primary-500">
         The New Dynamic
       </div>
     </a>
@@ -16,7 +16,7 @@
       <div class="flex items-center justify-between flex-shrink-0 w-full sm:hidden sm:w-auto sm:flex-shrink">
         {{/* Only Menu Items set as critical are displayed here */}}
         {{ range where $menu_items "critical" "eq" true }}
-          <a class="block px-4 py-2 hover:text-text-gray-300" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="block py-1 mx-4 my-1 transition duration-500 ease-in-out border-b border-transparent hover:text-primary-500 hover:border-primary-500" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         <div @click="nav_slide = !nav_slide" class="flex items-center px-4 py-2 ml-auto mr-0 sm:hidden"> 
           <span class="inline-block pb-1" x-text="nav_slide ? 'close' : 'more'"></span> <span class="ml-4">{{ partial "svg/chevron-down.svg" $ }}</span>
@@ -26,9 +26,9 @@
       <div x-bind:class="{ 'active': nav_slide }" class="flex flex-wrap items-center flex-shrink-0 block w-full text-gray-700 bg-gray-300 border-t border-b border-gray-800 md:bg-transparent mobile-nav sm:bg-transparent sm:border-0 sm:w-auto sm:flex sm:flex-shrink">
         {{ range $menu_items }}
           {{/* Making sure the critical call ones displayed above on mobile, are hidden in this section on mobile. */}}
-          <a class="{{ if .critical }}hidden sm:block{{ else }}block{{ end }} px-4 py-6 sm:py-2 hover:text-theme-gradient" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="{{ if .critical }}hidden sm:block{{ else }}block{{ end }} mx-4 my-4 py-1 sm:my-1 sm:py-1 hover:text-primary-500 border-b border-transparent hover:border-primary-500 duration-500 ease-in-out transition" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
-        <div class="w-full px-4 pb-4 my-12 sm:hidden">
+        <div class="w-full px-4 py-1 pb-4 my-10 sm:hidden">
           <div class="relative mt-1 rounded-md shadow-sm">
             {{ partial "search/form-input.html" . }} 
           </div>
