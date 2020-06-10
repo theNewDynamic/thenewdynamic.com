@@ -1183,8 +1183,8 @@ video {
 
 .bg-primary-500 {
   --bg-opacity: 1;
-  background-color: #980A38;
-  background-color: rgba(152, 10, 56, var(--bg-opacity));
+  background-color: #d80f2b;
+  background-color: rgba(216, 15, 43, var(--bg-opacity));
 }
 
 .bg-primary-600 {
@@ -1345,8 +1345,8 @@ video {
 
 .bg-tertiary-500 {
   --bg-opacity: 1;
-  background-color: #CC6554;
-  background-color: rgba(204, 101, 84, var(--bg-opacity));
+  background-color: #D84730;
+  background-color: rgba(216, 71, 48, var(--bg-opacity));
 }
 
 .bg-tertiary-600 {
@@ -2375,46 +2375,16 @@ video {
   color: rgba(88, 80, 236, var(--text-opacity));
 }
 
-.text-primary-200 {
-  --text-opacity: 1;
-  color: #E5C2CD;
-  color: rgba(229, 194, 205, var(--text-opacity));
-}
-
 .text-primary-300 {
   --text-opacity: 1;
   color: #D69DAF;
   color: rgba(214, 157, 175, var(--text-opacity));
 }
 
-.text-primary-400 {
-  --text-opacity: 1;
-  color: #B75474;
-  color: rgba(183, 84, 116, var(--text-opacity));
-}
-
 .text-primary-500 {
   --text-opacity: 1;
-  color: #980A38;
-  color: rgba(152, 10, 56, var(--text-opacity));
-}
-
-.text-primary-600 {
-  --text-opacity: 1;
-  color: #890932;
-  color: rgba(137, 9, 50, var(--text-opacity));
-}
-
-.text-secondary-500 {
-  --text-opacity: 1;
-  color: #FBCB41;
-  color: rgba(251, 203, 65, var(--text-opacity));
-}
-
-.text-tertiary-500 {
-  --text-opacity: 1;
-  color: #CC6554;
-  color: rgba(204, 101, 84, var(--text-opacity));
+  color: #d80f2b;
+  color: rgba(216, 15, 43, var(--text-opacity));
 }
 
 .group:hover .group-hover\:text-gray-500 {
@@ -2642,8 +2612,32 @@ video {
   transition-duration: 200ms;
 }
 
+.bg-gradient-tr-primary-light {
+  background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
+}
+
+.bg-gradient-r-primary-light {
+  background-image: linear-gradient(to right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
+}
+
+.bg-gradient-br-primary-light {
+  background-image: linear-gradient(to bottom right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
+}
+
+.bg-gradient-tl-primary-light {
+  background-image: linear-gradient(to top left, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
+}
+
+.bg-gradient-t-primary {
+  background-image: linear-gradient(to top, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
+}
+
 .bg-gradient-tr-primary {
   background-image: linear-gradient(to top right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
+}
+
+.bg-gradient-r-primary {
+  background-image: linear-gradient(to right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #AE0C40 83%, #980A38 100%);
 }
 
 body.theme-default .text-theme {
@@ -2684,23 +2678,18 @@ body.theme-alt .bg-map {
   background-image: url(../images/map-alt.svg);
 }
 
-body.theme-alt .text-theme-primary {
-  --text-opacity: 1;
-  color: #CC6554;
-  color: rgba(204, 101, 84, var(--text-opacity));
-}
-
 body.theme-alt .bg-theme {
-  background: url(../images/map-alt.svg), linear-gradient(
-		52deg,
-		#410252 0%,
-		#63004c 16%,
-		#810045 33%,
-		#9f003e 50%,
-		#bc0435 66%,
-		#AE0C40 83%,
-		#980A38 100%
-	);
+  background: url(../images/map-alt.svg),
+		linear-gradient(
+			52deg,
+			#410252 0%,
+			#63004c 16%,
+			#810045 33%,
+			#9f003e 50%,
+			#bc0435 66%,
+			#ae0c40 83%,
+			#980a38 100%
+		);
 }
 
 .pattern-dots-md {
