@@ -24,6 +24,5 @@ module:
     - path: github.com/theNewDynamic/hugo-component-tnd-forms
     - path: github.com/theNewDynamic/hugo-module-tnd-socials
     - path: github.com/theNewDynamic/hugo-module-tnd-redirects
-    - path: github.com/theNewDynamic/hugo-module-tnd-styleguide
     - path: github.com/theNewDynamic/hugo-module-tnd-netlify-cms
     - path: github.com/theNewDynamic/hugo-component-tnd-blocks

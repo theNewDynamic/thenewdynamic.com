@@ -27,6 +27,7 @@ fields:
       options:
       - Hugo Theme
       - Hugo Module
+      - VS Code Plugin
       required: false
   - label: Layout
     name: layout
