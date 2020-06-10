@@ -89,6 +89,7 @@ blocks:
         url: http://awesome-hugo.dev/
         status: Production
         type: Website
+        body: A curated list of awesome things related to Hugo
     title: Our Open Source Repos
 ---
 
