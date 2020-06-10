@@ -28,8 +28,7 @@ blocks:
         type: Hugo Theme
       - title: SEO Module
         url: https://github.com/theNewDynamic/hugo-component-tnd-seo
-        body:
-          A module loaded up for awesome SEO. Generates your SEO tags and is fully
+        body: A module loaded up for awesome SEO. Generates your SEO tags and is fully
           customizable.
         status: alpha
         type: Hugo Module
@@ -51,15 +50,13 @@ blocks:
         body: A Hugo module to handle redirects for Netlify.
       - title: Blocks Module
         url: https://github.com/theNewDynamic/hugo-component-tnd-blocks
-        body:
-          A Hugo module to handle Front Matter blocks. It sets the logic for finding
+        body: A Hugo module to handle Front Matter blocks. It sets the logic for finding
           the right partial any added block.
         type: Hugo Module
         status: Beta
       - url: https://github.com/theNewDynamic/hugo-component-tnd-forms
         title: Forms Module
-        body:
-          A Hugo module to easily add Forms to your Hugo project maintained via data
+        body: A Hugo module to easily add Forms to your Hugo project maintained via data
           files. Supports Netlify Form and Formspree.
         status: Production
         type: Hugo Module
@@ -88,6 +85,9 @@ blocks:
         body: Easily adds a timeline to your Hugo project using Tailwind and Data files.
         status: BEta
         type: HUgo Module
+      - title: Awesome Hugo
+        url: http://awesome-hugo.dev/
+        status: Production
     title: Our Open Source Repos
 ---
 
