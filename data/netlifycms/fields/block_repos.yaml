@@ -21,13 +21,10 @@ fields:
       - Alpha
       - Production
       required: false
-    - label: "Type"
-      name: "type"
-      widget: "select"
-      options:
-      - Hugo Theme
-      - Hugo Module
-      - VS Code Plugin
+    - label: "Types"
+      name: "types"
+      widget: "list"
+      hint: comma separated values
       required: false
   - label: Layout
     name: layout

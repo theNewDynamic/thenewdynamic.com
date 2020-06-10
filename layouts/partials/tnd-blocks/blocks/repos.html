@@ -17,7 +17,9 @@
       {{ end }}
       <div class="absolute bottom-0 left-0 flex items-center justify-between w-full px-4 pb-2 mt-2">
         <div class="text-xs text-gray-500">
-          {{ .type }}
+          {{ with .types }}
+          {{ delimit . ", " }}
+          {{ end }}
         </div>
         <div class="w-4 fill-current">
           {{ partial "svg/github-brands.svg" . }}
