@@ -9,8 +9,6 @@ body.theme-alt .text-theme-primary {
 	@apply text-tertiary-500;
 }
 
-
-/* todo: do this */
 body.theme-alt .bg-theme {
 	background: url(../images/map-alt.svg),
 		linear-gradient(
