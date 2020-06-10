@@ -84,10 +84,11 @@ blocks:
         title: Timeline Module
         body: Easily adds a timeline to your Hugo project using Tailwind and Data files.
         status: BEta
-        type: HUgo Module
+        type: Hugo Module
       - title: Awesome Hugo
         url: http://awesome-hugo.dev/
         status: Production
+        type: Website
     title: Our Open Source Repos
 ---
 
