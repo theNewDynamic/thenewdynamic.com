@@ -11,6 +11,11 @@ blocks:
   - type: repos
     layout: repos
     repos:
+      - url: https://tnd.dev/
+        title: theNewDynamic.dev
+        body: Directory of tools and services for the development community
+        status: Production
+        type: Website
       - url: https://github.com/theNewDynamic/language-hugo-vscode
         title: Hugo VS Code Plugin
         body: Adds Go Template syntax highlighting and 24 snippets!
@@ -23,7 +28,8 @@ blocks:
         type: Hugo Theme
       - title: SEO Module
         url: https://github.com/theNewDynamic/hugo-component-tnd-seo
-        body: A module loaded up for awesome SEO. Generates your SEO tags and is fully
+        body:
+          A module loaded up for awesome SEO. Generates your SEO tags and is fully
           customizable.
         status: alpha
         type: Hugo Module
@@ -45,13 +51,15 @@ blocks:
         body: A Hugo module to handle redirects for Netlify.
       - title: Blocks Module
         url: https://github.com/theNewDynamic/hugo-component-tnd-blocks
-        body: A Hugo module to handle Front Matter blocks. It sets the logic for finding
+        body:
+          A Hugo module to handle Front Matter blocks. It sets the logic for finding
           the right partial any added block.
         type: Hugo Module
         status: Beta
       - url: https://github.com/theNewDynamic/hugo-component-tnd-forms
         title: Forms Module
-        body: A Hugo module to easily add Forms to your Hugo project maintained via data
+        body:
+          A Hugo module to easily add Forms to your Hugo project maintained via data
           files. Supports Netlify Form and Formspree.
         status: Production
         type: Hugo Module
@@ -82,4 +90,5 @@ blocks:
         type: HUgo Module
     title: Our Open Source Repos
 ---
-Free and open source software is core to how we work. We use open source software and we contribute back to the software we use and create our own software for others to use. 
+
+Free and open source software is core to how we work. We use open source software and we contribute back to the software we use and create our own software for others to use.
