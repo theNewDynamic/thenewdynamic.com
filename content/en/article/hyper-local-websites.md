@@ -1,5 +1,5 @@
 ---
-title: "What is a Hyper Local Website?"
+title: "What is a Hyperlocal Website?"
 date: 2020-05-01T20:32:27.000Z
 description: >-
   Meet your audience from anywhere they are
