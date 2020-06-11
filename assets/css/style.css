@@ -172,7 +172,7 @@ body {
 	margin-right: calc(((100vw - 100%) / 2) * -1);
 }
 
-@screen lg {
+@screen xl {
 	.max-aside{
 		margin-left:0;
 		margin-right:0;
