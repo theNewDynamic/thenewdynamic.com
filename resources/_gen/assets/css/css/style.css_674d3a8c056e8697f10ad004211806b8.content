@@ -963,13 +963,13 @@ video {
 
 .rich-text > * + * {
   margin-top: 1em;
-  color: #374151;
 }
 
 .rich-text h1 {
   font-weight: 700;
   line-height: 1.25;
   font-size: 3rem;
+  color: #161e2e;
 }
 
 @media (min-width: 640px) {
@@ -982,6 +982,7 @@ video {
   font-weight: 700;
   line-height: 1.25;
   font-size: 2.25rem;
+  color: #161e2e;
 }
 
 @media (min-width: 640px) {
@@ -994,6 +995,7 @@ video {
   font-weight: 700;
   line-height: 1.25;
   font-size: 2.25rem;
+  color: #161e2e;
 }
 
 .rich-text h4 {
@@ -1398,8 +1400,8 @@ video {
   height: 1.5rem;
 }
 
-.h-16 {
-  height: 4rem;
+.h-20 {
+  height: 5rem;
 }
 
 .h-48 {
@@ -1604,6 +1606,10 @@ video {
   margin-top: 3rem;
 }
 
+.mr-12 {
+  margin-right: 3rem;
+}
+
 .mt-16 {
   margin-top: 4rem;
 }
@@ -1712,6 +1718,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .py-1 {
@@ -2180,6 +2190,10 @@ video {
   width: 4rem;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -2498,7 +2512,7 @@ body {
   margin-right: calc(((100vw - 100%) / 2) * -1);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .max-aside{
     margin-left:0;
     margin-right:0;

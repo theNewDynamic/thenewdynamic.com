@@ -6,14 +6,14 @@
     </div>  
   </div>
   {{/* The sticky class below must follow directly after the pageheadding div above for its interaction to work "js/intersection-observer.js" */}}
-  <div class="sticky z-50 top-0 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-gradient-tr-primary">
+  <div class="sticky top-0 z-50 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-gradient-tr-primary">
     <div class="container max-w-3xl p-4">
       {{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}}
       {{ with .Title }} :<span class="inline-block ml-4 altheading">{{ . }}</span>{{ end }}
     </div>
   </div>
   <div class="container max-w-3xl mt-8 mb-16">
-    <div class="col-span-11 rich-text">
+    <div class="col-span-11 text-gray-700 rich-text">
       {{ .Content }}
     </div>
     <div class="my-16">

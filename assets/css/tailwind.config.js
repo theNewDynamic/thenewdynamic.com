@@ -77,17 +77,19 @@ module.exports = {
 				fontSize: theme("fontSize.lg"),
 				lineHeight: theme("lineHeight.relaxed"),
 				"> * + *": {
-					marginTop: "1em",
-					color: theme("colors.gray.700"),
+					marginTop: "1em",				
 				},
 				h1: {
 					extends: "h1",
+					color: theme("colors.gray.900"),
 				},
 				h2: {
 					extends: "h2",
+					color: theme("colors.gray.900"),
 				},
 				h3: {
 					extends: "h3",
+					color: theme("colors.gray.900"),
 				},
 				h4: {
 					extends: "h4",
