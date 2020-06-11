@@ -8,7 +8,7 @@ When your business serves many communities of people, you've got a real challeng
 
  - Translate languages to local markets.
  - Localize your site so it's easy to use from anywhere.
- - Display geo-targed content to improve messaging whereever your audience is from.
+ - Display geo-targed content to improve messaging wherever your audience is from.
 
  Those aspects alone can be challenging, yet there's more if you want to be truly competitive. What happens when you (or, more specifically, your website) is in California, but someone visits your website in Berlin, or Cairo, or anyhwere else in the world? The answer is that, with a typical website, your potential customer is paying the price for that distance by having to wait. Sure, it may only be a few seconds, but, as we've discussed [elsewhere](/article/bulletproof-technology/), those seconds matter. 
 
