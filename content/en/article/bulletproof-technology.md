@@ -45,14 +45,14 @@ So we know we absolutely must engage users the instant they hit your home page. 
 
 Before we look at some of these elements in detail, let’s examine how a traditional website typically comes to life and gets served to an end user.
 
-<!-- aside -->
+{{% aside %}}
 
 #### The Tech Stack
 
   One cornerstone of website creation is the tech stack. In simplest terms, a tech stack is a collection of software that works together to achieve a certain goal. For our purposes here, the goal of the tech stack is to serve a website to the general public and end users.
   
   The legacy tech stack of the web is known as LAMP. Site platforms like Drupal, Joomla, and WordPress run off its collection of software. Here’s the quick acronym breakdown\:
-  
+
   Linux is the operating system.
   Apache is the stack’s web server.
   MySQL is the stack’s database. 
@@ -62,7 +62,7 @@ Before we look at some of these elements in detail, let’s examine how a tradit
 
   …but when it comes to a user’s perception of your website, every second counts.
 
-  <!-- aside -->
+{{% /aside %}}
 
 ## The Need for Speed
 

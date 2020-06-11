@@ -166,3 +166,16 @@ body {
 		z-index: 0;
 	}
 }
+
+.max-aside {
+	margin-left: calc(((100vw - 100%) / 2) * -1);
+	margin-right: calc(((100vw - 100%) / 2) * -1);
+}
+
+@screen lg {
+	.max-aside{
+		margin-left:0;
+		margin-right:0;
+		width: calc((100vw - 48rem) / 2);
+	}
+}
