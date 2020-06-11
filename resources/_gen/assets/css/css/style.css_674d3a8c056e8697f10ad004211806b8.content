@@ -2714,8 +2714,8 @@ body {
     font-size: 4rem;
   }
 
-  .lg\:mb-40 {
-    margin-bottom: 10rem;
+  .lg\:mb-24 {
+    margin-bottom: 6rem;
   }
 
   .lg\:py-4 {
