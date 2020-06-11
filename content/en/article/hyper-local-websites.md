@@ -19,7 +19,7 @@ When your business serves many communities of people, you've got a real challeng
 
 A website’s software and all of its files typically sit on a single server. If you’re in the U.S. that server might be in New York, Texas, wherever the server, the software, the files all interact with each other fast to serve up the site experience…
 
-…but when a site is built with our Jamstack technology, the experience is even faster.
+…but when a site is built with our [Jamstack technology](/article/bulletproof-technology/), the experience is even faster.
 
 Because of the way we prebuild our website, we can put the *entirety* of the site’s content on a Content Delivery Network (CDN) and accelerate everything.
 
