@@ -105,7 +105,7 @@ A website’s software and all of its files typically sit on a single server. If
 
 …but when a site is built with bulletproof technology, the experience is even faster.
 
-Because of the way we prebuild our website, we can put the entirely of the site’s content on a Content Delivery Network (CDN) and accelerate everything.
+Because of the way we prebuild our website, we can put the *entirety* of the site’s content on a Content Delivery Network (CDN) and accelerate everything.
 
 ##### How a Content Delivery Network Works
 
