@@ -3,8 +3,14 @@ github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3a
 github.com/theNewDynamic/hugo-module-tnd-icons v0.0.0-20200610141216-f7580fb1a309/go.mod h1:CJLWNvA72fl4Oa4jr0Dz6nAqJ9yaaWVLZuwCUCpxwuA=
 github.com/theNewDynamic/hugo-module-tnd-icons v0.1.0 h1:cp8O0jYTqAlzByuYUYZ/MvxPwGCcm1HG9oaYp/9Y8x8=
 github.com/theNewDynamic/hugo-module-tnd-icons v0.1.0/go.mod h1:5P8x9n4dAq+JChj5o0nUsF5G3ucNQglFoeAn5c1Me9A=
+github.com/theNewDynamic/hugo-module-tnd-icons v0.1.1 h1:OnCPwextlbJtkpLGgNvFV2WirGSaN/BHbrfXcq1YcPI=
+github.com/theNewDynamic/hugo-module-tnd-icons v0.1.1/go.mod h1:5P8x9n4dAq+JChj5o0nUsF5G3ucNQglFoeAn5c1Me9A=
+github.com/theNewDynamic/hugo-module-tnd-icons v0.1.2 h1:Ln+++rq9YIHC2MIqcfclkhrdz5zwVTs44afYW09p868=
+github.com/theNewDynamic/hugo-module-tnd-icons v0.1.2/go.mod h1:5P8x9n4dAq+JChj5o0nUsF5G3ucNQglFoeAn5c1Me9A=
 github.com/theNewDynamic/hugo-module-tnd-netlify-cms v0.1.3/go.mod h1:qZ98q8trzEc2KAeObCm/YZXKFjm/xt4ACjACq8BZCvM=
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.1.0/go.mod h1:UG+i6GOMCwA+ZbpQ9DXX8ImoW4IEY0tKfJ0/EiUZLLg=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.1/go.mod h1:7WIDUEYoiQVRZVPYPXpTLhSh+J25fPYJuCGNsYby3DM=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.2 h1:TptkBTEasOXjK5JsIfyVeZ0y0bGei+yd0JlwlAXPm0k=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.2/go.mod h1:7WIDUEYoiQVRZVPYPXpTLhSh+J25fPYJuCGNsYby3DM=
+github.com/theNewDynamic/hugo-module-tnd-socials v0.1.3 h1:2GQ2t5NNCv7YUbK37nNNGIspQDy0I87/d25Z5H6yfrI=
+github.com/theNewDynamic/hugo-module-tnd-socials v0.1.3/go.mod h1:7WIDUEYoiQVRZVPYPXpTLhSh+J25fPYJuCGNsYby3DM=

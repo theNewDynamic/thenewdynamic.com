@@ -2735,10 +2735,6 @@ body {
     margin-bottom: 6rem;
   }
 
-  .lg\:max-w-sm {
-    max-width: 24rem;
-  }
-
   .lg\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -2762,18 +2758,6 @@ body {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .lg\:pr-4 {
-    padding-right: 1rem;
-  }
-
-  .lg\:absolute {
-    position: absolute;
-  }
-
-  .lg\:right-0 {
-    right: 0;
   }
 
   .lg\:w-auto {
@@ -2801,6 +2785,26 @@ body {
 
   .xl\:mt-0 {
     margin-top: 0;
+  }
+
+  .xl\:max-w-sm {
+    max-width: 24rem;
+  }
+
+  .xl\:pr-4 {
+    padding-right: 1rem;
+  }
+
+  .xl\:absolute {
+    position: absolute;
+  }
+
+  .xl\:right-0 {
+    right: 0;
+  }
+
+  .xl\:w-auto {
+    width: auto;
   }
 
   .xl\:gap-8 {
