@@ -2,7 +2,7 @@
 title: "What is a Hyper Local Website?"
 date: 2020-05-01T20:32:27.000Z
 description: >-
-  No matter where your visitors come from
+  Meet your audience from anywhere they are
 ---
 When your business serves many communities of people, you've got a real challenge on your hand. What are the aspects of building a global website?
 
