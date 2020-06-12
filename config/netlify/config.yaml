@@ -1,3 +1,0 @@
-build:
-  useResourceCacheWhen: never
-  writeStats: false
