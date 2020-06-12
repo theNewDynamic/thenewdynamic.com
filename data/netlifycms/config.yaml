@@ -14,6 +14,7 @@ slug:
 collections:
 - import collection pages-en
 - import collection pages-fr
-- import collection regular-pages
+- import collection regular-pages-en
+- import collection regular-pages-fr
 - import collection articles
 - import collection persons

@@ -2,7 +2,7 @@
 <div class="container">
   {{ partial "page-header.html" . }}   
     <div class="my-4">
-      {{ with .Params.intro }}
+      {{ with .Params.description }}
         {{ partial "page-intro" ($.RenderString .) }}
       {{ end }}
     </div>

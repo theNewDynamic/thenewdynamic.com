@@ -1,15 +1,14 @@
-name: "regular-pages"
-label: "Regular Pages"
+name: "regular-pages-fr"
+label: "Regular Pages (FR)"
 label_singular: "Regular Page"
 description: The regular pages.
-folder: "content/en"
+folder: "content/fr"
 filter: { field: "exclude_collection" }
 create: true
 sortableFields: ['title']
 
 fields:
   - import field title
-  - import field intro
   - import field description
   - import field body
   - import field blocks

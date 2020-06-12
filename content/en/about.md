@@ -1,4 +1,16 @@
 ---
+title: About Us
+description: Since 2002 we’ve built websites for organizations large and small. We
+  pride ourselves on our human-centered approach to working with clients, and
+  bringing integrity to every detail of our work.
+hero:
+  text: A better team for the best websites
+menu:
+  main:
+    weight: 1
+    pre: critical
+layout: about
+exclude_collection: true
 blocks:
   - type: persons
     layout: persons
@@ -56,18 +68,4 @@ blocks:
         body: Boralex's international audience gets content specific to their location.
         image: /uploads/screenshot-work-boralex-2020-06-11.jpg
         client: Boralex Inc.
-layout: about
-title: About Us
-intro: Since 2002 we’ve built websites for organizations large and small. We
-  pride ourselves on our human-centered approach to working with clients, and
-  bringing integrity to every detail of our work.
-hero:
-  text: A better team for the best websites
-menu:
-  main:
-    weight: 1
-    pre: critical
 ---
-
-<!--
-/uploads/screenshot-work-brookline-2020-06-11.jpg -->

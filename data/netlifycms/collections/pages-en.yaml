@@ -14,5 +14,4 @@ files:
     fields:
       - import field title
       - import field description
-      - import field intro
       - import field blocks_about

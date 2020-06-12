@@ -1,6 +1,7 @@
 ---
-title: Home
+title: Accueil
 theme: alt
+exclude_collection: true
 blocks:
   - type: points
     layout: points
