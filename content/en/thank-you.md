@@ -2,4 +2,4 @@
 title: Thank you
 ---
 
-Thanks for signing up.
+Thanks for your message!

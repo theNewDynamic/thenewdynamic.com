@@ -21,7 +21,7 @@
           {{ partial "tnd-socials/follow.html" . }}
         </div>
         <div class="my-8">
-          {{ partial "tnd-forms/form" "contact-test" }}
+          {{ partial "tnd-forms/form" (print "contact-" .Language) }}
         </div>
       </div>
     </div>

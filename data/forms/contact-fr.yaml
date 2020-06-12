@@ -1,0 +1,20 @@
+id: contact-fr
+title: Contact Us
+provider: formspree
+formspree_id: mnqdldjj
+redirect: /fr/merci/
+submit: Contactez-nous
+fields:
+  - name: name
+    required: true
+    label: Nom
+  - name: email
+    label: Courriel
+    type: email
+    required: true
+  - name: phone
+    label: Téléphone
+    type: tel
+  - name: note
+    label: Message
+    type: textarea
