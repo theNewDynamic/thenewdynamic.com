@@ -3,33 +3,19 @@
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="col-span-2 text-gray-100">
         <p class="text-2xl font-bold">
-          Welcome to The New Dynamic. <br />We Design, Build and Manage <em>Better Faster Websites</em>
+          {{ i18n "statement_title" | safeHTML }}
         </p>
-        <p class="max-w-lg mt-4 mb-16 text-sm">          
-        Since 2002 we’ve built websites for organizations large and small. We pride ourselves on our human-centered approach to working with clients, and bringing integrity to every detail of our work.
-        </p>
+        {{ with site.GetPage "about" }}
+          {{ with .Params.description }}
+          <p class="max-w-lg mt-4 mb-16 text-sm">
+            {{ . }}
+          </p>
+          {{ end }}
+        {{ end }}
+
       </div>
       <div class="mt-8 xl:mt-0">
-        <h4 class="text-sm font-semibold leading-5 tracking-wider text-gray-400 uppercase">
-          Subscribe to our newsletter
-        </h4>
-        <p class="mt-4 text-base leading-6 text-gray-300">
-          Periodic updates with news, articles, and resources.
-        </p>
-        <form name="newsletter-signup" netlify-honeypot="bot-field" method="post" action="/thank-you/" class="mt-4 sm:flex sm:max-w-md" data-netlify="true">
-          <p class="hidden">
-            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-          </p>
-          <input aria-label="Email address" type="email" name="email" required
-            class="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none focus:outline-none focus:placeholder-gray-400"
-            placeholder="Enter your email" />
-          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-            <button
-              class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-500 border border-transparent rounded-md hover:bg-indigo-400 focus:outline-none focus:bg-indigo-400">
-              Subscribe
-            </button>
-          </div>
-        </form>
+        {{ partial "newsletter-form" . }}
       </div>
     </div>
     <div class="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
@@ -61,7 +47,7 @@
         {{ end }}
         <a class="px-3 py-2 text-xs italic no-underline hover:text-gray-100 color-inherit"
           href="https://thenewdynamic.com">
-          site by the New Dynamic
+          {{ i18n "site_by" }} the New Dynamic
         </a>
       </p>
     </div>

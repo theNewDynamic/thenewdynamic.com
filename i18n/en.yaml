@@ -22,3 +22,18 @@
   translation: Previous
 - id: next
   translation: Next
+# Newsletter Form
+- id: nl_form_title
+  translation: Subscribe to our newsletter
+- id: nl_form_body
+  translation: Periodic updates with news, articles, and resources.
+- id: nl_form_placeholder
+  translation: Enter your email
+- id: nl_form_submit
+  translation: Subscribe
+
+# Footer
+- id: statement_title
+  translation: Welcome to The New Dynamic. <br />We Design, Build and Manage <em>Better Faster Websites</em>
+- id: site_by
+  translation: site by

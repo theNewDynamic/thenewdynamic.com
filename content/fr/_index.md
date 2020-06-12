@@ -9,7 +9,7 @@ blocks:
     points:
       - title: Technologie blindée
         intro: Votre site web est designé et développé pour s'adapter aux technologies
-          changeantes .
+          changeantes.
         body: >-
           Les outils que nous utilisons pour la création et la maintenance de
           vos sites sont rapides, simples et flexibles. Avec notre installation

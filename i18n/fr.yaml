@@ -21,4 +21,20 @@
 - id: previous
   translation: Previous  
 - id: next
-  translation: Next      
+  translation: Next
+
+  # Newsletter Form
+- id: nl_form_title
+  translation: Inscrivez-vous à notre newsletter
+- id: nl_form_body
+  translation: Recevez des nouvelles, articles et resources.
+- id: nl_form_placeholder
+  translation: Votre courriel
+- id: nl_form_submit
+  translation: Je m'inscris
+
+  # Footer
+- id: statement_title
+  translation: Bienvenue dans la nouvelle dynamique. <br />On designe, on bâtit, on maintient<br> des sites <em>plus performants, plus rapides</em>.
+- id: site_by
+  translation: site par
