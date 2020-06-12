@@ -42,7 +42,7 @@ boxes:
     client: Retro Report
 
   - heading: Commerce
-    copy: Not your typical publisher, the venerable New Directions 
+    copy: Not your typical publisher, the venerable New Directions needed anything but a cookie-cutter design. 
     image: /uploads/screenshot-work-ndbooks.jpg
     client: New Directions Publishing
 
@@ -57,7 +57,7 @@ boxes:
     client: Royal Kingdom of the Netherlands
 
   - heading: Nonprofits
-    copy: AALDEF's deep archive of articles is invaluable, like the work they do. 
+    copy: AALDEF's deep archive of articles is invaluable, like the work they do. Our platform gives AALDEF a solid foundation to communicate their work.
     image: /uploads/screenshot-work-aldef-2020-06-10.jpg
     client: Asian American Legal Defense and Education Fund
 
@@ -67,12 +67,12 @@ boxes:
     client: Hugo
 
   - heading: Corporate
-    copy: Boralex
+    copy: Boralex's international audience gets content specific to their location.
     image: /uploads/screenshot-work-boralex-2020-06-11.jpg
     client: Boralex Inc.
 
   - heading: Social Good
-    copy: Is brings a much needed resource to families in the U.S. Their site gets a ton of traffic and benefits from our bulletproof technnology.
+    copy: FreshEBT brings a much needed resource to families in the U.S. Their site gets a ton of traffic and benefits from our bulletproof technnology.
     image: /uploads/screenshot-work-freshebt-2020-06-11.jpg
     client: Boralex Inc.
 ---
