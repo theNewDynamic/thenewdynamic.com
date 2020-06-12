@@ -1603,10 +1603,6 @@ video {
   margin-top: 3rem;
 }
 
-.mr-12 {
-  margin-right: 3rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -2165,6 +2161,10 @@ video {
 
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+
+.w-3 {
+  width: 0.75rem;
 }
 
 .w-4 {
