@@ -14,6 +14,7 @@ command = "hugo --minify -e netlify"
     HUGO_VERSION = "0.69.0"
     HUGO_ENV = "production"
     GO_VERSION = "1.14"
+    NODE_VERSION="10.13.0"
 
     [context.deploy-preview.environment]
     HUGO_VERSION = "0.70.0"
