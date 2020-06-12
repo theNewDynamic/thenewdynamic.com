@@ -1,9 +1,7 @@
 ---
 title: Nos contributions open source
 linktitle: Open Source
-description: Les logiciels libres et ouvert sont le coeur de notre façon de
-  travailler. Nous contribuons activement aux logiciels libres que nous
-  utilisons tout en développant nos propre outils libres.
+description: Les logiciels libres et ouverts sont nos cœurs de métier. Nous contribuons activement aux logiciels libres que nous utilisons tout en développant nos propre outils libres.
 menu:
   main:
     weight: 3
@@ -26,21 +24,21 @@ blocks:
       - title: "Theme: Ananke"
         url: https://github.com/budparr/gohugo-theme-ananke
         body: A Base theme for building full featured Hugo sites.
-        status: production
+        status: Production
         types:
           - Hugo Theme
       - title: SEO Module
         url: https://github.com/theNewDynamic/hugo-component-tnd-seo
         body: A module loaded up for awesome SEO. Generates your SEO tags and is fully
           customizable.
-        status: alpha
+        status: Alpha
         types:
           - Hugo Module
       - title: Netlify CMS Module
         url: https://github.com/theNewDynamic/hugo-module-tnd-netlify-cms
         body: A module to add Netlify CMS on your Hugo project and improve its
           configuration UX.
-        status: alpha
+        status: Alpha
         types:
           - Hugo Module
       - title: Imgix Module

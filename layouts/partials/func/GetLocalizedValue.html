@@ -1,0 +1,28 @@
+{{/*
+  GetLocalizedValue
+  Returns a given parameter key from its localized version.
+  Ex title for .Params.title_en (if site is english)
+
+  @author @regisphilibert
+
+  @context String
+
+  @access public
+
+  @example - Go Template
+    {{ partial "path" context }}
+    {{ partialCached "path" context "variant" }}
+*/}}
+
+{{ $key := .key }}
+{{ $map := .map }}
+{{ $lang := site.Language }}
+{{ with .lang }}
+  {{ $lang = . }}
+{{ end }}
+{{ $return := false }}
+{{ with index .map (printf "%s_%s" .key $lang) }}
+  {{ $return = . }}
+{{ end }}
+
+{{ return $return }}
