@@ -8,6 +8,7 @@ files:
       - import field title
       - import field description
       - import field blocks
+      - import field seo
   - name: "about"
     label: "About"
     file: "content/en/about.md"
@@ -15,3 +16,4 @@ files:
       - import field title
       - import field description
       - import field blocks_about
+      - import field seo
