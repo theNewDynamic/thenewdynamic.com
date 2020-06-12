@@ -5,6 +5,7 @@ lastmod: 2019-08-16T22:32:27.000Z
 description: >-
   Let's try and understand the impact of the scope/context within our templates
   and partials.
+draft: true
 ---
 
 __Why is my variable not available here or there?__ 🙄
