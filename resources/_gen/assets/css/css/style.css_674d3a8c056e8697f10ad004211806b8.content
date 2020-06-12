@@ -2024,10 +2024,6 @@ video {
   color: rgba(181, 3, 55, var(--text-opacity));
 }
 
-.italic {
-  font-style: italic;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
