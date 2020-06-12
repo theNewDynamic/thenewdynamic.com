@@ -1,0 +1,18 @@
+label: "Boxes"
+name: "boxes"
+widget: "object"
+fields:
+  - import field title
+  - label: Boxes
+    name: boxes
+    widget: list
+    fields:
+    - import field title
+    - import field body
+    - label: "Image"
+      name: "image"
+      widget: "image"
+  - label: Layout
+    name: layout
+    widget: hidden
+    default: boxes

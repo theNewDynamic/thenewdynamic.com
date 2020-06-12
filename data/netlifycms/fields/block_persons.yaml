@@ -1,0 +1,11 @@
+label: "Persons"
+name: "persons"
+widget: "object"
+fields:
+  - import field title
+  - import field body
+  - import field authors
+  - label: Layout
+    name: layout
+    widget: hidden
+    default: persons
