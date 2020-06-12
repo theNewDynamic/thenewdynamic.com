@@ -46,6 +46,11 @@ boxes:
     image: /uploads/screenshot-work-ndbooks.jpg
     client: New Directions Publishing
 
+  - heading: Social Good
+    copy: FreshEBT brings a much needed resource to families in the U.S. Their site gets a ton of traffic and benefits from our bulletproof technnology.
+    image: /uploads/screenshot-work-freshebt-2020-06-11.jpg
+    client: Boralex Inc.
+  
   - heading: Educational
     copy: Filling the gap in public awareness about the International Criminal Court. A project for the American Bar Association's Center for Human Rights.
     image: /uploads/screenshot-work-aba_icc.jpg
@@ -71,10 +76,7 @@ boxes:
     image: /uploads/screenshot-work-boralex-2020-06-11.jpg
     client: Boralex Inc.
 
-  - heading: Social Good
-    copy: FreshEBT brings a much needed resource to families in the U.S. Their site gets a ton of traffic and benefits from our bulletproof technnology.
-    image: /uploads/screenshot-work-freshebt-2020-06-11.jpg
-    client: Boralex Inc.
+
 ---
 
 <!--
