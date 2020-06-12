@@ -6,22 +6,32 @@ blocks:
     layout: points
     title: Nos méthodes de travail
     points:
-      - title: Une approche simple
-        intro: >-
-          Nulla vitae elit libero, a pharetra augue.
+      - title: Technologie blindée
+        intro: Votre site web est designé et développé pour s'adapter aux technologies
+          changeantes .
         body: >-
-          Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+          Les outils que nous utilisons pour la création et la maintenance de
+          vos sites sont rapides, simples et flexibles. Avec notre installation
+          logiciel et nos pré-requis minimalistes, vous conservez du budget pour
+          vos futures améliorations web. 
+
+
+          [EN SAVOIR PLUS &rarr;](/article/bulletproof-technology/)
         color: primary-500
-      - title: Technologie par-balles 
-        intro: >-
-          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.
-        body: >-
-          Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.
+      - title: Une approche simple
+        intro: Des experts qui font passer les gens avant les procédés. De la clarté,
+          pas de confusion. Des résultats, pas de paperasserie.
+        body: L'amélioration continue de votre site est la clé pour rester connecté avec
+          votre public. Ça à sonne compliqué? On rend ça facile. Notre équipe
+          s'occupera de votre présence web et trouvera de nouvelles façon de la
+          garder actuelle et engageante.
         color: secondary-500
       - title: Des tarifs transparents
-        intro: >-
-          Vestibulum id ligula porta felis euismod semper.
+        intro: Un model de tarification simple et efficace qui peut s'adapter
+          ponctuellement à vos besoin du moment.
         color: tertiary-500
-        body: >-
-          Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        body: Our technologies and efficient workflows allow us to offer affordable,
+          fixed-rate services. Each of our plans empowers you to work with us on
+          a continual basis – The New Dynamic requisite for building great
+          websites.
 ---

@@ -1,6 +1,8 @@
 - id: home_hero_title
   translation: Donnez à votre site une dimension globale
 - id: home_hero_subtitle
+  translation: Sites web Utlralocales. Cliquez pour en savoir plus.
+- id: welcome_tnd
   translation: Bienvenue dans la nouvelle dynamique
 - id: minutes_read
   translation: 

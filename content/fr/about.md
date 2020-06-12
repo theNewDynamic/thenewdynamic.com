@@ -1,6 +1,9 @@
 ---
 title: À propos
 slug: a-propos
+menu:
+  main: 
+    weight: 1
 intro: Depuis 2002 nous construisons des sites web pour des organization de
   toutes tailles. Nous somme fière de l'approche humaine avec laquelle nous
   travaillons avec tous nos clients. Nous faisons preuve d'intégrité en tout
