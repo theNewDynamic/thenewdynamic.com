@@ -15,7 +15,7 @@ When your business serves many communities of people, you've got a real challeng
  A Hyperlocal website not only is translated, localized, and geo-targeted, but serves your site from points of presence all over the world, wherever your audience is.
 
 
-### Delivering your site from any corner in the world
+### Delivering your site from every corner of the world
 
 A website’s software and all of its files typically sit on a single server. If you’re in the U.S. that server might be in New York, Texas, wherever the server, the software, the files all interact with each other fast to serve up the site experience. That's the old way. 
 
