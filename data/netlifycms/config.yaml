@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  branch: main
 show_preview_links: true
 publish_mode: editorial_workflow
 local_backend: true
