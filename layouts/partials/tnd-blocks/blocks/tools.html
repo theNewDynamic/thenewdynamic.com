@@ -1,0 +1,13 @@
+
+{{ with .Params.tools }}
+<section class="pb-24 text-gray-700 body-font">
+  <div class="container px-5 mx-auto ">
+    <h3 class="my-8 text-3xl">Our Tools</h3>
+    {{ range . }}
+      {{ with .image }}
+      <img src="{{ . }}" alt="" class="inline-block w-20 mr-12">        
+      {{ end }}
+    {{ end }}
+    </div>
+</section>
+{{ end }}

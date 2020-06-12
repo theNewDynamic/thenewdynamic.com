@@ -1,0 +1,17 @@
+name: "pages-fr"
+label: "Main Pages (FR)"
+files:
+  - name: "home"
+    label: "Homepage"
+    file: "content/fr/_index.md"
+    fields:
+      - import field title
+      - import field description
+      - import field blocks
+  - name: "about"
+    label: "About"
+    file: "content/fr/about.md"
+    fields:
+      - import field title
+      - import field description
+      - import field blocks_about

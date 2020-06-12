@@ -1,0 +1,18 @@
+name: "pages-en"
+label: "Main Pages (EN)"
+files:
+  - name: "home"
+    label: "Homepage"
+    file: "content/en/_index.md"
+    fields:
+      - import field title
+      - import field description
+      - import field blocks
+  - name: "about"
+    label: "About"
+    file: "content/en/about.md"
+    fields:
+      - import field title
+      - import field description
+      - import field intro
+      - import field blocks_about

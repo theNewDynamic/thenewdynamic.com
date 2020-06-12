@@ -1,0 +1,6 @@
+name: blocks
+label: Blocks
+widget: list
+types:
+  - import field block_persons
+  - import field block_boxes
