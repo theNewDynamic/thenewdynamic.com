@@ -2,4 +2,4 @@
 title: Thank you
 ---
 
-Thanks for your message!
+Thank you for getting in touch! We look forward to speaking to you more in the future.
