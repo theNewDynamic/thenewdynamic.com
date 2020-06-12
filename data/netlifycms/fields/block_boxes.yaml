@@ -9,9 +9,7 @@ fields:
     fields:
     - import field title
     - import field body
-    - label: "Image"
-      name: "image"
-      widget: "image"
+    - import field image
   - label: Layout
     name: layout
     widget: hidden

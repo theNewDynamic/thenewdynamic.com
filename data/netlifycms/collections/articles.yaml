@@ -13,4 +13,5 @@ fields:
   - import field description
   - import field authors
   - import field body
+  - import field seo
 

@@ -10,6 +10,8 @@ markup:
 params:
   tnd_redirects:
     use_aliases: true
+theme:
+  - github.com/theNewDynamic/hugo-component-tnd-seo
 
 social:
   twitter: theNewDynamic
