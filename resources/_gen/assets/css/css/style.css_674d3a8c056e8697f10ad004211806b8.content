@@ -1372,10 +1372,6 @@ video {
   font-weight: 900;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-20 {
   height: 5rem;
 }
