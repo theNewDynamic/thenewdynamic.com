@@ -15,6 +15,46 @@ Moving from old regular template languages where the scope is rarely an issue, y
 In this article we’ll try and understand the impact of the scope/context within our templates and partials and how to juggle with the dot 🤹.
 <!--more-->
 
+## Fat YAML Example
+
+```yaml
+title: The New Dynamic
+baseURL: https://www.thenewdynamic.com
+DefaultContentLanguage: en
+
+markup:
+  highlight:
+    style: monokai
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  tnd_redirects:
+    use_aliases: true
+theme:
+  - github.com/theNewDynamic/hugo-component-tnd-seo
+
+social:
+  twitter: theNewDynamic
+
+outputs:
+  home:
+    - HTML
+    - netlify_redir
+
+module:
+  imports:
+    - path: github.com/theNewDynamic/hugo-component-tnd-forms
+    - path: github.com/theNewDynamic/hugo-module-tnd-socials
+    - path: github.com/theNewDynamic/hugo-module-tnd-redirects
+    - path: github.com/theNewDynamic/hugo-module-tnd-netlify-cms
+    - path: github.com/theNewDynamic/hugo-component-tnd-blocks
+    - path: github.com/theNewDynamic/hugo-module-tnd-styleguide
+    - path: github.com/theNewDynamic/hugo-module-tnd-icons
+```
+
 ## The context and the dot
 
 I’m using the word scope in the title here, because it’s what first come to mind when dealing with the issue and I guess what people will eventually seek help for. But I suppose we’ll be talking more about the « context »
