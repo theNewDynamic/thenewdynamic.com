@@ -10,4 +10,9 @@
 	<script type="text/javascript" src="{{ print .js | default "/js/main.js" }}" {{ with .jsIntegrity }}integrity="{{ print . }}" crossorigin="anonymous"{{ end }} defer></script>
 {{ end }}
 
+
+
+
+{{ if eq (getenv "HUGO_ENV") "production" }}
 <script src="https://cdn.usefathom.com/script.js" site="KXXQSWVI" defer></script>
+{{ end }}
