@@ -16,6 +16,19 @@
 @import "themes/alt.css";
 @import "patterns.css";
 
+@import "highlight.css";
+
+:root {
+	font-size: 14px;
+	--headerHeight: 68px;
+}
+@screen md {
+	:root {
+		font-size: 16px;
+		--headerHeight: 78px;
+	}
+}
+
 /* STICKY FOOTER */
 html,
 body {
@@ -30,7 +43,9 @@ body {
 .page-container {
 	flex: 1 0 auto;
 }
-
+.something-test{
+	color:blue;
+}
 .footer {
 	flex-shrink: 0;
 }
@@ -72,16 +87,8 @@ body {
 }
 /* END Fancy Blockquotes */
 
-:root {
-	font-size: 14px;
-	--headerHeight: 68px;
-}
-@screen md {
-	:root {
-		font-size: 16px;
-		--headerHeight: 78px;
-	}
-}
+
+
 @variants hover {
 	.text-gradient {
 		/* standard gradient background */
@@ -167,11 +174,6 @@ body {
 	}
 }
 
-.max-aside {
-	margin-left: calc(((100vw - 100%) / 2) * -1);
-	margin-right: calc(((100vw - 100%) / 2) * -1);
-}
-
 @screen xl {
 	.max-aside{
 		margin-left:0;
@@ -179,3 +181,4 @@ body {
 		width: calc((100vw - 48rem) / 2);
 	}
 }
+

@@ -161,6 +161,13 @@ module.exports = {
 					'"Segoe UI Symbol"',
 					'"Noto Color Emoji"',
 				],
+				code: [
+					"Consolas",
+					"Monaco",
+					"Andale Mono",
+					"Ubuntu Mono",
+					"monospace"
+				]
 			},
 			opacity: {
 				"70": "0.7",

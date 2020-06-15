@@ -1,0 +1,135 @@
+/*
+*   Highlights
+*/
+
+/* Start of customization */
+
+.highlight {
+  --defaultColor: theme('colors.gray.400');
+	--preBackgroundColor: theme('colors.gray.800');
+	--preBorderColor: theme('colors.white');
+}
+.chroma .language-go-html-template {
+	--defaultColor: theme('colors.gray.400');
+	/* HTML tags
+	<div style="fill:currentColor;width:3rem;margin:1rem 0"> */ 
+	--htmlColor: theme('colors.primary.300');
+
+	/* Comments
+	{{/* This is why we doe it *}} */
+	--commentsColor: inherit;
+
+	/* 
+	Functions
+	resources.Match */
+	--functionsColor: theme('colors.purple.300');
+
+	/* 
+	Strings
+	"the fox whaterver etc..." */
+	--stringsColor: theme('colors.secondary.300');
+
+	/* 
+	Context Methods/Properties
+	{{ .Content }} */
+	--methodsColor: theme('colors.secondary.600');
+
+	/* 
+	Statements
+	{{ with/if/end }} */
+	--statementsColor: theme('colors.tertiary.500');
+}
+
+.chroma .language-yaml {
+	/* 
+	Comments
+	# a repo */
+	--commentsColor: theme('colors.gray.400');
+	/* 
+	Value
+	repo: {github.com/twbs/bootstrap}
+	We have to use default color as values aren't picked up...: */
+	color: theme('colors.secondary.300');
+	/* 
+	Keys
+	{repo}: github.com/twbs/bootstrap */
+	--statementsColor: theme('colors.purple.300');
+	/* 
+	Colons
+	repo{:} github.com/twbs/bootstrap */
+	--htmlColor: theme('colors.purple.300');
+}
+
+/* END of customization */
+
+.highlight {
+	position: relative;
+	margin: 1.4em 0 1em;
+	color: var(--defaultColor);
+}
+
+.highlight pre {
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	tab-size: 4;
+	hyphens: none;
+	overflow: scroll;
+	background-color: var(--preBackgroundColor);
+	border: 1px solid var(--preBorderColor);
+	@apply rounded p-4 m-0 text-left font-code;
+}
+.highlight pre {
+	font-size: 85%;
+}
+.highlight code {
+	background-color: transparent;
+	border:0;
+	font-size: 0.9em;
+	padding:0;
+}
+
+.highlight + .highlight {
+	margin-top:1.4em;
+}
+
+.chroma {
+	color: var(--defaultColor);
+}
+.chroma .c {
+	color: var(--commentsColor);
+}
+.chroma .nx, 
+.chroma .nx + .na {
+	color: var(--functionsColor);	
+}
+.chroma .na {
+	color: var(--methodsColor)
+}
+.chroma .o + .nx{
+	color: theme('colors.blue.500');
+}
+.chroma .s {
+	color: var(--stringsColor);
+}
+.chroma .o {
+	color: theme('colors.gray.300');
+}
+.chroma .k {
+	color: var(--statementsColor);
+	font-weight: bold;
+}
+.chroma .nt,
+.chroma .p,
+.chroma .nt + .na,
+.chroma .nt + .na + .o,
+.chroma .nt + .na + .o + .s {
+	color: var(--htmlColor);
+}
+
+.max-aside {
+	margin-left: calc(((100vw - 100%) / 2) * -1);
+	margin-right: calc(((100vw - 100%) / 2) * -1);
+}
