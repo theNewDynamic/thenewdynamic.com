@@ -3,7 +3,7 @@
 
 {{ $to_bundle := slice }}
 {{ with resources.Get "css/style.css" }}
-  {{ $style := . | resources.PostCSS }}
+  {{ $style := . | resources.PostCSS | fingerprint }}
   {{ $style_assets = $style_assets | append (dict "style" $style "type" "link") }}
 {{ end }}
 
@@ -13,8 +13,8 @@
 
 {{ range $style_assets }}
   {{ $style := . }}
-  {{ if not site.IsServer }}  
-    {{ $style = dict "type" .type "style" (.style | minify | fingerprint | resources.PostProcess) }}
+  {{ if not site.IsServer }}
+    {{ $style = dict "type" .type "style" (.style | minify | resources.PostProcess) }}
   {{ end }}
   {{ $return = $return | append $style }}
 {{ end }}

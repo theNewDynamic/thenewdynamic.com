@@ -10,4 +10,5 @@ require (
 	github.com/theNewDynamic/hugo-module-tnd-netlify-cms v0.1.3 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-redirects v1.1.0 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-socials v0.1.3 // indirect
+	github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200515172100-99f031b986cf // indirect
 )

@@ -3,6 +3,9 @@ baseURL: https://www.thenewdynamic.com
 DefaultContentLanguage: en
 
 markup:
+  highlight:
+    style: monokai
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true
@@ -28,4 +31,5 @@ module:
     - path: github.com/theNewDynamic/hugo-module-tnd-redirects
     - path: github.com/theNewDynamic/hugo-module-tnd-netlify-cms
     - path: github.com/theNewDynamic/hugo-component-tnd-blocks
+    - path: github.com/theNewDynamic/hugo-module-tnd-styleguide
     - path: github.com/theNewDynamic/hugo-module-tnd-icons
