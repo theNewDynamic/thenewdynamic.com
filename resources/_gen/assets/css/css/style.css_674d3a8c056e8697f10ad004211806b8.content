@@ -1514,10 +1514,6 @@ video {
   border-width: 1px;
 }
 
-.border-t-2 {
-  border-top-width: 2px;
-}
-
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -1965,11 +1961,6 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2325,6 +2316,12 @@ video {
   color: rgba(225, 154, 175, var(--text-opacity));
 }
 
+.text-primary-500 {
+  --text-opacity: 1;
+  color: #B50337;
+  color: rgba(181, 3, 55, var(--text-opacity));
+}
+
 .group:hover .group-hover\:text-gray-500 {
   --text-opacity: 1;
   color: #6b7280;
@@ -2619,7 +2616,144 @@ body.theme-alt .bg-theme {
 
 /* Customization starts here */
 
+.highlight {
+  --defaultColor: #9fa6b2;
+  --preBackgroundColor: #252f3f;
+  --preBorderColor: #ffffff;
+}
+
+.chroma .language-go-html-template {
+  --defaultColor: #9fa6b2;
+  /* HTML tags
+	<div style="fill:currentColor;width:3rem;margin:1rem 0"> */
+  --htmlColor: #E19AAF;
+  /* Comments
+	{{/* This is why we doe it *}} */
+  --commentsColor: inherit;
+  /* 
+	Functions
+	resources.Match */
+  --functionsColor: #cabffd;
+  /* 
+	Strings
+	"the fox whaterver etc..." */
+  --stringsColor: #FDEAB3;
+  /* 
+	Context Methods/Properties
+	{{ .Content }} */
+  --methodsColor: #E2B73B;
+  /* 
+	Statements
+	{{ with/if/end }} */
+  --statementsColor: #D84730;
+}
+
+.chroma .language-yaml {
+  /* 
+	Comments
+	# a repo */
+  --commentsColor: #9fa6b2;
+  /* 
+	Value
+	repo: {github.com/twbs/bootstrap}
+	We have to use default color as values aren't picked up...: */
+  color: #FDEAB3;
+  /* 
+	Keys
+	{repo}: github.com/twbs/bootstrap */
+  --statementsColor: #cabffd;
+  /* 
+	Colons
+	repo{:} github.com/twbs/bootstrap */
+  --htmlColor: #cabffd;
+}
+
 /* END of customization */
+
+.highlight {
+  position: relative;
+  margin: 1.4em 0 1em;
+  color: var(--defaultColor);
+}
+
+.highlight pre {
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  overflow: scroll;
+  background-color: var(--preBackgroundColor);
+  border: 1px solid var(--preBorderColor);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 0;
+  text-align: left;
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+}
+
+.highlight pre {
+  font-size: 85%;
+}
+
+.highlight code {
+  background-color: transparent;
+  border:0;
+  font-size: 0.9em;
+  padding:0;
+}
+
+.highlight + .highlight {
+  margin-top:1.4em;
+}
+
+.chroma {
+  color: var(--defaultColor);
+}
+
+.chroma .c {
+  color: var(--commentsColor);
+}
+
+.chroma .nx, 
+.chroma .nx + .na {
+  color: var(--functionsColor);
+}
+
+.chroma .na {
+  color: var(--methodsColor)
+}
+
+.chroma .o + .nx{
+  color: #3f83f8;
+}
+
+.chroma .s {
+  color: var(--stringsColor);
+}
+
+.chroma .o {
+  color: #d2d6dc;
+}
+
+.chroma .k {
+  color: var(--statementsColor);
+  font-weight: bold;
+}
+
+.chroma .nt,
+.chroma .p,
+.chroma .nt + .na,
+.chroma .nt + .na + .o,
+.chroma .nt + .na + .o + .s {
+  color: var(--htmlColor);
+}
 
 .max-aside {
   margin-left: calc(((100vw - 100%) / 2) * -1);
