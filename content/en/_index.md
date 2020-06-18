@@ -13,7 +13,7 @@ blocks:
         body: >-
           The tools we use to build and maintain your site are fast, simple and flexible. With minimal software setup and server upkeep requirements, you get more dollars to use towards future site improvements. 
                   
-          [READ MORE &rarr;](/article/bulletproof-technology/)
+          [READ MORE &rarr;](/article/simplicity-speed-security-savings-benefits-of-jamstack-technology/)
         color: primary-500
       - title: Simple approach
         intro: >-
