@@ -99,7 +99,7 @@ Also, just like `require` covered above, the `replace` directive can take multip
 
 ```go
 replace (
-	github.com/someone/hugo-module => /Users/someone/dir/hugo-module
+  github.com/someone/hugo-module => /Users/someone/dir/hugo-module
   github.com/someone/hugo-emojis => /Users/someone/dir/hugo-emojis
 )
 ```
