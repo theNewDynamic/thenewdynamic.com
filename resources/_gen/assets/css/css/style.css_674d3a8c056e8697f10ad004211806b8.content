@@ -1051,6 +1051,12 @@ video {
 
 .rich-text code {
   white-space: pre-wrap;
+  border-radius: 0.25rem;
+  background-color: #252f3f;
+  color: #e5e7eb;
+  padding: 0 .5rem;
+  font-size: 0.875rem;
+  display: inline-block;
 }
 
 .rich-text blockquote {
@@ -2672,6 +2678,22 @@ body.theme-alt .bg-theme {
   --htmlColor: #cabffd;
 }
 
+.chroma .language-go{
+  /* 
+	Directives
+	{require} github.com/twbs/bootstrap */
+  --functionsColor: #cabffd;
+  /* 
+	Lines
+	require {github.com/twbs/bootstrap} */
+  --stringsColor: #FDEAB3;
+  /* 
+	replace github.com/[...] {=>} /Users/[...]
+	{{ .Content }} */
+  --statementsColor: #D84730;
+  --methodsColor: #E2B73B;
+}
+
 /* END of customization */
 
 .highlight {
@@ -2725,8 +2747,8 @@ body.theme-alt .bg-theme {
   color: var(--commentsColor);
 }
 
-.chroma .nx, 
-.chroma .nx + .na {
+.chroma .language-go-html-template .nx, 
+.chroma .language-go-html-template .nx + .na {
   color: var(--functionsColor);
 }
 
@@ -2746,17 +2768,40 @@ body.theme-alt .bg-theme {
   color: #d2d6dc;
 }
 
-.chroma .k {
+.chroma .language-go-html-template .k {
   color: var(--statementsColor);
   font-weight: bold;
 }
 
-.chroma .nt,
-.chroma .p,
-.chroma .nt + .na,
-.chroma .nt + .na + .o,
-.chroma .nt + .na + .o + .s {
+.chroma .language-yaml .k {
+  color: var(--statementsColor);
+}
+
+.chroma .language-yaml .p {
   color: var(--htmlColor);
+}
+
+.chroma .language-go-html-template .nt,
+.chroma .language-go-html-template .p,
+.chroma .language-go-html-template .nt + .na,
+.chroma .language-go-html-template .nt + .na + .o,
+.chroma .language-go-html-template .nt + .na + .o + .s {
+  color: var(--htmlColor);
+}
+
+.chroma .language-go .nf,
+.chroma .language-go .nx,
+.chroma .language-go .k {
+  color: var(--functionsColor);
+}
+
+.chroma .language-go .mf,
+.chroma .language-go .nx + .nx,
+.chroma .language-go .o + .nx,
+.chroma .language-go .nx + .p,
+.chroma .language-go .nx ~ .o,
+.chroma .language-go .p + .nx {
+  color: var(--stringsColor)
 }
 
 .max-aside {

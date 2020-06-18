@@ -124,6 +124,12 @@ module.exports = {
 				},
 				code: {
 					"white-space": "pre-wrap",
+					borderRadius: theme('borderRadius.default'),
+					backgroundColor: theme('colors.gray.800'),
+					color: theme('colors.gray.200'),
+					padding: '0 .5rem',
+					fontSize: theme('fontSize.sm'),
+					display: 'inline-block',
 				},
 				blockquote: {
 					backgroundColor: theme("colors.gray.100"),

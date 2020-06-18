@@ -60,6 +60,23 @@
 	--htmlColor: theme('colors.purple.300');
 }
 
+.chroma .language-go{
+
+/* 
+	Directives
+	{require} github.com/twbs/bootstrap */
+	--functionsColor: theme('colors.purple.300');
+
+	/* 
+	Lines
+	require {github.com/twbs/bootstrap} */
+	--stringsColor: theme('colors.secondary.300');
+	/* 
+	replace github.com/[...] {=>} /Users/[...]
+	{{ .Content }} */
+	--statementsColor: theme('colors.tertiary.500');
+	--methodsColor: theme('colors.secondary.600');
+}
 /* END of customization */
 
 .highlight {
@@ -101,8 +118,8 @@
 .chroma .c {
 	color: var(--commentsColor);
 }
-.chroma .nx, 
-.chroma .nx + .na {
+.chroma .language-go-html-template .nx, 
+.chroma .language-go-html-template .nx + .na {
 	color: var(--functionsColor);	
 }
 .chroma .na {
@@ -117,18 +134,36 @@
 .chroma .o {
 	color: theme('colors.gray.300');
 }
-.chroma .k {
+.chroma .language-go-html-template .k {
 	color: var(--statementsColor);
 	font-weight: bold;
 }
-.chroma .nt,
-.chroma .p,
-.chroma .nt + .na,
-.chroma .nt + .na + .o,
-.chroma .nt + .na + .o + .s {
+.chroma .language-yaml .k {
+	color: var(--statementsColor);
+}
+.chroma .language-yaml .p {
 	color: var(--htmlColor);
 }
-
+.chroma .language-go-html-template .nt,
+.chroma .language-go-html-template .p,
+.chroma .language-go-html-template .nt + .na,
+.chroma .language-go-html-template .nt + .na + .o,
+.chroma .language-go-html-template .nt + .na + .o + .s {
+	color: var(--htmlColor);
+}
+.chroma .language-go .nf,
+.chroma .language-go .nx,
+.chroma .language-go .k {
+	color: var(--functionsColor);
+}
+.chroma .language-go .mf,
+.chroma .language-go .nx + .nx,
+.chroma .language-go .o + .nx,
+.chroma .language-go .nx + .p,
+.chroma .language-go .nx ~ .o,
+.chroma .language-go .p + .nx {
+	color: var(--stringsColor)
+}
 .max-aside {
 	margin-left: calc(((100vw - 100%) / 2) * -1);
 	margin-right: calc(((100vw - 100%) / 2) * -1);
