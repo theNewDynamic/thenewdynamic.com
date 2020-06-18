@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="container">
+  {{/* The sticky class below must follow directly after the pageheadding div above for its interaction to work "js/intersection-observer.js" */}}
+  <div class="text-center">
+    {{ partial "page-header.html" . }}
+  </div>
+  <div class="container max-w-3xl mt-8 mb-16">
+    <div class="col-span-11 text-gray-700 rich-text">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+
+{{ end }}
