@@ -5,6 +5,7 @@ lastmod: 2019-08-16T22:32:27.000Z
 description: >-
   Let's try and understand the impact of Hugo modules
 featured: /uploads/hugo-modules-featured.png
+twitter_description: Hugo sports its own dependency solution! In this article we'll cover how to use the most of Hugo Module by creating our own!
 draft: true
 ---
 
@@ -12,7 +13,7 @@ Back in July last year Hugo 0.56.0 introduced a powerful Module system. Pretty m
 
 In this article, we’ll see how any Hugo project can use files stored on a distant repository and make them its own using the Module **imports** and **mounts** logic.
 
-Then, we’ll dive into what exactly constitute a Hugo Module! We'll create a Module and cover how to develop, maintain and efficiently distribute your own.
+Then, we’ll dive into what exactly constitute a Hugo Module by creating our own!
 
 ### Init the project as a Module
 
@@ -324,7 +325,7 @@ module:
 {{% aside %}}
 #### CLI Potpourri
 
-We've only covered `hugo mod init` yet. But there's several useful ones:
+We've only covered `hugo mod init` and `hugo mod get -u`. But there's two useful ones:
 
 `hugo mod clean`
 

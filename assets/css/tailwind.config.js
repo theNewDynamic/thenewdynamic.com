@@ -154,6 +154,7 @@ module.exports = {
 			},
 			minHeight: {
 				"80v": "80vh",
+				"64": "16rem"
 			},
 			fontFamily: {
 				sans: [
