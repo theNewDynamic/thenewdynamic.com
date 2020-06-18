@@ -4,5 +4,12 @@
     <div class="my-4 user-content">
       {{ .Content }}
     </div>
+    {{ range .Pages }}
+      <div>
+        <a href="{{ .RelPermalink }}">
+          {{ .Title }}
+        </a>
+      </div>
+    {{ end }}
   </div>
 {{ end }}

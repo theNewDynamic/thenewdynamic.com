@@ -11,8 +11,8 @@
       {{ with .Params.blocks }}
         <div class="my-32">
           {{ range . }}
-          {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $) }}
-        {{ end }}
+            {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $) }}
+          {{ end }}
         </div>
       {{ end }}
     </div>
