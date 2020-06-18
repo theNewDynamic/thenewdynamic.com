@@ -4,20 +4,30 @@ date: 2018-02-05T20:32:27.000Z
 lastmod: 2019-08-16T22:32:27.000Z
 description: >-
   Let's try and understand the impact of Hugo modules
+featured: /uploads/hugo-modules-featured.png
 draft: true
 ---
 
-Back in July last year Hugo 0.56.0 introduced a powerful Module system. Pretty much like any package solution it allowed any Hugo project defined as a Module, be it a full website or a theme or a component to to use any files stored on a repository somewhere and mount it as its own. It also enabled any Hugo project to become a full fledge Hugo Module with its own config and dependencies which any other project could mount.
+Back in July last year Hugo 0.56.0 introduced a powerful Module system. Pretty much like any package solution it allowed any Hugo project defined as a Module, be it a full website or a theme or a component to to use any files stored on a repository somewhere and mount it as its own. It also enabled any Hugo project to become a full fledge Hugo Modules with its own config and dependencies which any other project could mount.
 
 In this article, we’ll see how any Hugo project can use files stored on a distant repository and make them its own using the Module **imports** and **mounts** logic.
 
 Then, we’ll dive into what exactly constitute a Hugo Module! We'll create a Module and cover how to develop, maintain and efficiently distribute your own.
 
-### Init the Module
+### Init the project as a Module
+
+{{% aside %}}
+#### Everything is a Module!
+
+It's important to understand that anything importing repo files or Hugo Modules must become a Hugo Module istelf.
+{{% /aside %}}
 
 Before you can import a repository and use its files, your project will need to be initiated as a Hugo Module. 
 
-For this, you need to reference a repository. We'll assume your Hugo project already has a GitHub repo which lives at `https://github.com/me-me-me/my-repo`
+
+For this, you need to reference a repository.
+
+We'll assume your Hugo project already has a GitHub repo which lives at `https://github.com/me-me-me/my-repo`
 
 Using the terminal for your project root directory:
 
@@ -33,7 +43,7 @@ module github.com/me-me-me/my-hugo-project
 go 1.14
 ```
 
-It will also has created a `go.sum` file but you should not concern yourself with that one.
+It will also has created a `go.sum` file. We won't concern ourselves with that one.
 
 ### Import a distant repository
 
@@ -110,7 +120,28 @@ We could even go crazier and use the icon from another distant repo just for tha
 
 ☝️ Here we are importing two repos, with their own `mount` settings.
 
-Notice: Note that regardless of the files mounted, Hugo will have to download the whole repository, so you might think twice before importing a 5MB repo for one of its svgs.
+{{< notice >}}
+Note that regardless of the files mounted, Hugo will have to download the whole repository, so you might think twice before importing a 5MB repo for one of its svgs.
+{{< /notice >}}
+
+### Upgrading
+
+What if the repo is updated? The default behaviour of Hugo Module is, on the first import, to grab the latest release, or if no release is found, the latest head on the default branch. That's why Hugo wrote `v1.0.0-alpha4` after the require directive.
+
+If `github.com/twbs/icons` moves past `v1` and you want that new release you can:
+
+```bash
+hugo mod get -u github.com/twbs/bootstrap`
+```
+This should update your `go.mod` file with the new release.
+
+Now if you want a specific release rather than the latest, (we'll use another repo for that example):
+
+```bash
+hugo mod get github.com/twbs/bootstrap@v3.4.0
+```
+
+__You should commit your `go.mod` and `go.sum` file of course, so that everybody is on the same versions!__
 
 {{% aside %}}
 #### Module Local Development
@@ -136,7 +167,7 @@ First we'll create a directory on our local machine. We'll give a poor but short
 
 ### 1. Imports
 
-The first thing we need is the `config.yaml` file for our Module to register our imports. 
+The first thing we need is a `config.yaml` file for our Module to register its imports. 
 
 Yes, any Hugo project, be it a website or a theme or a component can import other Modules or repo. The import tree is infinite. As we already mentioned, it's a real dependency solution!
 
@@ -152,7 +183,7 @@ module:
 	     target: assets/hugo-icons/icons
 ```
 
-## 2. Creating the listing page
+### 2. Creating the listing page
 
 We'll need two things for that. 
 
@@ -166,7 +197,7 @@ We'll go crazy and add
 - `page/layout.html`
 - `page/content.md`
 
-Getting back to our updated `config.yaml` , you'll note that the `mounts` settings we are dealing with sits at the root of the `module` map. 
+Getting back to our updated `config.yaml` , you'll note that the `mounts` settings we are dealing with sit at the root of the `module` map. 
 
 That's because mounting is not reserved to imports. You can assign mounting settings to the project at hand with its own `mounts` key.
 
@@ -176,8 +207,8 @@ module:
   mounts:
     - source: page/index.md
       target: content/hugo-icons-listing.md
-			lang: en
-		- source: page/template.html
+      lang: en
+    - source: page/template.html
       target: layouts/_default/hugo-icons-listing.html
   imports:
    [...]
@@ -200,17 +231,19 @@ layout: hugo-icons-listing
 ```go-html-template
 {{/* page/template.html */}}
 {{ define "main" }}
-	{{ range resources.Match "hugo-icons/icons/*.svg" }}
-		<div style="fill:currentColor;width:3rem;margin:1rem 0">
-		  {{ .Content | safeHTML }}
-		</div>
-	{{ end }}
+  {{ range resources.Match "hugo-icons/icons/*.svg" }}
+    <div style="fill:currentColor;width:3rem;margin:1rem 0">
+    {{ .Content | safeHTML }}
+    </div>
+  {{ end }}
 {{ end }}
 ```
 
-Notice: This will break if your project's or theme's baseof does not have a `main` block. We're just illustrating teaching here.
+{{< notice >}}
+This will break if your project's or theme's `baseof.html` does not have a `main` block. We'll let this slide for the purpose of teaching.
+{{< /notice >}}
 
-## .3 Adding the partial
+### .3 Adding the partial
 
 I think the partial can live under the module's `partials/icons.html` and we'll register that new mount:
 
@@ -219,10 +252,10 @@ I think the partial can live under the module's `partials/icons.html` and we'll 
 module:
   mounts:
     [...]
-		- source: partials
+    - source: partials
       target: layouts/partials/hugo-icons
   imports:
-   [...]
+  [...]
 ```
 
 Note we'll mount it under a reserved directory so users can safely call  `{{ partial "hugo-icons/icon" "cart" }}` . This way we won't collide with another module having an `icon` partial.
@@ -251,22 +284,22 @@ And our very basic partial:
 {{- end -}}
 ```
 
-## Wrapping up our Module
+### Wrapping up our Module
 
-It now provides the 3 features we set ourselves to. There's one critical thing missing from our Module's config though. 
+Our Module now provides the three features we set ourselves to deliver. There's one critical thing missing from our Module's config though. 
 
 We are using `resources.Match` which was introduced in Hugo 0.57.0. We should make sure no one using an older version can import our Hugo Icons Module or else... break!
 
 ```yaml
 # config.yaml
 module:
-	hugoVersion:
-		# We don't need extended (no sass)
-	  extended: false
-		# We don't have a max version
-	  max: ''
-		# We do have a min though.
-	  min: '0.57.0'
+  hugoVersion:
+    # We don't need extended (no sass)
+    extended: false
+    # We don't have a max version
+    max: ''
+    # We do have a min though.
+    min: '0.57.0'
 ```
 
 This makes our finale `config.yaml` file:
@@ -288,27 +321,10 @@ module:
         target: assets/hugo-icons/icons
 ```
 
-## Maintaining and distributing a Hugo Module
-
-### Versioning and releases
-
-When importing a Hugo Module, your project (which is also a Module...) will look for the latest release or if none is found, the latest commit on the default branch.
-
-You should really stick with release in order to control what feature is ready for distribution.
-
-In order for Hugo to do the version upgrade based on release, your Module should use [proper semantic versioning](https://semver.org/) as the release's *tag version*. 
-
-**A note about v2.0.0.**
-
-Hugo Module is powered by [Go Modules](https://github.com/golang/go/wiki/Modules) of which it follows many rule. One is that any release equal or above to v2.0.0 can introduce breaking changes. As a result, the Go Module logic will not let you upgrade a Module from a < v2 to a ≥ v2. You should read this [piece](https://blog.golang.org/v2-go-modules) to address that limitation: 
-
-### CLI
+{{% aside %}}
+#### CLI Potpourri
 
 We've only covered `hugo mod init` yet. But there's several useful ones:
-
-`hugo mod get -u github.com/someone/hugo-icons`
-
-This one will **upgrade** your module to the latests changes following the versioning logic mentioned above.
 
 `hugo mod clean`
 
@@ -317,6 +333,7 @@ This one will clean your module's cache. I usually run it when something seems a
 `hugo mod tidy`
 
 This will clean up the `go.sum` file we won't discuss here.
+{{% /aside %}}
 
 ## Conclusion
 

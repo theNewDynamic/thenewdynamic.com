@@ -105,3 +105,14 @@ replace (
 ```
 
 Of course, once your files are up in the cloud, GitHub or otherwise, you should remove the `require` directive (the one ending with `v0.0.0-giberish`) and let `hugo` writes its own `require` with the proper versioning suffix.
+
+## Distributing
+When importing a Hugo Module, your project (which is also a Module...) will look for the latest release or if none is found, the latest commit on the default branch.
+
+You should really stick with release in order to control what feature is ready for distribution.
+
+In order for Hugo to do the version upgrade based on release, your Module should use [proper semantic versioning](https://semver.org/) as the release's *tag version*. 
+
+**A note about v2.0.0.**
+
+Hugo Module is powered by [Go Modules](https://github.com/golang/go/wiki/Modules) of which it follows many rule. One is that any release equal or above to v2.0.0 can introduce breaking changes. As a result, the Go Module logic will not let you upgrade a Module from a < v2 to a ≥ v2. You should read this [piece](https://blog.golang.org/v2-go-modules) to address that limitation: 

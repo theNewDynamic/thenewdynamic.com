@@ -17,7 +17,7 @@
 
 	/* Comments
 	{{/* This is why we doe it *}} */
-	--commentsColor: inherit;
+	--commentsColor: theme('colors.gray.400');
 
 	/* 
 	Functions

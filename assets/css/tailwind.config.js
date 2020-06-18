@@ -2,9 +2,10 @@ const colors = require("./colors.json");
 
 module.exports = {
 	theme: {
-		linearGradientColors: {
+		linearGradientColors: (theme) => ({
 			// defaults to {}
 			tmd: "#f00",
+			gray: [theme('colors.gray.500'), theme('colors.gray.700')],
 			"red-blue": ["#f00", "#00f"],
 			"red-green-blue": ["#f00", "#0f0", "#00f"],
 			"primary-light": [
@@ -26,7 +27,7 @@ module.exports = {
 				"#980A38 100%",
 			],
 			"black-white-with-stops": ["#000", "#000 45%", "#fff 55%", "#fff"],
-		},
+		}),
 		textStyles: (theme) => ({
 			heading: {
 				output: false,

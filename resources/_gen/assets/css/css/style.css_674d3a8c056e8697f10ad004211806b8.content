@@ -1117,12 +1117,6 @@ video {
   background-color: rgba(75, 85, 99, var(--bg-opacity));
 }
 
-.bg-gray-700 {
-  --bg-opacity: 1;
-  background-color: #374151;
-  background-color: rgba(55, 65, 81, var(--bg-opacity));
-}
-
 .bg-gray-800 {
   --bg-opacity: 1;
   background-color: #252f3f;
@@ -1481,12 +1475,6 @@ video {
   border-color: rgba(181, 3, 55, var(--border-opacity));
 }
 
-.border-primary-900 {
-  --border-opacity: 1;
-  border-color: #360111;
-  border-color: rgba(54, 1, 17, var(--border-opacity));
-}
-
 .hover\:border-primary-500:hover {
   --border-opacity: 1;
   border-color: #B50337;
@@ -1524,10 +1512,6 @@ video {
   border-style: dashed;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border-4 {
   border-width: 4px;
 }
@@ -1536,16 +1520,8 @@ video {
   border-width: 1px;
 }
 
-.border-t-2 {
-  border-top-width: 2px;
-}
-
 .border-b-2 {
   border-bottom-width: 2px;
-}
-
-.border-t-4 {
-  border-top-width: 4px;
 }
 
 .border-t-6 {
@@ -1678,10 +1654,6 @@ video {
 
 .h-48 {
   height: 12rem;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .h-full {
@@ -2579,6 +2551,10 @@ video {
   transition-duration: 500ms;
 }
 
+.bg-gradient-tr-gray {
+  background-image: linear-gradient(to top right, #6b7280, #374151);
+}
+
 .bg-gradient-br-primary-light {
   background-image: linear-gradient(to bottom right, #410252 0%, #63004c, 16%, #810045 33%, #9f003e 50%, #bc0435 66%, #da0c2b 83%, #f8141d 100%);
 }
@@ -2663,7 +2639,7 @@ body.theme-alt .bg-theme {
   --htmlColor: #E19AAF;
   /* Comments
 	{{/* This is why we doe it *}} */
-  --commentsColor: inherit;
+  --commentsColor: #9fa6b2;
   /* 
 	Functions
 	resources.Match */
