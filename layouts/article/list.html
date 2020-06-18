@@ -7,7 +7,7 @@
       {{ end }}
       {{ range .Pages }}
         <div class="container mt-16 mb-16">
-          {{ partial "article-header.html" . }}
+          {{ partial "article-header.html" (dict "location" "list" "Page" .) }}
         </div>
       {{ end }}
     </div>

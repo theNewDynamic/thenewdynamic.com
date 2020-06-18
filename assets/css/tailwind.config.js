@@ -143,6 +143,10 @@ module.exports = {
 			},
 		}),
 		extend: {
+			borderWidth: {
+				'4': '4px',
+				'6': '6px'
+			},
 			colors,
 			screens: {
 				"-sm": { max: "638px" },
@@ -192,6 +196,7 @@ module.exports = {
 	},
 	variants: {
 		borderWidth: ["responsive", "hover", "focus"],
+		borderRadius: ["responsive"],
 	},
 	plugins: [
 		require("@tailwindcss/ui"),

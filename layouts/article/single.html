@@ -2,7 +2,7 @@
 <article>  
   <div id="pageheading" class="w-full py-8 TKbg-theme bg-gradient-br-primary-light">
     <div class="container max-w-6xl pb-8 mt-12 text-gray-100 duration-200 ease-in transtion hover:text-primary-400">
-      {{ partial "article-header.html" . }}
+      {{ partial "article-header.html" (dict "location" "single" "Page" $) }}
     </div>  
   </div>
   {{/* The sticky class below must follow directly after the pageheadding div above for its interaction to work "js/intersection-observer.js" */}}
