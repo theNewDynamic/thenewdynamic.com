@@ -49,7 +49,7 @@ blocks:
         status: beta
         types: 
         - Hugo Module
-      - url: " https://github.com/theNewDynamic/hugo-module-tnd-redirects"
+      - url: https://github.com/theNewDynamic/hugo-module-tnd-redirects
         title: Netlify Redirects Module
         status: Beta
         types: 
