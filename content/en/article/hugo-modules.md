@@ -338,4 +338,10 @@ This will clean up the `go.sum` file we won't discuss here.
 
 ## Conclusion
 
-We'll see.
+Hugo Module is the best way to import any public repo's files into your Hugo Projects and manage their versioning. And after seeing how easy it is to buld one, it should really become your go-to way to manage reusuable solutions and distritube them throughout the Hugo ecosystem.
+
+Again, if you're down for building some powerful Hugo Modules, you should definitely read our note on [Developing Hugo Modules Locally]({{< relref "/note/develop-hugo-modules-locally" >}}).
+
+The finished example repo we built in this article is available [here](https://github.com/regisphilibert/hugo-module-icons).
+
+But for some really complex, practical and usually well commented examples, your should check our [open source Hugo Modules]({{< relref "/open-source" >}}).
