@@ -2,7 +2,7 @@ label: Authors
 name: authors
 widget: relation
 collection: persons
-searchFields: title
+searchFields: ['title']
 valueField: "persons/{{slug}}.{{extension}}"
 multiple: true
 displayFields: ['title']
