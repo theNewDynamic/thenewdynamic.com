@@ -1,42 +1,44 @@
 {{ with .Page }}
 <div class="grid-cols-2 gap-8 sm:grid">
-	<div class="text-primary-300 pattern-dots-md">
-		<div class="flex flex-col justify-center min-h-64 mb-2 font-serif text-2xl font-light leading-tight text-black transform -translate-x-2 -translate-y-5 bg-gray-100 border-gray-200 rounded overflow-hidden shadow TKborder lg:-translate-x-5">
-			{{ with .Params.featured }}
-				<img class="w-full" src="{{ . }}" alt="">
-			{{ else }}
-			<div class="py-8 pl-12 pr-8 text-3xl">
-				<span class="inline-block pr-1 -ml-6 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
-			</div>
-			{{ end }}
-	</div>
-</div>
-	<div>
-		<h2 class="mb-4 text-4xl font-bold leading-tight lg:text-5xl">
-			{{ if eq $.location "list" }}
-				<a href="{{ .RelPermalink }}" class="color-inherit text-shadow-lg">
-					{{ .Title }}
-				</a>
-			{{ else }}
-				<span class="text-shadow-lg">
-					{{ .Title }}
-				</span>
-			{{ end }}
-		</h2>
-		<time class="opacity-75 color-inherit" datetime="{{ .Date }}">
-			{{ dateFormat "Published January 2, 2006" .Date }}
-		</time>
-		{{ if ne .Lastmod .Date }}
-			<div class="my-2 text-sm opacity-75 text-primary-500 color-inherit">
-				{{ $format := cond (eq (.Date.Format "2006") (.Lastmod.Format "2006") ) "January 2" "January 2, 2006" }}
-			<time datetime="{{ .Lastmod }}">
-				Updated {{ .Lastmod.Format $format }}
-			</time>
-		</div>
-		{{ end }} 
-		{{ with .ReadingTime }}
-		<small class="block opacity-75 color-inherit">{{ . }} {{ i18n "minutes_read" . }}</small>
-		{{ end }}
-	</div>
+  <div class="text-primary-300 pattern-dots-md">
+    <div
+      class="flex flex-col justify-center mb-2 overflow-hidden font-serif text-2xl font-light leading-tight text-black transform -translate-x-2 -translate-y-5 bg-gray-100 border-gray-200 rounded shadow min-h-64 TKborder lg:-translate-x-5">
+      {{ with .Params.featured }}
+      <img class="w-full" src="{{ . }}" alt="">
+      {{ else }}
+      <div class="py-8 pl-12 pr-8 text-3xl">
+        <span
+          class="inline-block pr-1 -ml-6 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <div>
+    <h2 class="mb-4 text-4xl font-bold leading-tight lg:text-5xl">
+      {{ if eq $.location "list" }}
+      <a href="{{ .RelPermalink }}" class="color-inherit hover:underline hover:text-gray-600 text-shadow-lg">
+        {{ .Title }}
+      </a>
+      {{ else }}
+      <span class="text-shadow-lg">
+        {{ .Title }}
+      </span>
+      {{ end }}
+    </h2>
+    <time class="opacity-75 color-inherit" datetime="{{ .Date }}">
+      {{ dateFormat "Published January 2, 2006" .Date }}
+    </time>
+    {{ if ne .Lastmod .Date }}
+    <div class="my-2 text-sm opacity-75 text-primary-500 color-inherit">
+      {{ $format := cond (eq (.Date.Format "2006") (.Lastmod.Format "2006") ) "January 2" "January 2, 2006" }}
+      <time datetime="{{ .Lastmod }}">
+        Updated {{ .Lastmod.Format $format }}
+      </time>
+    </div>
+    {{ end }}
+    {{ with .ReadingTime }}
+    <small class="block opacity-75 color-inherit">{{ . }} {{ i18n "minutes_read" . }}</small>
+    {{ end }}
+  </div>
 </div>
 {{ end }}
