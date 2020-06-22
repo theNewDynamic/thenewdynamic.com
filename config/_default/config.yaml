@@ -22,7 +22,7 @@ social:
 outputs:
   home:
     - HTML
-    - netlify_redir
+    - tnd_redirects_netlify
 
 module:
   imports:
