@@ -1,12 +1,14 @@
 ---
-title: 'Hugo Modules'
-date: 2018-02-05T20:32:27.000Z
-lastmod: 2019-08-16T22:32:27.000Z
-description: >-
-  Let's try and understand the impact of Hugo modules
-featured: /uploads/hugo-modules-featured.png
-twitter_description: Hugo sports its own dependency solution! In this article we'll cover how to use the most of Hugo Module by creating our own!
 draft: true
+authors:
+  - persons/regis-philibert.md
+lastmod: 2019-08-16T22:32:27.000Z
+featured: /uploads/hugo-modules-featured.png
+date: 2020-06-01T19:32:27.000Z
+twitter_description: Hugo sports its own dependency solution! In this article
+  we'll cover how to use the most of Hugo Module by creating our own!
+title: Hugo Modules
+description: Let's try and understand the impact of Hugo modules
 ---
 
 Back in July last year Hugo 0.56.0 introduced a powerful Module system. Pretty much like any package solution it allowed any Hugo project defined as a Module, be it a full website or a theme or a component to to use any files stored on a repository somewhere and mount it as its own. It also enabled any Hugo project to become a full fledge Hugo Modules with its own config and dependencies which any other project could mount.
