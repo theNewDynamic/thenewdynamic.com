@@ -48,6 +48,8 @@
       "ul"
     ],
     "classes": [
+      "+'\u003c/div\u003e';c;}});;CMS.registerEditorComponent({id:",
+      "+obj.body+",
       "-m-2",
       "-ml-0.5",
       "-ml-6",
@@ -458,6 +460,7 @@
       "transform",
       "transition",
       "transtion",
+      "underline",
       "uppercase",
       "user-content",
       "w",
@@ -477,6 +480,7 @@
       "xl:grid",
       "xl:grid-cols-3",
       "xl:max-w-sm",
+      "xl:max-w-sm\u003e'+",
       "xl:mt-0",
       "xl:pr-4",
       "xl:right-0",

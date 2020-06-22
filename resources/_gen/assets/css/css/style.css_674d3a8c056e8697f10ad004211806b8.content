@@ -2374,12 +2374,6 @@ video {
   color: rgba(22, 30, 46, var(--text-opacity));
 }
 
-.hover\:text-primary-400:hover {
-  --text-opacity: 1;
-  color: #CB4F73;
-  color: rgba(203, 79, 115, var(--text-opacity));
-}
-
 .hover\:text-primary-500:hover {
   --text-opacity: 1;
   color: #B50337;
@@ -2392,6 +2386,10 @@ video {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .no-underline {

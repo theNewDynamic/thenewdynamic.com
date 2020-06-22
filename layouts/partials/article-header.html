@@ -36,6 +36,7 @@
       </time>
     </div>
     {{ end }}
+    {{ .Render "authors" }}
     {{ with .ReadingTime }}
     <small class="block opacity-75 color-inherit">{{ . }} {{ i18n "minutes_read" . }}</small>
     {{ end }}

@@ -8,7 +8,9 @@ description: >-
 
   A second basic test from incognito window signed in with regisphilibert@gmail.com (not a GitHub registered email)
 authors:
+  - persons/bud-parr.md
   - persons/regis-philibert.md
+
 draft: true
 ---
 Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.

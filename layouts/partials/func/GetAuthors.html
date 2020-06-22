@@ -1,0 +1,16 @@
+{{ $authors := slice }}
+{{ $s := newScratch }}
+{{ with .Params.authors }}
+  {{ range . }}
+    {{ with site.GetPage . }}
+      {{ $s.Set "author" (dict "name" .Title) }}
+      {{ with .Params.twitter_handle }}
+        {{ $s.SetInMap "author" "twitter_handle" . }}
+        {{ $s.SetInMap "author" "twitter_url" (print "https://www.twitter.com/" .) }}
+      {{ end }}
+      {{ $authors = $authors | append ($s.Get "author") }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $authors }}

@@ -1,0 +1,13 @@
+{{ with partialCached "func/GetAuthors" . . }}
+  <div>
+  written by 
+  {{ range $index, $author := . -}}
+    {{ if $index -}}, {{- end }}
+    {{ with .twitter_url -}}
+      <a class="underline" target="_blank" href="{{- . -}}">{{- $author.name -}}</a>
+    {{- else -}}
+      <span>{{- $author.name -}}</span>
+    {{- end -}}
+  {{- end -}}
+  </div>
+{{ end }}
