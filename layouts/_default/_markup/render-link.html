@@ -1,0 +1,13 @@
+{{ $external := false }}
+{{ $destination := . }}
+{{ $text := .Text }}
+
+{{/* .Text will return `&gt;` when markdown contains `>` */}}
+{{ if strings.HasSuffix $text "&gt;" }}
+  {{ $external = true }}
+  {{ $text = strings.TrimSuffix "&gt;" $text | strings.TrimSuffix " "}}
+{{ end }}
+{{ if not $external }}
+  {{ $external = partialCached "tnd-func/IsExternalURL" $destination }}
+{{ end }}
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ $text | safeHTML }}</a>
