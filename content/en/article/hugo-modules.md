@@ -121,9 +121,9 @@ We could even go crazier and use the icon from another distant repo just for tha
 
 ☝️ Here we are importing two repos, with their own `mount` settings.
 
-{{< notice >}}
+{{% notice %}}
 Note that regardless of the files mounted, Hugo will have to download the whole repository, so you might think twice before importing a 5MB repo for one of its svgs.
-{{< /notice >}}
+{{% /notice %}}
 
 ### Upgrading
 
@@ -215,9 +215,9 @@ module:
    [...]
 ```
 
-{{< notice title="Language!" >}}
+{{% notice title="Language!" %}}
 Note that the `lang` parameter only matters on multilingual site and even on those, omitting it will simply put the page under the default language site.
-{{< /notice >}}
+{{% /notice %}}
 
 And now in those files:
 
@@ -240,9 +240,9 @@ layout: hugo-icons-listing
 {{ end }}
 ```
 
-{{< notice >}}
+{{% notice %}}
 This will break if your project's or theme's `baseof.html` does not have a `main` block. We'll let this slide for the purpose of teaching.
-{{< /notice >}}
+{{% /notice %}}
 
 ### .3 Adding the partial
 

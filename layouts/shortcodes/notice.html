@@ -1,12 +1,13 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-{{ $s := newScratch }}
+{{ with .Inner }}
 <div class="border-primary-500 border-t-6 border bg-gray-100 px-4 pb-4 pt-2">
 	<div class="font-bold">
-    {{ with .Get "title" }}
-			{{ . | markdownify }}
+    {{ with $.Get "title" }}
+			{{ $.Page.RenderString . }}
 		{{ end }}
 	</div>
 	<div class="">
-		{{ .Inner | markdownify }}
+		{{ . }}
 	</div>
 </div>
+{{ end }}
