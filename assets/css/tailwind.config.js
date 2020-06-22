@@ -3,30 +3,25 @@ const colors = require("./colors.json");
 module.exports = {
 	theme: {
 		linearGradientColors: (theme) => ({
-			// defaults to {}
-			tmd: "#f00",
-			gray: [theme('colors.gray.500'), theme('colors.gray.700')],
-			"red-blue": ["#f00", "#00f"],
-			"red-green-blue": ["#f00", "#0f0", "#00f"],
+			gray: [theme("colors.gray.500"), theme("colors.gray.700")],
 			"primary-light": [
-				"#410252 0%",
-				"#63004c, 16%",
+				"#410252",
+				"#63004c 16%",
 				"#810045 33%",
 				"#9f003e 50%",
 				"#bc0435 66%",
 				"#da0c2b 83%",
-				"#f8141d 100%",
+				"#f8141d",
 			],
 			primary: [
-				"#410252 0%",
+				"#410252",
 				"#63004c, 16%",
 				"#810045 33%",
 				"#9f003e 50%",
 				"#bc0435 66%",
 				"#AE0C40 83%",
-				"#980A38 100%",
+				"#980A38",
 			],
-			"black-white-with-stops": ["#000", "#000 45%", "#fff 55%", "#fff"],
 		}),
 		textStyles: (theme) => ({
 			heading: {
@@ -78,7 +73,7 @@ module.exports = {
 				fontSize: theme("fontSize.lg"),
 				lineHeight: theme("lineHeight.relaxed"),
 				"> * + *": {
-					marginTop: "1em",				
+					marginTop: "1em",
 				},
 				h1: {
 					extends: "h1",
@@ -125,12 +120,12 @@ module.exports = {
 				},
 				code: {
 					"white-space": "pre-wrap",
-					borderRadius: theme('borderRadius.default'),
-					backgroundColor: theme('colors.gray.800'),
-					color: theme('colors.gray.200'),
-					padding: '0 .5rem',
-					fontSize: theme('fontSize.sm'),
-					display: 'inline-block',
+					borderRadius: theme("borderRadius.default"),
+					backgroundColor: theme("colors.gray.800"),
+					color: theme("colors.gray.200"),
+					padding: "0 .5rem",
+					fontSize: theme("fontSize.sm"),
+					display: "inline-block",
 				},
 				blockquote: {
 					backgroundColor: theme("colors.gray.100"),
@@ -145,8 +140,8 @@ module.exports = {
 		}),
 		extend: {
 			borderWidth: {
-				'4': '4px',
-				'6': '6px'
+				"4": "4px",
+				"6": "6px",
 			},
 			colors,
 			screens: {
@@ -154,7 +149,7 @@ module.exports = {
 			},
 			minHeight: {
 				"80v": "80vh",
-				"64": "16rem"
+				"64": "16rem",
 			},
 			fontFamily: {
 				sans: [
@@ -173,13 +168,7 @@ module.exports = {
 					'"Segoe UI Symbol"',
 					'"Noto Color Emoji"',
 				],
-				code: [
-					"Consolas",
-					"Monaco",
-					"Andale Mono",
-					"Ubuntu Mono",
-					"monospace"
-				]
+				code: ["Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", "monospace"],
 			},
 			opacity: {
 				"70": "0.7",
