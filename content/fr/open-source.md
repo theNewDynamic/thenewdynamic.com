@@ -22,7 +22,7 @@ blocks:
         types:
           - VS Code Plugin
       - title: "Theme: Ananke"
-        url: https://github.com/budparr/gohugo-theme-ananke
+        url: https://github.com/theNewDynamic/gohugo-theme-ananke
         body: A Base theme for building full featured Hugo sites.
         status: Production
         types:
