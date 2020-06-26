@@ -21,3 +21,5 @@ github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200515172100-99f031
 github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200515172100-99f031b986cf/go.mod h1:iHPteGK+nyJ+md0+JJ5vPunkV+CAGZKGd2euh8VqtQA=
 github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200618163759-e4bd1c768f07 h1:dzTv4HPkZSuXTfqYXak09GQaviOsjPqXi30VQF5L/WE=
 github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200618163759-e4bd1c768f07/go.mod h1:iHPteGK+nyJ+md0+JJ5vPunkV+CAGZKGd2euh8VqtQA=
+github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20200626200509-93dcb309850a h1:t5I67C9YSEr4MyzZ7IhcQvHmPSayjk6CpCxhjSI0hgo=
+github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20200626200509-93dcb309850a/go.mod h1:fuXjv9Nbt2hi6oaOVAqhPRrS4hL9uYcwroo6V/Mw7Uk=

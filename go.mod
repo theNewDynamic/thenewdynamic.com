@@ -12,4 +12,5 @@ require (
 	github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.1 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-socials v0.1.4-0.20200626161708-2d861214bfaa // indirect
 	github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200618163759-e4bd1c768f07 // indirect
+	github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20200626200509-93dcb309850a // indirect
 )

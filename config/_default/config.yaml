@@ -27,3 +27,4 @@ module:
     - path: github.com/theNewDynamic/hugo-module-tnd-styleguide
     - path: github.com/theNewDynamic/hugo-module-tnd-icons
     - path: github.com/theNewDynamic/hugo-module-tnd-func
+    - path: github.com/theNewDynamic/hugo-module-tnd-tags
