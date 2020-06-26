@@ -1,6 +1,15 @@
 tnd_forms:
   css:
     submit: block text-xl text-white bg-gray-800 hover:bg-gradient w-full px-4 py-2 rounded lowercase
+tnd_redirects:
+  use_aliases: true
+tnd_socials:
+  services:
+    - name: github
+      handle: theNewDynamic
+      icon: github
+    - name: twitter
+      handle: theNewDynamic
 addresses:
   - 234 Fifth Ave. • New York, NY • 10001
   - 4267 St Laurent Blvd, Montréal, Québec H2W 1Z4

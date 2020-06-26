@@ -20,18 +20,15 @@
     </div>
     <div class="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
       <div class="flex md:order-2">
-        <a href="https://twitter.com/thenewdynamic" class="ml-6 text-gray-400 hover:text-gray-300">
-          <span class="sr-only">Twitter</span>
+        {{ $services := slice "twitter" "github" }}
+        {{ range partialCached "tnd-socials/GetSocials" $services $services }}
+        <a href="{{ .URL }}" class="ml-6 text-gray-400 hover:text-gray-300">
+          <span class="sr-only">{{ .Name }}</span>
           <span class="inline-block w-6 fill-current">
-            {{ partial "tnd-icons/icon" "twitter" }}
+            {{ .SVG | safeHTML }}
           </span>
         </a>
-        <a href="https://github.com/theNewDynamic" class="ml-6 text-gray-400 hover:text-gray-300">
-          <span class="sr-only">GitHub</span>
-          <span class="inline-block w-6 fill-current">
-            {{ partial "tnd-icons/icon" "github" }}
-          </span>
-        </a>
+        {{ end }}
       </div>
       <p class="mt-8 text-base leading-6 text-gray-400 md:mt-0 md:order-1">
         &copy; {{ now.Format "2006" }}

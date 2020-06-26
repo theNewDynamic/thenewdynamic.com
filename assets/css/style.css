@@ -39,7 +39,12 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-
+.tnd-icon {
+	visibility: visible;
+}
+.tnd-icon[width] {
+	fill: red;
+}
 .page-container {
 	flex: 1 0 auto;
 }
