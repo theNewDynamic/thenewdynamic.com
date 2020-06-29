@@ -29,7 +29,7 @@
 		"tailwindcss-typography": "^3.1.0"
 	},
 	"hugo": {
-		"version": "0.71.1",
+		"version": "0.73.0",
 		"extended": "true"
 	},
 	"devDependencies": {
