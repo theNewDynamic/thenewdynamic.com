@@ -1,7 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "!--",
       "!doctype",
       "a",
       "article",
@@ -10,11 +9,9 @@
       "body",
       "br",
       "button",
-      "button\n",
       "code",
       "desc",
       "div",
-      "div\n",
       "em",
       "form",
       "g",
@@ -26,6 +23,7 @@
       "head",
       "header",
       "html",
+      "iframe",
       "img",
       "input",
       "label",
@@ -43,7 +41,6 @@
       "section",
       "small",
       "span",
-      "span\n",
       "strong",
       "style",
       "svg",
@@ -309,6 +306,7 @@
       "mt-16",
       "mt-2",
       "mt-3",
+      "mt-32",
       "mt-4",
       "mt-5",
       "mt-8",
