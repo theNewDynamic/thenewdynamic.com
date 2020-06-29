@@ -7,5 +7,6 @@ description: As Jamstack pioneers we started one of the original
 menu:
   main:
     weight: 4
+show_events: true
 ---
 We've hosted 27 events so far and have spoken at and given workshops at the annual Jamstack Conference.
