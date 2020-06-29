@@ -4,6 +4,7 @@ folder: "content/en/styleguide"
 filter: { field: "exclude_collection" }
 create: true
 summary: '{{filename}} - {{title}}'
+preview_path: 'styleguide/{{ slug }}'
 editor:
   preview: false
 fields:

@@ -12,6 +12,7 @@ files:
   - name: "about"
     label: "About"
     file: "content/en/about.md"
+    preview_path: '{{slug}}'
     fields:
       - import field title
       - import field description
