@@ -1,0 +1,8 @@
+{{ $seo := dict }}
+{{ $s := newScratch }}
+{{ $s.Set "seo" dict }}
+{{ with $.Page.Params.featured }}
+{{ $s.SetInMap "seo" "image" . }}
+{{ end }}
+
+{{ return merge .seo ($s.Get "seo") }}

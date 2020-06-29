@@ -15,6 +15,8 @@ github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.5 h1:z/KEYumKfCrVgn58vO
 github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.5/go.mod h1:nq9tIR0Xpx2W2mSQHfJya2OvAfgYOMveqrllijA27vo=
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.1 h1:bvooL6i4bP8yaVq2fESTWTyrN0W1hZBN8igzaOyyYWE=
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.1/go.mod h1:UG+i6GOMCwA+ZbpQ9DXX8ImoW4IEY0tKfJ0/EiUZLLg=
+github.com/theNewDynamic/hugo-module-tnd-seo v0.0.0-20200629140545-2f8d0a174d75 h1:9Tp/B85W8QRCyoEeomiEMUaHt03tMK169TCjC8XDLpY=
+github.com/theNewDynamic/hugo-module-tnd-seo v0.0.0-20200629140545-2f8d0a174d75/go.mod h1:VY3Qvzif9T0Z0rjR85ufUQE1wrS/M5VZC9Dx1V8Vo8Y=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.3/go.mod h1:7WIDUEYoiQVRZVPYPXpTLhSh+J25fPYJuCGNsYby3DM=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.4-0.20200626161708-2d861214bfaa/go.mod h1:7WIDUEYoiQVRZVPYPXpTLhSh+J25fPYJuCGNsYby3DM=
 github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200515172100-99f031b986cf h1:UpmOesZsB/I0AMtrsFcMO0GgKgFMqr0gt1RYYOkFr4U=
@@ -23,3 +25,5 @@ github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200618163759-e4bd1c
 github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200618163759-e4bd1c768f07/go.mod h1:iHPteGK+nyJ+md0+JJ5vPunkV+CAGZKGd2euh8VqtQA=
 github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20200626200509-93dcb309850a h1:t5I67C9YSEr4MyzZ7IhcQvHmPSayjk6CpCxhjSI0hgo=
 github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20200626200509-93dcb309850a/go.mod h1:fuXjv9Nbt2hi6oaOVAqhPRrS4hL9uYcwroo6V/Mw7Uk=
+github.com/theNewDynamic/hugo-workshop-starter v1.0.0 h1:PuQaFq4mi7nghX7z7Vn3fOEDez/xzHeqQG+zRAbQ0RY=
+github.com/theNewDynamic/hugo-workshop-starter v1.0.0/go.mod h1:04s7iCiCawgDyRVMmNdR+Fimd8zSwLXcKUY+YyWacP8=

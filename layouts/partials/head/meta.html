@@ -12,6 +12,8 @@
 
 {{ if templates.Exists "partials/tnd-seo/print.html" }}
   {{ partial "tnd-seo/print.html" . }}
+{{ else }}
+  {{ partial "tnd-seo/tags.html" . }}
 {{ end }}
 
 {{ if eq (getenv "HUGO_ENV") "production" }}
