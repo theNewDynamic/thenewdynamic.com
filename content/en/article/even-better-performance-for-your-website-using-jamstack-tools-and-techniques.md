@@ -5,6 +5,7 @@ featured: /uploads/performance-score-16x9.jpg
 description: >-
   A talk we gave for the New York Web Performance group, with examples of tools and strategies to wring out every bit of performance from your website and get great Lighthouse scores (and what Lighthouse is).
 draft: false
+categories: ["events"]
 ---
 
 A talk our founder Bud Parr gave for the New York Web Performance group, with examples of tools and strategies to wring out every bit of performance from your website and get great Lighthouse scores (and what Lighthouse is). He reviewed getting the most out of static site generators and CDNs, techniques for loading assets and more.
