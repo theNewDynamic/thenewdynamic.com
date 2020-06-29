@@ -7,7 +7,7 @@
   {{else}}
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   {{end}}
-    {{ partial "head/styles" . }}
+    {{ partialCached "head/styles" . }}
     {{ partial "head/scripts" . }}    
   </head>
   <body class="{{ partial "func/GetCSSTheme" . }}">

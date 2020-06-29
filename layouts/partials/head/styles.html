@@ -15,7 +15,3 @@
     >
   {{ end }}
 {{ end }}
-{{ range resources.Match "fonts/**/*.woff*" }}
-{{ $tag_data := dict "name" "link" "attr" (dict "href" .RelPermalink "rel" "prefetch" "as" "font" "crossorigin" "") }}
-{{ partialCached "tnd-tags/tag" $tag_data $tag_data }}
-{{ end }}
