@@ -32,7 +32,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new SriPlugin({
       hashFuncNames: ["sha256"],
-      enabled: process.env.HUGO_ENV === "production"
+      //Removed condition on production because was not geneerating on deploy
+      //enabled: process.env.HUGO_ENV === "production"
     }),
     new AssetsPlugin({
       filename: "assets.json",
