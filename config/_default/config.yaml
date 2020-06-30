@@ -19,6 +19,12 @@ outputs:
     - HTML
     - tnd_redirects_netlify
 
+privacy:
+  youtube:    
+    privacyEnhanced: true
+  twitter:    
+    enableDNT: true    
+
 module:
   imports:
     - path: github.com/theNewDynamic/hugo-component-tnd-forms
