@@ -38,7 +38,7 @@ HUGO_VERSION = "0.73.0"
 for = "/*"
 
 [headers.values]
-Content-Security-Policy = "default-src 'none';script-src 'self' https://cdn.usefathom.com https://identity.netlify.com https://unpkg.com;style-src 'self' 'c';prefetch-src https://thenewdynamic.imgix.net;object-src 'none';img-src 'self' https://thenewdynamic.imgix.net;font-src 'self';base-uri 'none';require-trusted-types-for 'script';"
+Content-Security-Policy = "default-src 'https://www.thenewdynamic.com';script-src 'self' https://cdn.usefathom.com https://identity.netlify.com https://unpkg.com;style-src 'self' 'c';prefetch-src https://thenewdynamic.imgix.net;object-src 'none';img-src 'self' https://thenewdynamic.imgix.net;font-src 'self';base-uri 'none';require-trusted-types-for 'script';"
 Strict-Transport-Security = "max-age=15768000"
 X-Xss-Protection = "1; mode=block"
 X-Frame-Options = "DENY"
