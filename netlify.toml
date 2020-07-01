@@ -45,5 +45,6 @@ X-Frame-Options = "DENY"
 X-Content-Type-Options = "nosniff"
 Referrer-Policy = "strict-origin-when-cross-origin"
 Feature-Policy = "camera 'none'; geolocation 'none'; microphone 'none'"
+Access-Control-Allow-Origin = "https://www.thenewdynamic.com"
 
-
+# require-trusted-types-for 'script';report-uri //thenewdynamic.com/csp
