@@ -1,1 +1,10 @@
-<button class="px-3 py-2 mt-8 mb-32 bg-gray-200 rounded" onclick="window.print();return false;" />PRINT THIS PAGE</button>
+{{ $button := "<button class='px-3 py-2 mt-8 mb-32 bg-gray-200 rounded' onclick='window.print();return false;' />PRINT THIS PAGE</button>" }}
+
+{{$button | safeHTML }}
+
+{{/* 
+    If you change the button, temporarily uncomment to hash this asset for CSP
+    WIP: https://github.com/theNewDynamic/thenewdynamic.com/issues/111
+    {{ sha256 $button }} 
+    
+    */}}
