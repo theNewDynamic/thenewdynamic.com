@@ -10,4 +10,6 @@ categories: ["events"]
 
 A talk our founder Bud Parr gave for the New York Web Performance group, with examples of tools and strategies to wring out every bit of performance from your website and get great Lighthouse scores (and what Lighthouse is). He reviewed getting the most out of static site generators and CDNs, techniques for loading assets and more.
 
-{{< youtube WwQWJHEVl3E >}}
+Click below to watch video on Youtube:
+
+[![Web Performance Event](/uploads/webperf-event-2018-09-26.jpeg)](https://youtu.be/WwQWJHEVl3E)

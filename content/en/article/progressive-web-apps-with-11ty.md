@@ -15,5 +15,7 @@ You can get all the Progressive Web "App" benefits, like instant, offline-first 
 
 Jeff Posnick is a member of Google's Web Developer Relations, working on libraries and guidance around building PWAs.
 
+Click below to watch video on Youtube:
 
-{{< youtube JvT2uSgqW0c >}}
+[![Web Performance Event](/uploads/2020-jan-eventcard.jpeg)](https://youtu.be/JvT2uSgqW0c)
+
