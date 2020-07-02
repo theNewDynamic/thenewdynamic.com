@@ -28,8 +28,7 @@ module:
     - path: github.com/theNewDynamic/hugo-module-tnd-icons
     - path: github.com/theNewDynamic/hugo-module-tnd-func
     - path: github.com/theNewDynamic/hugo-module-tnd-tags
-    #- path: github.com/theNewDynamic/hugo-module-tnd-seo
-    - path: github.com/theNewDynamic/hugo-component-tnd-seo
+    - path: github.com/theNewDynamic/hugo-module-tnd-seo
     - path: github.com/theNewDynamic/hugo-workshop-starter
       mounts:
         source: content/products
