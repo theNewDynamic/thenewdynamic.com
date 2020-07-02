@@ -12,7 +12,7 @@
 		x-transition:leave-start="opacity-100"
 		x-transition:leave-end="opacity-0">
     {{ range . }}
-      <a href="{{ .permalink }}" class="absolute z-30 block max-w-full py-2 pl-2 pr-6 bg-gray-200 rounded rounded-t-none hover:text-white hover:bg-black" style="top:95%">
+      <a href="{{ .permalink }}" @click="window.fathom.trackGoal('HUH3RMSE', 0);" class="absolute z-30 block max-w-full py-2 pl-2 pr-6 bg-gray-200 rounded rounded-t-none hover:text-white hover:bg-black" style="top:95%">
         {{ .label }}
       </a>
     {{ end }}
