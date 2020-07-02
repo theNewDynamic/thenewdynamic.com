@@ -146,6 +146,7 @@ module.exports = {
 			colors,
 			screens: {
 				"-sm": { max: "638px" },
+				'print': {'raw': 'print'}
 			},
 			minHeight: {
 				"80v": "80vh",
