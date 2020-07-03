@@ -1469,12 +1469,6 @@ video {
   border-color: rgba(37, 47, 63, var(--border-opacity));
 }
 
-.border-primary-500 {
-  --border-opacity: 1;
-  border-color: #B50337;
-  border-color: rgba(181, 3, 55, var(--border-opacity));
-}
-
 .hover\:border-primary-500:hover {
   --border-opacity: 1;
   border-color: #B50337;
@@ -1522,10 +1516,6 @@ video {
 
 .border-b-2 {
   border-bottom-width: 2px;
-}
-
-.border-t-6 {
-  border-top-width: 6px;
 }
 
 .border-t {
@@ -2330,12 +2320,6 @@ video {
   color: rgba(225, 154, 175, var(--text-opacity));
 }
 
-.text-primary-500 {
-  --text-opacity: 1;
-  color: #B50337;
-  color: rgba(181, 3, 55, var(--text-opacity));
-}
-
 .group:hover .group-hover\:text-gray-500 {
   --text-opacity: 1;
   color: #6b7280;
@@ -2644,32 +2628,6 @@ body.theme-alt .bg-theme {
   --preBorderColor: #ffffff;
 }
 
-.chroma .language-go-html-template {
-  --defaultColor: #9fa6b2;
-  /* HTML tags
-	<div style="fill:currentColor;width:3rem;margin:1rem 0"> */
-  --htmlColor: #E19AAF;
-  /* Comments
-	{{/* This is why we doe it *}} */
-  --commentsColor: #9fa6b2;
-  /* 
-	Functions
-	resources.Match */
-  --functionsColor: #cabffd;
-  /* 
-	Strings
-	"the fox whaterver etc..." */
-  --stringsColor: #FDEAB3;
-  /* 
-	Context Methods/Properties
-	{{ .Content }} */
-  --methodsColor: #E2B73B;
-  /* 
-	Statements
-	{{ with/if/end }} */
-  --statementsColor: #D84730;
-}
-
 .chroma .language-yaml {
   /* 
 	Comments
@@ -2759,30 +2717,12 @@ body.theme-alt .bg-theme {
   color: var(--commentsColor);
 }
 
-.chroma .language-go-html-template .nx, 
-.chroma .language-go-html-template .nx + .na {
-  color: var(--functionsColor);
-}
-
-.chroma .na {
-  color: var(--methodsColor)
-}
-
 .chroma .o + .nx{
   color: #3f83f8;
 }
 
-.chroma .s {
-  color: var(--stringsColor);
-}
-
 .chroma .o {
   color: #d2d6dc;
-}
-
-.chroma .language-go-html-template .k {
-  color: var(--statementsColor);
-  font-weight: bold;
 }
 
 .chroma .language-yaml .k {
@@ -2790,14 +2730,6 @@ body.theme-alt .bg-theme {
 }
 
 .chroma .language-yaml .p {
-  color: var(--htmlColor);
-}
-
-.chroma .language-go-html-template .nt,
-.chroma .language-go-html-template .p,
-.chroma .language-go-html-template .nt + .na,
-.chroma .language-go-html-template .nt + .na + .o,
-.chroma .language-go-html-template .nt + .na + .o + .s {
   color: var(--htmlColor);
 }
 
@@ -3279,6 +3211,13 @@ body {
 
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media print {
+
+  .print\:hidden {
+    display: none;
   }
 }
 
