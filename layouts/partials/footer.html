@@ -35,16 +35,19 @@
         <a class="px-3 py-2 no-underline hover:text-gray-100 color-inherit" href="{{ site.Home.RelPermalink }}">
           {{ .Site.Title }}
         </a>
-        &bull; {{ with site.GetPage "/privacy-policy" }}
-        <a class="px-3 py-2 no-underline hover:text-gray-100 color-inherit" href="{{ .RelPermalink }}">
+        &bull; {{ with site.GetPage "/info/privacy-policy" }}
+        <a class="px-3 py-2 text-xs no-underline hover:text-gray-100 color-inherit" href="{{ .RelPermalink }}">
           {{ .Title }}
         </a>
         {{ end }}
 
-        <a class="px-3 py-2 text-xs no-underline hover:text-gray-100 color-inherit"
-          href="/privacy/">
-          {{ i18n "privacy" }}
+        &bull; {{ with site.GetPage "/info/cookie-policy" }}
+        <a class="px-3 py-2 text-xs no-underline hover:text-gray-100 color-inherit" href="{{ .RelPermalink }}">
+          {{ .Title }}
         </a>
+        {{ end }}
+
+       
 &bull; 
         <a class="px-3 py-2 text-xs no-underline hover:text-gray-100 color-inherit"
           href="https://thenewdynamic.com">
