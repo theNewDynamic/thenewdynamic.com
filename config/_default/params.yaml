@@ -12,7 +12,7 @@ tnd_socials:
       handle: theNewDynamic
 tnd_iubenda:
   no_markup: false
-  version: 'v1.0'
+  version: 'v1.1'
 addresses:
   - 234 Fifth Ave. • New York, NY • 10001
   - 4267 St Laurent Blvd, Montréal, Québec H2W 1Z4
