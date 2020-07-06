@@ -36,3 +36,4 @@ module:
     - path: github.com/theNewDynamic/hugo-module-tnd-icons
     - path: github.com/theNewDynamic/hugo-module-tnd-func
     - path: github.com/theNewDynamic/hugo-module-tnd-tags
+    - path: github.com/theNewDynamic/hugo-module-tnd-iubenda
