@@ -10,6 +10,8 @@ github.com/theNewDynamic/hugo-module-tnd-iubenda v0.0.0-20200706184234-42ef42410
 github.com/theNewDynamic/hugo-module-tnd-iubenda v0.0.0-20200706184234-42ef424108f8/go.mod h1:u/871AHmqZqGhOO9g3iqO1gq66hpp+d1Ls8uldbVkQQ=
 github.com/theNewDynamic/hugo-module-tnd-iubenda v0.0.0-20200706185815-5a9e152d6c5d h1:BquV0DoLohyas5tQSic+ClKxLLXCMhrN8kUcHmaKAAY=
 github.com/theNewDynamic/hugo-module-tnd-iubenda v0.0.0-20200706185815-5a9e152d6c5d/go.mod h1:u/871AHmqZqGhOO9g3iqO1gq66hpp+d1Ls8uldbVkQQ=
+github.com/theNewDynamic/hugo-module-tnd-iubenda v0.0.0-20200706191428-d78712a60011 h1:y0R479dKxlZR43YlCRmZjTbdo8gG7dAI9+a90+y2oeY=
+github.com/theNewDynamic/hugo-module-tnd-iubenda v0.0.0-20200706191428-d78712a60011/go.mod h1:u/871AHmqZqGhOO9g3iqO1gq66hpp+d1Ls8uldbVkQQ=
 github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.5 h1:z/KEYumKfCrVgn58vOCFI+aW7mypprpgtLkubjpUbC0=
 github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.5/go.mod h1:nq9tIR0Xpx2W2mSQHfJya2OvAfgYOMveqrllijA27vo=
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.1 h1:bvooL6i4bP8yaVq2fESTWTyrN0W1hZBN8igzaOyyYWE=
