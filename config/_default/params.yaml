@@ -30,10 +30,6 @@ tnd_headers:
         value: strict-origin-when-cross-origin
       - key: Feature-Policy
         value: camera 'none'; geolocation 'none'; microphone 'none'
-    - target: /open-source
-      values:
-      - key: My-Own
-        value: Header
 addresses:
   - 234 Fifth Ave. • New York, NY • 10001
   - 4267 St Laurent Blvd, Montréal, Québec H2W 1Z4

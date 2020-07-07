@@ -7,7 +7,7 @@ require (
 	github.com/theNewDynamic/hugo-component-tnd-forms v0.0.0-20200211220144-02e0fa3ace85 // indirect
 	github.com/theNewDynamic/hugo-component-tnd-seo v0.2.7 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-func v0.0.0-20200622145611-12358ce616bf // indirect
-	github.com/theNewDynamic/hugo-module-tnd-headers v0.0.0-20200707192122-e184b99d388a // indirect
+	github.com/theNewDynamic/hugo-module-tnd-headers v0.0.0-20200707202824-d0175727a620 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-icons v0.1.3-0.20200626160319-19bc8534b9de // indirect
 	github.com/theNewDynamic/hugo-module-tnd-iubenda v0.1.0 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.5 // indirect

@@ -29,6 +29,6 @@
 {{ $target := "/cms" }}
 {{ $hash_value := dict "key" "Content-Security-Policy" "value" (printf `script-src 'sha256-%s'` $hash) }}
 {{ $values := slice $hash_value }}
-{{ $group := dict "target" $target "values" $values}}
+{{ $group := dict "target" $target "weight" -1 "values" $values}}
 
 {{ return $group }}
