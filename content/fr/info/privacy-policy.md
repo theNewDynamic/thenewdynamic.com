@@ -1,8 +1,8 @@
 ---
-title: We Respect your Privacy
+title: Nous respectons votre vie privée
 description: 
 ---
-We use [Fathom](https://usefathom.com/ref/USBDZ0) for site analytics, a privacy-forward provider. 
+Nous utilisons [Fathom](https://usefathom.com/ref/USBDZ0), un champion de la confidentialité pour l'analyse des visites de notre sites, a privacy-forward provider. 
 
-{{<  json "https://www.iubenda.com/api/privacy-policy/93149670?20200704" >}}
+{{< tnd-iubenda "privacy-policy" >}}
 

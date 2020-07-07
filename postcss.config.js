@@ -11,7 +11,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 		"ease-out",
 		"opacity-0",
 		"opacity-100",
-		"active"
+		"active",
 	],
 });
 /* Currenlty, as of Hugo .69.0, the some classed are not picked up and added to the json file.
