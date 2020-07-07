@@ -1,0 +1,15 @@
+{{ $netlify_script_bundle := slice }}
+{{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
+  {{ with where . "type" "link" }}
+    {{ with $style := index . 0 }}
+      {{ $netlifycms_style := printf `CMS.registerPreviewStyle("%s");` $style.Permalink | resources.FromString "style_netlifycms.js" }}
+      {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_style }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ with resources.Match "netlifycms/**/*.js" }}
+  {{ $netlifycms_script := resources.Concat "script_netlifycms.js" . | babel (dict "config" "babel.config.json") }}
+  {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_script }}
+{{ end }}
+
+{{ return resources.Concat "netlifycms.js" $netlify_script_bundle }}

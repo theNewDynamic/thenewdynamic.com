@@ -1,0 +1,34 @@
+{{/*
+  AddRules
+
+  This partial is to be overwritten by user in own project to add a dynamically build list of rules to extend
+  the module's own.
+
+  IMPORTANT: This should always return a slice!
+
+  See README for an example.
+
+  @author {GitHub handle}
+
+  @context None (for `.Site`, `.Sites` and `.Hugo` use global functions `site`, `site.Sites` and `hugo`)
+
+  @access public
+
+  @return Slice of maps
+          - String (.origin)
+            String (.target)
+            String (.code) optional
+            Bool (.force) optional
+            String (.country) optional
+            String (.language) optional
+*/}}
+{{ $hash := "" }}
+{{ with partialCached "func/GetNetlifyCMSScripts" "func/GetNetlifyCMSScripts" }}
+{{ $hash = .Content | sha256 }}
+{{ end }}
+{{ $target := "/cms/*" }}
+{{ $hash_value := dict "key" "Content-Security-Policy" "value" (printf `script-src 'sha256-%s'` $hash) }}
+{{ $values := slice $hash_value }}
+{{ $group := dict "target" $target "values" $values}}
+
+{{ return $group }}

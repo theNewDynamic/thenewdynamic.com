@@ -21,6 +21,7 @@
 	"dependencies": {
 		"@fullhuman/postcss-purgecss": "^2.1.2",
 		"autoprefixer": "^9.7.3",
+		"netlify-cli": "^2.58.0",
 		"netlify-cms": "^2.0.0",
 		"postcss-cli": "^7.1.0",
 		"postcss-import": "^12.0.1",
