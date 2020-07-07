@@ -12,11 +12,6 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 		"opacity-0",
 		"opacity-100",
 		"active",
-		"iub_content",
-		"for_boxes",
-		"unstyled",
-		"box_primary",
-		"iconed",
 	],
 });
 /* Currenlty, as of Hugo .69.0, the some classed are not picked up and added to the json file.
