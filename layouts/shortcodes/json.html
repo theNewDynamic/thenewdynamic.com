@@ -1,6 +1,0 @@
-{{ with .Get 0 }}
-    {{ $data := getJSON . }}
-    <div class="max-w-4xl my-32">
-        {{ $data.content | safeHTML }}
-    </div>
-{{ end }}
