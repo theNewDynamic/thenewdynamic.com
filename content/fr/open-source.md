@@ -42,9 +42,15 @@ blocks:
         types:
           - Hugo Module
       - title: Imgix Module
-        url: https://github.com/theNewDynamic/hugo-module-imgix
+        url: https://github.com/theNewDynamic/hugo-module-tnd-imgix
         body: A module to use Imgix on any Hugo project.
         status: beta
+        types:
+          - Hugo Module
+      - title: Iubenda Module
+        url: https://github.com/theNewDynamic/hugo-module-tnd-iubenda
+        body: A module to use Iubenda legal sertvice on any Hugo project.
+        status: Beta
         types:
           - Hugo Module
       - url: https://github.com/theNewDynamic/hugo-module-tnd-redirects
