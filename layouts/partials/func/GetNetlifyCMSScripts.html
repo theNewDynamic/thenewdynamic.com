@@ -1,3 +1,4 @@
+{{ $script := dict }}
 {{ $netlify_script_bundle := slice }}
 {{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
   {{ with where . "type" "link" }}
@@ -11,5 +12,11 @@
   {{ $netlifycms_script := resources.Concat "script_netlifycms.js" . | babel (dict "config" "babel.config.json") }}
   {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_script }}
 {{ end }}
+{{ with $netlify_script_bundle }}
+  {{ $script = resources.Concat "netlifycms.js" . }}
+  {{ if eq (getenv "HUGO_ENV") "production" }}
+    {{ $script = $script | fingerprint }}
+  {{ end }}
+{{ end }}
 
-{{ return resources.Concat "netlifycms.js" $netlify_script_bundle }}
+{{ return  $script }}

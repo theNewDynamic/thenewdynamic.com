@@ -1,6 +1,10 @@
 <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
-<script>
 {{ with partialCached "func/GetNetlifyCMSScripts" "func/GetNetlifyCMSScripts" }}
-  {{ .Content | safeJS }}
+<script 
+  type="application/javascript" 
+  src="{{ .RelPermalink }}"
+  {{ with .Data.Integrity }}
+    integrity="{{ . }}"
+  {{ end }}
+  ></script>
 {{ end }}
-</script>
