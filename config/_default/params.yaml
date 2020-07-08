@@ -16,7 +16,7 @@ tnd_iubenda:
 tnd_headers:
   groups:
     - headers:
-      - key: Content-Security-Policy
+      - field: Content-Security-Policy
         value: 
         - default-src 'self';
         - script-src 'self' 'unsafe-eval' https://cdn.usefathom.com https://identity.netlify.com https://unpkg.com;
@@ -27,17 +27,17 @@ tnd_headers:
         - font-src 'self';
         - base-uri 'none';
         - connect-src 'self' https://cdn.usefathom.com;
-      - key: Strict-Transport-Security
+      - field: Strict-Transport-Security
         value: max-age=15768000
-      - key: X-Xss-Protection
+      - field: X-Xss-Protection
         value: 1; mode=block
-      - key: X-Frame-Options
+      - field: X-Frame-Options
         value: DENY
-      - key: X-Content-Type-Options
+      - field: X-Content-Type-Options
         value: nosniff
-      - key: Referrer-Policy
+      - field: Referrer-Policy
         value: strict-origin-when-cross-origin
-      - key: Feature-Policy
+      - field: Feature-Policy
         value: camera 'none'; geolocation 'none'; microphone 'none'
 addresses:
   - 234 Fifth Ave. • New York, NY • 10001
