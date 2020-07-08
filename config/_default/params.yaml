@@ -13,6 +13,32 @@ tnd_socials:
 tnd_iubenda:
   no_markup: false
   version: 'v1.1'
+tnd_headers:
+  groups:
+    - headers:
+      - field: Content-Security-Policy
+        value: 
+        - default-src 'self';
+        - script-src 'self' 'unsafe-eval' https://cdn.usefathom.com https://identity.netlify.com https://unpkg.com;
+        - style-src 'self' 'unsafe-inline';
+        - prefetch-src https://thenewdynamic.imgix.net;
+        - object-src 'none';
+        - img-src 'self' https://thenewdynamic.imgix.net https://img3.usefathom.com;
+        - font-src 'self';
+        - base-uri 'none';
+        - connect-src 'self' https://cdn.usefathom.com;
+      - field: Strict-Transport-Security
+        value: max-age=15768000
+      - field: X-Xss-Protection
+        value: 1; mode=block
+      - field: X-Frame-Options
+        value: DENY
+      - field: X-Content-Type-Options
+        value: nosniff
+      - field: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - field: Feature-Policy
+        value: camera 'none'; geolocation 'none'; microphone 'none'
 addresses:
   - 234 Fifth Ave. • New York, NY • 10001
   - 4267 St Laurent Blvd, Montréal, Québec H2W 1Z4

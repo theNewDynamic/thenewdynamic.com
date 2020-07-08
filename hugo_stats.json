@@ -1,7 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "!--",
       "!doctype",
       "a",
       "article",
@@ -10,13 +9,10 @@
       "blockquote",
       "body",
       "br",
-      "br/",
       "button",
-      "button\n",
       "code",
       "desc",
       "div",
-      "div\n",
       "em",
       "form",
       "g",
@@ -46,7 +42,6 @@
       "section",
       "small",
       "span",
-      "span\n",
       "strong",
       "style",
       "svg",
