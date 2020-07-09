@@ -7,6 +7,17 @@
       {{ end }}
       <div class="max-w-5xl text-gray-700 rich-text">
         {{ .Content }}
+        {{/* TODO: Move prototype to a block or whatever appropriate */}}
+        {{ if .Params.show_events }}                  
+          {{ with site.Taxonomies.categories.events }}                
+            <h3>A Selection of Past Events </h3>
+            {{ range .  }} 
+              <div class="container mt-32 mb-32 text-gray-900">          
+                {{ partial "article-header.html" (dict "location" "list" "Page" .) }}
+              </div>
+            {{ end }}    
+          {{ end }}
+          {{ end }}
       </div>
       {{ with .Params.blocks }}
         <div class="my-32">

@@ -17,6 +17,7 @@
 @import "patterns.css";
 
 @import "highlight.css";
+@import "iubenda.css";
 
 :root {
 	font-size: 14px;
@@ -48,8 +49,8 @@ body {
 .page-container {
 	flex: 1 0 auto;
 }
-.something-test{
-	color:blue;
+.something-test {
+	color: blue;
 }
 .footer {
 	flex-shrink: 0;
@@ -91,8 +92,6 @@ body {
 	}
 }
 /* END Fancy Blockquotes */
-
-
 
 @variants hover {
 	.text-gradient {
@@ -180,9 +179,9 @@ body {
 }
 
 @screen xl {
-	.max-aside{
-		margin-left:0;
-		margin-right:0;
+	.max-aside {
+		margin-left: 0;
+		margin-right: 0;
 		width: calc((100vw - 48rem) / 2);
 	}
 }

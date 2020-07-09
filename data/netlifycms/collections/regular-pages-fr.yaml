@@ -6,7 +6,7 @@ folder: "content/fr"
 filter: { field: "exclude_collection" }
 create: true
 sortableFields: ['title']
-
+preview_path: 'fr/{{slug}}'
 fields:
   - import field title
   - import field description

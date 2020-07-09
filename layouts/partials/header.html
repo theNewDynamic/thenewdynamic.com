@@ -12,7 +12,7 @@
     {{ partial "lang-switch" . }}
 
     {{ $menu_items := partialCached "func/GetMainMenuItems" . "func/GetMainMenuItems" }}
-    <nav x-data="{ nav_slide: false }" class="relative z-10 flex flex-wrap items-center flex-shrink-0 w-full py-2 text-lg text-gray-700 lowercase bg-gray-200 sm:bg-transparent sm:static sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent md:text-base">
+    <nav x-data="{ nav_slide: false }" class="print:hidden relative z-10 flex flex-wrap items-center flex-shrink-0 w-full py-2 text-lg text-gray-700 lowercase bg-gray-200 sm:bg-transparent sm:static sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent md:text-base">
       <div class="flex items-center justify-between flex-shrink-0 w-full sm:hidden sm:w-auto sm:flex-shrink">
         {{/* Only Menu Items set as critical are displayed here */}}
         {{ range where $menu_items "critical" "eq" true }}

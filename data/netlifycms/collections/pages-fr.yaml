@@ -1,9 +1,11 @@
 name: "pages-fr"
 label: "Main Pages (FR)"
+preview_path: 'fr/{{slug}}'
 files:
   - name: "home"
     label: "Homepage"
     file: "content/fr/_index.md"
+    preview_path: 'fr/'
     fields:
       - import field title
       - import field description
@@ -11,6 +13,7 @@ files:
   - name: "about"
     label: "About"
     file: "content/fr/about.md"
+    preview_path: 'fr/{{ slug }}'
     fields:
       - import field title
       - import field description

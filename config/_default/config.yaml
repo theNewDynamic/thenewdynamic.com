@@ -16,6 +16,13 @@ outputs:
   home:
     - HTML
     - tnd_redirects_netlify
+    - tnd_headers_netlify
+
+privacy:
+  youtube:    
+    privacyEnhanced: true
+  twitter:    
+    enableDNT: true    
 
 module:
   imports:
@@ -28,9 +35,6 @@ module:
     - path: github.com/theNewDynamic/hugo-module-tnd-icons
     - path: github.com/theNewDynamic/hugo-module-tnd-func
     - path: github.com/theNewDynamic/hugo-module-tnd-tags
+    - path: github.com/theNewDynamic/hugo-module-tnd-iubenda
+    - path: github.com/theNewDynamic/hugo-module-tnd-headers
     - path: github.com/theNewDynamic/hugo-module-tnd-seo
-    - path: github.com/theNewDynamic/hugo-workshop-starter
-      mounts:
-        source: content/products
-        target: content/products
-        lang: en

@@ -6,7 +6,7 @@ folder: "content/en/persons"
 filter: { field: "exclude_collection" }
 create: true
 sortableFields: ['title']
-
+show_preview_links: false
 fields:
   - name: title
     label: Full Name

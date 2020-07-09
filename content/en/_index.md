@@ -7,7 +7,7 @@ blocks:
     layout: points
     title: How We Work
     points:
-      - title: Bulletproof technology
+      - title: Progressive Technology
         intro: >-
           Your website—designed and developed to adapt to changing technology and business landscapes.
         body: >-
@@ -15,7 +15,7 @@ blocks:
                   
           [READ MORE &rarr;](/article/simplicity-speed-security-savings-benefits-of-jamstack-technology/)
         color: primary-500
-      - title: Simple approach
+      - title: Simple Approach
         intro: >-
           Dedicated experts who embrace people over process. 
           Clarity over confusion. 
@@ -23,7 +23,7 @@ blocks:
         body: >-
           Continuous improvement of your website is the key to staying connected with your audience. Sounds tough? We make it easy. Our team will manage your web presence and find new ways to keep it fresh and engaging.
         color: secondary-500
-      - title: Transparent pricing
+      - title: Transparent Pricing
         intro: >-
           A simple, effective pricing model that you can scale over time based on your level of need.
         color: tertiary-500
