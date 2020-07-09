@@ -9,8 +9,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-theme:
-  - github.com/theNewDynamic/hugo-component-tnd-seo
 
 social:
   twitter: theNewDynamic
@@ -39,3 +37,4 @@ module:
     - path: github.com/theNewDynamic/hugo-module-tnd-tags
     - path: github.com/theNewDynamic/hugo-module-tnd-iubenda
     - path: github.com/theNewDynamic/hugo-module-tnd-headers
+    - path: github.com/theNewDynamic/hugo-module-tnd-seo

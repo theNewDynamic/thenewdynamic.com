@@ -1,6 +1,8 @@
 tnd_forms:
   css:
     submit: block text-xl text-white bg-gray-800 hover:bg-gradient w-full px-4 py-2 rounded lowercase
+tnd_seo:
+  jsonld: true
 tnd_redirects:
   use_aliases: true
 tnd_socials:
