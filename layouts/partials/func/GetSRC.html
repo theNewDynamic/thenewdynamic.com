@@ -1,0 +1,53 @@
+{{/*
+  GetSRC
+  Retrieves a transformed image following a -- limited for now -- set of arguments.
+
+  @author @regisphilibert
+
+  @context String (.)
+
+  @access public
+
+  @return String
+
+  @example - Go Template
+  {{ $args := dict "src" . "width" 800 }}
+  {{ $image := partialCached "func/GetSRC" $args $args }}
+*/}}
+{{ $src := false }}
+{{ $args := dict }}
+{{ $return := false }}
+{{ if reflect.IsMap $ }}
+  {{ with .src }}
+    {{ $src = . }}
+    {{ range $key, $value := $ }}
+      {{ if ne $key "src" }}
+        {{ $args = $args | merge (dict $key $value) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else if not (reflect.IsSlice $) }}
+  {{/* Context is a string, we use it as $src */}}
+  {{ $src = $ }}
+{{ end }}
+{{ with $src }}
+  {{ with $resource := resources.Get . }}
+    {{ $width := .Width }}
+    {{ range $key, $value := $args }}
+      {{/* If argument is Width and desired with is small than original */}}
+      {{ $width_param := $value }}
+      {{ if lt $width $value }}
+        {{ $width_param = $width }}
+      {{ end }}
+      {{ if eq $key "width" }}
+        {{ $param := print $width_param "x" }}
+        {{/* We apply the transformations */}}
+        {{ with $resource.Resize $param }}
+          {{ $resource = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $return = $resource.RelPermalink }}
+  {{ end }}
+{{ end }}
+{{ return $return }}

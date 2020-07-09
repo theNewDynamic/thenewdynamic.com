@@ -17,7 +17,10 @@
         <div class="w-full sm:w-1/2 sm:mb-0">
           <div class="sm:p-2">
             {{ with .image }}
-              <img data-src="{{.}}" alt="work image" class="border lazyload" >
+              {{ $args := dict "src" . "width" 600 }}
+              {{ with partialCached "func/GetSRC" $args $args }}
+                <img data-src="{{ . }}" alt="work image" class="border lazyload" >
+              {{ end }}
             {{ end }}
           </div>
         </div>
