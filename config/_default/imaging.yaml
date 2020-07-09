@@ -1,0 +1,6 @@
+quality: 95
+resampleFilter: lanczos
+exif:
+  disableDate: true
+  disableLatLong: true
+  excludeFields: .*

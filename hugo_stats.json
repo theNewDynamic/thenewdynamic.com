@@ -196,6 +196,7 @@
       "gap-8",
       "grid",
       "grid-cols-2",
+      "grid-gap-4",
       "group",
       "group-focus:text-gray-500",
       "group-hover:text-gray-500",
