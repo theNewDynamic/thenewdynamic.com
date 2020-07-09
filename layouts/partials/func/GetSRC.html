@@ -17,12 +17,17 @@
 {{ $src := false }}
 {{ $args := dict }}
 {{ $return := false }}
+{{ $path := "relative" }}
 {{ if reflect.IsMap $ }}
   {{ with .src }}
     {{ $src = . }}
     {{ range $key, $value := $ }}
-      {{ if ne $key "src" }}
+      {{ if not (in (slice "src" "path") $key) }}
         {{ $args = $args | merge (dict $key $value) }}
+      {{ else if eq $key "path" }}
+        {{ if eq $value "absolute" }}
+          {{ $path = "absolute" }}
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -47,7 +52,11 @@
         {{ end }}
       {{ end }}
     {{ end }}
-    {{ $return = $resource.RelPermalink }}
+    {{ if eq $path "absolute" }}
+      {{ $return = $resource.Permalink }}
+    {{ else }}
+      {{ $return = $resource.RelPermalink }}
+    {{ end }}
   {{ end }}
 {{ end }}
 {{ return $return }}
