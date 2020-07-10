@@ -1,0 +1,18 @@
+{{ $headerGroups := slice }}
+{{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
+  {{ with where . "type" "critical" }}
+    {{ $styles := dict "target" "/*" }}
+    {{ $headers := slice }}
+    {{ range . }}
+      {{ $value := printf `script-src 'sha256-%s'` (sha256 .Content) }}
+      {{ $header := dict "field" "Content-Security-Policy" "value" $value}}
+      {{ $headers = $headers | append $header }}
+    {{ end }}
+    {{ with $headers }}
+      {{ $styles = merge $styles (dict "headers" .) }}
+      {{ $headerGroups = $headerGroups | append $styles }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $headerGroups }}
