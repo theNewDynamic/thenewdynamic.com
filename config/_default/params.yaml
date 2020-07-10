@@ -17,10 +17,6 @@ tnd_iubenda:
   version: 'v1.1'
 tnd_headers:
   groups:
-    - target: /cms
-      headers:
-      - field: Test-Header
-        value: Lorem
     - headers:
       - field: Strict-Transport-Security
         value: max-age=15768000
