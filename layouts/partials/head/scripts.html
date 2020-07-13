@@ -5,7 +5,7 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
 {{ end }}
 
-{{ $js := resources.Get "index.js" | js.Build | babel (dict "config" "babel.config.json") }}
+{{ $js := resources.Get "index.js" | js.Build }}
 {{ if not site.IsServer }}
   {{  $js = $js | minify | fingerprint }}
 {{ end }}
