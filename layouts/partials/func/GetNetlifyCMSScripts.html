@@ -9,11 +9,11 @@
   {{ end }}
 {{ end }}
 {{ with resources.Match "netlifycms/**/*.js" }}
-  {{ $netlifycms_script := resources.Concat "script_netlifycms.js" . | babel (dict "config" "babel.config.json") }}
+  {{ $netlifycms_script := resources.Concat "script_netlifycms.js" .}}
   {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_script }}
 {{ end }}
 {{ with $netlify_script_bundle }}
-  {{ $script = resources.Concat "netlifycms.js" . }}
+  {{ $script = resources.Concat "netlifycms.js" . | js.Build }}
   {{ if eq (getenv "HUGO_ENV") "production" }}
     {{ $script = $script | fingerprint }}
   {{ end }}
