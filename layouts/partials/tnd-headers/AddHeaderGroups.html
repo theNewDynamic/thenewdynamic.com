@@ -1,8 +1,8 @@
 {{ $headerGroups := slice }}
+{{ $style_srcs := slice `'self'` `'unsafe-inline'` }}
 {{ $CSP := `
 - default-src 'self';
 - script-src 'self' 'unsafe-eval' https://cdn.usefathom.com https://identity.netlify.com https://unpkg.com;
-- style-src 'self' 'unsafe-inline';
 - prefetch-src https://thenewdynamic.imgix.net;
 - object-src 'none';
 - img-src 'self' https://thenewdynamic.imgix.net https://img3.usefathom.com;
@@ -10,15 +10,18 @@
 - base-uri 'none';
 - connect-src 'self' https://cdn.usefathom.com;
   ` | transform.Unmarshal }}
+{{ $asset_script_src := slice }}
 {{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
-  {{ with where . "type" "critical" }}
+  {{/* Remove X from critical when we're ready to get back to this */}}
+  {{ with where . "type" "criticalX" }}
     {{ $styles := dict "target" "/*" }}
     {{ $headers := slice }}
     {{ range . }}
-      {{ $value := printf `script-src 'sha256-%s'` (sha256 .Content) }}
-      {{ $CSP = $CSP | append $value }}
+      {{ $style_srcs = $style_srcs | append (printf `'sha256-%s'` (sha256 .Content)) }}
     {{ end }}
   {{ end }}
 {{ end }}
+{{ $CSP_style_srcs := printf `style-src %s;` (delimit $style_srcs " ") }}
+{{ $CSP = $CSP | append $CSP_style_srcs }}
 {{ $CSP_header := dict "target" "/*" "headers" (slice (dict "field" "Content-Security-Policy" "value" $CSP)) }}
 {{ return slice $CSP_header }}
