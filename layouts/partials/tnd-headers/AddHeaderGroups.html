@@ -1,5 +1,5 @@
 {{ $headerGroups := slice }}
-{{ $style_srcs := slice `'self'` }}
+{{ $style_srcs := slice `'self'` `'unsafe-inline'` }}
 {{ $CSP := `
 - default-src 'self';
 - script-src 'self' 'unsafe-eval' https://cdn.usefathom.com https://identity.netlify.com https://unpkg.com;
@@ -12,7 +12,8 @@
   ` | transform.Unmarshal }}
 {{ $asset_script_src := slice }}
 {{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
-  {{ with where . "type" "critical" }}
+  {{/* Remove X from critical when we're ready to get back to this */}}
+  {{ with where . "type" "criticalX" }}
     {{ $styles := dict "target" "/*" }}
     {{ $headers := slice }}
     {{ range . }}
