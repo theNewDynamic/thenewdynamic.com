@@ -20,7 +20,7 @@
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $CSP_default_src := printf `'script-src' %s;` (delimit $script_sources " ") }}
+{{ $CSP_default_src := printf `script-src %s;` (delimit $script_sources " ") }}
 {{ $CSP = $CSP | append $CSP_default_src }}
 {{ $CSP_header := dict "target" "/*" "headers" (slice (dict "field" "Content-Security-Policy" "value" $CSP)) }}
 {{ return slice $CSP_header }}
