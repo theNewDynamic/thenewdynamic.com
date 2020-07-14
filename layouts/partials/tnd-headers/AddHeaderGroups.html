@@ -1,8 +1,8 @@
 {{ $headerGroups := slice }}
-{{ $script_sources := slice `'self'` `'unsafe-eval'` `https://cdn.usefathom.com` `https://identity.netlify.com` }}
+{{ $style_srcs := slice `'self'` `'unsafe-inline'` }}
 {{ $CSP := `
 - default-src 'self';
-- style-src 'self' 'unsafe-inline';
+- script-src 'self' 'unsafe-eval' https://cdn.usefathom.com https://identity.netlify.com https://unpkg.com;
 - prefetch-src https://thenewdynamic.imgix.net;
 - object-src 'none';
 - img-src 'self' https://thenewdynamic.imgix.net https://img3.usefathom.com;
@@ -16,11 +16,11 @@
     {{ $styles := dict "target" "/*" }}
     {{ $headers := slice }}
     {{ range . }}
-      {{ $script_sources = $script_sources | append (printf `'sha256-%s'` (sha256 .Content)) }}
+      {{ $style_srcs = $style_srcs | append (printf `'sha256-%s'` (sha256 .Content)) }}
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $CSP_default_src := printf `script-src %s;` (delimit $script_sources " ") }}
-{{ $CSP = $CSP | append $CSP_default_src }}
+{{ $CSP_style_srcs := printf `style-src %s;` (delimit $style_srcs " ") }}
+{{ $CSP = $CSP | append $CSP_style_srcs }}
 {{ $CSP_header := dict "target" "/*" "headers" (slice (dict "field" "Content-Security-Policy" "value" $CSP)) }}
 {{ return slice $CSP_header }}
