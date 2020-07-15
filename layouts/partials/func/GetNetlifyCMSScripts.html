@@ -13,7 +13,7 @@
   {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_script }}
 {{ end }}
 {{ with $netlify_script_bundle }}
-  {{ $script = resources.Concat "netlifycms.js" . }}
+  {{ $script = . | resources.Concat "netlifycms.js" }}
   {{ if eq (getenv "HUGO_ENV") "production" }}
     {{ $script = $script | fingerprint }}
   {{ end }}
