@@ -28,7 +28,7 @@ connect-src:
 {{ $asset_script_src := slice }}
 {{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
   {{/* Remove X from critical when we're ready to get back to this */}}
-  {{ with where . "type" "criticalX" }}
+  {{ with where . "type" "critical" }}
     {{ $styles := dict "target" "/*" }}
     {{ $headers := slice }}
     {{ range . }}
