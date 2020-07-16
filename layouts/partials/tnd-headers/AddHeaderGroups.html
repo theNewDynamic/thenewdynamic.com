@@ -34,7 +34,9 @@ connect-src:
     {{ $styles := dict "target" "/*" }}
     {{ $headers := slice }}
     {{ range . }}
-      {{ $asset_script_src = $asset_script_src | append (printf `'sha256-%s'` (sha256 .Content)) }}
+      {{ $style := .style | minify }}
+      {{ $sha := printf `'sha256-%s'` (sha256 $style.Content) }}
+      {{ $asset_script_src = $asset_script_src | append $sha }}
     {{ end }}
   {{ end }}
 {{ end }}
