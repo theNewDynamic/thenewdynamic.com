@@ -3,6 +3,8 @@
 {{ $CSP := `
 default-src: 
   - self
+style-src:
+  - self
 script-src: 
   - self
   - unsafe-eval
@@ -36,6 +38,6 @@ connect-src:
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $CSP = merge $CSP (dict "script-src" (append (index $CSP "script-src") $asset_script_src)) }}
+{{ $CSP = merge $CSP (dict "style-src" (append (index $CSP "style-src") $asset_script_src)) }}
 {{ $CSP_header := dict "target" "/*" "headers" (slice (dict "field" "Content-Security-Policy" "value" $CSP)) }}
 {{ return slice $CSP_header }}
