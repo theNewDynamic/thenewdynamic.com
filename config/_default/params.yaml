@@ -18,6 +18,34 @@ tnd_iubenda:
 tnd_headers:
   groups:
     - headers:
+      - field: Content-Security-Policy
+        value:
+          default-src: 
+            - self
+          style-src:
+            - self
+            - unsafe-inline
+          script-src: 
+            - self
+            - unsafe-eval
+            - https://cdn.usefathom.com 
+            - https://identity.netlify.com 
+            - https://unpkg.com
+          prefetch-src: 
+            - https://thenewdynamic.imgix.net
+          object-src: 
+            - none
+          img-src: 
+            - self 
+            - https://thenewdynamic.imgix.net 
+            - https://img3.usefathom.com
+          font-src: 
+            - self
+          base-uri: 
+            - none
+          connect-src: 
+            - self
+            - https://cdn.usefathom.com
       - field: Strict-Transport-Security
         value: max-age=15768000
       - field: X-Xss-Protection
