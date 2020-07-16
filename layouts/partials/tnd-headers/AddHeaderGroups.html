@@ -35,7 +35,7 @@ connect-src:
     {{ $headers := slice }}
     {{ range . }}
       {{ $style := .style | minify }}
-      {{ $sha := printf `'sha256-%s'` (sha256 $style.Content) }}
+      {{ $sha := printf `'sha256-%s'` (sha256 $style.Content | base64Encode) }}
       {{ $asset_script_src = $asset_script_src | append $sha }}
     {{ end }}
   {{ end }}
