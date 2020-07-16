@@ -1,6 +1,7 @@
 ---
 title: The New Dynamic Terms of Service & Statement of Work
-private: true
+seo:
+  private: true
 ---
 
 
