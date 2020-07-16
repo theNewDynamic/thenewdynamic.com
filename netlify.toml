@@ -20,7 +20,7 @@ NODE_VERSION = "10.13.0"
 HUGO_VERSION = "0.73.0"
 
 [context.deploy-preview]
-command = "hugo -e netlify -D -b $DEPLOY_PRIME_URL"
+command = "hugo --minify -e netlify -D -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
 command = "hugo --minify -e netlify -b $DEPLOY_URL"
