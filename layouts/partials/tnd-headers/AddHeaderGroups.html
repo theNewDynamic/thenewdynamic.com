@@ -30,7 +30,7 @@ connect-src:
   - self
   - https://cdn.usefathom.com
   ` | transform.Unmarshal }}
-{{ $asset_style_src := slice }}
+{{ $asset_script_src := slice }}
 {{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
   {{/* Remove X from critical when we're ready to get back to this */}}
   {{ with where . "type" "critical" }}
@@ -39,10 +39,10 @@ connect-src:
     {{ range . }}
       {{ $style := .style | minify }}
       {{ $sha := printf `'sha256-%s'` (sha256 $style.Content | base64Encode) }}
-      {{ $asset_style_src = $asset_style_src | append $sha }}
+      {{ $asset_script_src = $asset_script_src | append $sha }}
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $CSP = merge $CSP (dict "style-src-elem" $asset_style_src) }}
+{{ $CSP = merge $CSP (dict "style-src" (append (index $CSP "style-src") $asset_script_src)) }}
 {{ $CSP_header := dict "target" "/*" "headers" (slice (dict "field" "Content-Security-Policy" "value" $CSP)) }}
 {{ return slice $CSP_header }}
