@@ -7,26 +7,31 @@ blocks:
     layout: points
     title: How We Work
     points:
-      - title: Progressive Technology
-        intro: >-
-          Your website—designed and developed to adapt to changing technology and business landscapes.
-        body: >-
-          The tools we use to build and maintain your site are fast, simple and flexible. With minimal software setup and server upkeep requirements, you get more dollars to use towards future site improvements. 
-                  
-          [READ MORE &rarr;](/article/simplicity-speed-security-savings-benefits-of-jamstack-technology/)
+      - title: Product Focused
+        intro: Get a website that’s always evolving and getting better – just like your
+          product or service.
+        body: We believe you should treat your website like a product – not just a
+          digital asset. It’s a pivotal part of your brand story and should be
+          continually changing and improving in order to deliver value every
+          day.
         color: primary-500
-      - title: Simple Approach
-        intro: >-
-          Dedicated experts who embrace people over process. 
-          Clarity over confusion. 
-          Outcomes over paperwork
-        body: >-
-          Continuous improvement of your website is the key to staying connected with your audience. Sounds tough? We make it easy. Our team will manage your web presence and find new ways to keep it fresh and engaging.
+      - title: Team Centered
+        intro: Enjoy service & support from a team of specialists who are accountable
+          and always available.
+        body: From initial launch to ongoing enhancements, your website is in the
+          reliable hands of designers, developers and project managers who bring
+          transparency and a high level of expertise to every client
+          relationship.
         color: secondary-500
-      - title: Transparent Pricing
-        intro: >-
-          A simple, effective pricing model that you can scale over time based on your level of need.
+      - title: Built Progressively
+        intro: "Gain efficiency and cost savings from Progressive Technology that’s
+          simple, secure and fast. "
         color: tertiary-500
         body: >-
-          Our technologies and efficient workflows allow us to offer affordable, fixed-rate services. Each of our plans empowers you to work with us on a continual basis – The New Dynamic requisite for building great websites.
+          Our tech stack represents a shift in how the modern-day website is
+          built. Progressive Technology is a proven, cost-effective architecture
+          that delivers simplicity, security, scalability, and speed.
+
+
+          [READ MORE &rarr;](/article/simplicity-speed-security-savings-benefits-of-jamstack-technology/)
 ---
