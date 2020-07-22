@@ -11,7 +11,7 @@ title: Hugo Modules
 description: Let's try and understand the impact of Hugo modules
 ---
 
-Back in July last year Hugo 0.56.0 introduced a powerful Module system. Pretty much like any package solution it allowed any Hugo project defined as a Module, be it a full website or a theme or a component to to use any files stored on a repository somewhere and mount it as its own. It also enabled any Hugo project to become a full fledge Hugo Modules with its own config and dependencies which any other project could mount.
+Back in July last year Hugo 0.56.0 introduced a powerful Module system. Pretty much like any package solution it allowed any Hugo project defined as a Module, be it a full website or a theme or a component to use any files stored on a repository somewhere and mount it as its own. It also enabled any Hugo project to become a full fledge Hugo Modules with its own config and dependencies which any other project could mount.
 
 In this article, we’ll see how any Hugo project can use files stored on a distant repository and make them its own using the Module **imports** and **mounts** logic.
 
@@ -46,7 +46,7 @@ module github.com/me-me-me/my-hugo-project
 go 1.14
 ```
 
-It will also has created a `go.sum` file. We won't concern ourselves with that one.
+It will also have created a `go.sum` file. We won't concern ourselves with that one.
 
 ### Import a distant repository
 
@@ -100,7 +100,7 @@ With that mount in place, we will be able to access the icons svgs just like any
 
 That's it! 
 
-We can safely print this cart SVG without copying it to your project's directory. 
+We can safely print this cart SVG without copying it to our project's directory. 
 
 And in the off chance that this particular cart icon needs to be customized we can rely on Hugo's union file system! 
 
@@ -143,12 +143,13 @@ Now if you want a specific release rather than the latest, (we'll use another re
 ```bash
 hugo mod get github.com/twbs/bootstrap@v3.4.0
 ```
-
-__You should commit your `go.mod` and `go.sum` file of course, so that everybody is on the same versions!__
+{{% notice %}}
+You should commit your `go.mod` and `go.sum` file of course, so that everybody working on the project uses the same versions!
+{{% /notice %}}
 
 {{% aside %}}
 #### Module Local Development
-This article does not cover local development of a module, but we have a note that does! And you should defintely go and give it a thorough read before starting your real Hugo Module journey.
+This article does not cover local development of a module, but we have a note that does! And you should definitely go and give it a thorough read before starting your real Hugo Module journey.
 
 👉&nbsp;[Develop Hugo Module Locally]({{< relref "/note/develop-hugo-modules-locally" >}})
 {{% /aside %}}
@@ -164,7 +165,7 @@ For the sake of the example, we'll create our own Icon Module. It will:
 
 1. Import some SVG files from a distant repo
 2. Create a page listing all available icons on the site.
-3. Load its own `icon` partial which to ease up the printing of any icon on the project.
+3. Load its own `icon` partial which will ease up the printing of any icon on the project.
 
 First we'll create a directory on our local machine. We'll give a poor but short name: `hugo-icons`.
 
@@ -246,7 +247,7 @@ layout: hugo-icons-listing
 This will break if your project's or theme's `baseof.html` does not have a `main` block. We'll let this slide for the purpose of teaching.
 {{% /notice %}}
 
-### .3 Adding the partial
+### 3. Adding the partial
 
 I think the partial can live under the module's `partials/icons.html` and we'll register that new mount:
 
@@ -261,7 +262,7 @@ module:
   [...]
 ```
 
-Note we'll mount it under a reserved directory so users can safely call  `{{ partial "hugo-icons/icon" "cart" }}` . This way we won't collide with another module having an `icon` partial.
+Note we'll mount it under a reserved directory so users can safely call  `{{ partial "hugo-icons/icon" "cart" }}` . This way we won't collide with another module having its own `icon` partial.
 
 And our very basic partial:
 
@@ -340,7 +341,7 @@ This will clean up the `go.sum` file we won't discuss here.
 
 ## Conclusion
 
-Hugo Module is the best way to import any public repo's files into your Hugo Projects and manage their versioning. And after seeing how easy it is to buld one, it should really become your go-to way to manage reusuable solutions and distritube them throughout the Hugo ecosystem.
+Hugo Module is the best way to import any public repo's files into your Hugo Projects and manage their versioning. And after seeing how easy it is to build one, it should really become your go-to way to manage reusuable solutions and distritube them throughout the Hugo ecosystem.
 
 Again, if you're down for building some powerful Hugo Modules, you should definitely read our note on [Developing Hugo Modules Locally]({{< relref "/note/develop-hugo-modules-locally" >}}).
 
