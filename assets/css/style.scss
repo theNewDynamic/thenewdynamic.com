@@ -1,23 +1,16 @@
-/* 
-  Imports go to the top
-  https://tailwindcss.com/docs/using-with-preprocessors/#build-time-imports 
-*/
+@import "themes/default";
+@import "themes/alt";
+@import "patterns";
 
-/* purgecss start ignore */
-@import "tailwindcss/base";
+@import "highlight";
+@import "iubenda";
 
-@import "tailwindcss/components";
-
-/* purgecss end ignore */
-
-@import "tailwindcss/utilities";
-
-@import "themes/default.css";
-@import "themes/alt.css";
-@import "patterns.css";
-
-@import "highlight.css";
-@import "iubenda.css";
+body{
+	&::before{
+		content: "Built with SCSS";
+		@apply absolute p-2 fixed m-2 bg-gradient-tr-primary text-white text-sm top-0 right-0;
+	}
+}
 
 :root {
 	font-size: 14px;
