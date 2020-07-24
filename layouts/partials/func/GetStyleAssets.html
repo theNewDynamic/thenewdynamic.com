@@ -2,8 +2,25 @@
 {{ $return := slice }}
 
 {{ $to_bundle := slice }}
-{{ with resources.Get "css/style.css" }}
-  {{ $style := . | resources.PostCSS }}
+{{ with resources.Get "css/style.scss" }}
+  {{ $scss := . | toCSS }}
+  {{ $tailwind := `
+    /* 
+    Imports go to the top
+    https://tailwindcss.com/docs/using-with-preprocessors/#build-time-imports 
+  */
+  
+  /* purgecss start ignore */
+  @import "tailwindcss/base";
+  
+  @import "tailwindcss/components";
+  
+  /* purgecss end ignore */
+  
+  @import "tailwindcss/utilities";
+  ` }}
+  {{ $tailwind := $tailwind | resources.FromString "tailwind.css" }}
+  {{ $style := resources.Concat "style.css" (slice $tailwind $scss) | resources.PostCSS }}
   {{ $style_assets = $style_assets | append (dict "style" $style "type" "link") }}
 {{ end }}
 
