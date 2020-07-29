@@ -15,8 +15,6 @@ social:
 outputs:
   home:
     - HTML
-    - tnd_redirects_netlify
-    - tnd_headers_netlify
 
 privacy:
   youtube:
