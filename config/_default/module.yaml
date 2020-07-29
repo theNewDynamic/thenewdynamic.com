@@ -1,0 +1,13 @@
+imports:
+  - path: github.com/theNewDynamic/hugo-component-tnd-forms
+  - path: github.com/theNewDynamic/hugo-module-tnd-socials
+  - path: github.com/theNewDynamic/hugo-module-tnd-redirects
+  - path: github.com/theNewDynamic/hugo-module-tnd-netlifycms
+  - path: github.com/theNewDynamic/hugo-component-tnd-blocks
+  - path: github.com/theNewDynamic/hugo-module-tnd-styleguide
+  - path: github.com/theNewDynamic/hugo-module-tnd-icons
+  - path: github.com/theNewDynamic/hugo-module-tnd-func
+  - path: github.com/theNewDynamic/hugo-module-tnd-tags
+  - path: github.com/theNewDynamic/hugo-module-tnd-iubenda
+  - path: github.com/theNewDynamic/hugo-module-tnd-headers
+  - path: github.com/theNewDynamic/hugo-module-tnd-seo
