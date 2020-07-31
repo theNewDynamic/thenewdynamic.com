@@ -14,7 +14,7 @@
 {{ end }}
 {{ with $netlify_script_bundle }}
   {{ $script = resources.Concat "netlifycms.js" . }}
-  {{ if eq (getenv "HUGO_ENV") "production" }}
+  {{ if partialCached "func/IsProduction" . }}
     {{ $script = $script | fingerprint }}
   {{ end }}
 {{ end }}

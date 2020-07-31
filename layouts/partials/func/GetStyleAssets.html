@@ -13,7 +13,7 @@
 
 {{ range $style_assets }}
   {{ $style := . }}
-  {{ if and (not site.IsServer) (ne .type "critical") }}
+  {{ if and (not (partialCached "func/IsProduction" .)) (ne .type "critical") }}
     {{ $style = dict "type" .type "style" (.style | minify | fingerprint | resources.PostProcess) }}
   {{ end }}
   {{ $return = $return | append $style }}

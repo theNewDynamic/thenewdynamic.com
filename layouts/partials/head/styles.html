@@ -7,11 +7,8 @@
 {{ range where $styles "type" "!=" "critical" }}
   {{ with .style }}
     <link 
-      rel="stylesheet" 
+      rel="stylesheet"
       href="{{ .RelPermalink }}"
-      {{ with .Data.Integrity }}
-      integrity="{{ . }}"
-      {{ end }}
     >
   {{ end }}
 {{ end }}

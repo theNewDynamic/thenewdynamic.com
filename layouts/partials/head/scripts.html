@@ -13,7 +13,7 @@
 
 
 
-{{ if eq (getenv "HUGO_ENV") "production" }}
+{{ if partialCached "func/IsProduction" . }}
 <script src="https://cdn.usefathom.com/script.js" site="KXXQSWVI" defer></script>
 {{/* integrity="sha384-G4RrFbP4JdxxnoWJiJ+oMzKyFCHPE70DNZxer9XidgDCBgf+cjqxN2sSJpDtlKT" crossorigin="anonymous" */}}
 {{ end }}
