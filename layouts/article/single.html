@@ -7,9 +7,25 @@
   </div>
   {{/* The sticky class below must follow directly after the pageheadding div above for its interaction to work "js/intersection-observer.js" */}}
   <div class="sticky top-0 z-50 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-gradient-tr-primary">
-    <div class="container max-w-3xl p-4">
-      {{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}}
-      {{ with .Title }} :<span class="inline-block ml-4 altheading">{{ . }}</span>{{ end }}
+    <div class="container max-w-3xl p-4 flex justify-between">
+      <div>
+        {{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}}
+        {{ with .Title }} :<span class="inline-block ml-4 altheading">{{ . }}</span>{{ end }}
+      </div>
+      <div class="border border-white rounded-lg px-2 py-1 flex items-center">
+        {{ $args := dict "Page" $ "services" (slice "twitter" "linkedin" "email") }}
+        <div class="px-2 pb-1">share: </div>
+        {{ range $service := partial "tnd-socials/GetSocials" $args }}
+          {{ with .ShareURL }}
+          <a href="{{ . }}" class="block px-2">
+            <span class="sr-only">{{ $service.Name }}</span>
+            <div class="w-4 fill-current">
+              {{ $service.SVG | safeHTML }}
+            </div>
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
     </div>
   </div>
   <div class="container max-w-3xl mt-8 mb-16">

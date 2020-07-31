@@ -13,6 +13,10 @@ tnd_socials:
       icon: github
     - name: twitter
       handle: theNewDynamic
+    - name: linkedin
+      handle: theNewDynamic
+    - name: email
+      handle: welcome@thenewdynamic.com
 tnd_iubenda:
   no_markup: false
   version: 'v1.1'
