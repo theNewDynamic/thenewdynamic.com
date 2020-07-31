@@ -20,17 +20,6 @@
   {{ end }}
 {{ end }}
 
-<script>
-  document.body.onkeyup = function(e){
-    {{ with .PrevInSection }}
-      if (e.keyCode == '37') { window.location = '{{ .Permalink }}'; }
-    {{ end }}
-    {{ with .NextInSection }}
-      if (e.keyCode == '39') { window.location = '{{ .Permalink }}'; }
-    {{ end }}
-  };
-</script>
-
 {{/*
   Outputs a Previous or Next line based on .label
   @context Map
@@ -40,7 +29,7 @@
   @example - See above
 */}}
 {{ define "prev_next_item" }}
-<div class="flex mb-2">
+<div class="flex mb-2" data-{{ .label }}=" {{ .Page.Permalink }}">
   <div class="w-16 mr-4 flex-no-shrink">
     {{ i18n .label }}:
   </div>
