@@ -4,6 +4,7 @@ tnd_forms:
 tnd_seo:
   jsonld: true
   enable_follow: true
+  default_image: images/tnd-d.svg
 tnd_redirects:
   use_aliases: true
 tnd_socials:
