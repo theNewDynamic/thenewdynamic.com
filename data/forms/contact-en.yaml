@@ -1,6 +1,7 @@
 id: contact-en
 title: Contact Us
-provider: netlify
+provider: formspree
+formspree_id: xeqrdawe
 redirect: /thank-you/
 submit: Get in touch
 fields:
