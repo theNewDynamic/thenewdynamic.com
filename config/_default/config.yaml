@@ -1,6 +1,7 @@
 title: The New Dynamic
 baseURL: https://www.thenewdynamic.com
 DefaultContentLanguage: en
+enableRobotsTXT: true
 
 markup:
   highlight:
