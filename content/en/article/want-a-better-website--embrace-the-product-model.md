@@ -1,9 +1,7 @@
 ---
 title: Want a Better Website? Embrace the Product Model
 date: 2020-08-11T14:44:27.454Z
-description: The slow-and-steady investment approach to design and development
-  ensures that your website is updated, secure, relevant, and engaging – all the
-  time
+description: Embracing the product model delivers big return on investment…
 authors:
   - persons/bud-parr.md
 ---
