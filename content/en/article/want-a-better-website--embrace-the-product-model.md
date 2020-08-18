@@ -15,7 +15,26 @@ Let’s get right to it. Does any of this commentary sound familiar to you?
 - *We just don’t have the budget this year for a new website.*
 
 
+{{% aside %}}
+
+#### A Quick Look at the Numbers
+
+
+- 4.54 billion of the 7.77 billion people in the world are active internet users.
+- 100% of 18- to 29-year-olds are online (followed by 97% of 30- to 49-year-olds, 88% of 50- to 64-year-olds, and 73% of 65+ year-olds).
+- The average internet user spends 6.5 hours online every day.
+- There are 1.75 billion websites in existence.
+- Google receives approx. 40,000 search queries every second.-
+- Over 90% of consumers conduct online research before making a purchase.
+- Nearly half of all global retail sales are done online.
+
+Looking at these numbers, it’s safe to say that at just about any time of the day or night, someone somewhere in the world is visiting your website. 
+
+<!-- It’s a pivotal part of your brand story – quite often the place where first impressions are made. And whether you know it or not, that first impression will make or break the relationship you have with your audience. -->
+{{% /aside %}}
+
 Whether you’re a big brand, non-profit group, or mid-size business it’s very likely you can relate to some or all of these statements. Why are these types of conversations so common? Because most websites are managed as if they are a project, and nothing more. But considering the critical role that a website plays for most any entity these days, there’s a much better way to treat your website. More on that in a bit.
+
 
 
 ## The Challenge with Website ‘Projects’
