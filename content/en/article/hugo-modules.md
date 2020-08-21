@@ -72,7 +72,7 @@ require github.com/twbs/icons v1.0.0-alpha4 // indirect
 
 That's good but it does not tell Hugo what to do with those files. 
 
-With the `mount` key, attached to our Bootstrap import, we'll give Hugo more directions:
+With the `mounts` key, attached to our Bootstrap import, we'll give Hugo more directions:
 
 ```yaml
 module:
@@ -121,7 +121,7 @@ We could even go crazier and use the icon from another distant repo just for tha
       target: assets/icons
 ```
 
-☝️ Here we are importing two repos, with their own `mount` settings.
+☝️ Here we are importing two repos, with their own `mounts` settings.
 
 {{% notice %}}
 Note that regardless of the files mounted, Hugo will have to download the whole repository, so you might think twice before importing a 5MB repo for one of its svgs.
@@ -134,7 +134,7 @@ What if the repo is updated? The default behaviour of Hugo Module is, on the fir
 If `github.com/twbs/icons` moves past `v1` and you want that new release you can:
 
 ```bash
-hugo mod get -u github.com/twbs/bootstrap`
+hugo mod get -u github.com/twbs/bootstrap
 ```
 This should update your `go.mod` file with the new release.
 
@@ -167,7 +167,7 @@ For the sake of the example, we'll create our own Icon Module. It will:
 2. Create a page listing all available icons on the site.
 3. Load its own `icon` partial which will ease up the printing of any icon on the project.
 
-First we'll create a directory on our local machine. We'll give a poor but short name: `hugo-icons`.
+First we'll create a directory on our local machine. We'll give it a poor but short name: `hugo-icons`.
 
 ### 1. Imports
 
@@ -292,7 +292,8 @@ And our very basic partial:
 
 Our Module now provides the three features we set ourselves to deliver. There's one critical thing missing from our Module's config though. 
 
-We are using `resources.Match` which was introduced in Hugo 0.57.0. We should make sure no one using an older version can import our Hugo Icons Module or else... break!
+We are using `resources.Match` which was introduced in Hugo 0.57.0. Also fine tuned mounting using files and subdirectories got supported only with Hugo 0.64.0.
+So 0.64.0 is the minimum version our users will need if they want to use our module or else... break!
 
 ```yaml
 # config.yaml
@@ -303,7 +304,7 @@ module:
     # We don't have a max version
     max: ''
     # We do have a min though.
-    min: '0.57.0'
+    min: '0.64.0'
 ```
 
 This makes our finale `config.yaml` file:
