@@ -14,7 +14,7 @@
 
 {{ partial "tnd-seo/tags.html" $ }}
 
-{{ if eq (getenv "HUGO_ENV") "production" }}
+{{ if partialCached "func/IsProduction" . }}
   {{ template "_internal/google_analytics_async.html" . }}
 {{end}}
 

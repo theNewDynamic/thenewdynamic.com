@@ -10,7 +10,7 @@ public_folder: /uploads
 slug:
   encoding: "ascii"
   clean_accents: true
-  sanitize_replacement: "_"
+  sanitize_replacement: "-"
 collections:
 - import collection pages-en
 - import collection pages-fr

@@ -1,0 +1,4 @@
+{{ $return := false }}
+{{ if eq (getenv "HUGO_ENV") "production" }}
+  {{ $return = true }}
+{{ end }}
