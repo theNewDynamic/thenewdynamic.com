@@ -18,3 +18,12 @@ files:
       - import field description
       - import field blocks_about
       - import field seo
+  - name: "plans"
+    label: "Plans"
+    file: "content/en/plans/_index.md"
+    preview_path: '{{slug}}'
+    fields:
+      - import field title
+      - import field description
+      - import field callout
+      - import field seo

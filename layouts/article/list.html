@@ -2,9 +2,6 @@
   <div class="container">
     {{ partial "page-header.html" . }}
     <div class="my-4">
-      {{ with .Params.description }}
-        {{ partial "page-intro" ($.RenderString .) }}
-      {{ end }}
       {{ range .Pages }}
         <div class="container mt-16 mb-16">
           {{ partial "article-header.html" (dict "location" "list" "Page" .) }}

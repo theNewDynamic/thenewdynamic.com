@@ -2,9 +2,6 @@
   <div class="container">
     {{ partial "page-header.html" . }} 
     <div class="my-4">
-      {{ with .Params.description }}
-        {{ partial "page-intro" ($.RenderString .) }}
-      {{ end }}
       <div class="max-w-5xl text-gray-700 rich-text">
         {{ .Content }}
         {{/* TODO: Move prototype to a block or whatever appropriate */}}

@@ -1,0 +1,4 @@
+label: "Copy"
+name: "copy"
+widget: "markdown"
+required: false

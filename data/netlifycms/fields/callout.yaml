@@ -1,0 +1,7 @@
+name: callout
+label: Callout
+widget: object
+collapsed: true
+fields:
+  - import field copy
+  - import field cta
