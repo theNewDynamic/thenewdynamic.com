@@ -1,5 +1,3 @@
-name: "pages-en"
-label: "Main Pages (EN)"
 files:
   - import: page home
     extend:

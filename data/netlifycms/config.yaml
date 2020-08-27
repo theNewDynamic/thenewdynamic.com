@@ -12,19 +12,37 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 collections:
-- import collection pages-en
-- import collection pages-fr
-- import collection regular-pages-en
-- import collection regular-pages-fr
+
+# ENGLISH
+- import: collection pages
+  extend:
+    name: "pages-en"
+    label: "Main Pages (EN)"
+- import: collection regular-pages
+  extend:
+    name: "regular-pages-en"
+    label: "Regular Pages (EN)"
+    folder: "content/en"
 - import: collection plans
   extend: 
     name: plans-en
     label: Plans (EN)
     folder: content/en/plans
+- import collection articles
+- import collection persons
+
+# FRENCH
+- import: collection pages
+  extend:
+    name: "pages-fr"
+    label: "Main Pages (FR)"
+- import: collection regular-pages
+  extend:
+    name: "regular-pages-fr"
+    label: "Regular Pages (Fr)"
+    folder: "content/fr"
 - import: collection plans
   extend: 
     name: plans-fr
     label: Plans (FR)
     folder: content/fr/plans
-- import collection articles
-- import collection persons

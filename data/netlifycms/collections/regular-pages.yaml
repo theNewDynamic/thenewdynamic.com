@@ -2,7 +2,6 @@ name: "regular-pages-en"
 label: "Regular Pages (EN)"
 label_singular: "Regular Page"
 description: The regular pages.
-folder: "content/en"
 filter: { field: "exclude_collection" }
 create: true
 sortableFields: ['title']
