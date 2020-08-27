@@ -1,0 +1,16 @@
+label: "Plans"
+label_singular: "Plan"
+description: Our pricing plans
+filter: { field: "exclude_collection" }
+create: true
+sortableFields: ['price']
+show_preview_links: false
+fields:
+  - import field title
+  - name: price
+    widget: number
+  - import field ctas
+  - name: included
+    widget: list
+  - name: weight
+    widget: number

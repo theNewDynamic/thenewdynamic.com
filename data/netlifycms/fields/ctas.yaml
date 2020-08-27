@@ -1,0 +1,20 @@
+  - name: ctas
+    label: CTAs
+    widget: list
+    fields:
+    - label: Copy
+      name: copy
+      widget: string
+      required: false
+    - label: URL
+      name: url
+      widget: string
+      required: false
+    - label: Type
+      name: type
+      widget: select
+      default: default
+      options:
+        - default
+        - fat
+      required: false

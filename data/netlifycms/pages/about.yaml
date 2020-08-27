@@ -1,0 +1,8 @@
+name: "about"
+label: "About"
+preview_path: '{{slug}}'
+fields:
+  - import field title
+  - import field description
+  - import field blocks_about
+  - import field seo

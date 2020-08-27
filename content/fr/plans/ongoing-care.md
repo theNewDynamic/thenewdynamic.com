@@ -1,10 +1,10 @@
 ---
-title: Ongoing Care
+title: Attention continue
 weight: 3
-short_description: Keep your site in shape all the time.
+short_description: Gardez votre site en form en tout temps.
 price: 500
 ctas:
-  - copy: Nonprofits? Ask us about our generous discount.
+  - copy: Non lucratifs? Renseignez-vous sur nos réductions.
     url: /nonprofit
 included:
 - Unlimited work requests*

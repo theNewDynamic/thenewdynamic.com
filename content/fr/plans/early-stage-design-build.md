@@ -1,13 +1,13 @@
 ---
-title: Early Stage Design & Build
+title: Démarrage, design et production 
 weight: 2
-short_description: Agile pricing for even the most complex sites
+short_description: Tarif agile même pour les projets les plus complexes
 price: 13000
 ctas:
-  - copy: Get Started
+  - copy: Commencez
     url: /dunno
     type: fat
-  - copy: Change Plans Anytime
+  - copy: Changez de plan à tout moment
 included:
 - Dedicated Project Lead
 - Team Slack Access

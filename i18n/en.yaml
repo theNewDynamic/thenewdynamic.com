@@ -22,6 +22,13 @@
   translation: Previous
 - id: next
   translation: Next
+
+# Plans
+- id: included
+  translation: What's included
+- id: per_month
+  translation: Per Month
+  
 # Newsletter Form
 - id: nl_form_title
   translation: Subscribe to our newsletter

@@ -1,29 +1,12 @@
 name: "pages-en"
 label: "Main Pages (EN)"
 files:
-  - name: "home"
-    label: "Homepage"
-    file: "content/en/_index.md"
-    fields:
-      - import field title
-      - import field description
-      - import field blocks
-      - import field seo
-  - name: "about"
-    label: "About"
-    file: "content/en/about.md"
-    preview_path: '{{slug}}'
-    fields:
-      - import field title
-      - import field description
-      - import field blocks_about
-      - import field seo
-  - name: "plans"
-    label: "Plans"
-    file: "content/en/plans/_index.md"
-    preview_path: '{{slug}}'
-    fields:
-      - import field title
-      - import field description
-      - import field callout
-      - import field seo
+  - import: page home
+    extend:
+      file: "content/en/_index.md"
+  - import: page about
+    extend:
+      file: "content/en/about.md"
+  - import: page plans
+    extend:
+      file: "content/en/plans/_index.md"

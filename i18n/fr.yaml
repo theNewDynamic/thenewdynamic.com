@@ -23,7 +23,13 @@
 - id: next
   translation: Next
 
-  # Newsletter Form
+# Plans
+- id: included
+  translation: Inclus
+- id: per_month
+  translation: Par mois
+
+# Newsletter Form
 - id: nl_form_title
   translation: Inscrivez-vous à notre newsletter
 - id: nl_form_body
