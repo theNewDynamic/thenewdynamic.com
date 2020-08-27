@@ -5,11 +5,13 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
 {{ end }}
 
-{{ $assets := .Site.Data.assets }}  
-{{ with $assets.main }}
-	<script type="text/javascript" src="{{ print .js | default "/js/main.js" }}" {{ with .jsIntegrity }}integrity="{{ print . }}" crossorigin="anonymous"{{ end }} defer></script>
+{{ $js := resources.Get "index.js" | js.Build (dict "target" "es2016") }}
+{{ if not site.IsServer }}
+  {{  $js = $js | minify | fingerprint }}
 {{ end }}
-
+{{ with $js }}
+<script type="text/javascript" src="{{ .RelPermalink }}" defer></script>
+{{ end }}
 
 
 

@@ -5,18 +5,16 @@
 	"license": "MIT",
 	"scripts": {
 		"cms": "npx netlify-cms-proxy-server",
+		"hugo-cms": "HUGO_ENV=development bin/hugo* server -D --gc --noHTTPCache",
 		"dev:cms": "run-p cms hugo-cms",
 		"gethugo": "bash get-hugo.sh",
 		"version": "auto-changelog -p --template keepachangelog --unreleased true",
-		"hugo": "HUGO_ENV=development bin/hugo* server --minify -D --gc --navigateToChanged --noHTTPCache",
-		"hugo-cms": "HUGO_ENV=development bin/hugo* server -D --gc --noHTTPCache",
-		"hugo-prod": "HUGO_ENV=production bin/hugo* --gc --minify",
-		"netlify-dev": "netlify dev -l",
-		"webpack": "webpack --mode=development --progress --colors --watch",
-		"webpack-prod": "webpack --mode=production",
+		"dev:hugo": "HUGO_ENV=development bin/hugo* server --minify -D --gc --navigateToChanged --noHTTPCache",
+		"prod:hugo": "HUGO_ENV=production bin/hugo* --gc --minify",
+		"dev:netlify": "netlify dev -l",
 		"clean": "rm -rf public/ static/dist resources",
-		"deploy": "run-s webpack-prod hugo-prod",
-		"start": "run-p webpack hugo"
+		"deploy": "npm run prod:hugo",
+		"start": "npm run dev:hugo"
 	},
 	"dependencies": {
 		"@fullhuman/postcss-purgecss": "^2.1.2",
@@ -30,7 +28,7 @@
 		"tailwindcss-typography": "^3.1.0"
 	},
 	"hugo": {
-		"version": "0.73.0",
+		"version": "0.74.3",
 		"extended": "true"
 	},
 	"devDependencies": {
@@ -40,18 +38,13 @@
 		"@babel/preset-react": "^7.9.4",
 		"@tailwindcss/ui": "^0.1.3",
 		"alpinejs": "^2.3.5",
-		"assets-webpack-plugin": "^3.9.10",
 		"auto-changelog": "^2.0.0",
 		"babel-loader": "^8.0.6",
-		"clean-webpack-plugin": "^3.0.0",
 		"intersection-observer": "^0.7.0",
 		"lazysizes": "^5.2.0",
 		"npm-run-all": "^4.1.5",
 		"quicklink": "^1.0.1",
-		"typeface-play": "^0.0.72",
-		"webpack": "^4.41.5",
-		"webpack-cli": "^3.3.10",
-		"webpack-subresource-integrity": "^1.4.0"
+		"typeface-play": "^0.0.72"
 	},
 	"prettier": {
 		"tabWidth": 2,
