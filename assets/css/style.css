@@ -126,9 +126,13 @@ body {
 .hero {
 	padding-top: var(--headerHeight);
 }
+.socials{
+	display: flex;
+	align-items: center;
+}
 .socials a {
-	display: inline-block;
 	width: 3rem;
+	margin-right: 1rem;
 }
 .socials svg {
 	width: 100%;

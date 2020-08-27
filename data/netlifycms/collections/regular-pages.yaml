@@ -1,5 +1,3 @@
-name: "regular-pages-en"
-label: "Regular Pages (EN)"
 label_singular: "Regular Page"
 description: The regular pages.
 filter: { field: "exclude_collection" }
