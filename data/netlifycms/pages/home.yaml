@@ -1,0 +1,7 @@
+name: "home"
+label: "Homepage"
+fields:
+  - import field title
+  - import field description
+  - import field blocks
+  - import field seo

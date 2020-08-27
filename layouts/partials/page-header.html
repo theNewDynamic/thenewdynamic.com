@@ -3,3 +3,37 @@
   {{ $title = . }}
 {{ end }}
 <h1 class="pt-10 mb-8 text-4xl font-normal leading-tight text-black lg:text-5xl">{{ $title }}</h1>
+<div class="max-w-5xl mb-32 lg:mb-24">
+  {{ with .Params.description }}
+    {{ partial "page-intro" ($.RenderString .) }}
+  {{ end }}
+</div>
+{{ with $callout := .Params.callout }}
+  {{ with .copy }}
+  <div class="relative mx-auto mt-4 TKmax-w-screen-2xl lg:mt-5">
+    <div class="mx-auto tkmax-w-md TKlg:max-w-5xl">
+      <div
+        class="px-6 py-8 bg-gray-100 rounded-lg sm:p-10 lg:flex lg:items-center"
+      >
+        <div class="flex-1">
+          <div class="text-lg leading-7 text-gray-600">
+            {{ $.RenderString . }}
+          </div>
+        </div>
+        {{ with $cta := $callout.cta }}
+          {{ with $cta.url }}
+          <div class="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
+            <a
+              href="{{ . }}"
+              class="flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-gray-900 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none focus:shadow-outline"
+            >
+              {{ default "Nope" $cta.copy }}
+            </a>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}

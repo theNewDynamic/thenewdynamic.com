@@ -16,5 +16,15 @@ collections:
 - import collection pages-fr
 - import collection regular-pages-en
 - import collection regular-pages-fr
+- import: collection plans
+  extend: 
+    name: plans-en
+    label: Plans (EN)
+    folder: content/en/plans
+- import: collection plans
+  extend: 
+    name: plans-fr
+    label: Plans (FR)
+    folder: content/fr/plans
 - import collection articles
 - import collection persons

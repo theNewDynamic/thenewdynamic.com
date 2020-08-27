@@ -1,0 +1,8 @@
+name: "plans"
+label: "Plans"
+preview_path: '{{slug}}'
+fields:
+  - import field title
+  - import field description
+  - import field callout
+  - import field seo

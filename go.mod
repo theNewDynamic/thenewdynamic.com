@@ -9,7 +9,7 @@ require (
 	github.com/theNewDynamic/hugo-module-tnd-headers v0.1.4 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-icons v0.1.4 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-iubenda v0.1.0 // indirect
-	github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.5 // indirect
+	github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.6 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.1 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-seo v0.1.1 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-socials v0.1.5 // indirect

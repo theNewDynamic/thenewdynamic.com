@@ -1,18 +1,11 @@
 {{ define "main" }}
 <div class="container">
   {{ partial "page-header.html" . }}   
-    <div class="my-4">
-      {{ with .Params.description }}
-        {{ partial "page-intro" ($.RenderString .) }}
-      {{ end }}
-    </div>
-
     {{ with .Params.blocks }}
       {{ range . }}
         {{ partial "tnd-blocks/block" (dict "Page" $ "block" .) }}
       {{ end }}
     {{ end }}
-
   </div>
 </div>
 {{ end }}
