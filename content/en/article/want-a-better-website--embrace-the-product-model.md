@@ -69,7 +69,7 @@ Pride and happiness ensue (for at least a while).
 
 **Your website fails to evolve**.
 
-> Your organization, your product, your services continue to evolve and change with time, but your website does not.
+> Sound familiar? Your organization, your product or services evolve and change with time, but your website does not.
 
 So, there you have it. Before you know it, your new website is out of date and once again proving to be a pain point. And the value that you should be getting out of your big investment just isn’t there.
 
@@ -87,6 +87,9 @@ When it comes to managing your site, there are no starts and stops. Rather than 
 
 There’s flexibility to update your content at any time, so you’re presenting the most updated, relevant information to your audience. At the same time, you can keep the site looking current with regular design updates. You’ll never have to say that your site looks “so 2015” again.
 
+
+
+
 **The product model ensures site security.**
 
 Because this model supports continuous site management, any updates related to enhanced site security happen right away – not with the next round of site updates. This protects the site from potential software glitches and hacking and ensures that critical technical support is taken care of fast.
@@ -101,6 +104,8 @@ When your website is in a constant state of improvement, your audience will noti
 **The product model offers big return on investment.**
 
 Every time you build a new site from scratch, there’s a significant amount of time and money exhausted. The ‘big spend’ that’s required for a new website or an extensive site refresh is often the reason why sites only get touched every few years.
+
+<!-- ![](/uploads/Build-and-evolve-product.png) -->
 
 **With a product approach, you get a much better return on investment.**
 
