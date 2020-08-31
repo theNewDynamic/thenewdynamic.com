@@ -3,6 +3,11 @@ title: "What is a Hyperlocal Website?"
 date: 2020-05-01T20:32:27.000Z
 description: >-
   Meet your audience from anywhere they are
+tags:
+  - JAMStack
+  - hyperlocal
+subjects:
+  - commercial
 ---
 When your business serves many communities of people, you've got a real challenge on your hands. What are the aspects of building a global website?
 

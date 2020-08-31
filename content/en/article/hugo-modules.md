@@ -8,6 +8,12 @@ date: 2020-06-01T19:32:27.000Z
 twitter_description: Hugo sports its own dependency solution! In this article
   we'll cover how to use the most of Hugo Module by creating our own!
 title: Hugo Modules
+tags:
+  - hugo
+  - modules
+  - JAMStack
+subjects:
+  - dev
 description: Let's try and understand the impact of Hugo modules
 ---
 

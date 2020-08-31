@@ -1,0 +1,6 @@
+{{ $return := "" }}
+{{ with $.Params.promotion_text }}
+  {{ $return = . }}
+{{ end }}
+
+{{ return $return }}

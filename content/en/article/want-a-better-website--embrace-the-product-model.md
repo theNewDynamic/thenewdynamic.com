@@ -2,6 +2,8 @@
 title: Want a Better Website? Embrace the Product Model
 date: 2020-08-11T14:44:27.454Z
 description: Embracing the product model delivers big return on investment…
+subjects:
+  - commercial
 authors:
   - persons/bud-parr.md
 ---

@@ -17,7 +17,9 @@
 - id: book_apt
   translation: Prendre rendez-vous
 - id: recent_articles
-  translation: Recent Articles
+  translation: Articles récents
+- id: related_articles
+  translation: Articles reliés
 - id: previous
   translation: Previous  
 - id: next

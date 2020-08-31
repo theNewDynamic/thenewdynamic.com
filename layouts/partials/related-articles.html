@@ -1,0 +1,15 @@
+{{ with site.RegularPages.Related . }}
+  <div class="text-3xl mb-2">
+    {{ i18n "related_articles" }}
+  </div>
+  <ul>
+    {{ range $article := . }}
+    <li>
+      <a href="{{ .RelPermalink }}" class="no-underline color-inherit hover:underline hover:text-primary-color">
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+
+{{ end }}

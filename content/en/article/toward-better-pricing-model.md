@@ -4,6 +4,8 @@ draft: false
 categories: ["for Site Owners"]
 date: 2017-04-09T00:00:00+00:00
 description: We've decided that to be long-term partners with our clients…
+subjects:
+  - commercial
 authors: 
 - persons/bud-parr.md
 ---

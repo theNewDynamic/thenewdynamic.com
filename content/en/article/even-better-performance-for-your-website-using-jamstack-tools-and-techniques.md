@@ -5,6 +5,10 @@ featured: /uploads/performance-score-16x9.jpg
 description: >-
   A talk we gave for the New York Web Performance group, with examples of tools and strategies to wring out every bit of performance from your website and get great Lighthouse scores (and what Lighthouse is).
 draft: false
+tags:
+  - JAMStack
+subjects:
+  - commercial
 categories: ["events"]
 ---
 

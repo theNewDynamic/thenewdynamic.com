@@ -1,0 +1,8 @@
+includeNewer: true
+indices:
+- name: subjects
+  weight: 10
+- name: tags
+  weight: 100
+threshold: 80
+toLower: true

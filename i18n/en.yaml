@@ -18,6 +18,8 @@
   translation: Book an appointment
 - id: recent_articles
   translation: Recent Articles
+- id: related_articles
+  translation: Related Articles
 - id: previous
   translation: Previous
 - id: next

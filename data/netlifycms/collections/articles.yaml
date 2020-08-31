@@ -11,6 +11,15 @@ fields:
   - import field title
   - import field date
   - import field description
+  - name: featured
+    label: Featured Image
+    widget: image
+  - name: tags
+    label: Tags
+    widget: list
+  - name: subjects
+    label: Subjects
+    widget: list
   - import field authors
   - import field body
   - import field seo

@@ -4,6 +4,8 @@ date: 2020-05-05T20:32:27.000Z
 lastmod: 2020-07-20T12:32:27.000Z
 description: >-
   Using Progressive Technology to Build a Better Website
+subjects:
+  - commercial
 ---
 
 There are few things in life that evolve faster than technology. New innovations happen every day. It can be exhilarating. It can also be exhausting trying to keep up with it all—the latest widget, the latest update…you get the idea.
