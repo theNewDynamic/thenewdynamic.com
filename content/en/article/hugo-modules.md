@@ -7,9 +7,10 @@ featured: /uploads/hugo-modules-featured.png
 date: 2020-08-30T19:32:27.000Z
 twitter_description: |-
   .@GoHugoIO sports its own dependency solution and it's about time we talk about them! In this article
-  @regisphilibert covers everything you need to know about Hugo Modules from importing to creating your own!
+    @regisphilibert covers everything you need to know about Hugo Modules from importing to creating your own!
 
   #gohugo #JAMStack #ssg #golang
+  https://www.thenewdynamic.com/article/hugo-modules-everything-from-imports-to-create/
 title: "Hugo Modules: everything you need to know!"
 slug: hugo-modules-everything-from-imports-to-create
 tags:
@@ -18,7 +19,7 @@ tags:
   - JAMStack
 subjects:
   - dev
-description: Let's try and understand the impact of Hugo modules
+description: Hugo Modules is one of the most important addition to your favorite SSG. It allows any project to use files stored on a any distant repository and make them their own! In this article we look at what exactly constitute a Hugo Module by creating our own!
 ---
 
 Back in July last year Hugo 0.56.0 introduced a powerful Module system. Pretty much like any package solution it allowed any Hugo project defined as a Module, be it a full website or a theme or a component to use any files stored on a repository somewhere and mount it as its own. It also enabled any Hugo project to become a full fledge Hugo Modules with its own config and dependencies which any other project could mount.
