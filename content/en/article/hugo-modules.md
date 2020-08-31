@@ -2,15 +2,16 @@
 draft: false
 authors:
   - persons/regis-philibert.md
-lastmod: 2019-08-16T22:32:27.000Z
+lastmod: 2020-08-30T19:32:27.000Z
 featured: /uploads/hugo-modules-featured.png
-date: 2020-06-01T19:32:27.000Z
+date: 2020-08-30T19:32:27.000Z
 twitter_description: |-
   .@GoHugoIO sports its own dependency solution and it's about time we talk about them! In this article
-  @regisphilibert covers Hugo's ability to import any repos files out there and go in depth into Hugo Module's by creating our own!
+  @regisphilibert covers everything you need to know about Hugo Modules from importing to creating your own!
 
   #gohugo #JAMStack #ssg #golang
-title: Hugo Modules
+title: "Hugo Modules: everything you need to know!"
+slug: hugo-modules-everything-from-imports-to-create
 tags:
   - hugo
   - modules
