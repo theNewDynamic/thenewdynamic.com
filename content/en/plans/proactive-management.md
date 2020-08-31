@@ -1,6 +1,6 @@
 ---
 title: Proactive Management
-weight: 1
+weight: 2
 short_description: Your site at its best with continuous proactive suggestions for enhancements
 price: 2600
 ctas:
