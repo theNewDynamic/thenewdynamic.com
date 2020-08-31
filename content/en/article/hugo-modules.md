@@ -1,12 +1,15 @@
 ---
-draft: true
+draft: false
 authors:
   - persons/regis-philibert.md
 lastmod: 2019-08-16T22:32:27.000Z
 featured: /uploads/hugo-modules-featured.png
 date: 2020-06-01T19:32:27.000Z
-twitter_description: Hugo sports its own dependency solution! In this article
-  we'll cover how to use the most of Hugo Module by creating our own!
+twitter_description: |-
+  .@GoHugoIO sports its own dependency solution and it's about time we talk about them! In this article
+  @regisphilibert covers Hugo's ability to import any repos files out there and go in depth into Hugo Module's by creating our own!
+
+  #gohugo #JAMStack #ssg #golang
 title: Hugo Modules
 tags:
   - hugo
@@ -73,7 +76,7 @@ module github.com/me-me-me/my-hugo-project
 
 go 1.14
 
-require github.com/twbs/icons v1.0.0-alpha4 // indirect
+require github.com/twbs/icons v1.0.0 // indirect
 ```
 
 That's good but it does not tell Hugo what to do with those files. 
@@ -135,20 +138,27 @@ Note that regardless of the files mounted, Hugo will have to download the whole 
 
 ### Upgrading
 
-What if the repo is updated? The default behaviour of Hugo Module is, on the first import, to grab the latest release, or if no release is found, the latest head on the default branch. That's why Hugo wrote `v1.0.0-alpha4` after the require directive.
+What if the repo is updated? The default behaviour of Hugo Module is, on the first import, to grab the latest release, or if no release is found, the latest head on the default branch. That's why Hugo wrote `v1.0.0` after the require directive.
 
-If `github.com/twbs/icons` moves past `v1` and you want that new release you can:
+If `github.com/twbs/icons` releases `v1.1.0` and you want that new release you can:
 
 ```bash
 hugo mod get -u github.com/twbs/bootstrap
 ```
-This should update your `go.mod` file with the new release.
+This should update your `go.mod` file with the latest release.
 
 Now if you want a specific release rather than the latest, (we'll use another repo for that example):
 
 ```bash
 hugo mod get github.com/twbs/bootstrap@v3.4.0
 ```
+
+If you want a specific commit, you'll need to @ its long hash like so
+```bash
+hugo mod get github.com/twbs/bootstrap@394812b61d4dc80bfb2e090de925ae0dfc4cc29b
+```
+
+
 {{% notice %}}
 You should commit your `go.mod` and `go.sum` file of course, so that everybody working on the project uses the same versions!
 {{% /notice %}}
@@ -352,6 +362,6 @@ Hugo Module is the best way to import any public repo's files into your Hugo Pro
 
 Again, if you're down for building some powerful Hugo Modules, you should definitely read our note on [Developing Hugo Modules Locally]({{< relref "/note/develop-hugo-modules-locally" >}}).
 
-The finished example repo we built in this article is available [here](https://github.com/regisphilibert/hugo-module-icons).
+For some really complex, practical and usually well commented examples, your should check our [open source Hugo Modules]({{< relref "/open-source" >}}).
 
-But for some really complex, practical and usually well commented examples, your should check our [open source Hugo Modules]({{< relref "/open-source" >}}).
+Also, here's the finished example repo we built in this article is available [here](https://github.com/regisphilibert/hugo-module-icons).
