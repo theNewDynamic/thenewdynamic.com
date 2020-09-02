@@ -17,6 +17,8 @@ github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.1 h1:bvooL6i4bP8yaVq2fES
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.1/go.mod h1:UG+i6GOMCwA+ZbpQ9DXX8ImoW4IEY0tKfJ0/EiUZLLg=
 github.com/theNewDynamic/hugo-module-tnd-seo v0.1.1 h1:PTjKah87+DTjjDPfZHtrQ41p56xuliCmYWVKy0l+1RQ=
 github.com/theNewDynamic/hugo-module-tnd-seo v0.1.1/go.mod h1:VY3Qvzif9T0Z0rjR85ufUQE1wrS/M5VZC9Dx1V8Vo8Y=
+github.com/theNewDynamic/hugo-module-tnd-seo v0.1.3 h1:txE6frzlGuGqn+XYzg2P8TnHInPCQac30EOM8m4NOXs=
+github.com/theNewDynamic/hugo-module-tnd-seo v0.1.3/go.mod h1:VY3Qvzif9T0Z0rjR85ufUQE1wrS/M5VZC9Dx1V8Vo8Y=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.5 h1:5fQNPKsKZlA3sGOsihVhOretItUMZs1JXmLHO7CzWQ8=
 github.com/theNewDynamic/hugo-module-tnd-socials v0.1.5/go.mod h1:7WIDUEYoiQVRZVPYPXpTLhSh+J25fPYJuCGNsYby3DM=
 github.com/theNewDynamic/hugo-module-tnd-styleguide v0.0.0-20200618163759-e4bd1c768f07 h1:dzTv4HPkZSuXTfqYXak09GQaviOsjPqXi30VQF5L/WE=
