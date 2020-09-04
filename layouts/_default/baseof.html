@@ -11,6 +11,8 @@
       {{ block "main" . }}
       {{ end }}
     </div>
-    {{ partial "footer.html" . }}
+    {{ if ne .Layout "minimal" }}
+      {{ partial "footer.html" . }}
+    {{ end }}
   </body>
 </html>
