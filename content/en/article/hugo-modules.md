@@ -330,13 +330,15 @@ This makes our finale `config.yaml` file:
 ```yaml
 module:
   hugoVersion:
-    min: '0.57.0'
+    min: '0.64.0'
   mounts:
     - source: page/index.md
       target: content/hugo-icons-listing.md
       lang: en
     - source: page/template.html
       target: layouts/_default/hugo-icons-listing.html
+    - source: partials
+      target: layouts/partials/hugo-icons
   imports:
     - path: github.com/twbs/icons
       mounts:
