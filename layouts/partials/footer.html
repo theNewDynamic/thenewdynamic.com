@@ -46,6 +46,11 @@
           {{ .Title }}
         </a>
         {{ end }}
+        &bull; {{ with site.GetPage "/info/terms-of-service" }}
+        <a class="px-3 py-2 text-xs no-underline hover:text-gray-100 color-inherit" href="{{ .RelPermalink }}">
+          Terms of Service
+        </a>
+        {{ end }}
 
        
 &bull; 
