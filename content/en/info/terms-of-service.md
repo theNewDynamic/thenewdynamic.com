@@ -17,28 +17,29 @@ By checking an opt-in box, clicking on “I accept” or otherwise accepting thi
 
 Client hereby retains the The New Dynamic to perform Services in connection with the website(s) (“Websites”) as set forth in each subscription or SOW, and the The New Dynamic hereby agrees to provide such Services to Client. The services include full management of your website, such as:
 
-Website development  
-Website design       
-Content & user experience strategy  
-Website deployment and hosting  
-Website software updates  
-Website monitoring for performance and downtime  
-Implementation of third-party services ("Third Party")
-Email-based Customer support (Mon-Fri 9-5 EST/EDT)  
-Project management  
+Website development \
+Website design \
+Content & user experience strategy \
+Website deployment and hosting \
+Website software updates \
+Website monitoring for performance and downtime \
+Implementation of third-party ("Third Party") services \
+Email-based Customer support (Mon-Fri 9-5 EST/EDT) \
+Project management \
 Meetings  
+
 
 #### 2) Fees, Expenses, and Payment
 
 Access to the Services may require Client to pay Fees, as may be further described at https://www.thenewdynamic.com/agile-pricing-plans/. All Fees are in U.S. dollars and are non-refundable, unless otherwise provided herein.
 
-a) The cost and payment schedule for Services is set forth on the applicable subscription.  
+(a) The cost and payment schedule for Services is set forth on the applicable subscription.  
 
-b) Charges do not include third party expenses and disbursements, including but not limited to third party software programs, which may be required to run the Websites. Client shall either pay separately for any third party software programs and updates thereof, or The New Dynamic will include the fees in Client's invoice.  
+(b) Charges do not include third party expenses and disbursements, including but not limited to third party software programs, which may be required to run the Websites. Client shall either pay separately for any third party software programs and updates thereof, or The New Dynamic will include the fees in Client's invoice.  
 
-c) The New Dynamic reserves the right to charge late fees on overdue accounts.  
+(c) The New Dynamic reserves the right to charge late fees on overdue accounts.  
 
-d) Any additional work or material revisions beyond initial scope set forth on the SOW will be charged on an hourly basis for services performed that have been approved in advance by Client.  
+(d) Any additional work or material revisions beyond initial scope set forth on the SOW will be charged on an hourly basis for services performed that have been approved in advance by Client.  
 
 ##### Changes to the Services
 
@@ -65,7 +66,12 @@ g) to indemnify and hold harmless the Supplier (and any companies controlled or 
 
 #### 4) Intellectual Propery
 
-The New Dynamic expressly reserves all Intellectual Property Rights in the Services, The New Dynamic System and all materials provided by The New Dynamic hereunder. All right, title and interest in the Services and all other materials provided by The New Dynamic hereunder, any update, adaptation, translation, customization or derivative work thereof, and all Intellectual Property Rights therein will remain with The New Dynamic or its licensors.
+The New Dynamic expressly reserves all Intellectual Property Rights in the Services, The New Dynamic System and all "Background Technology" provided by The New Dynamic hereunder. 
+
+For purposes of this Agreement, "Background Technology" means any materials and other intellectual property which were owned or controlled by The New Dynamic or a third party prior to its performance of Services, or are created or developed by The New Dynamic in connection with the Services but not invoiced to and/or not paid for by Client, and all enhancements, modifications, improvements and derivative works of or in respect of the foregoing that may be created or developed by The New Dynamic (whether or not created or developed in connection with the performance of any Services). 
+
+The New Dynamic hereby grants Client a non-exclusive, irrevocable, perpetual, worldwide and fully paid license to copy, modify, distribute, and use the Background Technology solely as incorporated into, any in connection with the operation of the Websites. Specifically, Client may not separate any Background Technology from the Websites for any purpose. Expressly as stated in this Section. All right, title and interest in the Services and all other materials provided by The New Dynamic hereunder, any update, adaptation, translation, customization or derivative work thereof, and all Intellectual Property Rights therein will remain with The New Dynamic or its licensors.
+
 
 
 #### 5) Confidentiality
