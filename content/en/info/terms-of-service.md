@@ -1,5 +1,6 @@
 ---
-title: The New Dynamic Terms of Service
+title: The New Dynamic Terms of Service Agreement
+linktitle: Terms of Service
 layout: minimal
 seo:
   private: true
