@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <div class="container max-w-3xl mx-auto">
+    {{ partial "page-header.html" . }} 
+    <div class="my-4">
+      <div class="max-w-3xl mx-auto text-gray-700 rich-text">        
+        {{ .Content }}                
+      </div>
+      {{ with .Params.blocks }}
+        <div class="my-32">
+          {{ range . }}
+            {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $) }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
