@@ -5,7 +5,7 @@ short_description: Your site at its best with continuous proactive suggestions f
 price: 2600
 ctas:
   - copy: Get Access
-    url: /dunno
+    url: /contact
     type: fat
   - copy: Change Plans Anytime
 included:
