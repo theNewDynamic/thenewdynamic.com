@@ -12,7 +12,7 @@ included:
   - Unlimited work requests*
   - Team Slack Access
   - A/B Testing
-  - SEO + Accessibility Audits
+  - Technical SEO + Accessibility Audits
 ---
 
 We tell you more here
