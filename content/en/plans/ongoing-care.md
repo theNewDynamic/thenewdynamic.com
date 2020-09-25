@@ -7,7 +7,7 @@ ctas:
   - copy: Nonprofits? Ask us about our generous discount.
     url: /nonprofit
 included:
-- Unlimited work requests*
+- Unlimited Tech Support
 - Software Maintenance and Updates
 - Downtime/Performance monitoring
 - Emergency support 24/7
