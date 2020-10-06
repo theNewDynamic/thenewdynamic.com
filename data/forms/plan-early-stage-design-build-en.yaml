@@ -18,16 +18,13 @@ fields:
     label: Email
     type: email
     required: true
-  - name: org_type
-    label: Org Type
-    type: select
-    options: 
-    - "--"
-    - Enterprise
-    - Non Profit
-  - name: phone
-    label: Your phone
-    type: tel
+  # - name: org_type
+  #   label: Org Type
+  #   type: select
+  #   options: 
+  #   - "--"
+  #   - Enterprise
+  #   - Non Profit
   - name: note
     label: Tell us about your site
     type: textarea
