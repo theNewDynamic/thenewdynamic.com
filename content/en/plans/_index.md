@@ -1,5 +1,6 @@
 ---
 title: Our Agile Pricing Plans
+linktitle: Agile Pricing
 private: true
 exclude_collection: true
 url: /agile-pricing-plans
@@ -14,4 +15,7 @@ callout:
     url: /nope
 aliases:
  - /plans/
+menu:
+  main: 
+    weight: 2
 ---

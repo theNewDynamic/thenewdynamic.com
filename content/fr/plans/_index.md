@@ -9,8 +9,8 @@ callout:
   ctas:
     copy: En savoir plus
     url: /nope
-# menu:
-#   main:
-#     weight: 1.5
-#     name: Plans Agiles
+menu:
+  main:
+    weight: 1.5
+    name: Plans Agiles
 ---
