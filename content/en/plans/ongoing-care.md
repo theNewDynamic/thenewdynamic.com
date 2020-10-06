@@ -5,7 +5,7 @@ short_description: Keep your site in shape all the time.
 price: 500
 ctas:
   - copy: Nonprofits? Ask us about our generous discount.
-    url: /nonprofit
+    url: 
 included:
 - Unlimited Tech Support
 - Software Maintenance and Updates
