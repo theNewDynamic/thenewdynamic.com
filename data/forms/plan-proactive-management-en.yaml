@@ -1,0 +1,33 @@
+id: plan-proactive-management-en
+title: Plan Proactive
+provider: formspree
+formspree_id: xeqrdawe
+redirect: /thank-you/
+submit: Get Started
+fields:
+  - name: plan
+    label: Proactive Management
+    type: hidden
+  - name: name
+    required: true
+    label: Name
+  - name: organization
+    required: true
+    label: Organization
+  - name: email
+    label: Email
+    type: email
+    required: true
+  - name: org_type
+    label: Org Type
+    type: select
+    options: 
+    - "--"
+    - Enterprise
+    - Non Profit
+  - name: phone
+    label: Your phone
+    type: tel
+  - name: note
+    label: Tell us about your site
+    type: textarea
