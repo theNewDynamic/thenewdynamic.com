@@ -12,4 +12,6 @@ callout:
   ctas:
     copy: Learn more
     url: /nope
+aliases:
+ - /plans/
 ---
