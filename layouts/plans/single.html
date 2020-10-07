@@ -45,7 +45,7 @@
 			<div class="w-full col-span-8 mt-12 mb-32">
 				<h2 class="text-5xl font-bold">Get Started</h2>
 				<div class="my-8">
-					{{ if .Slug }} {{ partial "tnd-forms/form" (print "plan-" .Slug "-" .Language) }} {{ end }}
+					{{ if .Slug }} {{ partial "tnd-forms/private/form" (print "plan-" .Slug "-" .Language) }} {{ end }}
 				</div>
 			</div>
 		</div>

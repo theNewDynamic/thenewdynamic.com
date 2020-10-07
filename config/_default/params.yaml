@@ -1,5 +1,14 @@
 tnd_forms:
   css:
+    form: 'max-w-md pb-5'
+    control: ''
+    required: ''
+    input: block w-full bg-white text-grey-darker border border-grey py-3 px-4 mb-3 leading-tight focus:outline-none
+    textarea: block w-full bg-white text-grey-darker border border-grey py-3 px-4 mb-3 leading-tight focus:outline-none h-48
+    label: block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2
+    select: block appearance-none w-full rounded-none w-full bg-white text-grey-darker border border-grey py-3 px-4 leading-tight focus:outline-none focus:outline-none focus:shadow-outline
+    select_wrapper: inline-block relative w-full mb-3
+    select_fake: pointer-events-none h-full absolute top-0 right-0 flex items-center px-2 text-grey-darker
     submit: block text-xl text-white bg-gray-800 hover:bg-gradient w-full px-4 py-2 rounded lowercase
 tnd_seo:
   jsonld: true

@@ -1,0 +1,25 @@
+{{/* 
+	Print markup for select form input
+	
+	@author @regisphilibert
+	
+	@access private
+
+	@context Map
+		String (.type)
+		String (.name)
+		Slice (.options)
+		Map (.css)	
+*/}}
+{{ with .options }}
+	<div class="tnd-form__select_wrapper {{ $.css.select_wrapper }}">
+		<select class="{{ $.css.select }}" name="{{ $.name }}" id="id-{{ $.name }}"{{ with $.required }} required {{ end }}>
+			{{ range . }}
+				<option value="{{ . }}">{{ . }}</option>
+			{{ end }}
+		</select>
+    <div class="{{ $.css.select_fake }}">
+			<svg class="fill-current w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+		</div>
+	</div>
+{{ end }}
