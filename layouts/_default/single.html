@@ -23,6 +23,11 @@
           {{ end }}
         </div>
       {{ end }}
+        {{ if .Params.form }}          
+          <div class="max-w-lg mx-auto my-32">
+            {{ partial "tnd-forms/form" (print .Params.form "-" .Language) }}
+          </div>
+      {{ end }}
     </div>
   </div>
 {{ end }}
