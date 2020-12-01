@@ -3,7 +3,7 @@
 {{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
   {{ with where . "type" "link" }}
     {{ with $style := index . 0 }}
-      {{ $netlifycms_style := printf `import React from "react"; CMS.registerPreviewStyle("%s");` $style.style.Permalink | resources.FromString "style_netlifycms.jsx" }}
+      {{ $netlifycms_style := printf `import React from "react"; CMS.registerPreviewStyle("%s");` $style.beforeProcess.Permalink | resources.FromString "style_netlifycms.jsx" }}
       {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_style }}
     {{ end }}
   {{ end }}
