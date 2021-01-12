@@ -5,8 +5,8 @@ show_preview_links: true
 publish_mode: editorial_workflow
 local_backend: true
 use_graphql: true
-media_folder: /assets/uploads
-public_folder: uploads
+media_folder: assets/uploads
+public_folder: /uploads
 slug:
   encoding: "ascii"
   clean_accents: true
