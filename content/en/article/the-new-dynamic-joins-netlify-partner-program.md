@@ -1,8 +1,8 @@
 ---
 title: The New Dynamic Joins Netlify's Partner Program
-date: 2020-10-06T18:06:14-04:00
-draft: true
-featured: /uploads/netlify-agency.jpg
+date: 2021-01-12T18:06:14-04:00
+draft: false
+featured: /uploads/launch-partner-plus-tnd.png
 authors:
   - persons/bud-parr.md
 ---
