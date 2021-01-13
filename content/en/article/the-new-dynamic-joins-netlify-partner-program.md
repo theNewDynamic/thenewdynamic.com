@@ -1,8 +1,10 @@
 ---
-title: "The New Dynamic Joins Netlify's Partner Program"
-date: 2020-10-06T18:06:14-04:00
-draft: true
-featured: /uploads/netlify-agency.jpg
+title: The New Dynamic Joins Netlify's Partner Program
+date: 2021-01-12T18:06:14-04:00
+draft: false
+featured: /uploads/launch-partner-plus-tnd.png
+authors:
+  - persons/bud-parr.md
 ---
 
 We've long considered ourselves pioneers in using "Jamstack" methodologies to build our sites ([click here to read more](https://www.thenewdynamic.com/article/simplicity-speed-security-savings-benefits-of-jamstack-technology/)), yet, there are a handful of others who have really pushed the space forward and are still doing so today. One of them is Matt Biilmann, who even back in 2012-13 saw the future and started building it. When he and Chris Bach founded Netlify in 2015 we had no idea how fundamentally they'd change the Jamstack landscape.-
