@@ -1,4 +1,23 @@
-{{ $return := false }}
+{{/*
+  IsProduction 
+  Check if current Hugo environment is production as per Environment Variables
+
+  @author @regisphilibert
+
+  @context . (Any)
+
+  @access public
+
+  @return Boolean
+
+  @example - Go Template
+    {{ if partialCached "func/IsProduction" . }}
+      {{ partial "analytics" . }}
+    {{end}}
+*/}}
+{{ $production := false }}
 {{ if eq (getenv "HUGO_ENV") "production" }}
-  {{ $return = true }}
+  {{ $production = true }}
 {{ end }}
+
+{{ return $production }}
