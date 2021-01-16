@@ -29,7 +29,7 @@ blocks:
         types:
           - Hugo Theme
       - title: SEO Module
-        url: https://github.com/theNewDynamic/hugo-component-tnd-seo
+        url: https://github.com/theNewDynamic/hugo-module-tnd-seo
         body: A module loaded up for awesome SEO. Generates your SEO tags and is fully
           customizable.
         status: alpha
@@ -67,7 +67,7 @@ blocks:
         types:
           - Hugo Module
         status: Beta
-      - url: https://github.com/theNewDynamic/hugo-component-tnd-forms
+      - url: https://github.com/theNewDynamic/hugo-module-tnd-forms
         title: Forms Module
         body: A Hugo module to easily add Forms to your Hugo project maintained via data
           files. Supports Netlify Form and Formspree.

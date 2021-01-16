@@ -1,0 +1,21 @@
+id: support-en
+title: Need Help?
+provider: formspree
+formspree_id: xeqrdawe
+redirect: /thank-you/
+submit: Get in touch
+fields:
+  - name: name
+    required: true
+    label: Name
+  - name: email
+    label: Email
+    type: email
+    required: true
+  - name: website
+    label: Your Website
+    type: text
+    required: false
+  - name: note
+    label: Tell us what the issue is
+    type: textarea
