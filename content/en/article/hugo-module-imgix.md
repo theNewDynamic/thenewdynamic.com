@@ -183,8 +183,9 @@ https://tnd.imgix.com/uploads/cat-cucumber.gif
 
 Thanks to Hugo Modules and a little bit of head scratching we now have a consistent and easily maintainable and improvable solution to use a great service like imgix!
 
-And everytime we'll think of a new feature to improve the module, all our projects using it will be able to benefit from it by simply hitting the upgrade flag from Hugo Module's CLI:
-`hugo mod get -u github.com/theNewDynamic/hugo-module-tnd-imgix`
+Next time one of our project, or yours, will need imgix, all we'll have to do is import the module, add our own domain and settings, and use the one partial detailed above!
+
+Also, everytime we'll implement a new feature to improve the module, all our projects using it will benefit from it by simply hitting the upgrade flag from Hugo Modules' CLI `hugo mod get -u github.com/theNewDynamic/hugo-module-tnd-imgix`
 
 ### Take it for a spin!
 
