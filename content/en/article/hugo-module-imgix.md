@@ -195,7 +195,7 @@ Make sure your project is `init` as a Hugo Module [as documented here]({{< ref "
 # config.yaml
 module:
   imports:
-  - github.com/theNewDynamic/hugo-module-tnd-imgix
+  - path: github.com/theNewDynamic/hugo-module-tnd-imgix
 ```
 
 Then use the settings and code example above and start using `tnd-imgix/GetSRC`
