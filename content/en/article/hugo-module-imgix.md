@@ -1,9 +1,8 @@
 ---
-draft: true
 authors:
   - persons/regis-philibert.md
 featured: /uploads/hugo-module-imgix.png
-date: 2020-10-13T19:32:27.000Z
+date: 2021-01-18T9:32:27.000Z
 twitter_description: |- 
   We love @imgix but in order to fully integrate this amazing image optimization service into our everyday workflow, we had to solve some problems! The solution came in the form of an open source @GoHugoIo Module! 
   This article is about the whys-and-hows of TND's Imgix Hugo Module.
@@ -21,7 +20,9 @@ subjects:
 description: Imgix is image manipulation and optimization service we often lean on to for projects. We had to solve a few problematics before we could fully integrate it in our everyday workflow! The anwser came as a reusable and fully distributable Hugo Module. This article is about the whys-and-hows of TND's Imgix Hugo Module.
 ---
 
-# Imgix Module
+Recently we published an [article]({{< relref "/hugo-modules" >}}) about Hugo Modules. They are now essential to our Hugo projects and in the course of the past year we've been building many. Every Module we code is the result of a careful thinking on a particular issue and its satisfactory solution packaged in an easily maintainable and distributable code bundle.
+
+Today we are debuting a series of articles detailing the thought process behind some of our Hugo Modules, starting with one which help integrate a very popular service to any Hugo Projet: __imgix__.
 
 imgix is an image manipulation and optimization service that we rely on extensively in our work and has been part of the Jamstack ecosystem since the early days. It's a great way to leverage simple or even complex image processing on your projects and benefit from their optimized CDN.
 
@@ -58,7 +59,7 @@ And use throughout...
 3. **Some default transformations to apply on every image URI.**
 Client hints and auto enhancements are usually applied to every images, but some projects might need others. 
 4. **Restrict some extensions.** 
-Sometime editors will upload a PDF when your template expects an image. We needed to control which extensions could receive transformations.
+Sometime from the comfort of a CMS, one might upload a PDF when your template expects an image. We needed to control which extensions could receive transformations.
 5. **A single function which would build that imgix source URI.** 
 We needed one function to build all our URIs. It would take a relative or absolute image location alongside a map of transformation parameters.
 
@@ -160,7 +161,7 @@ Taking into account the configuration examples for the **domain**, the **mapped 
 {{*/ 2 Context is a map /*}}
 {{ $src := partial "tnd-imgix/GetSRC" (dict "src" "/uploads/image.jpg" "max-width" 500 "halftone" 11) }}
 
-{{*/ 3 Context is a map but editors used an animated gif 🤦‍♂️ /*}}
+{{*/ 3 Context is a map but an animated gif made its way in! 🤦‍♂️ /*}}
 {{ $src := partial "tnd-imgix/GetSRC" (dict "src" "/uploads/cat-cucumber.gif" "halftone" 11") }}
 
 ```
@@ -182,7 +183,8 @@ https://tnd.imgix.com/uploads/cat-cucumber.gif
 
 Thanks to Hugo Modules and a little bit of head scratching we now have a consistent and easily maintainable and improvable solution to use a great service like imgix!
 
-And everytime we'll think of a new feature to improve the module, all our projects using it will be able to benefit from it by simply hitting `hugo mod get -u github.com/theNewDynamic/hugo-module-tnd-imgix`
+And everytime we'll think of a new feature to improve the module, all our projects using it will be able to benefit from it by simply hitting the upgrade flag from Hugo Module's CLI:
+`hugo mod get -u github.com/theNewDynamic/hugo-module-tnd-imgix`
 
 ### Take it for a spin!
 
