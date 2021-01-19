@@ -22,7 +22,7 @@ description: Imgix is image manipulation and optimization service we often lean 
 
 Recently we published an [article]({{< relref "/hugo-modules" >}}) about Hugo Modules. They are now essential to our Hugo projects and in the course of the past year we've been building many. Every Module we code is the result of a careful thinking on a particular issue and its satisfactory solution packaged in an easily maintainable and distributable code bundle.
 
-Today we are debuting a series of articles detailing the thought process behind some of our Hugo Modules, starting with one which help integrate a very popular service to any Hugo Projet: __imgix__.
+Today we are debuting a series of articles detailing the thought process behind some of our Hugo Modules, starting with one which help integrate a very popular service to any Hugo project: __imgix__.
 
 imgix is an image manipulation and optimization service that we rely on extensively in our work and has been part of the Jamstack ecosystem since the early days. It's a great way to leverage simple or even complex image processing on your projects and benefit from their optimized CDN.
 
