@@ -6,7 +6,7 @@ date: 2019-12-31T14:37:32.812Z
 
 We started Sonnet Media in 2002 fresh from our enthusiasm with blogging and the rise of a better web. Sonnet Media's name—besides reflecting our enthusiasm for arts & culture—recognized the idea of "Code is Poetry" of a sort, or more specifically that both code and poetry have structure yet both are more beautiful when one breaks the rules a bit. 
 
-Fast forward to 2013. This is the year we threw out the rule book entirely. We fundamentally changed the way we build websites. In short, we started building sites that are fun for us to build and radically improve the performance, security and cost of our sites. See our post on [Bulletproof Technology](/article/bulletproof-technology/) for more on the details.
+Fast forward to 2013. This is the year we threw out the rule book entirely. We fundamentally changed the way we build websites. In short, we started building sites that are fun for us to build and radically improve the performance, security and cost of our sites. See our post on [Bulletproof Technology](/article/simplicity-speed-security-savings-benefits-of-jamstack-technology/) for more on the details.
 
 > we started building sites that are fun for us to build and radically improve the performance, security and cost of our sites.
 
