@@ -3,7 +3,7 @@ title: Redirects Hugo Module
 authors:
   - persons/regis-philibert.md
 featured: /uploads/hugo-module-redirects.png
-date: 2021-09-03T7:32:27.000Z
+date: 2021-08-03T7:32:27.000Z
 twitter_description: |- 
   Redirections and URL rewrites are an essential part of any web project.In this article we'll focus on @netlify's own redirection methods; how we dynamically set our rules in its format; how we packaged our approach in a reusable open source solution; and how to use the resulting @GoHugoIO Module on your Netlify hosted website.
   
