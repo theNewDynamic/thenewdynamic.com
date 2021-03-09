@@ -20,7 +20,6 @@ subjects:
 description: This article is about the hows-and-whys of the TND Redirects Hugo Module.
 seo:
   description: Redirections and URL rewrites are an essential part of any web project, and even more-so for sites that serve audiences from different countries. To deliver the right HTML file to the right audience, we need a robust and finely tuned set of redirection rules. In this article we’ll focus on Netlify’s own redirection methods; how we dynamically set our rules in its format; how we packaged our approach in a reusable open source solution; and how to use the resulting Hugo Module on your Netlify hosted website.
-draft: true
 ---
 
 Redirections and URL rewrites are an essential part of any web project, and even more-so for sites that serve audiences from different countries. 
