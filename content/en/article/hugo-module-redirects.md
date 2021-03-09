@@ -1,5 +1,5 @@
 ---
-title: Redirects Hugo Module
+title: Redirects Hugo Module with Netlify
 authors:
   - persons/regis-philibert.md
 featured: /uploads/hugo-module-redirects.png
