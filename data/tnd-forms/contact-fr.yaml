@@ -12,9 +12,8 @@ fields:
     label: Courriel
     type: email
     required: true
-  - name: phone
-    label: Téléphone
-    type: tel
+  - name: website
+    label: Site web
   - name: note
     label: Message
     type: textarea
