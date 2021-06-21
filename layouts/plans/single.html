@@ -50,8 +50,8 @@
 			</div>
 		</div>
 
-		<div class="max-w-2xl mx-auto mb-32 italic text-center text-gray-700">
-			{{ .Params.disclaimer }}
+		<div class="max-w-2xl mx-auto mb-32 text-sm italic text-center text-gray-700 rich-text">
+			{{ .Params.disclaimer | markdownify  }}
 		</div>
 	</div>
 </div>
