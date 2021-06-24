@@ -41,7 +41,7 @@ This means no section of a site can be safely populated from an API, from a Head
 
 It will be lifted, building pages from data is on the roadmap, but in the mean time for Hugo to acknowledge a page in its system, it needs a content file, most likely a Markdown file placed in the content directory.
 
-And yes, Hugo does handle data and json request! You can have that `data/monsters.json` array accessible through `site.Data.monsters`, or that  `[https://api.monsters.com/v1/monsters](https://api.monsters.com/v1/monstersdata)` API endpoint available through `getJSON`, but Hugo, in spite of all its amazing feats, will not be able to build a page for each of those monsters.
+And yes, Hugo does handle data and json request! You can have that `data/monsters.json` array accessible through `site.Data.monsters`, or that  `https://api.monsters.com/v1/monstersdata` API endpoint available through `getJSON`, but Hugo, in spite of all its amazing feats, will not be able to build a page for each of those monsters.
 
 That is, not on its own.
 
