@@ -289,7 +289,7 @@ Personally I would create two returning partials.
 ```go-html-template
 {{ $monsters := slice }}
 {{ with site.Taxonomies.monsters_ids }}
-	{{ range .
+  {{ range . }}
     {{ $monsters = $monsters | append .Page }}
   {{ end }}
 {{ end }}
@@ -331,7 +331,7 @@ Our list template would therefore look much cleaner:
 
 ### Conclusion
 
-Bravo! By leveragin Hugo's Taxonomy and Data APIs we've been able to fulfill the first objective of our series: building pages from local data!
+Bravo! By leveraging Hugo's Taxonomy and Data APIs we've been able to fulfill the first objective of our series: building pages from local data!
 
 In the next part, we'll see how we can achieve the same results but instead of using a local data file, we'll be safely fetching our monster's data from a remote API!
 
