@@ -57,7 +57,7 @@ First, let's quickly go over the concept here.
 
 Hugo needs a content file in order to acknowledge a page in its content system. But it's not true for every page. Your homepage doesn't need one, neither does your paginated sections or (and this is where it gets interesting) your taxonomy terms.
 
-Whenever you have a taxonomy in yo  ur project, like `tags` or `categories`, whose terms are added to pages, Hugo will produce a page for each of those terms.
+Whenever you have a taxonomy in your project, like `tags` or `categories`, whose terms are added to pages, Hugo will produce a page for each of those terms.
 
 Let's imagine we have a `monsters` taxonomy in our project with only one post using it:
 
