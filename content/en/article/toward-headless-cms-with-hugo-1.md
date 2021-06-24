@@ -19,33 +19,33 @@ subjects:
   - dev
 description: Hugo is yet to support building pages from data, but there is a workaround! In the first par of this series we explore the concept of hacking Hugo into building pages from local data.
 ---
-## Hugo's notorious and soon to be lifted limitation.
+
+## Hugo's notorious and soon to be lifted limitation
 
 {{% aside %}}
+
 #### Lifted soon but when?
+
 There is no date set for when Hugo will be able to build pages from data. It will most likely be implemented in two parts much like this series.
 
 First, it will build from local data.
 Then, it will build from remote data using a unique fetch mechanism and DX yet to be defined.
 
 You can follow the conversations on Hugo's repo:
+
 - [#5074](https://github.com/gohugoio/hugo/issues/5074)
 - [#6310](https://github.com/gohugoio/hugo/issues/6310)
-{{% /aside %}}
+  {{% /aside %}}
 
+At The New Dynamic we love Hugo, the framework we use to build many of our websites. Through the years there has been no objective, no client request, no challenge we were not able to meet with this amazing tool. But there is one limitation which can be tedious to circumvent: Hugo cannot build distinct pages from data sources outside of individual files! No section of a site can be safely populated from an external API such as a headless CMS.
 
+To be fair, when Hugo was created, headless CMSs were barely on the map. And, this limitation will be lifted in time. Meanwhile we've been exploring ways not to compromise on our site building and get around the limitation.
 
-I love Hugo, and through the years at The New Dynamic there has been no objective, no client request, no challenge we were not able to meet with this amazing tool. But there is one limitation which can be tedious to circumvent: Currently Hugo cannot **build pages from data!**
+Hugo does handle data and json requests: You can have your `data/monsters.json` array accessible through `site.Data.monsters`, or `https://api.monsters.com/v1/monstersdata` API endpoint available through `getJSON`, but Hugo, in spite of all its amazing feats, will not be able to build a page for each of those monsters.
 
-This means no section of a site can be safely populated from an API, from a Headless CMS or the likes.
+That is, not on its own. Yes there is a work-around!
 
-It will be lifted, building pages from data is on the roadmap, but in the mean time for Hugo to acknowledge a page in its system, it needs a content file, most likely a Markdown file placed in the content directory.
-
-And yes, Hugo does handle data and json request! You can have that `data/monsters.json` array accessible through `site.Data.monsters`, or that  `https://api.monsters.com/v1/monstersdata` API endpoint available through `getJSON`, but Hugo, in spite of all its amazing feats, will not be able to build a page for each of those monsters.
-
-That is, not on its own.
-
-Yes there is a work-around! Over the course of this two part series, we'll get into details as we conceptually build a Monsterspotting website which will publish one page for each of its "file-less" monsters and a paginated listing page!
+Over the course of this two part series, we'll get into details as we conceptually build a Monsterspotting website which will publish one page for each of its "file-less" monsters and a paginated listing page!
 
 In the first part we'll use a local data file to build our pages: **Toward using a Headless CMS with Hugo: Building Pages from Data**
 
@@ -55,9 +55,9 @@ Later, in the second part, we'll cover the remote side of it, using a distant AP
 
 First, let's quickly go over the concept here.
 
-Hugo needs a content file in order to acknowledge a page in its content system. But it's not true for every page. Your homepage doesn't need one, neither does your paginated sections or (and that's where it gets interesting) your taxonomy terms. 
+Hugo needs a content file in order to acknowledge a page in its content system. But it's not true for every page. Your homepage doesn't need one, neither does your paginated sections or (and this is where it gets interesting) your taxonomy terms.
 
-Whenever you have a taxonomy in your project, like `tags` or `categories`, whose terms are added to pages, Hugo will produce a page for each of those terms. 
+Whenever you have a taxonomy in yo  ur project, like `tags` or `categories`, whose terms are added to pages, Hugo will produce a page for each of those terms.
 
 Let's imagine we have a `monsters` taxonomy in our project with only one post using it:
 
@@ -66,8 +66,8 @@ Let's imagine we have a `monsters` taxonomy in our project with only one post us
 ---
 title: Two identified monsters spotted in Montréal today!
 monsters:
-- rona-wood
-- gus-vinyl
+  - rona-wood
+  - gus-vinyl
 ---
 What a day...
 ```
@@ -84,14 +84,14 @@ From that template context, assuming you have a data file with references matchi
 
 ```json
 {
-  "rona-wood": {
-    "spotted": "New York City",
-    "name": "Althea Rubber"
-  },
-  "gus-vinyl": {
-    "spotted": "Montreal",
-    "name": "Gus Vinyl"
-  }
+	"rona-wood": {
+		"spotted": "New York City",
+		"name": "Althea Rubber"
+	},
+	"gus-vinyl": {
+		"spotted": "Montreal",
+		"name": "Gus Vinyl"
+	}
 }
 ```
 
@@ -136,13 +136,13 @@ Then, in our content directory we'll add a content file to hold our monsters.
 title: Monsters
 layout: monsters
 monsters_refs:
-- althea-rubber
-- rona-wood
-- gus-vinyl
-- amity-granite
-- angele-steel
-# [... more monsters! ...]
-- wat-glass
+  - althea-rubber
+  - rona-wood
+  - gus-vinyl
+  - amity-granite
+  - angele-steel
+  # [... more monsters! ...]
+  - wat-glass
 ---
 ```
 
@@ -163,12 +163,12 @@ permalinks:
 
 Now that Hugo is building one page for each monster we can go and customize those. The trick here is to locate which template file Hugo will use to generate the `monsters_refs` term pages. Reading Hugo Template Lookup documentation, it seems it will be at `/layouts/taxonomy_name/term.html` so in our case:
 
-`layouts/monsters_refs/term.html` 
+`layouts/monsters_refs/term.html`
 
 Now from inside that template file's context we don't have a lot info about our monster:
 
 - `.RelPermalink` and `.Permalink` will hold the URL for the page which thanks to our previous configuration will most likely be `/monsters/ronda-wood`, `/monsters/gus-vinyl` etc...
-- `.Data.Term` will hold the term as referenced in the `/monsters.md` content page  `"rona-wood"`, `"gus-vinyl"` etc...
+- `.Data.Term` will hold the term as referenced in the `/monsters.md` content page `"rona-wood"`, `"gus-vinyl"` etc...
 - `.Title` which will in most case match `.Data.Term`
 - `.Pages` will list all the pages this monster has been assigned to. Us hackers won't need this as we only have one!
 
@@ -225,7 +225,7 @@ Now this is more like a real page template though:
 {{ end }}
 ```
 
-And that's it! 
+And that's it!
 
 We're building pages from data with Hugo! 🎉
 
@@ -235,7 +235,7 @@ Now that we all understand the concept, we can plus the project by creating a li
 
 Now we could grab our data file and list its entries, but this would mean guessing the permalink ourselves and we don't want that. We want their real Hugo generated `.RelPermalink`.
 
-So we are going to have to list the pages for the terms of the `monsters_refs` taxonomy. 
+So we are going to have to list the pages for the terms of the `monsters_refs` taxonomy.
 
 For this we'll rely on the Taxonomy API of Hugo. All of your project's taxonomies are stored under `site.Taxonomies`:
 
@@ -277,11 +277,11 @@ And that's it! With just one data file and one "monster referencing" content fil
 
 In returning partials!
 
-We should really try and wrap most reusable code in [returning partials](https://www.regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials/)! 
+We should really try and wrap most reusable code in [returning partials](https://www.regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials/)!
 
 Personally I would create two returning partials.
 
-1. One to fetch the data and potentially transform the monsters data 
+1. One to fetch the data and potentially transform the monsters data
 2. And another one to retrieve the monster's term pages so we don't have to use `.Page` all the time.
 
 ### 1. GetMonsterPages
