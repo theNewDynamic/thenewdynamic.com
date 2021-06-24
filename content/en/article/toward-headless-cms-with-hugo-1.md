@@ -7,7 +7,7 @@ twitter_description: |-
   .@GoHugoIO's notorious limitation will be lifted soon! But while building pages from data remains unsupported by our favorite CMS, you can start exploring the concept with a workaround we detail in this two part series.
 
   #gohugo #JAMStack #ssg #golang #headlesscms
-  3/article/toward-using-a-headless-cms-with-hugo-part-1/
+  https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-1/
 title: Toward using a Headless CMS with Hugo: Building Pages from Data
 slug: toward-using-a-headless-cms-with-hugo-part-1
 tags:
