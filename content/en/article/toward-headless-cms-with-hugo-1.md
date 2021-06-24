@@ -8,7 +8,7 @@ twitter_description: |-
 
   #gohugo #JAMStack #ssg #golang #headlesscms
   https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-1/
-title: Toward using a Headless CMS with Hugo: Building Pages from Data
+title: "Toward using a Headless CMS with Hugo: Building Pages from Data"
 slug: toward-using-a-headless-cms-with-hugo-part-1
 tags:
   - hugo
