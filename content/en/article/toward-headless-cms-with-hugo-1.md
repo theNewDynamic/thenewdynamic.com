@@ -17,7 +17,7 @@ tags:
   - JAMStack
 subjects:
   - dev
-description: Hugo is yet to support building pages from data, but there is a workaround! In the first par of this series we explore the concept of hacking Hugo into building pages from local data.
+description: Hugo is yet to support building pages from data, but there is a workaround! In the first part of this series we explore the concept of hacking Hugo into building pages from local data.
 ---
 ## Hugo's notorious and soon to be lifted limitation.
 
