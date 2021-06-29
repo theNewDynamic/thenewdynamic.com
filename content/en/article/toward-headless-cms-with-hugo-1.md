@@ -4,7 +4,9 @@ authors:
   - persons/regis-philibert.md
 date: 2021-06-24T08:32:27.000Z
 twitter_description: |-
-  .@GoHugoIO's notorious limitation will be lifted soon! But while building pages from data remains unsupported by our favorite CMS, you can start exploring the concept with a workaround we detail in this two part series.
+  .@GoHugoIO is yet to support building pages from data/api, but there is a workaround!
+  
+  In this two part series, while building a fun monsterspotting site, we detail how you can already start exploring building pages from data with Hugo.
 
   #gohugo #JAMStack #ssg #golang #headlesscms
   https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-1/
@@ -18,6 +20,8 @@ tags:
 subjects:
   - dev
 description: Hugo is yet to support building pages from data, but there is a workaround! In the first part of this series we explore the concept of hacking Hugo into building pages from local data.
+seo:
+  image: /uploads/toward-headless-cms-with-hugo-1.jpg
 ---
 
 ## Hugo's notorious and soon to be lifted limitation
