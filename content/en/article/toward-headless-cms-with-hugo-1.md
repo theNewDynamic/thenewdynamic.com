@@ -59,7 +59,7 @@ Hugo needs a content file in order to acknowledge a page in its content system. 
 
 Whenever you have a taxonomy in your project, like `tags` or `categories`, whose terms are added to pages, Hugo will produce a page for each of those terms.
 
-From the term page template, assuming you have a data file with references matching your term's name you can leverage Hugo's [`Data` feature](https://gohugo.io/templates/data-templates/#the-data-folder) or as we'll cover in the second part of this series, use Hugo's [`getJSON`](https://gohugo.io/templates/data-templates/#get-remote-data) function if the information is stored elsewhere in the cloud...
+From there you have two options: From the term page template—assuming you have a data file with references matching your term's name—you can leverage Hugo's [`Data` feature](https://gohugo.io/templates/data-templates/#the-data-folder). Or, as we'll cover in the second part of this series, you can use Hugo's [`getJSON`](https://gohugo.io/templates/data-templates/#get-remote-data) function if the information is stored elsewhere in the cloud...
 
 No content files except for the one holding the term list, no Front Matter, just plain Hugo building pages from data.
 
