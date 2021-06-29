@@ -8,7 +8,7 @@ twitter_description: |-
   
   In this two part series, while building a fun monsterspotting site, we detail how you can already start exploring building pages from data with Hugo.
 
-  #gohugo #JAMStack #ssg #golang #headlesscms
+  👾 #gohugo #JAMStack #ssg
   https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-1/
 title: "Toward using a Headless CMS with Hugo: Building Pages from Data"
 slug: toward-using-a-headless-cms-with-hugo-part-1
@@ -21,7 +21,7 @@ subjects:
   - dev
 description: Hugo is yet to support building pages from data, but there is a workaround! In the first part of this series we explore the concept of hacking Hugo into building pages from local data.
 seo:
-  image: /uploads/toward-headless-cms-with-hugo-1.jpg
+  image: /uploads/toward-headlesscms-with-hugo-part-1.png
 ---
 
 ## Hugo's notorious and soon to be lifted limitation
