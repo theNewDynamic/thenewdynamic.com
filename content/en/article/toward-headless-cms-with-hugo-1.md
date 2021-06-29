@@ -55,11 +55,11 @@ Later, in the second part, we'll cover the remote side of it, using a distant AP
 
 First, let's quickly go over the concept here.
 
-Hugo needs a content file in order to acknowledge a page in its content system. But it's not true for every page. Your homepage doesn't need one, neither does your paginated sections or (and this is where it gets interesting) your taxonomy terms.
+Hugo needs a content file in order to acknowledge a page in its content system. But it's not true for every page. Our homepage doesn't need one, neither does our paginated sections or (and this is where it gets interesting) our taxonomy terms.
 
 Whenever you have a taxonomy in your project, like `tags` or `categories`, whose terms are added to pages, Hugo will produce a page for each of those terms.
 
-From there you have two options: From the term page template—assuming you have a data file with references matching your term's name—you can leverage Hugo's [`Data` feature](https://gohugo.io/templates/data-templates/#the-data-folder). Or, as we'll cover in the second part of this series, you can use Hugo's [`getJSON`](https://gohugo.io/templates/data-templates/#get-remote-data) function if the information is stored elsewhere in the cloud...
+From there we have two options: From the term page template—assuming you have a data file with references matching our term's name—you can leverage Hugo's [`Data` feature](https://gohugo.io/templates/data-templates/#the-data-folder). Or, as we'll cover in the second part of this series, we can use Hugo's [`getJSON`](https://gohugo.io/templates/data-templates/#get-remote-data) function if the information is stored elsewhere in the cloud...
 
 No content files except for the one holding the term list, no Front Matter, just plain Hugo building pages from data.
 
