@@ -37,7 +37,7 @@ You can follow the conversations on Hugo's repo:
 - [#6310](https://github.com/gohugoio/hugo/issues/6310)
   {{% /aside %}}
 
-At The New Dynamic we love Hugo, the framework we use to build many of our websites. Through the years there has been no objective, no client request, no challenge we were not able to meet with this amazing tool. But there is one limitation which can be tedious to circumvent: Hugo cannot build distinct pages from data sources outside of individual files! No section of a site can be safely populated from an external API such as a headless CMS.
+At The New Dynamic we love Hugo, the framework we use to build many of our websites. Through the years there has been no objective, no client request, no challenge we were not able to meet with this amazing tool. But there is one limitation that can be tedious to circumvent: Hugo cannot build distinct pages from data sources outside of individual files! No section of a site can be safely populated from an external API such as a headless CMS.
 
 To be fair, when Hugo was created, headless CMSs were barely on the map. And, this limitation will be lifted in time. Meanwhile we've been exploring ways not to compromise on our site building and get around the limitation.
 
@@ -45,7 +45,7 @@ Hugo does handle data and json requests: You can have your `data/monsters.json` 
 
 That is, not on its own. Yes there is a work-around!
 
-Over the course of this two part series, we'll get into details as we conceptually build a Monsterspotting website which will publish one page for each of its "file-less" monsters and a paginated listing page!
+Over the course of this two part series, we'll get into details as we conceptually build a Monsterspotting website that will publish one page for each of its "file-less" monsters and a paginated listing page!
 
 In the first part we'll use a local data file to build our pages: **Toward using a Headless CMS with Hugo: Building Pages from Data**
 
@@ -55,61 +55,11 @@ Later, in the second part, we'll cover the remote side of it, using a distant AP
 
 First, let's quickly go over the concept here.
 
-Hugo needs a content file in order to acknowledge a page in its content system. But it's not true for every page. Your homepage doesn't need one, neither does your paginated sections or (and this is where it gets interesting) your taxonomy terms.
+Hugo needs a content file in order to acknowledge a page in its content system. But it's not true for every page. Our homepage doesn't need one, neither does our paginated sections or (and this is where it gets interesting) our taxonomy terms.
 
 Whenever you have a taxonomy in your project, like `tags` or `categories`, whose terms are added to pages, Hugo will produce a page for each of those terms.
 
-Let's imagine we have a `monsters` taxonomy in our project with only one post using it:
-
-```yaml
-# content/post/two-monsters-montreal.md
----
-title: Two identified monsters spotted in Montréal today!
-monsters:
-  - rona-wood
-  - gus-vinyl
----
-What a day...
-```
-
-Hugo will build a page for the post, obviously, but also for both the `monsters` taxonomy terms. The orignal intention was for Hugo to dynamically build term archive pages where websites would list all the posts assigned a given term.
-
-For our current example, the end result is that we'll end up with a page at `/monsters/rona-wood` and another one at `/monsters/gus-vinyl` !
-
-Note that none of those pages necessitated a content file.
-
-And now that we have a way for Hugo to acknowledge our "file-less" pages, we can tap into the term template which Hugo expects at `/layouts/monsters/term.html`
-
-From that template context, assuming you have a data file with references matching your term's, something like:
-
-```json
-{
-	"rona-wood": {
-		"spotted": "New York City",
-		"name": "Althea Rubber"
-	},
-	"gus-vinyl": {
-		"spotted": "Montreal",
-		"name": "Gus Vinyl"
-	}
-}
-```
-
-You will be able to grab that particular page's data with a simple:
-
-```go-html-template
-{{ with index site.Data.monsters $.Data.Term }}
-  {{ .name }} has been spotted in {{ .spotted }}
-{{ end }}
-```
-
-or as we'll cover in the second part of this series, retrieve its data from an api with
-
-```go-html-template
-{{ with getJSON "https://api.monsters.com/v1/monstersdata" $.Data.Term }}
-  {{ .name }} has been spotted in {{ .spotted }}
-{{ end }}
-```
+From there we have two options: From the term page template—assuming you have a data file with references matching our term's name—you can leverage Hugo's [`Data` feature](https://gohugo.io/templates/data-templates/#the-data-folder). Or, as we'll cover in the second part of this series, we can use Hugo's [`getJSON`](https://gohugo.io/templates/data-templates/#get-remote-data) function if the information is stored elsewhere in the cloud...
 
 No content files except for the one holding the term list, no Front Matter, just plain Hugo building pages from data.
 
