@@ -37,7 +37,7 @@ You can follow the conversations on Hugo's repo:
 - [#6310](https://github.com/gohugoio/hugo/issues/6310)
   {{% /aside %}}
 
-At The New Dynamic we love Hugo, the framework we use to build many of our websites. Through the years there has been no objective, no client request, no challenge we were not able to meet with this amazing tool. But there is one limitation which can be tedious to circumvent: Hugo cannot build distinct pages from data sources outside of individual files! No section of a site can be safely populated from an external API such as a headless CMS.
+At The New Dynamic we love Hugo, the framework we use to build many of our websites. Through the years there has been no objective, no client request, no challenge we were not able to meet with this amazing tool. But there is one limitation that can be tedious to circumvent: Hugo cannot build distinct pages from data sources outside of individual files! No section of a site can be safely populated from an external API such as a headless CMS.
 
 To be fair, when Hugo was created, headless CMSs were barely on the map. And, this limitation will be lifted in time. Meanwhile we've been exploring ways not to compromise on our site building and get around the limitation.
 
