@@ -14,14 +14,12 @@ exclude_collection: true
 blocks:
   - type: persons
     layout: persons
-    title: Our Core Team
-    body: Our core team has over 75 years of collective experience.
+    title: Our Leadership
+    body: Our leadership team has over 60 years of collective experience.
     authors:
       - persons/bud-parr.md
       - persons/regis-philibert.md
       - persons/adam-chlan.md
-      - persons/rory-bernstein.md
-      - persons/tanner-smith.md
   - type: boxes
     layout: boxes
     title: Our Work
