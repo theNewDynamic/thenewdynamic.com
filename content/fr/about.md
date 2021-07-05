@@ -12,8 +12,8 @@ description: Depuis 2002 nous construisons des sites web pour des organisations
 blocks:
   - type: persons
     layout: persons
-    title: Notre équipe cœur
-    body: Notre équipe cœur a une expérience cumulée de plus de 60 ans.
+    title: Notre équipe de direction
+    body: Notre équipe de direction a une expérience cumulée de plus de 60 ans.
     authors:
       - persons/bud-parr.md
       - persons/regis-philibert.md
