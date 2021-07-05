@@ -88,7 +88,7 @@ With the `mounts` key, attached to our Bootstrap import, we'll give Hugo more di
 ```yaml
 module:
   imports:
-   - path: github.com/twbs/bootstrap
+   - path: github.com/twbs/icons
      mounts:
      - source: icons
        target: assets/icons
