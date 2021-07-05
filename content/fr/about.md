@@ -13,13 +13,11 @@ blocks:
   - type: persons
     layout: persons
     title: Notre équipe cœur
-    body: Notre équipe cœur a une expérience cumulée de plus de 75 ans.
+    body: Notre équipe cœur a une expérience cumulée de plus de 60 ans.
     authors:
       - persons/bud-parr.md
       - persons/regis-philibert.md
       - persons/adam-chlan.md
-      - persons/rory-bernstein.md
-      - persons/tanner-smith.md
   - type: boxes
     layout: boxes
     title: Notre travail
