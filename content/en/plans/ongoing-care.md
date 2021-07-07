@@ -13,7 +13,7 @@ included:
 - Security Monitoring
 - Emergency Support 24/7
 - SEO Health Check
-- Daily Backups
+- Daily Encrypted Backups
 - SSL Certificate
 ---
 
