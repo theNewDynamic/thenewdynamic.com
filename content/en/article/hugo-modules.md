@@ -2,7 +2,7 @@
 draft: false
 authors:
   - persons/regis-philibert.md
-lastmod: 2020-08-30T19:32:27.000Z
+lastmod: 2021-07-07T08:04:44.000Z
 featured: /uploads/hugo-modules-featured.png
 date: 2020-08-30T19:32:27.000Z
 twitter_description: |-
@@ -145,19 +145,19 @@ What if the repo is updated? The default behaviour of Hugo Module is, on the fir
 If `github.com/twbs/icons` releases `v1.1.0` and you want that new release you can:
 
 ```bash
-hugo mod get -u github.com/twbs/bootstrap
+hugo mod get -u github.com/twbs/icons
 ```
 This should update your `go.mod` file with the latest release.
 
 Now if you want a specific release rather than the latest, (we'll use another repo for that example):
 
 ```bash
-hugo mod get github.com/twbs/bootstrap@v3.4.0
+hugo mod get github.com/twbs/icons@v1.4.0
 ```
 
 If you want a specific commit, you'll need to @ its long hash like so
 ```bash
-hugo mod get github.com/twbs/bootstrap@394812b61d4dc80bfb2e090de925ae0dfc4cc29b
+hugo mod get github.com/twbs/icons@2396edfbfeda7a3f9c5d98f67e3540f593b28e1e
 ```
 
 
@@ -199,7 +199,7 @@ Our imports and mounts settings will be very similar to what we did before. We'l
 # config.yaml
 module:
   imports:
-   - path: github.com/twbs/bootstrap
+   - path: github.com/twbs/icons
      mounts:
 	   - source: icons
 	     target: assets/hugo-icons/icons
