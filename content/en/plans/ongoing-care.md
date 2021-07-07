@@ -9,8 +9,12 @@ ctas:
 included:
 - Unlimited Tech Support
 - Software Maintenance and Updates
-- Downtime/Performance monitoring
-- Emergency support 24/7
+- Downtime/Performance Monitoring
+- Security Monitoring
+- Emergency Support 24/7
+- SEO Health Check
+- Daily Backups
+- SSL Certificate
 ---
 
 We tell you more here
