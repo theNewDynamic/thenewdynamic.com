@@ -1,4 +1,5 @@
 tnd_forms:
+  provider: netlify
   css:
     form: 'max-w-md pb-5'
     control: ''

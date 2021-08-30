@@ -1,7 +1,5 @@
 id: plan-proactive-management-en
 title: Plan Proactive
-provider: formspree
-formspree_id: xpzoqlev
 redirect: /thank-you/
 submit: Get Started
 fields:
