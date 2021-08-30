@@ -1,0 +1,20 @@
+{{/*
+  GetForm
+  Tries and retrieve form with given string as id from `site.Data.tnd-forms`
+
+  @author @regisphilibert
+
+  @context String (.)
+
+  @access private
+
+  @returns Boolean
+*/}}
+{{ $form := dict }}
+{{ with index site.Data "tnd-forms" }}
+  {{ with index . $ }}
+    {{ $form = . }}
+  {{ end }}
+{{ end }}
+
+{{ return $form }}

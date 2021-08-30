@@ -5,7 +5,7 @@ short_description: Votre site à son meilleur avec des suggestions proactive pou
 price: 2600
 ctas:
   - copy: Accedez!
-    url: /dunno
+    url: /fr/plans/early-stage-design-build/
     type: fat
   - copy: Changez de plan à tout moment
 included:

@@ -45,13 +45,18 @@
 			<div class="w-full col-span-8 mt-12 mb-32">
 				<h2 class="text-5xl font-bold">Get Started</h2>
 				<div class="my-8">
-					{{ if .Slug }} {{ partial "tnd-forms/private/form" (print "plan-" .Slug "-" .Language) }} {{ end }}
+					{{ $form := print "contact" "-" $.Language }}
+					{{ $test := print "plan-" .Slug "-" $.Language }}
+					{{ with partialCached "func/GetForm" $test }}
+						{{ $form = $test }}
+					{{ end }}
+					{{ partial "tnd-forms/private/form" $form }}
 				</div>
 			</div>
 		</div>
 
 		<div class="max-w-2xl mx-auto mb-32 text-sm italic text-center text-gray-700 rich-text">
-			{{ .Params.disclaimer | markdownify  }}
+			{{ .Params.disclaimer | markdownify }}
 		</div>
 	</div>
 </div>

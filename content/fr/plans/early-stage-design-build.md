@@ -5,7 +5,7 @@ short_description: Tarif agile même pour les projets les plus complexes
 price: 13000
 ctas:
   - copy: Commencez
-    url: /dunno
+    url: /fr/plans/early-stage-design-build/
     type: fat
   - copy: Changez de plan à tout moment
 included:
