@@ -1,7 +1,6 @@
 id: contact-fr
 title: Contact Us
-provider: formspree
-formspree_id: xwkrzljr
+provider: netlify
 redirect: /fr/merci/
 submit: Contactez-nous
 fields:
