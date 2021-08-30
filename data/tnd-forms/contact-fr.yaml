@@ -1,6 +1,5 @@
 id: contact-fr
 title: Contact Us
-provider: netlify
 redirect: /fr/merci/
 submit: Contactez-nous
 fields:
