@@ -19,14 +19,18 @@ Even though Hugo handles a lot from configuration, most of its new main features
 - Just a few lines of yaml to process __scripts__ supporting React or __styles__ supporting sass, tailwind, purgecss, you name it! 
 - Just some configuration maps to generate your hosted fonts's fontface declaration!
 - An easy to use `partial` to transform your __media__ files using either Hugo's image processing or imgix!
-- HUGE will also automatically generates all the __SEO__ tags your content will need including jsonld.
+- HUGE will also automatically generates all the __SEO__ tags your content will need including JSON+LD.
 - It even sports its own __environment__ solution so testing environment is just as easy as the rest of Hugo!
 
-Lastly, as HUGE handles most of your needs from configuration files, it also sports "configuration functions". A way to point to a partial whose returned value will be used for your setting... Think of it as "dynamic config".
+Lastly, as HUGE handles most of your needs from configuration files, it also sports "configuration functions". A way to point to a partial whose returned value will be used for your setting... Think of it as dynamic config à la JavaScript object.
 
-HUGE is almost reaching Alpha, and has many more features to come! We're eager to get some feedback from the Hugo community!
+HUGE is almost reaching Alpha, and has many more features to come! 
 
-## HUGE Scripts!
+At this stage we're eager to get some feedbacks or questions on its intital features detailed below. And the best way to do it is to hit the repo's [Discussions](https://github.com/theNewDynamic/huge/discussions)
+
+## This is HUGE
+
+### HUGE Scripts!
 
 HUGE will process your scripts with Hugo's powerfull [`js.Build`](https://gohugo.io/hugo-pipes/js#readout).
 
@@ -45,9 +49,9 @@ scripts:
 
 {{< huge_wiki "Scripts" >}}
 
-## HUGE Styles!
+### HUGE Styles!
 
-HUGE will process your styles with Hugo's powerfull [Pipes](https://gohugo.io/hugo-pipes/) (sass, postcss, purgecss, tailwind you name it...)
+HUGE will process your styles with Hugo's powerfull [Pipes](https://gohugo.io/hugo-pipes/) (sass, postcss, purgecss, tailwind, you name it...)
 
 ```yaml
 #_huge/config/styles.yaml
@@ -66,7 +70,7 @@ styles:
 
 {{< huge_wiki "Styles" >}}
 
-## HUGE Media! 
+### HUGE Media! 
 
 HUGE and its `huge/media/Get` function can transform images with Hugo's powerful [image transformations](https://gohugo.io/content-management/image-processing/) or... imgix!
 
@@ -87,9 +91,9 @@ HUGE and its `huge/media/Get` function can transform images with Hugo's powerful
 
 {{< huge_wiki "Media" >}}
 
-## HUGE SEO! 
+### HUGE SEO! 
 
-Huge will build all the meta tags you need in your head, even jsonld with zero configuration! 
+Huge will build all the SEO related tags you need in your `<head>`, even JSON+LD with zero configuration! 
 
 ```yaml
 ---
@@ -121,7 +125,7 @@ Photo Credits: [Aldric Rivat](https://unsplash.com/@aldric)
 <meta content="Today we write about: Victorian House galore for everyone who loves them!" name="description">
 <meta content="Today we write about: Victorian House galore for everyone who loves them!" property="og:description">
 <meta content="Today we write about: Victorian House galore for everyone who loves them!" name="twitter:description">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"website","dateModified":null,"datePublished":null,"description":"Today we write about: Victorian House galore for everyone who loves them!","headline":"Victorian Houses | Architecture Then!","image":"media/aldric-rivat-LfsDV6VObmw-unsplash_1200x0_resize_q75_box.jpg","url":"https://archi-then.com/post/victorian-houses/","wordcount":"8"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"website","dateModified":null,"datePublished":null,"description":"Today we write about: Victorian House galore for everyone who loves them!","headline":"Victorian Houses | Architecture Then!","image":"https://archi-then.com/media/aldric-rivat-LfsDV6VObmw-unsplash_1200x0_resize_q75_box.jpg","url":"https://archi-then.com/post/victorian-houses/","wordcount":"8"}</script>
 <meta content="https://archi-then.com/post/victorian-houses/" property="og:url">
 <meta content="https://archi-then.com/post/victorian-houses/" name="twitter:url">
 <meta content="Architecture Then!" property="og:site_name">
@@ -130,15 +134,17 @@ Photo Credits: [Aldric Rivat](https://unsplash.com/@aldric)
 <link href="https://archi-then.com/fr/post/maisons-victoriennes/" hreflang="fr" rel="alternate">
 <meta content="website" property="og:type">
 <meta content="2021-06-24T08:32:27+00:00" property="og:published_time">
-<meta content="/media/aldric-rivat-LfsDV6VObmw-unsplash_1200x0_resize_q75_box.jpg" property="og:image">
-<meta content="/media/aldric-rivat-LfsDV6VObmw-unsplash_1200x0_resize_q75_box.jpg" name="twitter:image">
+<meta content="/https://archi-then.com/media/aldric-rivat-LfsDV6VObmw-unsplash_1200x0_resize_q75_box.jpg" property="og:image">
+<meta content="https://archi-then.com/media/aldric-rivat-LfsDV6VObmw-unsplash_1200x0_resize_q75_box.jpg" name="twitter:image">
 <meta content="summary_large_image" name="twitter:card">
 </head>
 ```
 
 {{< huge_wiki "SEO" >}}
 
-## HUGE Fonts!
+### HUGE Fonts!
+
+Declare your fonts with their property and a base filename pointing to your assets and HUGE will generate all the necessary `@fontface` declarations for you with prefetching tags to boot!
 
 ```yaml
 # _huge/config/fonts.yaml
@@ -156,16 +162,16 @@ fonts:
   weight: 400
 ```
 
-```go-template-html
+```go-html-template
 <head>
 <!-- fonts -->
-{{ partial "huge/fonts/tags "any" }}
+{{ partial "huge/fonts/tags . }}
 </head>
 ```
 
 {{< huge_wiki "Fonts" >}}
 
-## HUGE Environment!
+### HUGE Environment!
 
 HUGE offers an environment solution which gives users several functions to test environments following their own logic.
 
@@ -183,6 +189,27 @@ HUGE offers an environment solution which gives users several functions to test 
 ```
 
 {{< huge_wiki "Env" >}}
+
+### HUGE Configuration
+
+Everything happens in `_huge/config/` directory. You can populate settings with functions à la JavaScript.
+
+```yaml
+# _huge/config/media.yaml
+imgix: 
+  domain: functions/GetImgixDomain()
+```
+
+```go-html-template
+{{/* layouts/partials/functions/GetImgixDomain.html */}}
+{{ $domain := "staging.imgix.net" }}
+{{ if partial "huge/env/IsProduction" . }}
+  {{ $domain = "live.imgix.net" }}
+{{ end }}
+{{ return $domain }}
+```
+
+{{< huge_wiki "Config" >}}
 
 ## Get started!
 
