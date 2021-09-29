@@ -4,11 +4,13 @@ authors:
   - persons/regis-philibert.md
 featured: /uploads/huge-featured.png
 date: 2021-09-28T07:32:27.000Z
-title: "HUGE Announcement!"
-slug: introducing-huge
+title: "Introducing HUGE, a Hugo framework"
+slug: introducing-huge-a-hugo-framework
+seo:
+  description: Styles and scripts building, media transformation, self-loaded fonts and SEO in the configuration. Hugo is even more declarative with HUGE.
 ---
 
-## Introducing HUGE, a Hugo framework.
+## HUGE Announcement!
 
 We've been cooking something interesting at TND which could benefit Hugo users. It's a framework you can use on any Hugo project.
 
