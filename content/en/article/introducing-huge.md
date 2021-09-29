@@ -32,6 +32,9 @@ At this stage we're eager to get some feedbacks or questions on its intital feat
 
 ## This is HUGE
 
+- [Repo](https://github.com/theNewDynamic/huge)
+- [Wiki](https://github.com/theNewDynamic/huge/wiki)
+
 ### HUGE Scripts!
 
 HUGE will process your scripts with Hugo's powerfull [`js.Build`](https://gohugo.io/hugo-pipes/js#readout).
