@@ -1,13 +1,21 @@
 {{ $script := dict }}
 {{ $netlify_script_bundle := slice }}
-{{ with partialCached "func/GetStyleAssets" . "GetStyleAssets" }}
-  {{ with where . "type" "link" }}
-    {{ with $style := index . 0 }}
-      {{ $netlifycms_style := printf `import React from "react"; CMS.registerPreviewStyle("%s");` $style.beforeProcess.Permalink | resources.FromString "style_netlifycms.jsx" }}
-      {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_style }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{ $netlify_start := ` 
+import React from "react";
+fetch("/")
+  .then(response => response.text())
+  .then(html => {
+    const f = document.createElement("html");
+    f.innerHTML = html;
+    Array.from(f.getElementsByTagName("link")).forEach(tag => {
+      if (tag.rel == "stylesheet" && !tag.media) {
+        CMS.registerPreviewStyle(tag.href);
+      }
+    });
+  });
+` }}
+{{ $netlifycms_style := $netlify_start | resources.FromString "style_netlifycms.jsx" }}
+{{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_style }}
 {{ with resources.Match "netlifycms/**/*.jsx" }}
   {{ $netlifycms_script := resources.Concat "script_netlifycms.jsx" . }}
   {{ $netlify_script_bundle = $netlify_script_bundle | append $netlifycms_script }}
@@ -16,7 +24,7 @@
   {{ $defines := dict "process.env.NODE_ENV" `"development"` }}
   {{ $script = resources.Concat "netlifycms.jsx" . }}
   {{ $script = $script | js.Build (dict "defines" $defines) }}
-  {{ if partial "func/IsProduction" . }}
+  {{ if partialCached "huge/env/IsProduction" "IsProduction" }}
     {{ $script = $script | fingerprint }}
   {{ end }}
 {{ end }}

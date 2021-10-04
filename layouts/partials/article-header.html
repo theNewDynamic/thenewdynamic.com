@@ -4,9 +4,9 @@
     <div
       class="flex flex-col justify-center mb-2 overflow-hidden font-serif text-2xl font-light leading-tight text-black transform -translate-x-2 -translate-y-5 bg-gray-100 border-gray-200 rounded shadow min-h-64 TKborder lg:-translate-x-5">
       {{ with .Params.featured }}
-        {{ $args := dict "src" . "width" 600 }}
-        {{ with partialCached "func/GetSRC" $args $args }}
-          <img class="w-full" src="{{ . }}" alt="">
+        {{ $args := dict "path" . "width" 600 }}
+        {{ with partialCached "huge/media/Get" $args $args }}
+          <img class="w-full" src="{{ .RelPermalink }}" alt="">
         {{ end }}
       {{ else }}
       <div class="py-8 pl-12 pr-8 text-3xl">

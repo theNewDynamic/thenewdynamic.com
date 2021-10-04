@@ -2,7 +2,7 @@
 <html lang="{{ site.LanguageCode | default "en" }}" class="no-js">
   <head>
     {{ partial "head/meta.html" . }}
-    {{ partialCached "head/styles" . }}
+    {{ partial "huge/styles/tags" "main" }}
     {{ partial "head/scripts" . }}
   </head>
   <body class="{{ partial "func/GetCSSTheme" . }}">

@@ -3,9 +3,9 @@
 {{ $alt := false }}
 {{ with .Destination }}
   {{ $src = . }}
-  {{ $transArgs := dict "src" . "width" 800 }}
-  {{ with partialCached "func/GetSRC" $transArgs $transArgs }}
-    {{ $src = . }}
+  {{ $transArgs := dict "path" . "width" 800 }}
+  {{ with partialCached "huge/media/Get" $transArgs $transArgs }}
+    {{ $src = .RelPermalink }}
   {{ end }}
   {{ with $.Title }}
     {{ $title = . }}

@@ -3,9 +3,9 @@
   {{ range resources.Match "/uploads/*" }}
     {{ $image := dict "original" .RelPermalink}}
     {{ if eq .MediaType.MainType "image" }}
-      {{ $args := dict "src" .RelPermalink "width" 600 }}
-      {{ with partialCached "func/GetSRC" $args $args }}
-        {{ $image = merge $image (dict "transformed" .) }}
+      {{ $args := dict "path" .RelPermalink "width" 600 }}
+      {{ with partialCached "huge/media/Get" $args $args }}
+        {{ $image = merge $image (dict "transformed" .RelPermalink) }}
       {{ end }}
       <div>
         <div class="text-xl">Original {{ .Width }}</div>
