@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --minify -e netlify"
+command = "hugo --minify"
 
 [build.environment]
   GO_VERSION = "1.14"
