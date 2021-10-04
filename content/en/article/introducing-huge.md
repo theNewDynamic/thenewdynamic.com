@@ -19,7 +19,7 @@ The concept revolves around making some critical Hugo features declarative.
 Even though Hugo handles a lot from configuration, most of its new main features (pipes, js.build, image transformation) do not. HUGE aligns their ease of use with other features of Hugo so users don't have to educate themselves about their API and focus on what matters: HTML, Javascript, CSS.
 
 - Just a few lines of yaml to process __scripts__ supporting React or __styles__ supporting sass, tailwind, purgecss, you name it! 
-- Just some configuration maps to generate your hosted fonts's fontface declaration!
+- Just some configuration maps to generate your hosted fonts's __@fontface__ declaration!
 - An easy to use `partial` to transform your __media__ files using either Hugo's image processing or imgix!
 - HUGE will also automatically generates all the __SEO__ tags your content will need including JSON+LD.
 - It even sports its own __environment__ solution so testing environment is just as easy as the rest of Hugo!
@@ -28,7 +28,7 @@ Lastly, as HUGE handles most of your needs from configuration files, it also spo
 
 HUGE is almost reaching Alpha, and has many more features to come! 
 
-At this stage we're eager to get some feedbacks or questions on its intital features detailed below. And the best way to do it is to hit the repo's [Discussions](https://github.com/theNewDynamic/huge/discussions)
+At this stage we're eager to get some feedbacks or questions on its initital features detailed below. And the best way to do it is to hit the repo's [Discussions](https://github.com/theNewDynamic/huge/discussions)
 
 ## This is HUGE
 
@@ -218,7 +218,7 @@ imgix:
 
 ## Get started!
 
-I guess the easiest way to get aquainted with HUGE might be by downloading one of its starters:
+I guess the easiest way to get acquainted with HUGE might be by downloading one of its starters:
 
 ### Basic
 
