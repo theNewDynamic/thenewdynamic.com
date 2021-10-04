@@ -5,7 +5,7 @@ command = "hugo --minify -e netlify"
 [build.environment]
   GO_VERSION = "1.14"
   NODE_VERSION = "10.13.0"
-  HUGO_VERSION = "0.79.0"
+  HUGO_VERSION = "0.86.1"
 [dev]
 framework = "hugo" # or "#static" to force a static server
 command = "npm run start"
