@@ -9,6 +9,7 @@
   <body class="{{ partial "func/GetCSSTheme" . }}">
     <div class="page-container">
       {{ partial "header.html" . }}
+      {{ printf "%#v" (partial "huge/env/Get" .) }}
       {{ block "main" . }}
       {{ end }}
     </div>
