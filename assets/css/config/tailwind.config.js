@@ -192,7 +192,6 @@ module.exports = {
 		borderRadius: ["responsive"],
 	},
 	plugins: [
-		require("@tailwindcss/ui"),
 		require("tailwindcss-gradients"),
 		require("tailwindcss-typography")({
 			componentPrefix: "", // the prefix to use for text style classes
