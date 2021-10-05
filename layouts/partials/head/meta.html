@@ -17,5 +17,3 @@
 {{ if partialCached "huge/env/IsProduction" "IsProduction" }}
   {{ template "_internal/google_analytics_async.html" . }}
 {{end}}
-
-{{ partialCached "head/fonts.html" . }}

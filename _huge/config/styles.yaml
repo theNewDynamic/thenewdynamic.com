@@ -4,3 +4,8 @@ styles:
   use:
   - postcss
   - postprocess
+# As we cannot use our own names for the files, we use a hardcoded fontface declaration rather
+# than using HUGE/Fonts
+- name: fonts
+  path: fonts/index.css
+  internal: true
