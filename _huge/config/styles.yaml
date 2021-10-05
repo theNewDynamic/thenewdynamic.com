@@ -4,8 +4,8 @@ styles:
   use:
   - postcss
   - postprocess
-  fingerprint: staging
-  minify: staging
+  fingerprint: config/fingerprint-minify()
+  minify: config/fingerprint-minify()
 # As we cannot use our own names for the files, we use a hardcoded fontface declaration rather
 # than using HUGE/Fonts
 - name: fonts
