@@ -4,7 +4,7 @@ command = "hugo --minify"
 
 [build.environment]
   GO_VERSION = "1.14"
-  NODE_VERSION = "10.13.0"
+  NODE_VERSION = "15.4.0"
   HUGO_VERSION = "0.86.1"
   HUGO_ENV = "staging"
 [dev]
