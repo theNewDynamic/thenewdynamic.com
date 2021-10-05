@@ -18,10 +18,7 @@ command = "npm run start"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --minify -D -b $DEPLOY_PRIME_URL"
+command = "hugo -D -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-command = "hugo --minify -b $DEPLOY_URL"
-
-[context.master]
 command = "hugo --minify -b $DEPLOY_URL"
