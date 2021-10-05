@@ -17,9 +17,9 @@
         <div class="w-full sm:w-1/2 sm:mb-0">
           <div class="sm:p-2">
             {{ with .image }}
-              {{ $args := dict "src" . "width" 600 }}
-              {{ with partialCached "func/GetSRC" $args $args }}
-                <img data-src="{{ . }}" alt="work image" class="border lazyload" >
+              {{ $args := dict "path" . "width" 600 }}
+              {{ with partialCached "huge/media/Get" $args $args }}
+                <img data-src="{{ .RelPermalink }}" alt="work image" class="border lazyload" >
               {{ end }}
             {{ end }}
           </div>

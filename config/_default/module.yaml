@@ -4,10 +4,14 @@ imports:
   - path: github.com/theNewDynamic/hugo-module-tnd-redirects
   - path: github.com/theNewDynamic/hugo-module-tnd-netlifycms
   - path: github.com/theNewDynamic/hugo-component-tnd-blocks
-  - path: github.com/theNewDynamic/hugo-module-tnd-styleguide
   - path: github.com/theNewDynamic/hugo-module-tnd-icons
   - path: github.com/theNewDynamic/hugo-module-tnd-func
   - path: github.com/theNewDynamic/hugo-module-tnd-tags
   - path: github.com/theNewDynamic/hugo-module-tnd-iubenda
   - path: github.com/theNewDynamic/hugo-module-tnd-headers
-  - path: github.com/theNewDynamic/hugo-module-tnd-seo
+  - path: github.com/theNewDynamic/huge
+mounts:
+  - source: assets
+    target: assets
+  - source: _huge
+    target: assets/_huge

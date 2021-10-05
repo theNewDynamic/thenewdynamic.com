@@ -30,6 +30,7 @@ partials/structure/stylesheet.html
 # Hugo
 hugo_stats.json
 layouts/partials/tnd-iubenda/private/GetApiKey.html
+resources/_gen/assets/css
 
 # Local Netlify folder
 .netlify

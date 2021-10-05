@@ -1,21 +1,13 @@
-{{ with .Site.Params.image_url }}
-  <link rel="dns-prefetch" href="{{.}}">
-{{ end }}
+
 {{ with .Site.GoogleAnalytics }}
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
 {{ end }}
 
-{{ $js := resources.Get "index.js" | js.Build (dict "target" "es2016") }}
-{{ if not site.IsServer }}
-  {{  $js = $js | minify | fingerprint }}
-{{ end }}
-{{ with $js }}
-<script type="text/javascript" src="{{ .RelPermalink }}" defer></script>
-{{ end }}
+{{ partial "huge/scripts/tags" . }}
 
 
 
-{{ if partialCached "func/IsProduction" . }}
+{{ if partialCached "huge/env/IsProduction" "IsProduction" }}
 <script src="https://cdn.usefathom.com/script.js" site="KXXQSWVI" defer></script>
 {{/* integrity="sha384-G4RrFbP4JdxxnoWJiJ+oMzKyFCHPE70DNZxer9XidgDCBgf+cjqxN2sSJpDtlKT" crossorigin="anonymous" */}}
 {{ end }}

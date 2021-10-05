@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ site.LanguageCode | default "en" }}" class="no-js">
   <head>
-    {{ if partialCached "func/IsProduction" . }}
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    {{ else }}
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    {{end}}
-    {{ partial "head/styles" . }}
-    {{ partial "head/scripts" . }}
+    {{ partial "huge/styles/tags" "main" }}
+    {{ partial "head/scripts" }}
   </head>
   <body>
       styleguide baseof

@@ -1,13 +1,13 @@
 {{ define "main" }}
 <article>  
   <div id="pageheading" class="w-full py-8 TKbg-theme bg-gradient-br-primary-light">
-    <div class="container max-w-6xl pb-8 mt-12 text-gray-100 duration-200 ease-in transtion">
+    <div class="max-w-6xl mx-auto pb-8 mt-12 text-gray-100 duration-200 ease-in transtion">
       {{ partial "article-header.html" (dict "location" "single" "Page" $) }}
     </div>  
   </div>
   {{/* The sticky class below must follow directly after the pageheadding div above for its interaction to work "js/intersection-observer.js" */}}
   <div class="sticky top-0 z-50 w-full text-white transition duration-200 ease-in border-t opacity-0 headings bg-gradient-tr-primary">
-    <div class="container max-w-3xl p-4 flex justify-between">
+    <div class="max-w-3xl mx-auto p-4 flex justify-between">
       <div>
         {{ .Section | title }} {{ with .Params.categories}}{{ index . 0 }}{{ end}}
         {{ with .Title }} :<span class="inline-block ml-4 altheading">{{ . }}</span>{{ end }}
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="container max-w-3xl mt-8 mb-16">
+  <div class="max-w-3xl mx-auto mt-8 mb-16">
     <div class="col-span-11 text-gray-700 rich-text">
       {{ .Content }}
     </div>

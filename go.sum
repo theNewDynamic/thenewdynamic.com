@@ -1,3 +1,5 @@
+github.com/theNewDynamic/huge v0.1.0 h1:GEFDPHpTj9Bgm8b4dKiDn82NKv9nVAAPM3oTBLDIJX4=
+github.com/theNewDynamic/huge v0.1.0/go.mod h1:wZCHbuGglX7Iwa2xbJ/FcDIUzUsMGW6CyLboOp5iKR8=
 github.com/theNewDynamic/hugo-component-tnd-blocks v0.0.0-20200618163712-a1fce85c0c7b h1:KTmxxuhuWevdfoN4rQz8Dq/ZGivhCcky1jFYoqT9xtI=
 github.com/theNewDynamic/hugo-component-tnd-blocks v0.0.0-20200618163712-a1fce85c0c7b/go.mod h1:VnztlqJpuK/eTa1KFBvyNCg3OgBGIwCxfccBMLJY3LM=
 github.com/theNewDynamic/hugo-module-tnd-forms v0.0.0-20200814174513-3de32861e182 h1:S/DNYcBG97xCAGJNmq3gB7p7JJdwRRukZMfi3c2Ea9Y=
@@ -10,8 +12,12 @@ github.com/theNewDynamic/hugo-module-tnd-headers v0.1.4 h1:ZmHKrcGc62SMZkXERQL4c
 github.com/theNewDynamic/hugo-module-tnd-headers v0.1.4/go.mod h1:L1vGtRuZCVVcfFHnLokvtQ9hlsfN/jiUem8O17VYeZo=
 github.com/theNewDynamic/hugo-module-tnd-icons v0.1.4 h1:xz8NrAJpjvdfygjpa/HZvG+RL7Jox5nXaUizOLz+mxg=
 github.com/theNewDynamic/hugo-module-tnd-icons v0.1.4/go.mod h1:5P8x9n4dAq+JChj5o0nUsF5G3ucNQglFoeAn5c1Me9A=
+github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2 h1:QyvV5FgRFNX6ZbMkB9uE2b5lnoCzVWlWSfM+ic1fYGc=
+github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2/go.mod h1:6P3SwYL7H/KccxwrB7BDl+wJW2qzaLTnVDf9m+Uj/Uo=
 github.com/theNewDynamic/hugo-module-tnd-iubenda v0.1.0 h1:LozT94umbZKcS42TTZ/CwGGKTJFQYesM19OmhylVfVo=
 github.com/theNewDynamic/hugo-module-tnd-iubenda v0.1.0/go.mod h1:u/871AHmqZqGhOO9g3iqO1gq66hpp+d1Ls8uldbVkQQ=
+github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210627141852-8218fee868cb h1:az9J4QSOi7Jv0cIlqN/rlsDR+wm7L4MG1QiHnvrK2oo=
+github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210627141852-8218fee868cb/go.mod h1:5kGUg8NNAfXvsiXl2y910hJEjMkfQbmO1m1vXcehZiA=
 github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.6 h1:aNjrECljNsImCdU5efv4IIU1741Ea86EpZsV8W2si6Q=
 github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.6/go.mod h1:nq9tIR0Xpx2W2mSQHfJya2OvAfgYOMveqrllijA27vo=
 github.com/theNewDynamic/hugo-module-tnd-netlifycms v0.1.7 h1:5L7XSijR1Qu7S5vy4BXS4kI3i61dtvfyjr24k4emp24=

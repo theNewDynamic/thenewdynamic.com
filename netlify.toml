@@ -1,11 +1,12 @@
 [build]
 publish = "public"
-command = "hugo --minify -e netlify"
+command = "hugo --minify"
 
 [build.environment]
   GO_VERSION = "1.14"
-  NODE_VERSION = "10.13.0"
-  HUGO_VERSION = "0.79.0"
+  NODE_VERSION = "15.4.0"
+  HUGO_VERSION = "0.86.1"
+  HUGO_ENV = "staging"
 [dev]
 framework = "hugo" # or "#static" to force a static server
 command = "npm run start"
@@ -18,10 +19,7 @@ command = "npm run start"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --minify -e netlify -D -b $DEPLOY_PRIME_URL"
+command = "hugo -D -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-command = "hugo --minify -e netlify -b $DEPLOY_URL"
-
-[context.master]
-command = "hugo --minify -e netlify -b $DEPLOY_URL"
+command = "hugo --minify -b $DEPLOY_URL"

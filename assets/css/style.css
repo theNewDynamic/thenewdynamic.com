@@ -29,7 +29,9 @@
 		--headerHeight: 78px;
 	}
 }
-
+.container{
+	@apply max-w-7xl px-4 mx-auto;
+}
 /* STICKY FOOTER */
 html,
 body {

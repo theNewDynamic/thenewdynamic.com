@@ -1,0 +1,8 @@
+{{ $return := "never" }}
+{{ with partialCached "huge/env/Get" "Get" "Get" }}
+  {{ if eq . "staging" "production" }}
+    {{ $return = "always" }}
+  {{ end }}
+{{ end }}
+
+{{ return $return }}

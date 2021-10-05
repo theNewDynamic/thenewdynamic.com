@@ -159,10 +159,10 @@ Taking into account the configuration examples for the **domain**, the **mapped 
 {{ $src := partial "tnd-imgix/GetSRC" "/uploads/image.jpg" }}
 
 {{*/ 2 Context is a map /*}}
-{{ $src := partial "tnd-imgix/GetSRC" (dict "src" "/uploads/image.jpg" "max-width" 500 "halftone" 11) }}
+{{ $src := partial "tnd-imgix/GetSRC" (dict "path" "/uploads/image.jpg" "max-width" 500 "halftone" 11) }}
 
 {{*/ 3 Context is a map but an animated gif made its way in! 🤦‍♂️ /*}}
-{{ $src := partial "tnd-imgix/GetSRC" (dict "src" "/uploads/cat-cucumber.gif" "halftone" 11") }}
+{{ $src := partial "tnd-imgix/GetSRC" (dict "path" "/uploads/cat-cucumber.gif" "halftone" 11") }}
 
 ```
 
