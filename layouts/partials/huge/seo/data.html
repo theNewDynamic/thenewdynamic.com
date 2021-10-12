@@ -5,6 +5,7 @@
 {{ $args := dict "path" . "width" 1000 "path" . }}
   {{ with partialCached "huge/media/Get" $args $args }}
     {{ $s.SetInMap "seo" "image" .Permalink }}
+    {{ $s.SetInMap "seo" "twitter_card" "summary_large_image" }}
   {{ end }}
 {{ end }}
 
