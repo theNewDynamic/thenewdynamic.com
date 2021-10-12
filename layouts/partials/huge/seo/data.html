@@ -2,7 +2,7 @@
 {{ $s := newScratch }}
 {{ $s.Set "seo" dict }}
 {{ with $.Page.Params.featured }}
-{{ $args := dict "path" . "width" 1000 "path" "absolute" }}
+{{ $args := dict "path" . "width" 1000 "path" . }}
   {{ with partialCached "huge/media/Get" $args $args }}
     {{ $s.SetInMap "seo" "image" .Permalink }}
   {{ end }}
