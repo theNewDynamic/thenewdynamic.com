@@ -343,20 +343,29 @@ So to revere the order and have them younger to older:
 {{ $gents := sort $gents "birth" "desc" }}
 ```
 
-## Transforming.
+## Transforming!
 
-Now let's dive into use this recently aquired knowledge about data maniuplation in Hugo. We'll output some data from the raw gets data we've configured up there. 
+Ok, that is all well and good, but let's be hardcoding your data this way can be useful for defining defaults or re-usable bases but not much more. Usually you data came from a source you lack control on like an API, a Data file or most usually a content file. 
 
-This is the structure for one gent:
+What we'll focus on now is how you can take data from this source and transform it to better suit your template usage.
 
-"firstname" String (John)
-"lastname" String (Lennon)
-"birth" String ("1940-10-09")
-"instruments" Slice of strings
+Alright, so one of our gent from above should look like this, were they a typicall markdown file:
 
-Note that we've updated the birth string to include month and day.
+```yaml
+title: gent-1
+firstname: John
+lastname: Lennon
+birthdate: 1940-10-09 #let's use something more precise
+instruments:
+  - Piano
+  - Guitar
+  - Vocals
+---
 
-Now this is ideally what we want to make available ot an API endpoint or a template:
+John Lennon was an English singer, songwriter, musician and peace activist who achieved worldwide fame as the founder...
+```
+
+Now this is ideally what we want to make available at an API endpoint or a template:
 
 "firstname" String
 "lastname" String
@@ -367,6 +376,7 @@ Now this is ideally what we want to make available ot an API endpoint or a templ
   "string_rep" String
   "list" Slice
 "city" "Liverpool"
+
 
 ```
 {{ $new_gents := slice }}
