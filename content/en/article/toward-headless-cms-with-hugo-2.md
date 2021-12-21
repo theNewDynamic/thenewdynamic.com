@@ -29,8 +29,7 @@ __Step 1__ uses whatever script and tooling you're comfortable with to fetch the
 
 __Step 2__ simply runs a Hugo project using the markdown files generated during __Step 1__.
 
-Now there's a lot of way to implement __Step 1__.
-Netlify for instance has a "build" plugin solution you can run before your build. It's currently limited to NodeJS though, and requires jumping through several hoops when building locally but it works.
+There are lot of ways to implement __Step 1__: Netlify, for instance, has a "build" plugin solution you can run before your build. It is currently limited to NodeJS and requires jumping through several hoops when building locally, but is an option.
 
 CloudCannon on the other hand reads a `prebuild` file on your repo which can include any script to be run before the build.
 
@@ -79,7 +78,7 @@ For Hugo to build a project, it only needs two files. We'll add those.
 
 ### Configuring our minimal project
 
-Technically an empty `config.yaml` would be okay, but while we're at it, we can pass some settings to make sure Hugo does not outputs too many useless files likes `/categories/index.html`, `/tags/index.html` or the `sitemap.xml` etc...
+Technically an empty `config.yaml` would be okay, but while we're at it, we can pass some settings to make sure Hugo does not output too many useless files likes `/categories/index.html`, `/tags/index.html` or the `sitemap.xml` etc...
 
 ```yaml
 # config.yaml
@@ -118,13 +117,13 @@ First let's look at what our endpoint at `https://monsters-api.netlify.app/` ret
 ```
 
 {{% notice %}}
-There is various settings this `resources.GetRemote` can use like "headers" (useful for authorizations) or `method` and `body`. It also sports a `.Err` method to check for errors. Now our monsters API is not too shy, we won't need to get into any of this just yet. A simple URL will do.
+There are various settings this `resources.GetRemote` can use like "headers" (useful for authorizations) or `method` and `body`. It also sports a `.Err` method to check for errors. Now our monsters API is not too shy, we won't need to get into any of this just yet. A simple URL will do.
 
 {{% /notice %}}
 
 __Looks good? Let's start fetching!__
 
-We'll know focus on our minimal project's `layouts/index.html`. Hugo will only have one template to read, but for what we're trying to achieve it's plenty.
+We'll now focus on our minimal project's `layouts/index.html`. Hugo will only have one template to read, but for what we're trying to achieve it's plenty.
 
 This template file will be in charge of fetching the API data, ranging on the returned monsters and create the markdown files.
 
@@ -145,7 +144,7 @@ Let's dive in with this very basic piece:
 With the code above, we are able to retrieve our Monsters. 
 
 
-But that will not be enought, the `$monsters` variable does not contain a list of monsters yet, for now it's just a resource, a file which has been fetched. The content of the response, in our case ~500 monsters trapped in an jsonified array is available at `.Content`.
+But that will not be enough, the `$monsters` variable does not contain a list of monsters yet, for now it's just a resource, a file which has been fetched. The content of the response, in our case ~500 monsters trapped in an jsonified array is available at `.Content`.
 
 And in order to turn this json string into an array (or slice) Hugo understands, we'll use the `transform.Unmarshal` function, aliased `unmarshal`. This take any string, `json`, `yaml` or `toml` and turns it into "Hugo data".
 
