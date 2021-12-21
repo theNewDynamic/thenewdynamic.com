@@ -10,6 +10,7 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+      hardWraps: true
 
 social:
   twitter: theNewDynamic
