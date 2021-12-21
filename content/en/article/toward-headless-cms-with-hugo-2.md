@@ -224,13 +224,35 @@ For now, our monsters content will be stored as Front Matter key, easy then:
 
 That's it? That's it!
 
-Now our if we run `hugo` from the `/prebuild` directory, it should get a fresh `public/monster` directory with all our markdown files.
+Now we can run `hugo` from the `/prebuild` directory:
 
-And just like this, we've wrapped up __Step 1__!.
+```bash
+my-computer:remote mememe$ hugo
+Start building sites … 
+hugo v0.91.0+extended darwin/amd64 BuildDate=unknown
+
+                   | EN  
+-------------------+-----
+  Pages            |  0  
+  Paginator pages  |  0  
+  Non-page files   |  0  
+  Static files     |  0  
+  Processed images |  0  
+  Aliases          |  0  
+  Sitemaps         |  0  
+  Cleaned          |  0  
+
+Total in 1057 ms
+```
+
+
+As you can seem Hugo did not build any pages per say but we should get a fresh `remote/public/monster` directory full of monsters!
+
+And just like that, we've wrapped up __Step 1__!
 
 ## Step 2.
 
-This will be much easier. Let's get back one directory, up to our main project.
+This will be much easier. Let's `cd` back one directory, up to our main project.
 
 ### Configuring our main project
 
