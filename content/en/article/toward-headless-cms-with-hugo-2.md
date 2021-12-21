@@ -12,7 +12,16 @@ tags:
   - JAMStack
 subjects:
   - dev
-description: Hugo is yet to support building pages from data, but there is a workaround! In the first part of this series we explore the concept of hacking Hugo into building pages from local data.
+twitter_description: |-
+  Ho ho ho! This holiday season, we have a nice little gift for @GoHugoIO users out there! 🎁
+      
+  How to build pages from a remote API using Hugo and Hugo alone? 
+      
+  Go unwrap your present at https://www.thenewdynamic.com/article/oward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api/ 
+  
+  #gohugo #JAMStack #SSG #headlesscms
+
+description: Hugo is yet to support building pages from a remote source, but there is a workaround! In this article we uncover how Hugo can fetch data with its resources.GetRemote feature, write its own markdownfiles with resources.FromString and consume them in a subsequent build!
 seo:
   image: /uploads/toward-headlesscms-with-hugo-part-1.png
 ---
