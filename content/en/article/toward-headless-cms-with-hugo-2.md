@@ -15,7 +15,7 @@ subjects:
 twitter_description: |-
   Ho ho ho! This holiday season, we have a nice little gift for @GoHugoIO users out there! 🎁
       
-  How to build pages from a remote API using Hugo and Hugo alone? 
+  How to build pages from a remote API using Hugo and Hugo alone? By using resource.GetRemote and resource.FromString!
       
   Go unwrap your present at https://www.thenewdynamic.com/article/oward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api/ 
   
@@ -28,7 +28,7 @@ seo:
 
 [Ealier this year]({{< relref toward-headless-cms-with-hugo-1 >}}), we covered one workaround which allowed us to circumvent Hugo limitation on building pages from data.
 
-This time we'll use another workarkound, much more straight forward, but most importantly we'll grab our data from a remote source using `resources.GetRemote` --- Hugo's own `fetch` API --- and build a Hugo project with it. List, Pages and all!
+This time we'll use another workarkound, much more straight forward. It consists of using Hugo to grab our data from a remote source using `resources.GetRemote` --- Hugo's own `fetch` API ---, keep using Hugo to generate markdown files using its `resources.FromString`, and finally build our Hugo project with the aformentioned content files.
 
 ## Building pages from a remote source
 
@@ -43,20 +43,31 @@ There are lot of ways to implement __Step 1__: Netlify, for instance, has a "bui
 CloudCannon on the other hand reads a `prebuild` file on your repo which can include any script to be run before the build.
 
 All of this is good and all, but what if I told you that Hugo, in itself, while not able to build pages from data is perfectly capable of:
-- Fetching and API and process its response.
-- Write markdown files.
+- Fetching an API and process its response
+- Write markdown files
 
-So Hugo can very well run both steps!
+__So Hugo can very well run both steps!__
 
 In this article, we'll see how we can safely use the same Hugo binary to run __Step 1__ and __Step 2__ and have Hugo and Hugo alone build pages from a remote source.
 
 ## The project
 
-Remember our MonsterSpotting site from earlier? It was relying on a data file to build its pages. Well from now on, it will ping an API located at https://monsters-api.netlify.app/ to retrieve its monsters, and create pages from it.
+
+It's a [monsterspotting site](https://monsterspotting.netlify.app)! With its 500 spotted monsters of 10 different generations, it bears a home page, a monsters page with pagination and detail pages for each monster.
+
+It grabs its monsters from an API located at https://monsters-api.netlify.app/ and create pages for all of them.
+
+During this article, you'll be able to mount the monsters on any project of your choosing though.
 
 ### Prerequisite
+If you want to play along and build a little remote fed monster site:
 
 You should have Hugo `0.91.0` running.
+You should have a Hugo project set up. Does not need to be too complex. A `layouts/index.html` and a `layouts/_default/single.html` will do!
+
+Or you can just read along!
+
+Here we go!
 
 {{% aside %}}
 
@@ -67,6 +78,8 @@ Always up for debate but we've tested this with 10,000 entries fetched from a pa
 The only preferable solution could be a Go script of course, but you will need to carefully choose your CI in order to set it up properly and, you need to know Go. 
 
 The advantage of running Hugo here is that you are using the same framework that you know well and benefit from its caching logic for the endpoints. There is no extra setup: just one more configuration file and one more template file.
+
+This also means this setup will work on any host out there, regardless of their build, pre-build features.
 {{% /aside %}}
 
 ## Step 1
@@ -75,7 +88,7 @@ We need to configure a minimal Hugo project. This is the project which will just
 
 We could use the root directory of the main project, but it's much more convenient to use a sub directory. 
 
-Let's create a `prebuild` directory to handle everything "pre-build".
+Let's create a `/prebuild` directory to handle everything "pre-build".
 
 In your terminal you can already `cd` into this directory as you'll have to run `hugo` from there throughout __Step 1__.
 
@@ -87,7 +100,7 @@ For Hugo to build a project, it only needs two files. We'll add those.
 
 ### Configuring our minimal project
 
-Technically an empty `config.yaml` would be okay, but while we're at it, we can pass some settings to make sure Hugo does not output too many useless files likes `/categories/index.html`, `/tags/index.html` or the `sitemap.xml` etc...
+Technically an empty `config.yaml` would be okay, but while we're at it, we can pass some settings to make sure Hugo does not output too many useless files alongisdes our markdown files.
 
 ```yaml
 # config.yaml
@@ -106,29 +119,26 @@ First let's look at what our endpoint at `https://monsters-api.netlify.app/` ret
 ```json
 [
   {
-    "id": "bryan-plastic",
+    "content": "Condim uisque curae duis...",
+    "generation": 1,
+    "id": "bryan-plastic-1",
+    "img": "https://monsters-api.netlify.app/png_4526566859420692809.png",
     "league": "Teal",
-    "title": "Bryan Plastic",
     "spotted": "Gandara",
-    "svg": "<?xml version=\"1.0\" encoding=\"utf-8\"?>..."
-    "content" "Liberos egestas culus sque nuncves cras roin. Aliquet..."
+    "title": "Bryan Plastic the First"
   },
   {
-    "id": "gus-vinyl",
+    "content": "Itur erdiet pretium quisque sapien lacinia ullamcor. Disse bibendu fusce suspendi...",
+    "generation": 1,
+    "id": "gus-vinyl-1",
+    "img": "https://monsters-api.netlify.app/png_7480160596753705284.png",
     "league": "Fuscia",
-    "title": "Gus Vinyl",
     "spotted": "Reserva",
-    "svg": "<?xml version=\"1.0\" encoding=\"utf-8\"?>..."
-    "content": "Consect sapien nequenu lisis portamor rutrumnu nisimor lus malesu risque. Ibulum molestie...
-  }
+    "title": "Gus Vinyl the First"
+  },
   [...]
 ]
 ```
-
-{{% notice %}}
-There are various settings this `resources.GetRemote` can use like "headers" (useful for authorizations) or `method` and `body`. It also sports a `.Err` method to check for errors. Now our monsters API is not too shy, we won't need to get into any of this just yet. A simple URL will do.
-
-{{% /notice %}}
 
 __Looks good? Let's start fetching!__
 
@@ -136,11 +146,15 @@ We'll now focus on our minimal project's `layouts/index.html`. Hugo will only ha
 
 This template file will be in charge of fetching the API data, ranging on the returned monsters and create the markdown files.
 
-Since Hugo 0.91.0, you can fetch remote resources using `resources.GetRemote`.
+Since Hugo 0.91.0, you can fetch remote resources using [`resources.GetRemote`](https://gohugo.io/hugo-pipes/introduction/#get-resource-with-resourcesget-and-resourcesgetremote).
 Here we're looking for a JSON response, but bear in mind you could fetch images, documents, svgs, anything out there is yours to get and manipulate with Hugo's [resources feature](https://gohugo.io/hugo-pipes/).
 
+{{% aside %}}
+There are various settings this `resources.GetRemote` can use like "headers" (useful for authorizations) or `method` and `body`. It even sports a `.Err` method. Our monsters API is static and open, so we won't get into it now but will in a future article.
 
-Let's dive in with this very basic piece:
+{{% /aside %}}
+
+Let's dive in with some plain code:
 
 
 ```go-html-template
@@ -150,18 +164,17 @@ Let's dive in with this very basic piece:
 {{ end }}
 ```
 
-With the code above, we are able to retrieve our Monsters. 
+With the above, we are able to retrieve our Monsters. 
 
+But that will not be enough, the `$monsters` variable does not contain a list of monsters yet. For now it's just a resource: a file which has been fetched. The content of the response, in our case 500 monsters trapped in an jsonified array is available at `.Content`.
 
-But that will not be enough, the `$monsters` variable does not contain a list of monsters yet, for now it's just a resource, a file which has been fetched. The content of the response, in our case ~500 monsters trapped in an jsonified array is available at `.Content`.
-
-And in order to turn this json string into an array (or slice) Hugo understands, we'll use the `transform.Unmarshal` function, aliased `unmarshal`. This take any string, `json`, `yaml` or `toml` and turns it into "Hugo data".
+And in order to turn this JSON string into an object Hugo understands, we'll use the `transform.Unmarshal` function, aliased `unmarshal`. This takes any string, `json`, `yaml` or `toml` and turns it into "Hugo data".
 
 One more time:
 
 ```go-html-template
 {{/* prebuild/layouts/index.html */}}
-{{ with .resources.GetRemote "https://monsters-api.netlify.app/" }}
+{{ with resources.GetRemote "https://monsters-api.netlify.app/" }}
   {{ $monsters := unmarshal .Content }}
   {{ range $monsters }}
     I love {{ .title }}
@@ -169,20 +182,23 @@ One more time:
 {{ end }}
 ```
 
-Now we know how to handle our response and turn into data we can use in templates! But while do love our monsters, proclaiming our love is not the point here. We want to create files, markdown files!
+Great, now we know how to handle our response and turn into data we can use in templates! 
+
+But while do love our monsters, proclaiming our love is not the point here. We want to create files, markdown files!
+
 
 ### Create the markdown files
 
 What we now want to do for each monster, is use the retrieved data to create a markdown file. 
 
-For this we'll use the Hugo Pipes `resource.FromString` method. What it does is take a string, and generate a Hugo resource from it at the desired destination.
+For this we'll use the Hugo Pipes `resource.FromString` method. What it does is take a string and generate a Hugo resource from it at the desired destination.
 
 ```go-html-template
 {{ $love := resources.FromString "monsters/love.txt" "I love Monsters" }}
 ```
 The above will create a resource with "I love Monsters" for content, and `monsters/love.txt` as a filename.
 
-But it will not publish it, if you're familiar with Hugo Pipes, you'll know that anything it produces will only be published if its `.RelPermalink` or `.Permalink` method is invoked.
+But it will not publish it! If you're familiar with Hugo Pipes, you'll know that anything it produces will only be published if its `.RelPermalink` or `.Permalink` method is invoked.
 
 ```go-html-template
 {{ $love := resources.FromString "monsters/love.txt" "I love Monsters" }}
@@ -198,20 +214,21 @@ This is a conventional markdown file using YAML:
 ```yaml
 # monsters/gus-vinyl.md
 ---
-title: Gus Vinyl
+title: Gus Vinyl the First
 league: Fuscia
 spotted: Reserva
-id: gus-vinyl
 ---
+
+Itur erdiet pretium quisque sapien lacinia ullamcor. Disse bibendu fusce suspendi...
 ```
 
 We could spend a bit more time formatting something like that, but Hugo also supports `json` as Front Matter. A JSON Front Matter markdown file's content is just a JSON object followed by the content:
 
 ```json
-{"id":"gus-vinyl","league":"Fuscia","title":"Gus Vinyl","spotted":"Reserva"} Lorem ipsum monster yaya...
+{"title":"Gus Vinyl the First", "league":"Fuscia", "spotted":"Reserva"} Lorem ipsum monster yaya...
 ```
 
-For now, our monsters content will be stored as Front Matter key, easy then:
+For now, our monsters content will be stored as Front Matter key! This makes it easy then:
 
 ```go-html-template
 {{/* prebuild/layouts/index.html */}}
@@ -230,7 +247,9 @@ For now, our monsters content will be stored as Front Matter key, easy then:
 3. We generate the markdown resource using `resources.FromString`
 4. We make sure it's published.
 
-That's it? That's it!
+That's it?
+
+__That's it!__
 
 Now we can run `hugo` from the `/prebuild` directory:
 
@@ -254,7 +273,7 @@ Total in 1057 ms
 ```
 
 
-As you can seem Hugo did not build any pages per say but we should get a fresh `remote/public/monster` directory full of monsters!
+As you can see Hugo did not build any pages per say but it did wrote markdown files! We should get a fresh `remote/public/monster` directory full of monsters!
 
 And just like that, we've wrapped up __Step 1__!
 
@@ -264,7 +283,7 @@ This will be much easier. Let's `cd` back one directory, up to our main project.
 
 ### Configuring our main project
 
-First, for Hugo to read the markdown files from below, we need to mount the `prebuild/public/monsters` directory into our project. For this we head to our project's module config and update its mounts settings:
+First, for Hugo to read the markdown files from below, we need to mount the `prebuild/public/monster` directory into our project. For this we head to our project's module config and update its mounts settings:
 
 ```yaml
 # config.yaml
@@ -287,13 +306,11 @@ For example our `layouts/monster/list.html` will look like that:
 ```go-html-template
 {{ define "main" }}
   {{ range .Pages }}
-  <h1>{{ .Title }}</h1>
-  <p>{{ .Title }} was spotted in {{ .Params.spotted }}</p>
-
-  {{ .Params.svg | safeHTML }}
-
-  <div class="content">{{ .Params.content }}</div>
-  <hr>
+    <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+      <img src="{{ .Params.img }}" title="Portrait of {{ .Title }}" />
+      <strong>{{ .Title }}</strong>
+      <p>Last spotted in {{ .Params.spotted }}</p>
+    </a>
   {{ end }}
 {{ end }}
 ```
@@ -303,7 +320,7 @@ If you have already ran `hugo` from the `prebuild` direrctory, you can safely ru
 
 ## Step 1 && Step 2
 
-Running both builds locally can be okay, but we need to make sure this will be viable in the cloud, when our site is built by a CI.
+Running both builds locally can be okay, but we need to make sure this will be viable in the cloud, when our site is deployed and hosted.
 
 As we covered lengthily we need to run it from the `prebuild` directory first and then the main one. 
 
@@ -314,9 +331,9 @@ cd prebuild && hugo && cd .. && hugo
 ```
 ☝️ That will do it!
 
-#### CIs.
+#### Deployement and Hosting
 
-The great advantage of this is you don't need to wonder how your CI will handle the two steps, you just need to update the build command to navigate your directories.
+The great advantage of this is you don't need to wonder how your hosting and deployement service will handle the two steps, you just need to update the build command to navigate your directories.
 
 For Netlify for example your `netlify.toml` will look something like this:
 
@@ -329,11 +346,9 @@ command = "cd remote && hugo && cd .. && hugo"
 
 #### Caching
 
-Do we really want to fetch our API everytime the site builds? Depending on the API, you could of course, and writing the files should always be very fast.
+Our Monsters API is static, built with Hugo so quiet reliable. But even so, it's always safer to cache your API responses so you're not stressing them at every build
 
-But it's always good to know your options.
-
-For the API, Hugo has a nice `caches` settings which allows to control how long any given URL's repsonse should be cached. With
+Hugo has a nice `caches` settings which allows to control how long any given resource is saved. It bear several, but the one that matters to us is `getresource`.
 
 ```yaml
 # prebuild/config.yaml
@@ -342,31 +357,37 @@ caches:
     maxAge: 6h
 ```
 
-We are effectively informing Hugo that this any endpoint used with `resources.GetRemote` should not be fetched again until 6 hours have passed.
+With the above we are effectively informing Hugo that any response obtained with `resources.GetRemote` should cached for 6 hours. That is 6 hours during which the API can REST! 🥁.
 
-## A few more things!
+## Before you go...
 
+We've covered API fetching, mardkown files writing, content files mounting, website deploying and hosting and caching! But there are more to this we can quickly glance at. 
 
 ### Data transformation
 
-The data from our Monsters is easy to handle but you'll mostly want to transform the data from the API into something more aligned with your project. In a future article we'll cover everything there is to know about the way to manipulate data with Hugo. 
+The data from our Monsters is easy to handle but you'll mostly want to transform the data from the API into something more aligned with your project. 
+
+In a future article we'll cover everything there is to know about the way to manipulate data with Hugo. 
 
 That will allow us to create transformers for our data and prep those markdown files nicely!
-
 
 ### Adding .Content
 What about `.Content` and how can we make the generated files look good?
 
-Front Matter --- in our example, a simple json object --- goes first, the body comes second. So translated into Hugo:
+Front Matter --- in our example, a simple JSON object --- goes first, the body comes second. So translated into Hugo:
 ```go-html-template
 {{ $string := print (jsonify $monster) $monster.content }}
 ```
 Then you've got a complete Markdown file with a content handled in the template via `.Content`.
 
 ### Other Front Matter than JSON?
-Again, in this modest example we're using a json string because in most cases you won't need a fancy formatting for your "imported" markdown files. After all, there are for Hugo eyes only... 
+In most cases you won't need a fancy formatting for your "imported" markdown files, JSON Front Matter should always do. After all, there are for Hugo's eyes only... 
 
-But in the offchance that you do, you could use: [`resources.ExecuteAsTemplate`](https://gohugo.io/hugo-pipes/resource-from-template/#readout). This useful resource method will take a filepath destination as first argument, a context as second and the template's filepath to use as third.
+But there are some use case where you might want to create nice readable files.
+
+Maybe to make your life easier for debuging the output of the __Step 1__ logic. Or you might want to use what we've learned today to handle a database migration to git based content. In this case, the produced files must be perfect.
+
+Whatever the use case, we could make those files look good by using [`resources.ExecuteAsTemplate`](https://gohugo.io/hugo-pipes/resource-from-template/#readout). This useful resource method will take a filepath destination as first argument, a context as second and the template's filepath to use as third.
 
 For yaml you could create a `/remote/assets/monster.yaml` file like so:
 ```go-html-template
@@ -390,6 +411,16 @@ And update the file creation in your `remote/layouts/index.html` to:
 
 ## See in action
 
-All code examples are located in this repo:
+The full project is located in this repo: [https://github.com/regisphilibert/monsterspotting-remote.com](https://github.com/regisphilibert/monsterspotting-remote.com). 
 
-It's running Tailwind and PostCSS, so you might need to hit `npm install` before playing!
+Feel free to fork it and play around. It's running Tailwind and PostCSS, so you will need to hit `npm install` before playing! 
+
+The API lives at https://monsters-api.netlify.app/
+
+It bears one end point with a generation parameters
+
+`https://monsters-api.netlify.app` > All 10 generations of monsters (500 👾)
+`https://monsters-api.netlify.app?generations=1` > Just one generation of monsters (50 👾)
+[...]
+`https://monsters-api.netlify.app?generations=9` > Nine generations of monsters (450 👾)
+
