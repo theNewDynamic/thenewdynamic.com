@@ -95,6 +95,17 @@ body {
 }
 /* END Fancy Blockquotes */
 
+.rich-text table{
+		border-collapse: collapse;
+		table-layout: fixed;
+		width: 100%;
+}
+.rich-text table td, .rich-text table th {
+	border: 1px solid #999;
+	padding: 0.5rem;
+	text-align: left;
+}
+
 @variants hover {
 	.text-gradient {
 		/* standard gradient background */
