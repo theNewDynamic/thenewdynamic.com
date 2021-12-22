@@ -21,9 +21,9 @@ twitter_description: |-
   
   #gohugo #JAMStack #SSG #headlesscms
 
-description: Hugo is yet to support building pages from a remote source, but there is a workaround! In this article we uncover how Hugo can fetch data with its resources.GetRemote feature, write its own markdownfiles with resources.FromString and consume them in a subsequent build!
+description: How to build pages from a remote API using Hugo and Hugo alone? In this article we uncover how Hugo can fetch data with its resources.GetRemote feature, write its own markdownfiles with resources.FromString and consume them in a subsequent build!
 seo:
-  image: /uploads/toward-headlesscms-with-hugo-part-1.png
+  image: /uploads/toward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api.png
 ---
 
 [Ealier this year]({{< relref toward-headless-cms-with-hugo-1 >}}), we covered one workaround which allowed us to circumvent Hugo limitation on building pages from data.
