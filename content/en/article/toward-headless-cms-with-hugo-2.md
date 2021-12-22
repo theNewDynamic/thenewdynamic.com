@@ -13,13 +13,13 @@ tags:
 subjects:
   - dev
 twitter_description: |-
-  Ho ho ho! This holiday season, we have a nice little gift for @GoHugoIO users out there! 🎁
-      
-  How to build pages from a remote API using Hugo and Hugo alone? By using resource.GetRemote and resource.FromString!
-      
-  Go unwrap your present at https://www.thenewdynamic.com/article/oward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api/ 
-  
-  #gohugo #JAMStack #SSG #headlesscms
+Ho ho ho! This holiday season, we have a nice little gift for @GoHugoIO users out there! 🎁
+    
+How to build pages from a remote API using Hugo and Hugo alone?
+    
+Go unwrap your present at https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api/ 
+
+#gohugo #JAMStack #SSG #headlesscms
 
 description: How to build pages from a remote API using Hugo and Hugo alone? In this article we uncover how Hugo can fetch data with its resources.GetRemote feature, write its own markdownfiles with resources.FromString and consume them in a subsequent build!
 seo:
@@ -60,7 +60,7 @@ It grabs its monsters from an API located at https://monsters-api.netlify.app/ a
 During this article, you'll be able to mount the monsters on any project of your choosing though.
 
 ### Prerequisite
-If you want to play along and build a little remote fed monster site:
+If you want to play along and build a monster site from our remote API:
 
 You should have Hugo `0.91.0` running.
 You should have a Hugo project set up. Does not need to be too complex. A `layouts/index.html` and a `layouts/_default/single.html` will do!
