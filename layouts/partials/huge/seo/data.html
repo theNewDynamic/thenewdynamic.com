@@ -1,7 +1,15 @@
 {{ $seo := dict }}
 {{ $s := newScratch }}
 {{ $s.Set "seo" dict }}
+{{ $img := "" }}
 {{ with $.Page.Params.featured }}
+  {{ $img = . }}
+{{ else }}
+  {{ with $.Page.Params.seo.image }}
+    {{ $img = . }}
+  {{ end }}
+{{ end }}
+{{ with $img }}
 {{ $args := dict "path" . "width" 1000 "path" . }}
   {{ with partialCached "huge/media/Get" $args $args }}
     {{ $s.SetInMap "seo" "image" .Permalink }}
