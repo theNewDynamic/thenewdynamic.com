@@ -13,11 +13,11 @@ tags:
 subjects:
   - dev
 twitter_description: |-
-Ho ho ho! This holiday season, we have a nice little gift for @GoHugoIO users out there! 🎁
-    
-How to build pages from a remote API using Hugo and Hugo alone?
-    
-Go unwrap your present at https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api/ 
+  Ho ho ho! This holiday season, we have a nice little gift for @GoHugoIO users out there! 🎁
+      
+  How to build pages from a remote API using Hugo and Hugo alone?
+      
+  Go unwrap your present at https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api/ 
 
 #gohugo #JAMStack #SSG #headlesscms
 
