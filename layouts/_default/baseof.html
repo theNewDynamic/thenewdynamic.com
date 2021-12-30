@@ -3,11 +3,19 @@
   <head>
     {{ partial "head/meta.html" . }}
     {{ partialCached "head/fonts.html" . }}
-    {{ partial "huge/styles/tags" (slice "fonts" "main") }}
+    {{ partial "huge/styles/tags" (slice 
+      "fonts" 
+      (dict 
+        "name" "main"
+        "fingerprint" (partial "config/fingerprint-minify" "context")
+        "minify" (partial "config/fingerprint-minify" "context")
+      )
+    ) }}
     {{ partial "head/scripts" . }}
   </head>
   <body class="{{ partial "func/GetCSSTheme" . }}">
     <div class="page-container">
+      {{ printf "%#v" (hugo.Environment) }}
       {{ partial "header.html" . }}
       {{ block "main" . }}
       {{ end }}

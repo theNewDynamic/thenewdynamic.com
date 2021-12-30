@@ -197,22 +197,7 @@ HUGE offers an environment solution which gives users several functions to test 
 
 ### HUGE Configuration
 
-Everything happens in `_huge/config/` directory. You can populate settings with functions à la JavaScript.
-
-```yaml
-# _huge/config/media.yaml
-imgix: 
-  domain: functions/GetImgixDomain()
-```
-
-```go-html-template
-{{/* layouts/partials/functions/GetImgixDomain.html */}}
-{{ $domain := "staging.imgix.net" }}
-{{ if partial "huge/env/IsProduction" . }}
-  {{ $domain = "live.imgix.net" }}
-{{ end }}
-{{ return $domain }}
-```
+Everything happens in `_huge/config/` directory!
 
 {{< huge_wiki "Config" >}}
 
