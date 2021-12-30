@@ -15,7 +15,6 @@
   </head>
   <body class="{{ partial "func/GetCSSTheme" . }}">
     <div class="page-container">
-      {{ printf "%#v" (hugo.Environment) }}
       {{ partial "header.html" . }}
       {{ block "main" . }}
       {{ end }}
