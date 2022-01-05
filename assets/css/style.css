@@ -202,4 +202,12 @@ body {
 		width: calc((100vw - 48rem) / 2);
 	}
 }
-
+table.condition-examples{
+	width: auto;
+}
+table.condition-examples tr td{
+	width: 150px;
+}
+table.condition-examples tr td:nth-child(2){
+	width: auto;
+}

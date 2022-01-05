@@ -8,6 +8,10 @@ markup:
     style: monokai
     noClasses: false
   goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
     renderer:
       unsafe: true
       hardWraps: true
