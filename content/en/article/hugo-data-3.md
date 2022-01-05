@@ -2,9 +2,9 @@
 authors:
   - persons/regis-philibert.md
 featured: /uploads/hugo-data.png
-date: 2021-12-21T9:32:27.000Z
-title: "Hugo and Data Part 2: Transform!"
-slug: hugo-data-manipulation-and-logic-2-advanced-transformation
+date: 2022-01-31T9:32:27.000Z
+title: "Hugo and Data: Advanced Transformations (ignore)"
+slug: hugo-data-manipulation-and-logic-advanced-transformations
 draft: true
 tags:
   - hugo
