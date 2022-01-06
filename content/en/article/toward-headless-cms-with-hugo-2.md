@@ -5,6 +5,7 @@ authors:
 date: 2021-12-20T08:32:27.000Z
 title: "Toward using a Headless CMS with Hugo: Building Pages from an API"
 slug: toward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api
+comments: https://github.com/theNewDynamic/thenewdynamic.com/discussions/196
 tags:
   - hugo
   - headless-cms
