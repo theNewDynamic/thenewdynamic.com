@@ -17,6 +17,10 @@ tnd_seo:
   default_image: images/tnd-social.png
 tnd_redirects:
   use_aliases: true
+  rules:
+    - origin: /fr/*
+      target: /fr/404.html
+      code: 404
 tnd_socials:
   services:
     - name: github

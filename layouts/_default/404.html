@@ -1,0 +1,8 @@
+{{/* We use our own 404 template to avoid bugs related to default Hugo 404 templating */}}
+{{ define "main" }}
+<div class="container">
+  <h1 class="pt-10 mb-8 text-4xl font-normal leading-tight text-black lg:text-5xl">404</h1>
+  <div class=" text-gray-700 rich-text text-3xl">{{ .Content }}</div>
+</div>
+
+{{ end }}
