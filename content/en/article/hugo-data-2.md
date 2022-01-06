@@ -2,7 +2,7 @@
 authors:
   - persons/regis-philibert.md
 featured: /uploads/hugo-data.png
-date: 2022-01-05T9:32:27.000Z
+date: 2022-01-06T9:32:27.000Z
 title: "Hugo and Data: Advance manipulation with Slices and Maps"
 slug: hugo-data-manipulation-slices-and-maps
 tags:
@@ -16,7 +16,9 @@ subjects:
 description: Hugo is well know for minimal config templating features. But do you know it's also great at structuring and manipulation data? In this article we cover advanced data manipulation in Hugo with Slices and Maps! We learn to fitler their content and shape up their structure while reviewing some critical functions and Hugo concept.
 ---
 
-Building or manipulating data to one's need from a raw source—like an API endpoint or a Markdown file—is not often discussed in the Hugo community and may seem daunting for many users. How can Hugo and Go Templates turn your massive wall of JSON or an editor friendly front matter into just what your HTML needs? In this article we'll cover advanced data manipulation in Hugo with Slices and Maps types. We'll learn how to filter their content and shape up their structure while reviewing some critical functions and concept Hugo.
+Building or manipulating data to one's need from a raw source—like an API endpoint or a Markdown file—is not often discussed in the Hugo community and may seem daunting for many users. How can Hugo and Go Template turn your massive wall of JSON or an editor friendly Front Matter into just what your HTML needs? 
+
+In this article we'll cover advanced data manipulation in Hugo with Slices and Maps types. We'll learn how to filter their content and shape up their structure while reviewing some critical functions and concepts of Hugo.
 
 ## Prerequisite
 
@@ -36,9 +38,7 @@ We create a slice using the `slice` function:
 {{ $gents := slice "John" "Paul" }}
 
 {{ range $gents }}
-
-    I love {{ . }}
-
+  I love {{ . }}
 {{ end }}
 ```
 
@@ -106,9 +106,7 @@ If you want to retrieve the index from a range on a slice, you can actually stor
 
 ```go-html-template
 {{ range $index, $gent := $gents }}
-
-    {{ $gent }} is at index {{ $index }}
-
+  {{ $gent }} is at index {{ $index }}
 {{ end }}
 ```
 
@@ -127,9 +125,7 @@ Even though our value is now stored in a `$value` variable, it remains available
 
 ```go-html-template
 {{ range $index, $value := $gents }}
-
   {{ . }} is at index {{ $index }}
-
 {{ end }}
 ```
 
@@ -196,7 +192,7 @@ The above will print:
 
 ```text
 Firstname: John
-Lastname: Ringo
+Lastname: Lennon
 ```
 
 ### Add to a map
@@ -204,8 +200,9 @@ Lastname: Ringo
 The simplest way is to use the merge function:
 
 {{% aside %}}
-The simplest but not the fastest! For very big projects, you shoud rely on `sratch` for Map manipulation to save on build time. We cover this later in this article.
+The simplest but not the fastest! For very big projects, you shoud rely on `sratch` for Map manipulation to save on build time. We'll cover this in the next article.
 {{% /aside %}}
+
 The merge function takes two parameters, two maps which will be merged into one together. By creating a new map with its own pair of key values and merging it on top of the existing one, we add to a map or edit the value an existing pair:
 
 ```go-html-template
@@ -218,9 +215,7 @@ We range on the map the same way we do a slice. Index is also available, althoug
 
 ```go-html-template
 {{ range $key, $value := $gent }}
-
-    {{ $key }}: {{ $value }}
-
+  {{ $key }}: {{ $value }}
 {{ end }}
 ```
 
@@ -263,23 +258,14 @@ Here we go:
 
 ```go-html-template
 {{ range $key, $value := $gent }}
-  
-  <div>
-  
-    {{ $key }}:
-  
-      {{ if reflect.IsSlice $value }}
-  
-        {{ delimit $value ", " }}
-  
-      {{ else }}
-  
-        {{ $value }}
-  
-      {{ end }}
-  
-  </div>
-
+<div>
+{{ $key }}:
+  {{ if reflect.IsSlice $value }}
+    {{ delimit $value ", " }}
+  {{ else }}
+    {{ $value }}
+  {{ end }}
+</div>
 {{ end }}
 ```
 
@@ -306,9 +292,7 @@ This function will prove very valuable on maps, when the key in question is stor
 {{ $basis := "lastname" }}
 
 {{ if eq $relation "friend" }}
-
-    {{ $basis = "firstname" }}
-
+  {{ $basis = "firstname" }}
 {{ end }}
 
 Good day {{ index $gent $basis }}!
@@ -318,9 +302,7 @@ Or a range:
 
 ```go-html-template
 {{ range slice "firstname" "lastname" }}
-
-    {{ . }}: {{ index $gent . }}
-
+  {{ . }}: {{ index $gent . }}
 {{ end }}
 ```
 
@@ -381,11 +363,9 @@ And now to browse our gents:
 
 ```go-html-template
 {{ range $gents }}
-
-    <p>
-      {{ .firstname }} {{ .lastname }} was born on {{ .birth }}, he played {{ delimit .instruments ", " " and " }}
-    </p>
-
+<p>
+  {{ .firstname }} {{ .lastname }} was born on {{ .birth }}, he played {{ delimit .instruments ", " " and " }}
+</p>
 {{ end }}
 ```
 
@@ -411,13 +391,9 @@ As you know, `where` returns a slice empty or not, so it's safe to use range/els
 
 ```go-html-template
 {{ range where $gents ".birth" "1940" }}
-
-      <p>{{ .firstname }}, {{ .birth }}</p>
-
+  <p>{{ .firstname }}, {{ .birth }}</p>
 {{ else }}
-
-    No gents 🤷!
-
+  No gents 🤷!
 {{ end }}
 ```
 

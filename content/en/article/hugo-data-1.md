@@ -16,7 +16,7 @@ subjects:
 description: This article simply addresses the basics of the Go Template, along with some critical functions Hugo offers to complement it. If you're starting your Hugo journey, or simply feel like several concepts remain obscure to you after years of Hugo, read on!
 ---
 
-Hugo's logic has to be addressed in the context of templating. Meaning from within a template file and using Go Template. Over the years, Hugo has complemented Go Template with many functions and features in order to allow users to build advanced and robust logic.
+Hugo is built with [Go](https://go.dev/?gclid=Cj0KCQiAw9qOBhC-ARIsAG-rdn7THucmaRhNs4pAP_KAa2ic7wC2ar9smJR2I5WAl_PIxhmVTOCkICIaAq6xEALw_wcB) but as users, we only get to modify template files using Go's templating language: Go Template. Go Template concepts are different than its more commonly used counterparts and can be intimidating for new comers.
 
 This article addresses the basics of the language, along with some critical functions Hugo offers to complement it. If you're starting your Hugo journey, or simply feel like several concept remains obscure to you after years of Hugo, this useful recap is for you!
 
@@ -44,9 +44,7 @@ There is only one kind of loop in Go Template, its called `range`. The syntax is
 
 ```go-html-template
 {{ range $beatles }}
-    
     This member is {{ . }}
-
 {{ end }}
 ```
 
@@ -64,17 +62,11 @@ Go Templates only know `if` and `if else` as conditionals proper. Everything bey
 
 ```go-html-template
 {{ if eq $gent "John" }}
-
     We're missing a lastname
-
 {{ else if eq $gent "John Lennon" }}
-
     We have a full name
-
 {{ else }}
-
     Not sure!
-
 {{ end }}
 ```
 
@@ -84,9 +76,7 @@ If `$gent` is either equal to "John Lennon" or "Paul McCartney" we have a Beatle
 
 ```go-html-template
 {{ if eq $gent "John Lennon" "Paul McCartney" }}
-    
     We have a Beatle!
-
 {{ end }}
 ```
 
@@ -101,7 +91,6 @@ Hugo sports several other "comparing" functions. Unlike `eq` they only take two 
 | lt       | first parameter is Lower Than second parameter               | `<`                        |
 | ge       | first parameter is Lower than or Equal to second parameter   | `<=`                       |
 | in       | first parameter Contains second parameter                    |
-
 {.condition-examples}
 
 ### OR and AND
@@ -110,9 +99,7 @@ Just like comparison, `or` and `and` are also functions. They take two parameter
 
 ```go-html-template
 {{ if and (in $gent "John") (in $gent "Lennon") }}
-
-    That must be John Lennon
-
+  That must be John Lennon
 {{ end }}
 ```
 
@@ -124,13 +111,9 @@ Another useful action in Hugo is `with`.
 
 ```go-html-template
 {{ with $gent }}
-
-    {{ . }} is the gent.
-
+  {{ . }} is the gent.
 {{ else }}
-    
-    We have no gent.
-
+  We have no gent.
 {{ end }}
 ```
 
@@ -160,17 +143,11 @@ Now if you are to include functions as argument, then you wrap them in parenthes
 
 ```go-html-template
 {{ if eq $gent "John" }}
-  
-    Hello John
-
+  Hello John
 {{ else if eq $gent "Paul" }}
-    
-    Hello Paul
-
+  Hello Paul
 {{ else }}
-    
-    Hello You
-
+  Hello You
 {{ end }}
 ```
 
@@ -208,7 +185,6 @@ Hugo can use many types of numbers, integer, floats etc... Just like for conditi
 | sub      | second parameter is Substracted from first parameter | `-`                        |
 | mul      | first parameter is Multiplied by second parameter    | `*`                        |
 | div      | first parameter is Divided by second parameter       | `/`                        |
-
 {.condition-examples}
 
 These are just the basics but [more are available](https://gohugo.io/functions/math/#readout) for advanced usage.
