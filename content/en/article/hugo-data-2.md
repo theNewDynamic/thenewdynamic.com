@@ -50,7 +50,9 @@ I love John I love Paul
 
 ### Adding to a slice, or append.
 
-We use the `append` function. It takes two parameters. First parameter, is what we add to the slice, second parameter is the slice in question.
+We use the `append` function. It takes two parameters: 
+- First parameter, is what we add to the slice, 
+- second parameter is the slice in question.
 
 ```go-html-template
 {{ $gents = append "Ringo" $gents }}
@@ -72,7 +74,7 @@ Now we'll have:
 I love John I love Paul I love Ringo I love Ringo I love George
 ```
 
-Oops, Ringo's been added twice, once as a lone `string` argument and once as part of that [Ringo George] `slice`, no sweat we can use `uniq` to ensure there's no duplicate:
+Oops, Ringo's been added twice, once as a lone `string` argument and once as part of that [Ringo George] `slice`; no sweat we can use `uniq` to ensure there's no duplicate:
 
 ```go-html-template
 {{ $gents = uniq $gents }}
@@ -199,7 +201,7 @@ Lastname: Ringo
 
 ### Add to a map
 
-The simplest way is using the merge function.
+The simplest way is to use the merge function:
 
 {{% aside %}}
 The simplest but not the fastest! For very big projects, you shoud rely on `sratch` for Map manipulation to save on build time. We cover this later in this article.
@@ -253,7 +255,7 @@ instruments: [Piano Guitar Vocals]
 lastname: Lennon
 ```
 
-Instruments does not look too good though! We should test if our value is a slice, and behave appropriately. We'll use `delimit` to join the slice's value into a string with a comma as delimiter.
+The instruments value does not look so good though! We should test if our value is a slice, and have it behave appropriately. We'll use `delimit` to join the slice's value into a string with a comma as delimiter.
 
 As for testing, for now Hugo can only test for two types with the following self explanatory functions: `reflect.IsSlice` and `reflect.IsMap`.
 
@@ -261,14 +263,23 @@ Here we go:
 
 ```go-html-template
 {{ range $key, $value := $gent }}
+  
   <div>
+  
     {{ $key }}:
+  
       {{ if reflect.IsSlice $value }}
+  
         {{ delimit $value ", " }}
+  
       {{ else }}
+  
         {{ $value }}
+  
       {{ end }}
+  
   </div>
+
 {{ end }}
 ```
 
@@ -424,10 +435,10 @@ As you know, `where` returns a slice empty or not, so it's safe to use range/els
 
 As you'll have noticed by now `where` takes a set of parameters.
 
-The first, `$gents` is the collection.
-The second is the key we're evaluating in the collection's entries `".birth"`. (dot is optional, but I find it helps instantly identify the "key" argument)
-The third is the operator in use.
-The fourth is the value we're trying to match.
+- The first, `$gents` is the collection.
+- The second is the key we're evaluating in the collection's entries `".birth"`. (dot is optional, but I find it helps instantly identify the "key" argument).
+- The third is the operator in use.
+- The fourth is the value we're trying to match.
 
 If you omit number two, the operator defaults to `"=="`
 
