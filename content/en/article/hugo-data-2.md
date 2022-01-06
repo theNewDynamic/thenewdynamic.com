@@ -24,51 +24,52 @@ You'll need an intermediate understanding of Go Template in Hugo. If you're unsu
 
 Having a Hugo running on your local machine is a plus, as you'll be able to experiment with the code examples! But if not, just read along and imagine a cocktail in your hand!
 
-
 ## Slices
 
 Slices are arrays, they can be made of strings, maps, Pages etc...
 
 ### Creating a slice
+
 We create a slice using the `slice` function:
 
 ```go-html-template
 {{ $gents := slice "John" "Paul" }}
 
 {{ range $gents }}
-  
+
     I love {{ . }}
 
 {{ end }}
 ```
 
 The above will print:
+
 ```html
-I love John
-I love Paul
+I love John I love Paul
 ```
+
 ### Adding to a slice, or append.
+
 We use the `append` function. It takes two parameters. First parameter, is what we add to the slice, second parameter is the slice in question.
 
 ```go-html-template
 {{ $gents = append "Ringo" $gents }}
 ```
-In plain english: __*Append Ringo to the Gents*__
+
+In plain english: **_Append Ringo to the Gents_**
 
 Note that if your first argument is a another slice, it'll add all its entries!
 
 ```go-html-template
 {{ $gents = append (slice "Ringo" "George") $gents }}
 ```
-__*Append Ringo and George to the Gents*__
+
+**_Append Ringo and George to the Gents_**
 
 Now we'll have:
+
 ```html
-I love John
-I love Paul
-I love Ringo
-I love Ringo
-I love George
+I love John I love Paul I love Ringo I love Ringo I love George
 ```
 
 Oops, Ringo's been added twice, once as a lone `string` argument and once as part of that [Ringo George] `slice`, no sweat we can use `uniq` to ensure there's no duplicate:
@@ -84,7 +85,8 @@ Sure, there's no `prepend` function, but `append` will do. Instead of adding Rin
 ```go-html-template
 {{ $gents = append $gents (slice "Ringo") }}
 ```
-Or in plain english: __*Append the Gents to Ringo*__
+
+Or in plain english: **_Append the Gents to Ringo_**
 
 {{% notice %}}
 Go Template has that pipe thing that allows to chain functions. The offsetting thing is that the left part will be passed as the last argument of the chained function. And when you append to a slice, the order matter.
@@ -92,7 +94,8 @@ Go Template has that pipe thing that allows to chain functions. The offsetting t
 ```go-html-template
 {{ $gents = $gents | append "Ringo" }}
 ```
-Actually means: __*Append "Ringo" to the Gents*__ or __*The Gents are taking Ringo in...*__ 🤷
+
+Actually means: **_Append "Ringo" to the Gents_** or **_The Gents are taking Ringo in..._** 🤷
 {{% /notice %}}
 
 ### Index
@@ -101,10 +104,14 @@ If you want to retrieve the index from a range on a slice, you can actually stor
 
 ```go-html-template
 {{ range $index, $gent := $gents }}
-  {{ $gent }} is at index {{ $index }}
+
+    {{ $gent }} is at index {{ $index }}
+
 {{ end }}
 ```
+
 Will print:
+
 ```text
 John is at index 0
 Paul is at index 1
@@ -112,24 +119,30 @@ Ringo is at index 2
 George is at index 3
 ```
 
-Yep, pretty much like in any programming language, the index starts at 0. 
+Yep, pretty much like in any programming language, the index starts at 0.
 {{% notice %}}
 Even though our value is now stored in a `$value` variable, it remains available in the `.`.
+
 ```go-html-template
 {{ range $index, $value := $gents }}
-{{ . }} is at index {{ $index }}
+
+  {{ . }} is at index {{ $index }}
+
 {{ end }}
 ```
+
 {{% /notice %}}
 
-### First, Last 
+### First, Last
 
 What if we only want our first 2 gents? Or the last 3? We can use `first` or `last`. Both functions take two parameters, an integer and a slice.
 
 ```go-html-template
 {{ $first_two := first 2 $gents }}
+
 {{ $last_three := last 3 $gents }}
 ```
+
 This reads nicely don't you think? Now both functions always return a slice, even if it contains a lone gent like `{{ $first := first 1 $gent }}`
 
 ### The other `index`.
@@ -146,23 +159,27 @@ We could but...should we? We'd rather use `index`. This function takes two param
 {{ $third := index $gents 2 }}
 ```
 
-Two because, the index starts at zero! 
+Two because, the index starts at zero!
 {{% notice %}}
 We'll often find ourselves using `index . 0` to single out a lone element wrapped in a slice.
 {{% /notice %}}
+
 ## Maps
 
 Maps are associative arrays, meaning you've got key and value pairs.
 
 ### Creating a Map
+
 To create a map we use the `dict` function. It takes an unlimited sets of even parameters: odds are keys, evens are values.
 
 ```go-html-template
 {{ $gent := dict "firstame" "John" "lastname" "Lennon" }}
 ```
+
 Since [Hugo 0.81.0](https://github.com/gohugoio/hugo/releases/tag/v0.81.0) we can break lines within "curlies". This enables more readable declarations.
+
 ```go-html-template
-{{ $gent := dict 
+{{ $gent := dict
   "firstname" "John"
   "lastname" "Lennon"
 }}
@@ -170,9 +187,11 @@ Since [Hugo 0.81.0](https://github.com/gohugoio/hugo/releases/tag/v0.81.0) we ca
 Firsname: {{ $gent.firstname }}
 Lastname: {{ $gent.lastname }}
 ```
+
 Beautiful!
 
 The above will print:
+
 ```text
 Firstname: John
 Lastname: Ringo
@@ -180,7 +199,7 @@ Lastname: Ringo
 
 ### Add to a map
 
-The simplest way is using the merge function. 
+The simplest way is using the merge function.
 
 {{% aside %}}
 The simplest but not the fastest! For very big projects, you shoud rely on `sratch` for Map manipulation to save on build time. We cover this later in this article.
@@ -190,16 +209,21 @@ The merge function takes two parameters, two maps which will be merged into one 
 ```go-html-template
 {{ $gent = merge $gent (dict "birth" "1940") }}
 ```
+
 ### Browsing the map
 
 We range on the map the same way we do a slice. Index is also available, although this time it holds our key.
 
 ```go-html-template
 {{ range $key, $value := $gent }}
-  {{ $key }}: {{ $value }}
+
+    {{ $key }}: {{ $value }}
+
 {{ end }}
 ```
+
 Will print:
+
 ```text
 birth: 1940
 firstame: John
@@ -229,12 +253,12 @@ instruments: [Piano Guitar Vocals]
 lastname: Lennon
 ```
 
-Instruments does not look too good though! We should test if our value is a slice, and behave appropriately. We'll use `delimit` to join the slice's value into a string with a comma as delimiter. 
+Instruments does not look too good though! We should test if our value is a slice, and behave appropriately. We'll use `delimit` to join the slice's value into a string with a comma as delimiter.
 
 As for testing, for now Hugo can only test for two types with the following self explanatory functions: `reflect.IsSlice` and `reflect.IsMap`.
 
-
 Here we go:
+
 ```go-html-template
 {{ range $key, $value := $gent }}
   <div>
@@ -247,6 +271,7 @@ Here we go:
   </div>
 {{ end }}
 ```
+
 Will print:
 
 ```text
@@ -268,9 +293,13 @@ This function will prove very valuable on maps, when the key in question is stor
 
 ```go-html-template
 {{ $basis := "lastname" }}
+
 {{ if eq $relation "friend" }}
-  {{ $basis = "firstname" }}
+
+    {{ $basis = "firstname" }}
+
 {{ end }}
+
 Good day {{ index $gent $basis }}!
 ```
 
@@ -278,11 +307,14 @@ Or a range:
 
 ```go-html-template
 {{ range slice "firstname" "lastname" }}
-{{ . }}: {{ index $gent . }}
+
+    {{ . }}: {{ index $gent . }}
+
 {{ end }}
 ```
 
 ## Slices of Maps
+
 Now let's mix slices and maps!
 
 We'll create a slice of maps. We already have one gent so we "instantiate" our slice with him:
@@ -333,16 +365,20 @@ And in order to add the last gents, we can append a slice of the two:
 ```
 
 ### Browsing
-And now to browse our gents: 
+
+And now to browse our gents:
 
 ```go-html-template
 {{ range $gents }}
-  <p>
-    {{ .firstname }} {{ .lastname }} was born on {{ .birth }}, he played {{ delimit .instruments ", " " and " }}
-  </p>
+
+    <p>
+      {{ .firstname }} {{ .lastname }} was born on {{ .birth }}, he played {{ delimit .instruments ", " " and " }}
+    </p>
+
 {{ end }}
 ```
-Will print: 
+
+Will print:
 
 ```text
 John Lennon was born on 1940, he played Piano, Guitar and Vocals
@@ -358,48 +394,54 @@ George Harrison was born on 1943, he played Guitar, Sitar and Vocals
 
 People are using `where` clause all the time to filter out pages and if you're not familiar you should give it glance in the [doc](https://gohugo.io/functions/where/#readout), but you can use it on any kind of collections, slices as well.
 
-__Let's find all gents born in 1940__
+**Let's find all gents born in 1940**
 
 As you know, `where` returns a slice empty or not, so it's safe to use range/else on it.
 
 ```go-html-template
 {{ range where $gents ".birth" "1940" }}
-    <p>{{ .firstname }}, {{ .birth }}</p>
+
+      <p>{{ .firstname }}, {{ .birth }}</p>
+
 {{ else }}
-  No gents 🤷!
+
+    No gents 🤷!
+
 {{ end }}
 ```
 
-__Now all the gents not born in 1940__
+**Now all the gents not born in 1940**
 
 ```go-html-template
 {{ $gents := where $gents ".birth" "!=" "1940" }}
 ```
 
-__Or born in or after 1942__
+**Or born in or after 1942**
+
 ```go-html-template
 {{ $gents := where $gents ".birth" ">=" "1942" }}
 ```
+
 As you'll have noticed by now `where` takes a set of parameters.
 
-The first, `$gents` is the collection. 
+The first, `$gents` is the collection.
 The second is the key we're evaluating in the collection's entries `".birth"`. (dot is optional, but I find it helps instantly identify the "key" argument)
 The third is the operator in use.
 The fourth is the value we're trying to match.
 
 If you omit number two, the operator defaults to `"=="`
 
-I woudn't go as far as writing a javascript comparison but... Ok just one! 
+I woudn't go as far as writing a javascript comparison but... Ok just one!
 
 ```javascript
-gents = gents.map(gent => gent.birth >= 1942)
+gents = gents.map((gent) => gent.birth >= 1942);
 ```
 
 {{% notice %}}
 Type must be the same in Hugo, here we're using strings for the years. Had we been using integers for our gents' birth we should have used `1942` (int) as matching value.
 {{% /notice %}}
 
-__Back to playing: Born in 1942 OR 1940?__
+**Back to playing: Born in 1942 OR 1940?**
 
 ```go-html-template
 {{ $gents := where $gents ".birth" "in" (slice "1940" "1942") }}
@@ -407,23 +449,23 @@ __Back to playing: Born in 1942 OR 1940?__
 
 Here we can use `"in"` to find gents whose birth year is included in ["1940", "1942"]
 
-
-
-__Now we want all gents playing the Guitar!__
+**Now we want all gents playing the Guitar!**
 
 It's different that with `"in"` as we want to find gents whose instruments' list includes "Guitar".
 
 We'll use the `"intersect"` operator. It compares a slice from the entries with a given slice, and only returns the entries where both slices "intersect".
 
-[Guitar, Piano] and [Bass, Guitar] intersects! They have __Guitar__ in common!
+[Guitar, Piano] and [Bass, Guitar] intersects! They have **Guitar** in common!
 [Guitar, Piano] and [Drums, Vocals] do not intersect! Nothing in common!
-[Guitar, Vocals] and [Drums, Vocals] do intersect, but with __Vocals__, not Guitar.
+[Guitar, Vocals] and [Drums, Vocals] do intersect, but with **Vocals**, not Guitar.
 
 Now we only need one intersection, Guitar, so:
+
 ```go-html-template
 {{ $gents := where $gents ".instruments" "intersect" (slice "Guitar") }}
 ```
-And if we wanted to find the gents who played Guitar and Vocals --- __two__ intersections --- we'd:
+
+And if we wanted to find the gents who played Guitar and Vocals --- **two** intersections --- we'd:
 
 ```go-html-template
 {{ $gents := where $gents ".instruments" "intersect" (slice "Guitar" "Vocals") }}
@@ -444,13 +486,14 @@ Let's sort our gents by age using their `birth` year:
 `sort` takes a first parameter, the key we'll sort the collection by, and an optional second for the direction. It defaults to ascending.
 
 To reverse the order and have them younger to older, we add a third parameter, `desc` for --- you guessed it --- descending.
+
 ```go-html-template
 {{ $gents := sort $gents ".birth" "desc" }}
 ```
 
 ## To reality and beyond!
 
-Ok, that is all well and good, but let's be honest, hardcoding your data this way can be useful for defining defaults or re-usable bases but not much more. 
-Usually your data comes from a source you lack control of like an API, or a Data file or most usually a user managed content file. 
+Ok, that is all well and good, but let's be honest, hardcoding your data this way can be useful for defining defaults or re-usable bases but not much more.
+Usually your data comes from a source you lack control of like an API, or a Data file or most usually a user managed content file.
 
 In the follow up article we'll cover how you can take data from a limited source (basic Front Matters, API endpoints) and transform it to data which better suit your project's needs. We'll use a lot of stuff covered above, but also more advanced ones so you can code safely with readablity, scalablity and build time in mind!
