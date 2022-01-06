@@ -40,43 +40,46 @@ This will mostly be used in the context of a conditional "overwrite."
 
 ## Loops
 
-There is only one kind of loop in Go Template, its called `range`. The syntax is like conditions.
+There is only one kind of loop in Go Template, its called `range`.
 
 ```go-html-template
 {{ range $beatles }}
-    This member is {{ . }}
+  This member is {{ . }}
 {{ end }}
 ```
 
 Above the dot holds the value at cursor. So ranging on a list of strings, like say, names of gentleman forming a band, that dot will be their name.
 
 ```html
-This member is John This member is Paul This member is Ringo This member is George
+This member is John
+This member is Paul 
+This member is Ringo 
+This member is George
 ```
 
 ## Conditions
 
-Go Templates only know `if` and `if else` as conditionals proper. Everything beyond them are functions in Hugo.
+Go Template only knows `if` and `if else` as conditionals proper. Everything beyond them are functions in Hugo.
 
 ### Comparing functions
 
 ```go-html-template
 {{ if eq $gent "John" }}
-    We're missing a lastname
+  We're missing a lastname
 {{ else if eq $gent "John Lennon" }}
-    We have a full name
+  We have a full name
 {{ else }}
-    Not sure!
+  Not sure!
 {{ end }}
 ```
 
-Above, `if` is the condition, and `eq` is a function (short of equal) which takes an infinite number of parameters. It compares the first parameter with any of the subsequent ones.
+Above, `if` is the condition, and `eq` is a function (short for equal) which takes an infinite number of parameters. It compares the first parameter with any of the subsequent ones.
 
 If `$gent` is either equal to "John Lennon" or "Paul McCartney" we have a Beatle!
 
 ```go-html-template
 {{ if eq $gent "John Lennon" "Paul McCartney" }}
-    We have a Beatle!
+  We have a Beatle!
 {{ end }}
 ```
 
@@ -117,7 +120,7 @@ Another useful action in Hugo is `with`.
 {{ end }}
 ```
 
-It is followed by a function or a variable whose value is evaluated. Upon success, the code inside `with` is executed, and the context shifts to the successfully evaluated value. It can take an optional `else` to be executed upon failure. Note that the context does not shift on failure.
+It is followed by a function or a variable whose value is evaluated. Upon success, the code inside `with` is executed, and, the context shifts to the successfully evaluated value. It can take an optional `else` to be executed upon failure. Note that the context does not shift on failure.
 
 {{% notice %}}
 **Context shifting in Hugo** cannot be covered in one paragraph. For a more detailed article on one of the most useful, yet puzzling Hugo concept you should give a read to [Hugo, the scope, the context and the dot](https://www.regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/) by yours truly.
@@ -154,14 +157,15 @@ Now if you are to include functions as argument, then you wrap them in parenthes
 **3. Some actions shifts the contet.**
 
 {{% notice %}}
-Shouldn't `eq $gent "John"` be wrapped into parenthesis? Because `if` is at the root of your curlies, Go Template can perfectly identify it for what it is, while still properly evaluation the following word and its potential followers as a function and its arguments.
+Shouldn't `eq $gent "John"` be wrapped into parenthesis? 
+No necessarily. Because `if` is at the root of your curlies, Go Template can perfectly identify it for what it is, while still properly evaluating the following word and its potential followers as a function and its arguments.
 {{% /notice %}}
 
 ## Basic Types
 
 ### Strings
 
-Strings are very important when dealing with templating. We'll need to format them or transform them a lot. One of the most useful function will be `printf`. It takes an unlimited number of parameters. First one is a string wich includes "verbs", subsequent ones are any variables whose value needs to replace the "verbs"
+Strings are very important when dealing with templating. We'll need to format them or transform them a lot. One of the most useful function will be `printf`. It takes an unlimited number of parameters. First one is a string wich includes "verbs", subsequent ones are any variables or else whose value needs to replace the "verbs"
 
 ```go-html-template
 {{ printf "%s was a famous song writer." $gent }}
