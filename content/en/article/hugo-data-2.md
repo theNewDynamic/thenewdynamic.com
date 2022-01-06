@@ -16,11 +16,7 @@ subjects:
 description: Hugo is well know for minimal config templating features. But do you know it's also great at structuring and manipulation data? In this article we cover advanced data manipulation in Hugo with Slices and Maps! We learn to fitler their content and shape up their structure while reviewing some critical functions and Hugo concept.
 ---
 
-Building or manipulating data to one's need from a raw source—like an API endpoint or a Markdown file—is not often discussed and may seem daunting for many users.
-
-How using Hugo and Go Template can your turn this massive wall of JSON or an editor friendly Front Matter into just what your HTML needs?
-
-In this article we'll cover advanced data manipulation in Hugo with Slices and Maps types! We'll learn fitler their content and shape up their structure while reviewing some critical functions and concept Hugo.
+Building or manipulating data to one's need from a raw source—like an API endpoint or a Markdown file—is not often discussed in the Hugo community and may seem daunting for many users. How can Hugo and Go Templates turn your massive wall of JSON or an editor friendly front matter into just what your HTML needs? In this article we'll cover advanced data manipulation in Hugo with Slices and Maps types. We'll learn fitler their content and shape up their structure while reviewing some critical functions and concept Hugo.
 
 ## Prerequisite
 
