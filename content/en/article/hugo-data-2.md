@@ -24,7 +24,6 @@ You'll need an intermediate understanding of Go Template in Hugo. If you're unsu
 
 Having a Hugo running on your local machine is a plus, as you'll be able to experiment with the code examples! But if not, just read along and imagine a cocktail in your hand!
 
-As for 
 
 ## Slices
 
@@ -35,12 +34,15 @@ We create a slice using the `slice` function:
 
 ```go-html-template
 {{ $gents := slice "John" "Paul" }}
+
 {{ range $gents }}
-I love {{ . }}
+  
+    I love {{ . }}
+
 {{ end }}
 ```
 
-☝️ This will print:
+The above will print:
 ```html
 I love John
 I love Paul
