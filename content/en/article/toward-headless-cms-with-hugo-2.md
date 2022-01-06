@@ -28,7 +28,7 @@ seo:
 
 [Ealier this year]({{< relref toward-headless-cms-with-hugo-1 >}}), we covered one workaround which allowed us to circumvent Hugo limitation on building pages from data.
 
-This time we'll use another workarkound, much more straight forward. It consists of using Hugo to grab our data from a remote source using `resources.GetRemote` --- Hugo's own `fetch` API ---, keep using Hugo to generate markdown files using its `resources.FromString`, and finally build our Hugo project with the aformentioned content files.
+This time we'll use another workarkound, much more straight forward. It consists of using Hugo to grab our data from a remote source using `resources.GetRemote` --- Hugo's own `fetch` API ---, keep using Hugo to generate markdown files using its `resources.FromString`, and finally build our Hugo project with the aforementioned content files.
 
 ## Building pages from a remote source
 
