@@ -5,6 +5,7 @@ featured: /uploads/hugo-data.png
 date: 2022-01-06T9:32:27.000Z
 title: "Hugo and Data: Advance manipulation with Slices and Maps"
 slug: hugo-data-manipulation-slices-and-maps
+comments: https://github.com/theNewDynamic/thenewdynamic.com/discussions/194
 tags:
   - hugo
   - data
