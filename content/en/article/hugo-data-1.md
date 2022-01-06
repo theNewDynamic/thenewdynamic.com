@@ -16,24 +16,27 @@ subjects:
 description: This article simply addresses the basics of the Go Template, along with some critical functions Hugo offers to complement it. If you're starting your Hugo journey, or simply feel like several concepts remain obscure to you after years of Hugo, read on!
 ---
 
-Hugo's logic has to be addressed in the context of templating. Meaning from within a template file and using Go Template. Over the years, Hugo has been complementing Go Template with many functions and features in order to allow users to build advanced and robust logic.
+Hugo's logic has to be addressed in the context of templating. Meaning from within a template file and using Go Template. Over the years, Hugo has complemented Go Template with many functions and features in order to allow users to build advanced and robust logic.
 
-This article simply addresses the basics of the language, along with some critical functions Hugo offers to complement it. If you're starting your Hugo journey, or simply feel like several concept remains obscure to you after years of Hugo, this useful recap is for you!
+This article addresses the basics of the language, along with some critical functions Hugo offers to complement it. If you're starting your Hugo journey, or simply feel like several concept remains obscure to you after years of Hugo, this useful recap is for you!
 
 ## Variables
 
-Hugo variables are always prefixed with a `$` sign. The way they are initialized and assigned is different. 
+Hugo variables are always prefixed with a `$` sign. However, variables are initialized and then assigned differently.
+
+Initialization is simply the first time we store anything into a variable. Here we initialize the variable:
 
 ```go-html-template
 {{ $gent := "John" }}
 ```
 
-Above we initializes the variable. Let's say it's simply the first time we store anything into it.
+Here we've assigned a new value (John Lennon) to our pre-initialized variable:
 
 ```go-html-template
 {{ $gent = "John Lennon" }}
 ```
-Now we've assigned to a pre-initialized variable, a new value "John Lennon". This will mostly be used in the context of a conditional "overwrite".
+
+This will mostly be used in the context of a conditional "overwrite."
 
 ## Loops
 
@@ -41,31 +44,37 @@ There is only one kind of loop in Go Template, its called `range`. The syntax is
 
 ```go-html-template
 {{ range $beatles }}
-  This member is {{ . }}
+    
+    This member is {{ . }}
+
 {{ end }}
 ```
 
 Above the dot holds the value at cursor. So ranging on a list of strings, like say, names of gentleman forming a band, that dot will be their name.
+
 ```html
-This member is John
-This member is Paul
-This member is Ringo
-This member is George
+This member is John This member is Paul This member is Ringo This member is George
 ```
 
 ## Conditions
 
-Go Template only knows `if` and `if else` as condition proper. Everything beyond it are functions in Hugo.
+Go Templates only know `if` and `if else` as conditionals proper. Everything beyond them are functions in Hugo.
 
 ### Comparing functions
 
 ```go-html-template
 {{ if eq $gent "John" }}
-We're missing a lastname
+
+    We're missing a lastname
+
 {{ else if eq $gent "John Lennon" }}
-We have a full name
+
+    We have a full name
+
 {{ else }}
-Not sure!
+
+    Not sure!
+
 {{ end }}
 ```
 
@@ -75,21 +84,24 @@ If `$gent` is either equal to "John Lennon" or "Paul McCartney" we have a Beatle
 
 ```go-html-template
 {{ if eq $gent "John Lennon" "Paul McCartney" }}
-We have a Beatle!
+    
+    We have a Beatle!
+
 {{ end }}
 ```
 
-Hugo sports several other "comparing" functions. Unlike `eq` they only take two parameters. The first one would sit on the left of the operator, the second one the right. 
+Hugo sports several other "comparing" functions. Unlike `eq` they only take two parameters. The first one would sit on the left of the operator, the second one the right.
 
-function | short for | other language equivalence
----|---|---
-eq | first parameter is Equal to any other parameters | `==`
-ne | first parameter is Not Equal to second parameter | `!=`
-gt | first parameter is Greater Than second parameter | `>`
-ge | first parameter is Greater than or Equal to second parameter | `>=`
-lt | first parameter is Lower Than second parameter | `<`
-ge | first parameter is Lower than or Equal to second parameter | `<=`
-in | first parameter Contains second parameter |
+| function | short for                                                    | other language equivalence |
+| -------- | ------------------------------------------------------------ | -------------------------- |
+| eq       | first parameter is Equal to any other parameters             | `==`                       |
+| ne       | first parameter is Not Equal to second parameter             | `!=`                       |
+| gt       | first parameter is Greater Than second parameter             | `>`                        |
+| ge       | first parameter is Greater than or Equal to second parameter | `>=`                       |
+| lt       | first parameter is Lower Than second parameter               | `<`                        |
+| ge       | first parameter is Lower than or Equal to second parameter   | `<=`                       |
+| in       | first parameter Contains second parameter                    |
+
 {.condition-examples}
 
 ### OR and AND
@@ -98,61 +110,71 @@ Just like comparison, `or` and `and` are also functions. They take two parameter
 
 ```go-html-template
 {{ if and (in $gent "John") (in $gent "Lennon") }}
-That must be John Lennon
+
+    That must be John Lennon
+
 {{ end }}
 ```
 
-Above we're using the `and` function to test two conditions. Those conditions are using `in` which tests if a given substring is contained in a string.
+Above we're using the `and` function to test two conditions. Those conditions are using `in` which tests if a given substring is contained within a string.
 
 ## With, the other condition
 
-Another useful action in Hugo is `with`. 
+Another useful action in Hugo is `with`.
 
 ```go-html-template
 {{ with $gent }}
-{{ . }} is the gent.
+
+    {{ . }} is the gent.
+
 {{ else }}
-We have no gent.
+    
+    We have no gent.
+
 {{ end }}
 ```
 
 It is followed by a function or a variable whose value is evaluated. Upon success, the code inside `with` is executed, and the context shifts to the successfully evaluated value. It can take an optional `else` to be executed upon failure. Note that the context does not shift on failure.
 
 {{% notice %}}
-__Context shifting in Hugo__ cannot be covered in one paragraph. For a more detailed article on one of the most useful, yet puzzling Hugo concept you should give a read to [Hugo, the scope, the context and the dot](https://www.regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/) by yours truly.
+**Context shifting in Hugo** cannot be covered in one paragraph. For a more detailed article on one of the most useful, yet puzzling Hugo concept you should give a read to [Hugo, the scope, the context and the dot](https://www.regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/) by yours truly.
 {{% /notice %}}
 
 ## A word on Go Template
 
 By now you will have noticed some peculiarities with the Go Template syntax.
 
-
-__1. Function parameters are not delimited by commas or wrappped in parenthesis like most languages.__
+**1. Function parameters are not delimited by commas or wrappped in parenthesis like most languages.**
 
 ```go-html-template
 {{ print "Hello" "john" " and " "paul" }}
 ```
+
 Now if you are to include functions as argument, then you wrap them in parenthesis like so:
 
 ```go-html-template
 {{ print "Hello" (upper "john") " and " (upper "paul") }}
 ```
 
-__2. Every code action stands within double curlies__
+**2. Every code action stands within double curlies**
 
 ```go-html-template
 {{ if eq $gent "John" }}
-  Hello John
+  
+    Hello John
+
 {{ else if eq $gent "Paul" }}
-  Hello Paul
+    
+    Hello Paul
+
 {{ else }}
-  Hello You
+    
+    Hello You
+
 {{ end }}
 ```
 
-__3. Some actions shifts the contet.__
-
-
+**3. Some actions shifts the contet.**
 
 {{% notice %}}
 Shouldn't `eq $gent "John"` be wrapped into parenthesis? Because `if` is at the root of your curlies, Go Template can perfectly identify it for what it is, while still properly evaluation the following word and its potential followers as a function and its arguments.
@@ -180,12 +202,13 @@ Another useful printing function is `print`. This one does not use any verb, it 
 
 Hugo can use many types of numbers, integer, floats etc... Just like for conditions, their computing is made through the use of functions. First parameter sits on the left side of the conventional operator, second parameter on the right side.
 
-function | short for | other language equivalence
----|---|---
-add | first parameter is Added to second parameter | `+`
-sub | second parameter is Substracted from first parameter | `-`
-mul | first parameter is Multiplied by second parameter | `*`
-div | first parameter is Divided by second parameter | `/`
+| function | short for                                            | other language equivalence |
+| -------- | ---------------------------------------------------- | -------------------------- |
+| add      | first parameter is Added to second parameter         | `+`                        |
+| sub      | second parameter is Substracted from first parameter | `-`                        |
+| mul      | first parameter is Multiplied by second parameter    | `*`                        |
+| div      | first parameter is Divided by second parameter       | `/`                        |
+
 {.condition-examples}
 
 These are just the basics but [more are available](https://gohugo.io/functions/math/#readout) for advanced usage.
