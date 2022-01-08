@@ -239,7 +239,7 @@ For now, our monsters content will be stored as Front Matter key! This makes it 
     {{/* 1. */}} {{ $string := jsonify . }} 
     {{/* 2. */}} {{ $filename := printf "monster/%s.md" (urlize .title) }} 
     {{/* 3. */}} {{ $resource := resources.FromString $filename $string }} 
-    {{/* 4. */}} {{ $file := $file.RelPermalink }} 
+    {{/* 4. */}} {{ $file := $resource.RelPermalink }} 
   {{ end }}
 {{ end }}
 ```
