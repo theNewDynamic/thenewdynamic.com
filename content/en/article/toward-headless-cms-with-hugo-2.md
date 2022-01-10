@@ -101,7 +101,7 @@ For Hugo to build a project, it only needs two files. We'll add those.
 
 ### Configuring our minimal project
 
-Technically an empty `config.yaml` would be okay, but while we're at it, we can pass some settings to make sure Hugo does not output too many useless files alongisdes our markdown files.
+Technically an empty `config.yaml` would be okay, but while we're at it, we can pass some settings to make sure Hugo does not output too many useless files alongside our markdown files.
 
 ```yaml
 # config.yaml
@@ -167,7 +167,7 @@ Let's dive in with some plain code:
 
 With the above, we are able to retrieve our Monsters. 
 
-But that will not be enough, the `$monsters` variable does not contain a list of monsters yet. For now it's just a resource: a file which has been fetched. The content of the response, in our case 500 monsters trapped in an jsonified array is available at `.Content`.
+But that will not be enough, the `$monsters` variable does not contain a list of monsters yet. For now it's just a resource: a file which has been fetched. The content of the response, in our case 500 monsters trapped into a jsonified array is available at `.Content`.
 
 And in order to turn this JSON string into an object Hugo understands, we'll use the `transform.Unmarshal` function, aliased `unmarshal`. This takes any string, `json`, `yaml` or `toml` and turns it into "Hugo data".
 
@@ -183,9 +183,9 @@ One more time:
 {{ end }}
 ```
 
-Great, now we know how to handle our response and turn into data we can use in templates! 
+Great, now we know how to handle our response and turn it into data we can use in templates! 
 
-But while do love our monsters, proclaiming our love is not the point here. We want to create files, markdown files!
+But while we do love our monsters, proclaiming our love is not the point here. We want to create files, markdown files!
 
 
 ### Create the markdown files
@@ -248,9 +248,7 @@ For now, our monsters content will be stored as Front Matter key! This makes it 
 3. We generate the markdown resource using `resources.FromString`
 4. We make sure it's published.
 
-That's it?
-
-__That's it!__
+That's it? ... __That's it!__
 
 Now we can run `hugo` from the `/prebuild` directory:
 
@@ -274,7 +272,7 @@ Total in 1057 ms
 ```
 
 
-As you can see Hugo did not build any pages per say but it did wrote markdown files! We should get a fresh `remote/public/monster` directory full of monsters!
+As you can see Hugo did not build any pages per say but it did write markdown files! We should get a fresh `remote/public/monster` directory full of monsters!
 
 And just like that, we've wrapped up __Step 1__!
 
@@ -317,7 +315,7 @@ For example our `layouts/monster/list.html` will look like that:
 ```
 Tada!
 
-If you have already ran `hugo` from the `prebuild` direrctory, you can safely run `hugo serve` from the main one, and see how ours monsters look.
+If you have already ran `hugo` from the `prebuild` direrctory, you can safely run `hugo serve` from the main one, and see how our monsters look.
 
 ## Step 1 && Step 2
 
@@ -347,9 +345,9 @@ command = "cd remote && hugo && cd .. && hugo"
 
 #### Caching
 
-Our Monsters API is static, built with Hugo so quiet reliable. But even so, it's always safer to cache your API responses so you're not stressing them at every build
+Our Monsters API is static, built with Hugo so quiet reliable. But even so, it's always safer to cache your API responses so you're not stressing those endpoints at every build.
 
-Hugo has a nice `caches` settings which allows to control how long any given resource is saved. It bear several, but the one that matters to us is `getresource`.
+Hugo has a nice `caches` settings which allows to control how long any given resource is saved. It bears several caches key, but the one that matters to us is `getresource`.
 
 ```yaml
 # prebuild/config.yaml
@@ -358,7 +356,7 @@ caches:
     maxAge: 6h
 ```
 
-With the above we are effectively informing Hugo that any response obtained with `resources.GetRemote` should cached for 6 hours. That is 6 hours during which the API can REST! 🥁.
+With the above we are effectively informing Hugo that any response obtained with `resources.GetRemote` should be cached for 6 hours. That is 6 hours during which the API can REST! 🥁.
 
 ## Before you go...
 
@@ -368,7 +366,7 @@ We've covered API fetching, mardkown files writing, content files mounting, webs
 
 The data from our Monsters is easy to handle but you'll mostly want to transform the data from the API into something more aligned with your project. 
 
-In a future article we'll cover everything there is to know about the way to manipulate data with Hugo. 
+We're covering everything there is to know about the way to manipulate data with Hugo in this article: {{< link "hugo-data-2" >}}. 
 
 That will allow us to create transformers for our data and prep those markdown files nicely!
 
