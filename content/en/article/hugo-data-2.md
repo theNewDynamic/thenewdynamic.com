@@ -439,7 +439,7 @@ Type must be the same in Hugo, here we're using strings for the years. Had we be
 
 Here we can use `"in"` to find gents whose birth year is included in ["1940", "1942"]
 
-**Now we want all gents playing the Guitar!**
+###### **Now we want all gents playing the Guitar!**
 
 It's different that with `"in"` as we want to find gents whose instruments' list includes "Guitar".
 
