@@ -5,7 +5,6 @@ featured: /uploads/hugo-data.png
 date: 2022-01-19T9:32:27.000Z
 title: "Hugo and Data: Advanced Transformations"
 slug: hugo-data-manipulation-and-logic-advanced-transformations
-draft: true
 tags:
   - hugo
   - modules
@@ -13,7 +12,7 @@ tags:
   - logic
 subjects:
   - dev
-description: Hugo is well know for minimal config templating features. But do you know it's also great at structuring and manipulation data?
+description: Hugo is well known for building pages! But do you know it's also great at structuring and manipulation data? In this article we cover challenging data transformation in Hugo wrapped in a "transforming" partial. Plus a little bit of GetRemote to make it fun!
 ---
 
 ## Transform!
