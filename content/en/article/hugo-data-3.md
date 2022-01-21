@@ -20,7 +20,7 @@ description: Hugo is well know for minimal config templating features. But do yo
 
 Last time, using famous gents from Britain we covered some data manipulation, but it implied hardcoding of lot of gent's info.
 
-Usually your data comes from a source you lack control of like an API, or a data file or most usually a user managed content file. In this new article about Hugo and Data, we'll cover how you can take data from a limited source (basic Front Matters, API endpoints) and transform into objects better suited to your project's needs! We'll a "transformer" partial and even some remote data fetching to complement our gent!
+Usually your data comes from a source you lack control of like an API, or a data file or most usually a user managed content file. In this new article about Hugo and Data, we'll cover how you can take data from a limited source (basic Front Matters, API endpoints) and transform it into objects better suited to your project's needs! We'll use a "transformer" partial and even some remote data fetching to complement our gent!
 
 If you're stumbling on this article without having read through [this one]({{< relref "hugo-data-2" >}}), I strongly suggest you go back to it as it covers the basics of two very important data types which we'll use a lot here: Slice and Maps.
 
@@ -82,23 +82,49 @@ Let's range on our gents and create a new slice with the transformed entries:
 {{ end }}
 ```
 ### Name
+
+```go-html-template
+"fullname" .Title
+"firstname" (index 0 (split .Title " "))
+"lastname" (index 1 (split .Title " "))
+```
+
 First thing of note is that we only have a fullname under the file's `.Title`. We add it as `fullname` because it makes much more sense.
 
 If you've followed the first part well you should be able to see what's happening next. 
-We're using `split` a function which does the opposite of `delimit`. It takes a string as first parameter and creates a slice with all the substrings delimited by the second parameter.
+We're using `split` a function which does the opposite of `delimit`. It takes a string as first parameter and creates a slice with all the substrings delimited by the second parameter --- here a whitespace between our two words.
 Of course, the firstname will be the first entry at 0 and lastname the second one at 1. We use `index` to retrieve those.
 
 ### Birthdate
 
+```go-html-template
+"birthdate" .Date
+```
+
 We also pass the entry's `.Date` as `birthdate`.
 
 ### City
+
+```go-html-template
+"city" "Liverpool"
+```
+
 We know the city is always "Liverpool"!
 
 ### Instruments
+
+```go-html-template
+"instruments" (dict
+  "list" .instruments
+  "string_rep" (delimit .instruments ", " "and")
+  "number" (len .instruments)
+
+)
+```
+
 We've also created an `instruments` maps with various informations that we could use. 
 Under `.list` we have the raw list from our content file. 
-Under `string_rep` we have a string representation of the list built with the now famliar `delimit`. 
+Under `string_rep` we have a string representation of the list built with the now familiar `delimit`. 
 And finally, under `.numbers` the numbers of instruments. `len` is a useful function evaluating the length of a slice!
 
 Now if our project needs to sort out gents by the number of instruments they play, it would be just as easy as:
@@ -132,9 +158,10 @@ And from that partial we'd return a simple map of our new transformed gent.
 
 ## Inside our transformer
 
-Nice. Now let's focus on the content of `transform_gent.html`. It's really unsafe of us to assume all those keys are filled.
+Nice. Now let's focus on the content of `partials/transform_gent.html`. It's really unsafe of us to assume all those keys are filled.
 
 What if there is no instruments? Then we should probably do not use `delimit`, and simply return an empty slice!
+
 What if there is no "lastname"? Then our `index` will definitely fail and break our build as a result.
 
 We cannot simply declare our `dict` in one shot anymore. We have to increment the additions of key/value pairs based on certain conditions. 
@@ -166,11 +193,11 @@ Let's start... from `.Scratch`!
 3. Right after that we'll proceed to our various conditions and data manipulations.
 4. At the end, we return the `"gent"` map stored in the `$s` Scratch.
 
-Ok let's start safely transforming our gents!
+Ok let's start safely transforming our gents and improve our code while we're at it!
 
 ### Name
 
-First let's improve that firstname/lastname thing. Currently it will only work with the most basic name like John Lennon but what if a zealous editor entered `title: John Winston Lennon`.  Now our little concoction would use the wrong part as `lastname`. Another problem could occur if the editor enters `title: Ringo`. This time we have a broken build!
+First let's improve that firstname/lastname thing. Currently it will only work with the most "two words" names like _John Lennon_ but what if a zealous editor entered `title: John Winston Lennon`. Now our little concoction would use the wrong substring as `lastname`. Another problem could occur if the editor enters `title: Ringo`. This time we have a broken build as `index . 1` does not exist!
 
 First we need to make sure we have at least 2 strings seperated by a whitespace. We'll use `len` to retrieve the number of strings contained in the slice returned by `split`.
 
@@ -315,7 +342,7 @@ Remember at the beginning of this article when we applied the transformations to
 {{ end }}
 ```
 
-It is not ideal! There is a underated Hugo function called [apply](https://gohugo.io/functions/apply/#readout) we can use instead. 
+It is not ideal! There is an underated Hugo function called [apply](https://gohugo.io/functions/apply/#readout) we can use instead. 
 It takes as first argument a slice and as second the "function" to apply. All subsequent arguments are passed to the applied function.
 
 For example we could do:
@@ -338,7 +365,7 @@ Now, using `apply`, we can apply our transformations without a `range`.
 
 ## Finally outputing our data!
 
-Now that we're done formatting or data we can keep the Hugo logic in our template to the minimum. And after reading this series on Hugo and Data, you should be perfectly capable to understand the following without any help:
+Now that we're done formatting or data we can keep the Hugo logic in our template to the minimum. And after reading this series on Hugo and Data, you should be perfectly capable of understanding the following without any help:
 
 ```go-html-template
 <h2>Gents from Britain</h2>
@@ -373,4 +400,4 @@ Now that we're done formatting or data we can keep the Hugo logic in our templat
 I hope this has been a fun and detailed way to cover everything there is to know about Hugo and Data to start or complement existing data-heavy Hugo projects.
 
 The final code resulting in our series is available to look at at https://github.com/regisphilibert/gents-from-britain
-The code for the Beatles API  (build with Hugo) is available here: https://github.com/regisphilibert/ya-beatles-api
+The code for the Beatles API  (built with Hugo) is available here: https://github.com/regisphilibert/ya-beatles-api
