@@ -1,10 +1,9 @@
 ---
-authors:
-  - persons/regis-philibert.md
-featured: /uploads/hugo-data.png
 date: 2022-01-06T9:32:27.000Z
 title: "Hugo and Data: Advance manipulation with Slices and Maps"
-slug: hugo-data-manipulation-slices-and-maps
+slug: manipulation-slices-and-maps
+aliases:
+  - /article/hugo-data-manipulation-slices-and-maps
 comments: https://github.com/theNewDynamic/thenewdynamic.com/discussions/194
 tags:
   - hugo
@@ -25,7 +24,7 @@ How can Hugo and Go Template turn your massive wall of JSON or an editor friendl
 
 ## Prerequisite
 
-You'll need an intermediate understanding of Go Template in Hugo. If you're unsure, it might be a good idea --- it's always a good idea --- to review the basics from this earlier article: [Hugo and Data: The Basics]({{< relref "article/hugo-data-1" >}})
+You'll need an intermediate understanding of Go Template in Hugo. If you're unsure, it might be a good idea --- it's always a good idea --- to review the basics from this earlier article: [Hugo and Data: The Basics]({{< relref "article/hugo-data/part-1" >}})
 
 Having a Hugo running on your local machine is a plus, as you'll be able to experiment with the code examples! But if not, just read along and imagine a cocktail in your hand!
 

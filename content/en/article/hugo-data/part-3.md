@@ -1,10 +1,9 @@
 ---
-authors:
-  - persons/regis-philibert.md
-featured: /uploads/hugo-data.png
 date: 2022-01-19T9:32:27.000Z
 title: "Hugo and Data: Advanced Transformations"
-slug: hugo-data-manipulation-and-logic-advanced-transformations
+slug: manipulation-and-logic-advanced-transformations
+aliases:
+- /article/hugo-data-manipulation-and-logic-advanced-transformations
 tags:
   - hugo
   - modules
@@ -21,7 +20,7 @@ Last time, using famous gents from Britain we covered some data manipulation, bu
 
 Usually your data comes from a source you lack control of like an API, or a data file or most usually a user managed content file. In this new article about Hugo and Data, we'll cover how you can take data from a limited source (basic Front Matters, API endpoints) and transform it into objects better suited to your project's needs! We'll use a "transformer" partial and even some remote data fetching to complement our gent!
 
-If you're stumbling on this article without having read through [this one]({{< relref "hugo-data-2" >}}), I strongly suggest you go back to it as it covers the basics of two very important data types which we'll use a lot here: Slice and Maps.
+If you're stumbling on this article without having read through [this one]({{< relref "article/hugo-data/part-2" >}}), I strongly suggest you go back to it as it covers the basics of two very important data types which we'll use a lot here: Slice and Maps.
 
 For this illustrative context, our data source will be markdown files and our gents will be structured this way:
 
@@ -165,7 +164,7 @@ What if there is no "lastname"? Then our `index` will definitely fail and break 
 
 We cannot simply declare our `dict` in one shot anymore. We have to increment the additions of key/value pairs based on certain conditions. 
 
-Adding to a map? Awesome, we've covered it in the [last article]({{< relref "hugo-data-2#add-to-a-map" >}})!
+Adding to a map? Awesome, we've covered it in the [last article]({{< relref "article/hugo-data/part-2#add-to-a-map" >}})!
 
 Well... We've covered one way to do it with `merge`. But there is one serious problem with the `merge` technique: it's pretty slow. And understandably as for every addition, it invokes two functions, `merge` and the creation of a new map with `dict`.
 
@@ -275,7 +274,7 @@ Nothing new for the birthdate except we condition its addition on the existence 
 
 Easy! 
 
-For the age, we'll perform one easy calculation with the `sub` function discussed [earlier in the series]({{< relref "hugo-data-1#numbers" >}}) and the `now` function. The `now` function simply returns the current time in the form of a Go Date object with among many a `.Day`, `.Month` and `.Year` methods. 
+For the age, we'll perform one easy calculation with the `sub` function discussed [earlier in the series]({{< relref "article/hugo-data/part-1#numbers" >}}) and the `now` function. The `now` function simply returns the current time in the form of a Go Date object with among many a `.Day`, `.Month` and `.Year` methods. 
 
 ```go-html-template
 {{ with sub now.Year .Date.Year }}
@@ -324,9 +323,9 @@ We want to fetch this data, and list the song names attributed to each of our ge
 
 1. We use [resources.GetRemote](https://github.com/regisphilibert/ya-beatles-api) to fetch the API endpoint.
 2. We turn its content into Hugo data with `unmarshal`.
-3. We create an emtpy [slice]({{< relref "hugo-data-2#creating-a-slice" >}}) for our songs.
-4. Using [with]({{< relref "hugo-data-1#with-the-other-condition" >}}), [where]({{< relref "hugo-data-2#filtering" >}}) and [intersect]({{< relref "hugo-data-2#now-we-want-all-gents-playing-the-guitar" >}}) we filter all the songs form the API to only keep the ones whose `.songwriters` includes the name of our gent.
-5. Using [range]({{< relref "hugo-data-2#creating-a-slice" >}}), we loop on our filtered songs and [append]({{< relref "hugo-data-2#adding-to-a-slice-or-append" >}}) our `$songs` array with the `.name` of the song at cursor.
+3. We create an emtpy [slice]({{< relref "article/hugo-data/part-2#creating-a-slice" >}}) for our songs.
+4. Using [with]({{< relref "article/hugo-data/part-1#with-the-other-condition" >}}), [where]({{< relref "article/hugo-data/part-2#filtering" >}}) and [intersect]({{< relref "article/hugo-data/part-2#now-we-want-all-gents-playing-the-guitar" >}}) we filter all the songs form the API to only keep the ones whose `.songwriters` includes the name of our gent.
+5. Using [range]({{< relref "article/hugo-data/part-2#creating-a-slice" >}}), we loop on our filtered songs and [append]({{< relref "article/hugo-data/part-2#adding-to-a-slice-or-append" >}}) our `$songs` array with the `.name` of the song at cursor.
 5. Using `with` again, we make sure the above did populate our `$songs` array and if so, store its value in our local scratch's "songs" key.
 6. Done!
 
