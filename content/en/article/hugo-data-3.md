@@ -12,7 +12,7 @@ tags:
   - logic
 subjects:
   - dev
-description: Hugo is well known for building pages! But do you know it's also great at structuring and manipulation data? In this article we cover challenging data transformation in Hugo wrapped in a "transforming" partial. Plus a little bit of GetRemote to make it fun!
+description: Hugo is well known for building pages! But do you know it's also great at structuring and manipulation data? In this final article we level up to achieve advanced data transformations!
 ---
 
 ## Transform!
