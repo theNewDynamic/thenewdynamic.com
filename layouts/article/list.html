@@ -2,9 +2,13 @@
   <div class="container">
     {{ partial "page-header.html" . }}
     <div class="my-4">
-      {{ range .Pages }}
+      {{ range $page := .Pages }}
         <div class="container mt-16 mb-16">
-          {{ partial "article-header.html" (dict "location" "list" "Page" .) }}
+          {{ with .Pages }}
+            {{ partial "series-header.html" (dict "location" "list" "Page" $page) }}
+          {{ else }}
+            {{ partial "article-header.html" (dict "location" "list" "Page" .) }}
+          {{ end }}
         </div>
       {{ end }}
     </div>

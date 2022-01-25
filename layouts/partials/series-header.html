@@ -1,0 +1,38 @@
+{{ with .Page }}
+<div class="grid-cols-2 gap-8 sm:grid">
+  <div class="text-primary-300 pattern-dots-md">
+    <div
+      class="flex flex-col justify-center mb-2 overflow-hidden font-serif text-2xl font-light leading-tight text-black transform -translate-x-2 -translate-y-5 bg-gray-100 border-gray-200 rounded shadow min-h-64 TKborder lg:-translate-x-5">
+      {{ with .Params.featured }}
+        {{ $args := dict "path" . "width" 600 }}
+        {{ with partialCached "huge/media/Get" $args $args }}
+          <img class="w-full" src="{{ .RelPermalink }}" alt="">
+        {{ end }}
+      {{ else }}
+      <div class="py-8 pl-12 pr-8 text-3xl">
+        <span
+          class="inline-block pr-1 -ml-6 font-serif text-5xl">“</span>{{ .Description | default .Summary | truncate 100 }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <div>
+    <h2 class="mb-4 text-4xl font-bold leading-tight lg:text-5xl">
+      {{ if eq $.location "list" }}
+      <a href="{{ .RelPermalink }}" class="color-inherit hover:underline hover:text-gray-600 text-shadow-lg">
+        {{ .Title }}
+      </a>
+      {{ else }}
+      <span class="text-shadow-lg">
+        {{ .Title }}
+      </span>
+      {{ end }}
+    </h2>
+    <ul class="pl-2 mt-8">
+      {{ range .Pages.ByDate }}
+      <li><a class="hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

@@ -1,10 +1,9 @@
 ---
-authors:
-  - persons/regis-philibert.md
-featured: /uploads/hugo-data.png
 date: 2022-01-02T9:32:27.000Z
 title: "Hugo and Data: The Basics"
-slug: hugo-data-manipulation-and-logic-the-basics
+slug: manipulation-and-logic-the-basics
+aliases:
+- /article/hugo-data-manipulation-and-logic-the-basics
 tags:
   - hugo
   - data
@@ -197,4 +196,4 @@ These are just the basics but [more are available](https://gohugo.io/functions/m
 
 Congratulation for reviewing the basics of Go Template in Hugo! By reviewing the basics for variables, conditions, loops, strings and numbers, we might have shed some lights on some everyday concepts that remained obscure even to advance users!
 
-You can keep on learning with the next article [Hugo and Data: Advance manipulation with Slices and Maps]({{< relref "article/hugo-data-2" >}}) which goes deeper into Go Template and Hugo by manipulating its more advanced data types: Slices and Maps.
+You can keep on learning with the next article [Hugo and Data: Advance manipulation with Slices and Maps]({{< relref "article/hugo-data/part-2" >}}) which goes deeper into Go Template and Hugo by manipulating its more advanced data types: Slices and Maps.
