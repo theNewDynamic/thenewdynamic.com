@@ -2,7 +2,12 @@
   <div class="container">
     {{ partial "page-header.html" . }}
     <div class="my-4">
-      {{ range $page := .Pages }}
+      {{ $pages := .Pages }}
+      {{/* If .FirstSection is different than the current page, then we are un a series */}}
+      {{ if ne .FirstSection $ }}
+        {{ $pages = $pages.Reverse }}
+      {{ end }}
+      {{ range $page := $pages }}
         <div class="container mt-16 mb-16">
           {{ with .Pages }}
             {{ partial "series-header.html" (dict "location" "list" "Page" $page) }}
