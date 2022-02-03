@@ -301,7 +301,7 @@ And our very basic partial:
 ```
 
 ```go-html-template
-{{- with resources.Get (print "hugo-icons/icons/" .) -}}
+{{- with resources.Get (print "hugo-icons/icons/" . ".svg") -}}
   {{- .Content | safeHTML -}}
 {{- end -}}
 ```
