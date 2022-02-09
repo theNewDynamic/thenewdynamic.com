@@ -9,4 +9,5 @@ menu:
     weight: 4
 show_events: true
 ---
-We've hosted 27 events so far and have spoken at and given workshops at the annual Jamstack Conference.
+
+{{< connect >}}
