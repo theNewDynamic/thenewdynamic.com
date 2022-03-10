@@ -27,19 +27,12 @@
           {{ $support := eq . "support" }}
           <div 
           {{ if $support }}
-            x-data="formData()"
+            x-data="formSupport"
           {{ end }}
           class="max-w-lg mx-auto my-32">
             {{ partial "tnd-forms/form" (print . "-" $.Language) }}
           </div>
           {{ if $support }}
-          <script>
-            function formData() {
-              return {
-                website: new URLSearchParams(window.location.search).get('website')
-              }
-            }
-          </script>
           {{ end }}
       {{ end }}
     </div>
