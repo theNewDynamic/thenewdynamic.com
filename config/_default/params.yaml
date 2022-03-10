@@ -48,6 +48,7 @@ tnd_headers:
           script-src: 
             - self
             - unsafe-eval
+            - unsafe-inline
             - https://cdn.usefathom.com 
             - https://identity.netlify.com 
             - https://unpkg.com
