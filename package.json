@@ -32,7 +32,7 @@
 		"extended": "true"
 	},
 	"devDependencies": {
-		"alpinejs": "^2.3.5",
+		"alpinejs": "^3.9.0",
 		"auto-changelog": "^2.0.0",
 		"intersection-observer": "^0.7.0",
 		"lazysizes": "^5.2.0",
