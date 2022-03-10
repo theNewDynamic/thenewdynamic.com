@@ -1,5 +1,5 @@
 tnd_forms:
-  provider: netlify
+  provider: formspree
   css:
     form: 'max-w-md pb-5'
     control: ''
