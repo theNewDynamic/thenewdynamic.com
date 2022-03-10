@@ -1,6 +1,7 @@
 id: support-en
 title: Need Help?
 redirect: /thank-you/
+formspree_id: mrgjkwpj
 submit: Get in touch
 fields:
   - name: name
@@ -13,6 +14,7 @@ fields:
   - name: website
     label: Your Website
     type: text
+    model: website
     required: false
   - name: note
     label: Tell us what the issue is

@@ -23,10 +23,24 @@
           {{ end }}
         </div>
       {{ end }}
-        {{ if .Params.form }}          
-          <div class="max-w-lg mx-auto my-32">
-            {{ partial "tnd-forms/form" (print .Params.form "-" .Language) }}
+        {{ with .Params.form }}
+          {{ $support := eq . "support" }}
+          <div 
+          {{ if $support }}
+            x-data="formData()"
+          {{ end }}
+          class="max-w-lg mx-auto my-32">
+            {{ partial "tnd-forms/form" (print . "-" $.Language) }}
           </div>
+          {{ if $support }}
+          <script>
+            function formData() {
+              return {
+                website: new URLSearchParams(window.location.search).get('website')
+              }
+            }
+          </script>
+          {{ end }}
       {{ end }}
     </div>
   </div>
