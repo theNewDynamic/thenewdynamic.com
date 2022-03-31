@@ -24,8 +24,6 @@ Even though Hugo handles a lot from configuration, most of its new main features
 - HUGE will also automatically generates all the __SEO__ tags your content will need including JSON+LD.
 - It even sports its own __environment__ solution so testing environment is just as easy as the rest of Hugo!
 
-Lastly, as HUGE handles most of your needs from configuration files, it also sports "configuration functions". A way to point to a partial whose returned value will be used for your setting... Think of it as dynamic config à la JavaScript object.
-
 HUGE is almost reaching Alpha, and has many more features to come! 
 
 At this stage we're eager to get some feedbacks or questions on its initital features detailed below. And the best way to do it is to hit the repo's [Discussions](https://github.com/theNewDynamic/huge/discussions)
