@@ -26,7 +26,7 @@ Even though Hugo handles a lot from configuration, most of its new main features
 
 HUGE is almost reaching Alpha, and has many more features to come! 
 
-At this stage we're eager to get some feedbacks or questions on its initital features detailed below. And the best way to do it is to hit the repo's [Discussions](https://github.com/theNewDynamic/huge/discussions)
+Feedbacks or questions on its initital features detailed below? The best way to do it is to hit the repo's [Discussions](https://github.com/theNewDynamic/huge/discussions)
 
 ## This is HUGE
 
