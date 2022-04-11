@@ -1,1 +1,1 @@
-The New Dynamic
+The New Dynamic. 
