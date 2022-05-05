@@ -1,0 +1,16 @@
+{{ with .Params.articles }}
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 my-8">
+  {{ range . }}
+    {{ with site.GetPage . }}
+      <div class="py-4">
+        {{ with partialCached "func/GetSubject" . . }}
+        <a href="{{ .RelPermalink }}" class="text-blue-500 mb-0">{{ .Title }}</a>
+        {{ end }}
+        <a class="text-current" href="{{ .RelPermalink }}">
+          <h3 class="text-3xl my-0 font-serif ">{{ .Title }}</h3>
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+  </div>
+{{ end }}

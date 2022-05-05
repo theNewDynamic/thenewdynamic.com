@@ -12,7 +12,7 @@ tags:
   - JAMStack
   - logic
 subjects:
-  - dev
+  - Code
 description: Hugo is well known for building pages! But do you know it's also great at structuring and manipulation data? In this article we cover advanced data manipulation in Hugo with Slices and Maps! We learn to fitler their content and shape up their structure while reviewing some critical functions and Hugo concept.
 ---
 

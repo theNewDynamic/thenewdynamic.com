@@ -12,7 +12,7 @@ tags:
   - api
   - JAMStack
 subjects:
-  - dev
+  - Code
 twitter_description: |-
   Ho ho ho! This holiday season, we have a nice little gift for @GoHugoIO users out there! 🎁
       

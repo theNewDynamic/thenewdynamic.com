@@ -18,7 +18,7 @@ tags:
   - modules
   - JAMStack
 subjects:
-  - dev
+  - Code
 description: Hugo Modules is one of the most important addition to your favorite SSG. It allows any project to use files stored on a any distant repository and make them their own! In this article we look at what exactly constitute a Hugo Module by creating our own!
 ---
 

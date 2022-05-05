@@ -1,0 +1,8 @@
+{{ $subject := dict }}
+{{ with .GetTerms "subjects" }}
+  {{ with index . 0 }}
+    {{ $subject = .Page }}
+  {{ end }}
+{{ end }}
+
+{{ return $subject }}

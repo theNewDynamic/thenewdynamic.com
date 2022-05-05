@@ -6,6 +6,8 @@ github.com/theNewDynamic/huge v0.1.2-0.20211230151551-896938f7c962 h1:6Yg9awhFRe
 github.com/theNewDynamic/huge v0.1.2-0.20211230151551-896938f7c962/go.mod h1:wZCHbuGglX7Iwa2xbJ/FcDIUzUsMGW6CyLboOp5iKR8=
 github.com/theNewDynamic/huge v0.1.2-0.20211230164104-443104adccd5 h1:e0XV4qAi7yeIbSpNaagC6quD/936rI2IHPv+xUV/qCE=
 github.com/theNewDynamic/huge v0.1.2-0.20211230164104-443104adccd5/go.mod h1:wZCHbuGglX7Iwa2xbJ/FcDIUzUsMGW6CyLboOp5iKR8=
+github.com/theNewDynamic/huge v0.1.5 h1:lcEW40qYaSxmYZpAa+2nCOLnz/kerCiR0NoIw3j+Mpc=
+github.com/theNewDynamic/huge v0.1.5/go.mod h1:wZCHbuGglX7Iwa2xbJ/FcDIUzUsMGW6CyLboOp5iKR8=
 github.com/theNewDynamic/hugo-component-tnd-blocks v0.0.0-20200618163712-a1fce85c0c7b h1:KTmxxuhuWevdfoN4rQz8Dq/ZGivhCcky1jFYoqT9xtI=
 github.com/theNewDynamic/hugo-component-tnd-blocks v0.0.0-20200618163712-a1fce85c0c7b/go.mod h1:VnztlqJpuK/eTa1KFBvyNCg3OgBGIwCxfccBMLJY3LM=
 github.com/theNewDynamic/hugo-module-tnd-forms v0.0.0-20200814174513-3de32861e182 h1:S/DNYcBG97xCAGJNmq3gB7p7JJdwRRukZMfi3c2Ea9Y=

@@ -10,7 +10,7 @@ tags:
   - JAMStack
   - logic
 subjects:
-  - dev
+  - Code
 description: Hugo is well known for building pages! But do you know it's also great at structuring and manipulation data? In this final article we level up to achieve advanced data transformations!
 ---
 

@@ -8,7 +8,7 @@ tags:
   - hugo
   - modules
 subjects:
-  - dev
+  - Code
 ---
 
 A couple of months back, we decided to try Netlify CMS and see how well it could fit in our various processes and methodology. Early in our trials we realized some issues would need to be addressed before even considering setting up one of our sites with it.

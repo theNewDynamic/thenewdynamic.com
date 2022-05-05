@@ -1,0 +1,22 @@
+<div class="h-full flex flex-col justify-between py-16 px-10">
+  <div>
+    <a href="{{ site.Home.RelPermalink }}" class="mb-16 flex flex-col items-center justify-center">
+      <div class="ml-3 text-3xl text-black hover:text-primary-500">
+        The New Dynamic
+      </div>
+      <div class="w-24 mt-8">{{ partial "tnd-icons/icon" "logo-solid" }}</div>
+    </a>
+    <div class="text-lg text-center my-8">
+      we are a web services firm reinventing taglines
+    </div>
+    <nav class="text-center my-16">
+      {{ range site.Menus.sidebar }}
+        <a href="{{ .URL }}" 
+        class="hidden lowercase text-2xl sm:block my-4 hover:text-primary-500 duration-500 ease-in-out transition">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+  <div class="flex justify-center">
+    {{ partial "lang-switch" . }}
+  </div>
+</div>

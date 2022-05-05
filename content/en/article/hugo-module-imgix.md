@@ -16,7 +16,7 @@ tags:
   - JAMStack
   - imgix
 subjects:
-  - dev
+  - Code
 description: Imgix is image manipulation and optimization service we often lean on to for projects. We had to solve a few problematics before we could fully integrate it in our everyday workflow! The anwser came as a reusable and fully distributable Hugo Module. This article is about the whys-and-hows of TND's Imgix Hugo Module.
 ---
 

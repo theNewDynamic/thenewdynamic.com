@@ -191,6 +191,9 @@ module.exports = {
 		borderWidth: ["responsive", "hover", "focus"],
 		borderRadius: ["responsive"],
 	},
+	corePlugins: {
+		container: false	
+	},
 	plugins: [
 		require("tailwindcss-gradients"),
 		require("tailwindcss-typography")({

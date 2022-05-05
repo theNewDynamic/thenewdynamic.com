@@ -1,6 +1,8 @@
 ---
 title: Hugo Data, a series
 cascade:
+  subjects: 
+  - Code
   authors:
   - persons/regis-philibert.md
   featured: /uploads/hugo-data.png

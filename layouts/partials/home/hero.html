@@ -1,16 +1,7 @@
-<div class="bg-center bg-no-repeat bg-cover hero bg-theme bg-gradient-tr-primary text-theme bg-map">
-  <div class="max-w-3xl pt-0 pb-12 mx-auto md:pt-8 md:pb-32">
-    <div class="flex items-center">
-      <div class="container">
-        <div class="mb-6 text-4xl font-black leading-tight text-center md:mb-12 md:text-6xl">
-          {{ i18n "home_hero_title" }}
-        </div>
-        <div class="text-3xl font-bold text-center text-gray-200">
-          <a href="/article/hyper-local-websites/" class="no-underline hover:text-gray-300">{{ i18n "home_hero_subtitle" }}</a>
-          {{/*  <p>We Make <em>Better Faster</em> Websites</p>  */}}
-        </div>
-      </div>
+<div class="pt-0 pb-12 mx-auto md:mb-14">
+  <div class="container">
+    <div class="lowercase text-2xl font-black leading-tight text-center md:text-left md:text-4xl">
+      {{ .Params.hero_text }}
     </div>
   </div>
-  
 </div>

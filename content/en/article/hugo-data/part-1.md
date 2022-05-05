@@ -11,7 +11,7 @@ tags:
   - JAMStack
   - logic
 subjects:
-  - dev
+  - Code
 description: This article simply addresses the basics of the Go Template, along with some critical functions Hugo offers to complement it. If you're starting your Hugo journey, or simply feel like several concepts remain obscure to you after years of Hugo, read on!
 ---
 

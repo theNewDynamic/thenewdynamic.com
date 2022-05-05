@@ -16,6 +16,9 @@
 {{ range site.Menus.main }}
   {{/* Adding "critical" to the Pre setting of the menu item sets it to critical */}}
   {{ $item := dict "Name" .Name "URL" .URL "critical" (eq .Pre "critical")}}
+  {{ with .Params }}
+    {{ $item = merge $item . }}
+  {{ end }}
   {{ $items = $items | append $item }}
 {{ end }}
 

@@ -7,6 +7,10 @@ hero:
   text: A better team for the best websites
 menu:
   main:
+    weight: 6
+    params:
+      class: md:hidden
+  sidebar:
     weight: 1
     pre: critical
 layout: about
