@@ -1,3 +1,4 @@
 funcs:
   getenv:
+  - HUGO_ENV
   - '^TND_IUBENDA'
