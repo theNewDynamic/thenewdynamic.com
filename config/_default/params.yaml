@@ -66,6 +66,8 @@ tnd_headers:
           connect-src: 
             - self
             - https://cdn.usefathom.com
+          report-uri:
+            - https://thenewdynamic.report-uri.com/r/d/csp/enforce
       - field: Strict-Transport-Security
         value: max-age=15768000
       - field: X-Xss-Protection
