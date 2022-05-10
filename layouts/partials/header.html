@@ -1,24 +1,24 @@
 
-<header class="z-50 max-w-6xl mx-auto px-4 flex justify-start items-center w-full lg:py-4">
-  <div class="flex flex-wrap items-center justify-start w-full max-w-xl lg:flex-no-wrap">
+<header class="z-50 flex items-center justify-center w-full max-w-6xl px-4 mx-auto lg:py-4">
+  <div class="flex flex-wrap items-center justify-center w-full max-w-xl lg:flex-no-wrap">
 
     {{ if ne .Layout "minimal" }}
     {{ $menu_items := partialCached "func/GetMainMenuItems" . "func/GetMainMenuItems" }}
-    <nav x-data="{ nav_slide: false }" class="print:hidden relative z-10 flex flex-wrap items-center flex-shrink-0 w-full py-2 text-lg text-gray-700 lowercase bg-gray-200 sm:bg-transparent sm:static sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent md:text-base">
+    <nav x-data="{ nav_slide: false }" class="relative z-10 flex flex-wrap items-center flex-shrink-0 w-full py-4 text-lg text-gray-700 lowercase bg-gray-200 print:hidden sm:bg-transparent sm:static sm:flex-no-wrap lg:order-2 lg:w-auto lg:bg-transparent md:text-2xl">
       <div class="flex items-center justify-between flex-shrink-0 w-full sm:hidden sm:w-auto sm:flex-shrink">
         {{/* Only Menu Items set as critical are displayed here */}}
         {{ range where $menu_items "critical" "eq" true }}
           <a class="block py-1 mx-4 my-1 transition duration-500 ease-in-out border-b border-transparent hover:text-primary-500 hover:border-primary-500 {{ with .class }}{{ . }}{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
-        <div @click="nav_slide = !nav_slide" class="flex items-center px-4 py-2 ml-auto mr-0 sm:hidden"> 
+        <div @click="nav_slide = !nav_slide" class="flex items-center px-4 py-4 ml-auto mr-0 sm:hidden"> 
           <span class="inline-block pb-1" x-text="nav_slide ? 'close' : 'more'"></span> <span class="ml-4">{{ partial "svg/chevron-down.svg" $ }}</span>
         </div>
       </div>
       {{/* Here we iterate on the full main menu */}}
-      <div x-bind:class="{ 'active': nav_slide }" class="flex flex-wrap items-center flex-shrink-0 block w-full text-gray-700 bg-gray-300 border-t border-b border-gray-800 md:bg-transparent mobile-nav sm:bg-transparent sm:border-0 sm:w-auto sm:flex sm:flex-shrink">
+      <div x-bind:class="{ 'active': nav_slide }" class="flex-wrap items-center flex-shrink-0 block w-full text-gray-900 border-t border-b border-gray-800 md:bg-transparent mobile-nav sm:bg-transparent sm:border-0 sm:w-auto sm:flex sm:flex-shrink">
         {{ range $menu_items }}
           {{/* Making sure the critical call ones displayed above on mobile, are hidden in this section on mobile. */}}
-          <a class="{{ if .critical }}hidden sm:block{{ else }}block{{ end }} mx-4 my-4 py-1 sm:my-1 sm:py-1 hover:text-primary-500 border-b border-transparent hover:border-primary-500 duration-500 ease-in-out transition {{ with .class }}{{ . }}{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="{{ if .critical }}hidden sm:block{{ else }}block{{ end }} mx-8 tracking-wider my-4 py-1 sm:my-1 sm:py-1 hover:text-primary-500 border-b border-transparent hover:border-primary-500 duration-500 ease-in-out transition {{ with .class }}{{ . }}{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
         {{/* The search will return... */}}
         {{ if false }}
