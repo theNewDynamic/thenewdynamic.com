@@ -20,7 +20,7 @@ callout:
     url: /nope
 aliases:
  - /plans/
-menu:
-  main: 
-    weight: 2
+# menu:
+#   main: 
+#     weight: 2
 ---

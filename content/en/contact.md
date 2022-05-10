@@ -4,10 +4,10 @@ hero:
   text: We'd Like to Hear from You
 layout: contact
 exclude_collection: true
-menu:
-  main: 
-    weight: 4
-    pre: 'critical'
+# menu:
+#   main: 
+#     weight: 4
+#     pre: 'critical'
 ---
 234 Fifth Ave. • New York, NY • 10001
 

@@ -1,5 +1,5 @@
 ---
-title: Services
+title: Solutions
 menu:
   main: 
     weight: 20

@@ -1,7 +1,7 @@
 ---
-title: Services
+title: Platform
 menu:
   main: 
-    weight: 20
+    weight: 10
     pre: critical
 ---

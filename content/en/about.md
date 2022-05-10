@@ -6,10 +6,10 @@ description: Since 2002 we’ve built websites for organizations large and small
 hero:
   text: A better team for the best websites
 menu:
-  main:
-    weight: 6
-    params:
-      class: md:hidden
+  # main:
+  #   weight: 6
+  #   params:
+  #     class: md:hidden
   sidebar:
     weight: 1
     pre: critical
