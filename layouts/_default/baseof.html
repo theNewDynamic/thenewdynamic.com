@@ -13,12 +13,12 @@
     ) }}
     {{ partial "head/scripts" . }}
   </head>
-  <body class="{{ partial "func/GetCSSTheme" . }}">
-    <div class="md:pr-96 h-full flex flex-col justify-between">
+  <body class="{{ partial "func/GetCSSTheme" . }} bg-tnd-white">
+    <div class="flex flex-col justify-between h-full md:pr-96">
       <div>
-        <div class="md:w-96 md:fixed md:right-0 md:top-0 md:h-full bg-gray-100">
+        <div class="bg-tnd-800 md:w-96 md:fixed md:right-0 md:top-0 md:h-full">
           {{ partial "sidebar" . }}
-        </div>
+        </div>1,118,187,
         <div class="page-container">
           {{ partial "header.html" . }}
           {{ block "main" . }}

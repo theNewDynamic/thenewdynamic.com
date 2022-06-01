@@ -2,7 +2,7 @@
 title: Home
 theme: alt
 exclude_collection: true
-hero_text: It's time to rethink your hero message
+hero_text: The Best Platform is *No Platform at All*
 articles:
 - article/toward-headless-cms-with-hugo-2.md
 - article/hugo-data/_index.md

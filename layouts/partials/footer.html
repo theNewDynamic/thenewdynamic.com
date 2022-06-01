@@ -1,7 +1,7 @@
-<div class="bg-gray-900 footer print:hidden">
-  <div class="container px-4 py-12 mx-auto lg:py-16">
+<div class="bg-gray-100 border-t border-gray-200 text-tnd-50 footer print:hidden">
+  <div class="container px-12 py-12 mx-auto lg:py-16">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="col-span-2 text-gray-100">
+      <div class="col-span-2 text-tnd-100">
         <p class="text-2xl font-bold">
           {{ i18n "statement_title" | safeHTML }}
         </p>
@@ -18,11 +18,11 @@
         {{ partial "newsletter-form" . }}
       </div>
     </div>
-    <div class="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
+    <div class="pt-8 mt-8 border-t border-gray-200 md:flex md:items-center md:justify-between">
       <div class="flex md:order-2">
         {{ $services := slice "twitter" "github" }}
         {{ range partialCached "tnd-socials/GetSocials" $services $services }}
-        <a href="{{ .URL }}" class="ml-6 text-gray-400 hover:text-gray-300">
+        <a href="{{ .URL }}" class="ml-6 text-white hover:text-gray-300">
           <span class="sr-only">{{ .Name }}</span>
           <span class="inline-block w-6 fill-current">
             {{ .SVG | safeHTML }}
@@ -30,7 +30,7 @@
         </a>
         {{ end }}
       </div>
-      <p class="mt-8 text-base leading-6 text-gray-400 md:mt-0 md:order-1">
+      <p class="mt-8 text-base leading-6 text-gray-300 md:mt-0 md:order-1">
         &copy; {{ now.Format "2006" }}
         <a class="px-3 py-2 no-underline hover:text-gray-100 color-inherit" href="{{ site.Home.RelPermalink }}">
           {{ .Site.Title }}
