@@ -1,7 +1,10 @@
 const colors = require("./colors.json");
 
 module.exports = {
-	purge: require('./purge.config.js'),
+  content: [
+    './hugo_stats.json',
+    './layouts/**/*.html',
+  ],
 	theme: {
 		linearGradientColors: (theme) => ({
 			gray: [theme("colors.gray.500"), theme("colors.gray.700")],
