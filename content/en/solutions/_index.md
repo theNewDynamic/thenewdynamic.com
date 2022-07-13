@@ -1,11 +1,17 @@
 ---
-title: Our Agile Pricing Plans
-linktitle: Agile Pricing
-private: true
+title: Solutions for Every Stage for Every Budget
+linkTitle: Solutions
+menu:
+  main: 
+    weight: 20
+    pre: critical
 exclude_collection: true
-url: /agile-pricing-plans
-description: Our Pay-as-you go model lets you control your budget and keeps our
+description: | 
+  Our Pay-as-you go model lets you control your budget and keeps our
   team accountable.
+  #### Like salary for a junior staff member
+
+  When you hire The New Dynamic, you get an experienced team and well-honed processes for the same pay, only you can fire us at any time.
 disclaimer: | 
   All plans are paid monthly in advance with no commitment. Proactive Management and Ongoing Care plans are for existing or migration customers only.
   
@@ -20,7 +26,11 @@ callout:
     url: /nope
 aliases:
  - /plans/
-# menu:
-#   main: 
-#     weight: 2
+ - /agile-pricing-plans/
 ---
+
+## _[Get in Touch](/contact/) for Enterprise Pricing or Nonprofit Discounts_
+
+
+
+

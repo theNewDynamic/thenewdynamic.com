@@ -15,7 +15,7 @@
           </svg>
 
           <div class="relative z-50 flex items-center mt-16 mb-8">
-            <div class="w-2/5 w-full max-w-xs tnd-statement__title md:w-3/5">
+            <div class="w-full max-w-xs tnd-statement__title md:w-3/5">
               <div class="bg-{{ .color }} rounded-full relative overflow-hidden w-full pb-full shadow-md">
                 <div class="absolute z-0 flex items-center justify-center w-full h-full">
                   <div class="w-3/5 pl-1 opacity-25">
@@ -29,12 +29,12 @@
                 </div>
               </div>
             </div>
-            <div class="max-w-md text-2xl font-bold tnd-statement__intro">
+            <div class="max-w-md text-3xl font-bold tnd-statement__intro">
               {{ .intro | markdownify }}
             </div>
             
           </div>
-          <div class="relative z-50 max-w-xl py-2 mx-auto my-20 text-base text-gray-600 bg-white rich-text">
+          <div class="relative z-50 max-w-xl py-2 mx-auto my-20 text-base text-gray-600 bg-tnd-50 rich-text">
             {{ .body | markdownify }}
           </div>
         </div>

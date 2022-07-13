@@ -3,6 +3,28 @@
     {{/* HERO */}}
     {{ partial "home/hero.html" . }}
     {{ partial "home/info-card" . }}
+
+
+    <div class="pb-16 text-gray-100">
+      <div class="relative mx-auto text-black max-w-7xl">
+        <div>                  
+        {{ with .Params.blocks }}
+          {{ range . }}
+            {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $ "variant" "home") }}
+          {{ end }}
+        {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
     {{ partial "home/articles" . }}
   </div>
 {{ end }}

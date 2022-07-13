@@ -1,2 +1,18 @@
 @import "highlight.css";
 @import "iubenda.css";
+
+
+.tnd-statement:nth-child(odd) .tnd-statement__title {
+	order: 1;
+	padding-right: 1.5rem;
+}
+.tnd-statement:nth-child(odd) .tnd-statement__intro {
+	order: 2;
+}
+.tnd-statement:nth-child(even) .tnd-statement__title {
+	order: 2;
+	padding-left: 1.5rem;
+}
+.tnd-statement:nth-child(even) .tnd-statement__intro {
+	order: 1;
+}

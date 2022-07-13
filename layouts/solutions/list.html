@@ -1,11 +1,11 @@
 {{ define "main" }}
-<div class="container">
+<div class="container max-w-5xl min-h-screen mx-auto">
 	{{ partial "page-header.html" . }}
 	<div class="my-4">
-		<h2 class="max-w-2xl mx-auto my-16 italic text-center">
-			<a href="/contact/" class="text-gray-500">Get in Touch</a>
-			for Enterprise Pricing or Nonprofit Discounts
-		</h2>
+		<div class="text-center">
+			{{ .Content | markdownify }}
+		</div>
+
 		<div class="w-full mt-12 mb-32">{{ partial "plans" . }}</div>
 	</div>
 
