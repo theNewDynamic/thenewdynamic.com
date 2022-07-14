@@ -1,10 +1,10 @@
 ---
 title: Proactive Management
 slug: proactive-management
-weight: 2
+weight: 1
 description: Your site at its best with continuous proactive suggestions for enhancements
 short_description: Your site at its best with continuous proactive suggestions for enhancements
-price: 2600
+price: 6600
 ctas:
   - copy: Get Access
     url: /plans/proactive-management/

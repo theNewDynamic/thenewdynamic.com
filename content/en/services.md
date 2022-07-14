@@ -1,5 +1,6 @@
 ---
-title: Services
+title: Comprehensive & Fully Managed Services
+linkTitle: Services
 menu:
   main: 
     weight: 20

@@ -1,7 +1,7 @@
 ---
 title: Early Stage Design & Build
 slug: early-stage-design-build
-weight: 1
+weight: 2
 description: Agile pricing for even the most complex sites
 short_description: Agile pricing for even the most complex sites
 price: 13000
