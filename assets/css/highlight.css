@@ -27,17 +27,17 @@
 	/* 
 	Strings
 	"the fox whaterver etc..." */
-	--stringsColor: theme('colors.secondary.300');
+	--stringsColor: theme('colors.cherry.300');
 
 	/* 
 	Context Methods/Properties
 	{{ .Content }} */
-	--methodsColor: theme('colors.secondary.600');
+	--methodsColor: theme('colors.cherry.600');
 
 	/* 
 	Statements
 	{{ with/if/end }} */
-	--statementsColor: theme('colors.tertiary.500');
+	--statementsColor: theme('colors.apricot.500');
 }
 
 .chroma .language-yaml {
@@ -49,7 +49,7 @@
 	Value
 	repo: {github.com/twbs/bootstrap}
 	We have to use default color as values aren't picked up...: */
-	color: theme('colors.secondary.300');
+	color: theme('colors.cherry.300');
 	/* 
 	Keys
 	{repo}: github.com/twbs/bootstrap */
@@ -70,12 +70,12 @@
 	/* 
 	Lines
 	require {github.com/twbs/bootstrap} */
-	--stringsColor: theme('colors.secondary.300');
+	--stringsColor: theme('colors.cherry.300');
 	/* 
 	replace github.com/[...] {=>} /Users/[...]
 	{{ .Content }} */
-	--statementsColor: theme('colors.tertiary.500');
-	--methodsColor: theme('colors.secondary.600');
+	--statementsColor: theme('colors.apricot.500');
+	--methodsColor: theme('colors.cherry.600');
 }
 /* END of customization */
 
@@ -96,7 +96,7 @@
 	overflow: scroll;
 	background-color: var(--preBackgroundColor);
 	border: 1px solid var(--preBorderColor);
-	@apply rounded p-4 m-0 text-left font-code;
+	@apply p-4 m-0 text-left rounded font-code;
 }
 .highlight pre {
 	font-size: 85%;

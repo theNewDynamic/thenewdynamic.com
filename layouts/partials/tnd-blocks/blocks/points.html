@@ -1,6 +1,6 @@
 {{ with .block }}
 <div class="max-w-3xl mx-auto">
-  {{/*  <h2 class="font-bold text-barossa-500">{{ .title }}</h2>  */}}
+  {{/*  <h2 class="font-bold text-wine-800">{{ .title }}</h2>  */}}
   <div class="">
     {{ with .points }}
       {{ range $index, $v:= . }}
@@ -34,7 +34,7 @@
             </div>
             
           </div>
-          <div class="relative z-50 max-w-xl py-2 mx-auto my-20 text-base text-gray-600 bg-tnd-50 rich-text">
+          <div class="relative z-50 max-w-xl py-2 mx-auto my-20 text-base text-gray-600 bg-eggshell-500 rich-text">
             {{ .body | markdownify }}
           </div>
         </div>

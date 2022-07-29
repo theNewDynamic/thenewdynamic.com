@@ -9,7 +9,7 @@
 		"dev:cms": "run-p cms hugo-cms",
 		"gethugo": "bash get-hugo.sh",
 		"version": "auto-changelog -p --template keepachangelog --unreleased true",
-		"dev:hugo": "HUGO_ENV=development bin/hugo* server --minify -D --gc --navigateToChanged --noHTTPCache",
+		"dev:hugo": "HUGO_ENV=development bin/hugo* server --minify -D -p 3003 --gc --navigateToChanged --noHTTPCache",
 		"prod:hugo": "HUGO_ENV=production bin/hugo* --gc --minify",
 		"dev:netlify": "netlify dev -l",
 		"clean": "rm -rf public/ static/dist resources",

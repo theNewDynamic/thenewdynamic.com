@@ -1,7 +1,7 @@
-<div class="border-t border-gray-200 bg-tnd-50 text-sky-900 footer print:hidden">
+<div class="border-t border-gray-200 bg-eggshell-600 text-eggshell-900 footer print:hidden">
   <div class="container px-12 py-12 mx-auto lg:py-16">
     <div class="pr-8 xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="col-span-2 text-sky-900">
+      <div class="col-span-2 text-eggshell-900">
         <p class="text-2xl font-bold">
           {{ i18n "statement_title" | safeHTML }}
         </p>
@@ -22,7 +22,7 @@
       <div class="flex md:order-2">
         {{ $services := slice "twitter" "github" }}
         {{ range partialCached "tnd-socials/GetSocials" $services $services }}
-        <a href="{{ .URL }}" class="ml-6 text-white hover:text-gray-300">
+        <a href="{{ .URL }}" class="ml-6 text-eggshell-700 hover:text-gray-300">
           <span class="sr-only">{{ .Name }}</span>
           <span class="inline-block w-6 fill-current">
             {{ .SVG | safeHTML }}
@@ -30,7 +30,7 @@
         </a>
         {{ end }}
       </div>
-      <p class="mt-8 text-base leading-6 text-gray-300 md:mt-0 md:order-1">
+      <p class="mt-8 text-base leading-6 text-eggshell-800 md:mt-0 md:order-1">
         &copy; {{ now.Format "2006" }}
         <a class="px-3 py-2 no-underline hover:text-gray-100 color-inherit" href="{{ site.Home.RelPermalink }}">
           {{ .Site.Title }}

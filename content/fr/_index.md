@@ -18,7 +18,7 @@ blocks:
 
 
           [EN SAVOIR PLUS &rarr;](/article/bulletproof-technology/)
-        color: primary-500
+        color: banana-500
       - title: Une approche simple
         intro: Des experts qui font passer les gens avant les procédés. De la clarté,
           pas de confusion. Des résultats, pas de paperasserie.
@@ -26,11 +26,11 @@ blocks:
           votre public. Ça sonne compliqué? Nous on rend ça facile. Notre équipe
           s'occupera de votre présence web et trouvera de nouvelles façon de la
           garder actuelle et engageante.
-        color: secondary-500
+        color: cherry-500
       - title: Des tarifs transparents
         intro: Un model de tarification simple et efficace qui peut s'adapter à vos
           besoin du moment.
-        color: tertiary-500
+        color: apricot-500
         body: Nos technologies et nos processus efficaces nous permettent d'offrir un
           service abordable et à prix fix. Chaque plan vous permet de travailler
           avec nous au jour le jour – Notre condition sine qua non pour bâtir

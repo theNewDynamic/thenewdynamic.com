@@ -9,9 +9,8 @@ exclude_collection: true
 description: | 
   Our Pay-as-you go model lets you control your budget and keeps our
   team accountable.
-  #### Like salary for a junior staff member
-
-  When you hire The New Dynamic, you get an experienced team and well-honed processes for the same pay, only you can fire us at any time.
+  
+  When you hire The New Dynamic, you get an experienced team and well-honed processes. Like the salary for a junior staff member, only you can fire us at any time.
 disclaimer: | 
   All plans are paid monthly in advance with no commitment. Proactive Management and Ongoing Care plans are for existing or migration customers only.
   
@@ -28,9 +27,6 @@ aliases:
  - /plans/
  - /agile-pricing-plans/
 ---
-
-## _[Get in Touch](/contact/) for Enterprise Pricing or Nonprofit Discounts_
-
 
 
 

@@ -2,7 +2,7 @@
 {{ with .Params.hero.text }}
   {{ $title = . }}
 {{ end }}
-<h1 class="pt-10 mb-8 text-4xl font-normal leading-tight text-black lg:text-5xl">{{ $title }}</h1>
+<h1 class="pt-10 mb-8 text-4xl font-normal leading-tight text-artichoke-600 lg:text-5xl">{{ $title }}</h1>
 <div class="max-w-5xl mb-32 lg:mb-16">
   {{ with .Params.description }}
     {{ partial "page-intro" ($.RenderString .) }}

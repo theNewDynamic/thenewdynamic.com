@@ -1,11 +1,11 @@
 {{ with site.RegularPages.Related . }}
-  <div class="text-3xl mb-2">
+  <div class="mb-2 text-3xl">
     {{ i18n "related_articles" }}
   </div>
   <ul>
     {{ range $article := . }}
     <li>
-      <a href="{{ .RelPermalink }}" class="no-underline color-inherit hover:underline hover:text-primary-color">
+      <a href="{{ .RelPermalink }}" class="no-underline color-inherit hover:underline hover:text-wine-500">
         {{ .Title }}
       </a>
     </li>
