@@ -1,11 +1,38 @@
 {{ define "main" }}
-<div class="container">
-  {{ partial "page-header.html" . }}   
-    {{ with .Params.blocks }}
-      {{ range . }}
-        {{ partial "tnd-blocks/block" (dict "Page" $ "block" .) }}
-      {{ end }}
-    {{ end }}
+  <div class="container max-w-5xl min-h-screen px-8 mx-auto">
+    {{ partial "page-header.html" . }} 
+    <div class="my-4">
+      <div class="text-gray-700 rich-text">
+        {{ .Content }}        
+
+
+        <div class="grid-cols-11 row-span-6 gap-0 font-serif text-4xl lg:grid text-artichoke-800">
+          
+          <div class="col-span-5 row-span-3 row-start-1 rounded bg-slate-300">
+            <div class="p-4">
+              <p>Our mission is to change the very nature of your experience with a web agency</p>
+            </div>
+          </div>
+          
+          <div class="col-span-1 ml-4 lg:border-l border-artichoke-400"></div>
+          
+          <div class="col-span-5 row-span-2 row-start-5 rounded bg-slate-700">
+            <div class="p-4 text-slate-100">
+              <p>We use nimble tools and lean methods to become your super-productive on-demand web team.</p>
+            </div>
+          </div>
+        </div>
+
+
+        
+      </div>
+      {{ with .Params.blocks }}
+        <div class="my-32">
+          {{ range . }}
+            {{ partial "tnd-blocks/block.html" (dict "block" . "Page" $) }}
+          {{ end }}
+        </div>
+      {{ end }}        
+    </div>
   </div>
-</div>
 {{ end }}

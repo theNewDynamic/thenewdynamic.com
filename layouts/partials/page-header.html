@@ -2,7 +2,7 @@
 {{ with .Params.hero.text }}
   {{ $title = . }}
 {{ end }}
-<h1 class="pt-10 mb-8 text-4xl font-normal leading-tight text-artichoke-600 lg:text-5xl">{{ $title }}</h1>
+<h1 class="pt-10 mb-8 text-5xl font-bold text-artichoke-600 md:text-7xl xl:text-8xl">{{ $title }}</h1>
 <div class="max-w-5xl mb-32 lg:mb-16">
   {{ with .Params.description }}
     {{ partial "page-intro" ($.RenderString .) }}
@@ -13,7 +13,7 @@
   <div class="relative mx-auto mt-4 TKmax-w-screen-2xl lg:mt-5">
     <div class="mx-auto tkmax-w-md TKlg:max-w-5xl">
       <div
-        class="px-6 py-8 bg-gray-100 rounded-lg sm:p-10 lg:flex lg:items-center"
+        class="px-6 py-8 border rounded-lg border-eggshell-900 bg-eggshell-900 sm:p-10 lg:flex lg:items-center"
       >
         <div class="flex-1">
           <div class="text-lg leading-7 text-gray-600">
