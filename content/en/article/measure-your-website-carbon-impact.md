@@ -9,4 +9,7 @@ categories: ["events"]
 
 Part of our ongoing series (back in person) in New York City on Jamstack technologies. This talk is a discussion on how we can reduce the internet’s massive environmental impact through better design and development practices.
 
-Watch on [Youtube](https://youtu.be/UawsSCL2sVE)
+
+{{< youtube id="UawsSCL2sVE" title="Measure and Impact Your Site's Carbon Footprint" >}}
+
+Or, watch on [Youtube](https://youtu.be/UawsSCL2sVE)
