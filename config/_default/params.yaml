@@ -54,7 +54,7 @@ tnd_headers:
           prefetch-src: 
             - https://thenewdynamic.imgix.net
           object-src: 
-            - none
+            - https://www.youtube-nocookie.com
           img-src: 
             - self 
             - https://thenewdynamic.imgix.net 
