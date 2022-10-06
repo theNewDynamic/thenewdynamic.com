@@ -53,8 +53,10 @@ tnd_headers:
             - https://unpkg.com
           prefetch-src: 
             - https://thenewdynamic.imgix.net
-          object-src: 
+          frame-src:
             - https://www.youtube-nocookie.com
+          object-src: 
+            - none
           img-src: 
             - self 
             - https://thenewdynamic.imgix.net 
