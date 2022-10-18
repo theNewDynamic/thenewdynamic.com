@@ -3,9 +3,9 @@ title: Open Source Contributions
 linktitle: Open Source
 description: Free and open source software is core to how we work. We use open
   source software and we contribute back and create our own for others to use.
-menu:
-  main:
-    weight: 3
+# menu:
+#   main:
+#     weight: 3
 blocks:
   - type: repos
     layout: repos

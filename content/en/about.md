@@ -5,10 +5,10 @@ description: Since 2002 we’ve built websites for organizations large and small
   bringing integrity to every detail of our work.
 hero:
   text: A better team for the best websites
-menu:
-  main:
-    weight: 1
-    pre: critical
+# menu:
+#   main:
+#     weight: 1
+#     pre: critical
 layout: about
 exclude_collection: true
 blocks:

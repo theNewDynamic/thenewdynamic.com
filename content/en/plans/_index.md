@@ -1,6 +1,6 @@
 ---
-title: Our Agile Pricing Plans
-linktitle: Agile Pricing
+title: Our S.M.A.R.T Plan
+linktitle: S.M.A.R.T Plan
 private: true
 exclude_collection: true
 url: /agile-pricing-plans
@@ -22,5 +22,5 @@ aliases:
  - /plans/
 menu:
   main: 
-    weight: 2
+    weight: 20
 ---
