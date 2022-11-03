@@ -3,28 +3,31 @@ body.theme-alt .text-theme {
 }
 body.theme-alt .bg-map {
 	@apply bg-gradient-tr-primary;
-	background-image: url(../images/map-alt.svg);
+	background-image: url(../images/map-world-pops.svg);
+	@apply bg-eggshell-500
 }
 body.theme-alt .text-theme-primary {
 	@apply text-tertiary-500;
 }
 
 body.theme-alt .bg-theme {
-	background: url(../images/map-alt.svg),
+	background: url(../images/map-world-pops.svg),
 		linear-gradient(
 			52deg,
-			#410252 0%,
-			#63004c 16%,
-			#810045 33%,
-			#9f003e 50%,
-			#bc0435 66%,
-			#ae0c40 83%,
-			#980a38 100%
+			#766E4C 0%,
+			#A9A07A 16%,
+			#CFCAB5 33%,
+			#F6F5F1 50%,
+			#F7F6F3 66%,
+			#F9F8F6 83%,
+			#FBFBF9 100%
 		);
 }
 
+
+
 body.theme-alt .bg-themeTK {
-	background: url(../images/map-alt.svg),
+	background: url(../images/map-world-pops.svg),
 		linear-gradient(
 			52deg,
 			#410252 0%,

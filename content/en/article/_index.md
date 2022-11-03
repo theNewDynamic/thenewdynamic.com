@@ -6,6 +6,6 @@ cascade:
     Since 2002 the New Dynamic has built websites for organizations large and small. [Get in touch now](/contact) to benefit from our JAMStack expertise!
 menu:
   main: 
-    weight: 40
+    weight: 400
 ---
 We write about technology for people like you.

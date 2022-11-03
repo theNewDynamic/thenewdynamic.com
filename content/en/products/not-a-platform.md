@@ -1,6 +1,6 @@
 ---
 title: The Best Platform is No Platform at All
-LinkTitle: Not-a-Platform
+LinkTitle: Not-a-Platform  
 menu:
   main: 
     weight: 10
@@ -23,6 +23,4 @@ and
 
 we only use the tools that we need. 
 
-We bring them to you just as seamlessly. The result is a much leaner and adaptable not-a-platform that is flexible, more safe and faster than anything you’ve experienced before.
-
-
+We bring them to you just as seamlessly. The result is a much leaner and adaptable not-a-platform that is flexible, more safe and faster than anything you’ve expe

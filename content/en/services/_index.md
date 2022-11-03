@@ -1,10 +1,10 @@
 ---
 title: Comprehensive & Fully Managed Services
 linkTitle: Services
-menu:
-  main: 
-    weight: 20
-    pre: critical
+# menu:
+#   main: 
+#     weight: 20
+#     pre: critical
 ---
 
 Web design and development

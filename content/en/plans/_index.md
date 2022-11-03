@@ -1,6 +1,6 @@
 ---
-title: Our S.M.A.R.T Plan
-linktitle: S.M.A.R.T Plan
+title: Our SMART Plan
+linktitle: Get SMART
 private: true
 exclude_collection: true
 url: /agile-pricing-plans

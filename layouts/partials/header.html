@@ -1,15 +1,18 @@
 
-<header class="z-50 flex items-center w-full lg:py-4">
+<header class="z-50 flex items-center w-full bg-blue-900 lg:py-4">
   <div class="flex flex-wrap items-center justify-between w-full mx-auto max-w-7xl lg:flex-no-wrap">
     
     <a href="{{ site.Home.RelPermalink }}" class="flex items-center py-8 pl-4 sm:py-4 lg:order-1">
       <div class="w-12">{{ partial "tnd-icons/icon" "logo-solid" }}</div>
-      <div class="ml-3 text-xl text-black hover:text-primary-500">
+      <div class="ml-3 text-xl font-black text-artichoke-400 hover:text-primary-500">
         The New Dynamic
       </div>
     </a>
     
     {{ partial "lang-switch" . }}
+
+
+
 
     {{ if ne .Layout "minimal" }}
     {{ $menu_items := partialCached "func/GetMainMenuItems" . "func/GetMainMenuItems" }}

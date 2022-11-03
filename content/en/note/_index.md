@@ -1,4 +1,0 @@
----
-tilte: Notes
-url: /notes
----
