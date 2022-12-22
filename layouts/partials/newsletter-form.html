@@ -4,10 +4,11 @@
 <p class="mt-4 text-base leading-6 text-gray-300">
   {{ i18n "nl_form_body" }}
 </p>
-<form name="newsletter-signup" netlify-honeypot="bot-field" method="post" action="/thank-you/" class="mt-4 sm:flex sm:max-w-md" data-netlify="true">
-  <p class="hidden">
-    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-  </p>
+<form
+  action="https://formspree.io/f/mpzeajkv"
+  method="POST"
+  class="mt-4 sm:flex sm:max-w-md"
+>
   <input aria-label="Email address" type="email" name="email" required
     class="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none focus:outline-none focus:placeholder-gray-400"
     placeholder="{{ i18n "nl_form_placeholder" }}" />
