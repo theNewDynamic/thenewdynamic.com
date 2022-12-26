@@ -92,7 +92,7 @@ Sure, there's no `prepend` function, but `append` will do. Instead of adding Rin
 
 Or in plain english: **_Append the Gents to Ringo_**
 
-{{% notice %}}
+{{< notice >}}
 Go Template has that pipe thing that allows to chain functions. The offsetting thing is that the left part will be passed as the last argument of the chained function. And when you append to a slice, the order matter.
 
 ```go-html-template
@@ -100,7 +100,7 @@ Go Template has that pipe thing that allows to chain functions. The offsetting t
 ```
 
 Actually means: **_Append "Ringo" to the Gents_** or **_The Gents are taking Ringo in..._** 🤷
-{{% /notice %}}
+{{< /notice >}}
 
 ### Index
 

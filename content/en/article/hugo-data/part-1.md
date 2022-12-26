@@ -121,9 +121,9 @@ Another useful action in Hugo is `with`.
 
 It is followed by a function or a variable whose value is evaluated. Upon success, the code inside `with` is executed, and, the context shifts to the successfully evaluated value. It can take an optional `else` to be executed upon failure. Note that the context does not shift on failure.
 
-{{% notice %}}
+{{< notice >}}
 **Context shifting in Hugo** cannot be covered in one paragraph. For a more detailed article on one of the most useful, yet puzzling Hugo concept you should give a read to [Hugo, the scope, the context and the dot](https://www.regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/) by yours truly.
-{{% /notice %}}
+{{< /notice >}}
 
 ## A word on Go Template
 
@@ -155,10 +155,10 @@ Now if you are to include functions as argument, then you wrap them in parenthes
 
 **3. Some actions shifts the contet.**
 
-{{% notice %}}
+{{< notice >}}
 Shouldn't `eq $gent "John"` be wrapped into parenthesis? 
 No necessarily. Because `if` is at the root of your curlies, Go Template can perfectly identify it for what it is, while still properly evaluating the following word and its potential followers as a function and its arguments.
-{{% /notice %}}
+{{< /notice >}}
 
 ## Basic Types
 
@@ -172,7 +172,7 @@ Strings are very important when dealing with templating. We'll need to format th
 
 Above we have a sentence whose verb `%s` will be replaced by the value of our `$gent`. Note that the verbs must match the type of the variable value. [Here is a list of available verbs](https://pkg.go.dev/fmt#hdr-Printing).
 
-Another useful printing function is `print`. This one does not use any verb, it just takes a infinite list of parameters and print their values.
+Another useful printing function is `print`. This one does not use any verb, it just takes a infinite list of parameters and concatenate their values.
 
 ```go-html-template
 {{ print $gent " was a famous song writer for " $band }}
