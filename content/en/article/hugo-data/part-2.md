@@ -480,9 +480,11 @@ To reverse the order and have them younger to older, we add a third parameter, `
 {{ $gents := sort $gents ".birth" "desc" }}
 ```
 
+Again the `.` in the key parameter is optional.
+
 ## To reality and beyond!
 
 Ok, that is all well and good, but let's be honest, hardcoding your data this way can be useful for defining defaults or re-usable bases but not much more.
 Usually your data comes from a source you lack control of like an API, or a Data file or most usually a user managed content file.
 
-In the follow up article we'll cover how you can take data from a limited source (basic Front Matters, API endpoints) and transform it to data which better suit your project's needs. We'll use a lot of stuff covered above, but also more advanced ones so you can code safely with readablity, scalablity and build time in mind!
+In the follow up article [Hugo and Data: Advanced Transformations]({{< relref "article/hugo-data/part-3" >}}) we'll cover how you can take data from a limited source (basic Front Matters, API endpoints) and transform it to data which better suit your project's needs. We'll use a lot of stuff covered above, but also more advanced ones so you can code safely with readablity, scalablity and build time in mind!
