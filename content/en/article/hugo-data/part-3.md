@@ -138,7 +138,7 @@ That's really good, but we should really isolate our transforming operations in 
 ```go-html-template
 {{ $new_gents := slice }}
 {{ range $gents }}
-  {{ $new_gents = $new_gents | append (partial "gent_transformer" .)
+  {{ $new_gents = $new_gents | append (partial "gent_transformer" .) }}
 {{ end }}
 ```
 
@@ -171,9 +171,9 @@ Well... We've covered one way to do it with `merge`. But there is one serious pr
 If you only have a few hundred gents, it should be okay, but if you need to transform thousands of them, you'll end up bumping your build time considerably. 
 The reasonable approach is `Scratch`. Scratch is seldom used these days but it remains the best solution to modify maps!
 
-{{% notice %}}
+{{< notice >}}
 We'll limit ourselves to the [`.SetInMap` scratch method](https://www.regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/#scratchsetinmap). It takes three parameters, the map to modify, the concerned key and the value. If the key exists, it overwrites its value, if it does not exist, it creates it with the given value.
-{{% /notice %}}
+{{< /notice >}}
 
 Let's start... from `.Scratch`!
 
@@ -234,11 +234,11 @@ Finally we'll decide what to do if we only have one word in there. I guess it co
 {{ end }}
 ```
 
-{{% notice %}}
+{{< notice >}}
 If it's your first time seeing `gt` or `with`, you should probably hit {{< link "hugo-data-1" >}}! It's a great refresh or introduction on everything Go Templates! 
 
 First time seeing `first` or `last`? You've missed the second part: {{< link "hugo-data-2" >}}!
-{{% /notice %}}
+{{< /notice >}}
 
 ### City
 
@@ -346,7 +346,7 @@ It takes as first argument a slice and as second the "function" to apply. All su
 For example we could do:
 
 ```go-html-template
-{{ $gents := "John" "Paul" "George" "Ringo" }}
+{{ $gents := slice "John" "Paul" "George" "Ringo" }}
 {{ $gents = apply $gents "printf" "I love %s" "." }}
 ```
 
