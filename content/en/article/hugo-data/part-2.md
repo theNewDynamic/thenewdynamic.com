@@ -122,7 +122,7 @@ George is at index 3
 ```
 
 Yep, pretty much like in any programming language, the index starts at 0.
-{{% notice %}}
+{{< notice >}}
 Even though our value is now stored in a `$value` variable, it remains available in the `.`.
 
 ```go-html-template
@@ -131,7 +131,7 @@ Even though our value is now stored in a `$value` variable, it remains available
 {{ end }}
 ```
 
-{{% /notice %}}
+{{< /notice >}}
 
 ### First, Last
 
@@ -160,9 +160,9 @@ We could but...should we? We'd rather use `index`. This function takes two param
 ```
 
 Two because, the index starts at zero!
-{{% notice %}}
+{{< notice >}}
 We'll often find ourselves using `index . 0` to single out a lone element wrapped in a slice.
-{{% /notice %}}
+{{< /notice >}}
 
 ## Maps
 
@@ -426,9 +426,9 @@ I woudn't go as far as writing a javascript comparison but... Ok just one!
 gents = gents.map((gent) => gent.birth >= 1942);
 ```
 
-{{% notice %}}
+{{< notice >}}
 Type must be the same in Hugo, here we're using strings for the years. Had we been using integers for our gents' birth we should have used `1942` (int) as matching value.
-{{% /notice %}}
+{{< /notice >}}
 
 **Back to playing: Born in 1942 OR 1940?**
 
