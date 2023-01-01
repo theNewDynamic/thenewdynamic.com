@@ -253,7 +253,7 @@ That's it? ... __That's it!__
 Now we can run `hugo` from the `/prebuild` directory:
 
 ```bash
-my-computer:remote mememe$ hugo
+my-computer:prebuild mememe$ hugo
 Start building sites … 
 hugo v0.91.0+extended darwin/amd64 BuildDate=unknown
 
@@ -272,7 +272,7 @@ Total in 1057 ms
 ```
 
 
-As you can see Hugo did not build any pages per say but it did write markdown files! We should get a fresh `remote/public/monster` directory full of monsters!
+As you can see Hugo did not build any pages per say but it did write markdown files! We should get a fresh `prebuild/public/monster` directory full of monsters!
 
 And just like that, we've wrapped up __Step 1__!
 
@@ -340,7 +340,7 @@ For Netlify for example your `netlify.toml` will look something like this:
 # netlify.toml
 [build]
 publish = "public"
-command = "cd remote && hugo && cd .. && hugo"
+command = "cd prebuild && hugo && cd .. && hugo"
 ```
 
 #### Caching
@@ -388,7 +388,7 @@ Maybe to make your life easier for debuging the output of the __Step 1__ logic. 
 
 Whatever the use case, we could make those files look good by using [`resources.ExecuteAsTemplate`](https://gohugo.io/hugo-pipes/resource-from-template/#readout). This useful resource method will take a filepath destination as first argument, a context as second and the template's filepath to use as third.
 
-For yaml you could create a `/remote/assets/monster.yaml` file like so:
+For yaml you could create a `/prebuild/assets/monster.yaml` file like so:
 ```go-html-template
 ---
 {{ range $key, $value := . -}}
