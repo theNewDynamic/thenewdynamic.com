@@ -294,9 +294,9 @@ module:
     target: content/monster
 ```
 
-{{% notice %}}
+{{< notice >}}
 With a mount target on a sub directory it's always safer to redeclare the mount of its parent. Hence our fist content > content mount.
-{{% /notice %}}
+{{< /notice >}}
 
 Now on our main project, we just need to make sure our templates are using the proper Front Matter keys.
 
