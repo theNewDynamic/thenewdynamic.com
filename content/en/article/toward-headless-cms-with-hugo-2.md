@@ -321,12 +321,12 @@ If you have already ran `hugo` from the `prebuild` direrctory, you can safely ru
 
 Running both builds locally can be okay, but we need to make sure this will be viable in the cloud, when our site is deployed and hosted.
 
-As we covered lengthily we need to run it from the `prebuild` directory first and then the main one. 
+As we covered lengthily we need to run it from first on the `prebuild` directory and then at the root, on the main project's directory. 
 
-Rather than runing a simple `hugo`, we need to navigate a bit:
+The `--source` flag (abreviated `-s`) will point to the source folder to use for the first buid.
 
 ```bash
-cd prebuild && hugo && cd .. && hugo
+hugo -s prebuild && hugo
 ```
 ☝️ That will do it!
 
@@ -340,7 +340,7 @@ For Netlify for example your `netlify.toml` will look something like this:
 # netlify.toml
 [build]
 publish = "public"
-command = "cd prebuild && hugo && cd .. && hugo"
+command = "hugo -s prebuild && hugo"
 ```
 
 #### Caching
@@ -366,7 +366,7 @@ We've covered API fetching, mardkown files writing, content files mounting, webs
 
 The data from our Monsters is easy to handle but you'll mostly want to transform the data from the API into something more aligned with your project. 
 
-We're covering everything there is to know about the way to manipulate data with Hugo in this article: {{< link "hugo-data-2" >}}. 
+We're covering everything there is to know about the way to manipulate data with Hugo in this article: {{< link "/article/hugo-data/part-2" >}}. 
 
 That will allow us to create transformers for our data and prep those markdown files nicely!
 
