@@ -1,0 +1,19 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $s.Set "data" (dict 
+  "_id" .File.UniqueID
+  "_type" "review"
+  "publishedAt" .Date
+  "title" .Title
+)}}
+
+{{ with .Params.link_to_original }}
+  {{ $s.SetInMap "data" "href" . }}
+{{ end }}
+
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+{{ return $s.Get "data" }}

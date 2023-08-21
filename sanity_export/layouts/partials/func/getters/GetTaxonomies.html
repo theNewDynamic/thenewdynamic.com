@@ -1,0 +1,17 @@
+{{ $entries := slice }}
+{{ $taxonomies := slice
+  (dict
+    "taxonomy" "subjects"
+    "type" "taxonomySubject"
+  )
+}}
+{{ range $taxo :=  $taxonomies }}
+  {{ with partial "func/GetTerms" (dict
+    "taxonomy" $taxo.taxonomy
+    "type" $taxo.type
+  ) }}
+    {{ $entries = $entries | append . }}
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

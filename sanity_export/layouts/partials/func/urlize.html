@@ -1,0 +1,48 @@
+{{ $regexes := slice
+  (dict
+    "pattern" "[àáâãäå]"
+    "replacement" "a"
+  )
+  (dict
+    "pattern" "æ" 
+    "replacement" "ae"
+  )
+  (dict
+    "pattern" "ç" 
+    "replacement" "c"
+  )
+  (dict
+    "pattern" "[èéêë]"
+    "replacement" "e"
+  )
+  (dict
+    "pattern" "[ìíîï]"
+    "replacement" "i"
+  )
+  (dict
+    "pattern" "ñ" 
+    "replacement" "n"
+  )
+  (dict
+    "pattern" "[òóôõö]" 
+    "replacement" "o"
+  )
+  (dict
+    "pattern" "œ"
+    "replacement" "oe"
+  )
+  (dict
+    "pattern" "[ùúûü]"
+    "replacement" "u"
+  )
+  (dict
+    "pattern" "[ýÿ]" 
+    "replacement" "y"
+  )
+}}
+{{ $slug := lower . }}
+{{ range $regexes }}
+  {{ $slug = replaceRE .pattern .replacement $slug }}
+{{ end }}
+
+{{ return urlize $slug }}

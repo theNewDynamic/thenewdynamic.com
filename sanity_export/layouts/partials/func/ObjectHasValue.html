@@ -1,0 +1,8 @@
+{{ $object := dict }}
+{{ range $index, $v := $ }}
+  {{ with . }}
+    {{ $object = $ }}
+    {{ break }}
+  {{ end }}
+{{ end }}
+{{ return $object }}

@@ -1,0 +1,35 @@
+{{ $s := newScratch }}
+{{ $id := partial "func/GetVenueID" .  }}
+
+{{ if eq $id "5298c182f60aa53470176b1e1c1a2ec6" }}
+  {{ warnf "%#v" .name }}
+{{ end }}
+{{ $s.Set "data" (dict 
+  "_id" $id
+  "_type" "venue"
+) }}
+
+{{ with .name }}
+  {{ $s.SetInMap "data" "title" . }}
+{{ end }}
+
+{{ with .address }}
+  {{ $s.SetInMap "data" "address_1" . }}
+{{ end }}
+
+{{ range $key := slice
+  "city"
+  "state"
+  "zip"
+  "phone"
+  "country"
+}}
+  {{ with index $ $key }}
+    {{ $s.SetInMap "data" $key . }}
+  {{ end }}
+{{ end }}
+{{ with .link }}
+  {{ $s.SetInMap "data" "link" (partial "transformers/url" .)  }}
+{{ end }}
+
+{{ return $s.Get "data" }}

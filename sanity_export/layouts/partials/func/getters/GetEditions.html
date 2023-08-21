@@ -1,0 +1,16 @@
+{{ $entries := slice }}
+
+{{ with where site.RegularPages "Type" "book" }}
+  {{ range $book := . }}
+    {{ with .Params.editions }}
+      {{ range . }}
+        {{ $entries = $entries | append (partial "transformers/documents/edition" (dict
+          "book" $book
+          "edition" .
+        )) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

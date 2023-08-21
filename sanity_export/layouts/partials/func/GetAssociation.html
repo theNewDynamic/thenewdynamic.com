@@ -1,0 +1,18 @@
+{{ $ass := "" }}
+{{ if eq $.Type  "catalog" }}
+  {{ $ass = "default" }}
+{{ end }}
+
+{{ if eq $.Type "shop" }}
+  {{ $ass = "subscription" }}
+  {{ with .Params.related_books }}
+    {{ $ass = "bundle" }}
+    {{ with $.Params.sales_data }}
+      {{ with .sku }}{{ else }}
+      {{ $ass = "catalog" }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $ass }}

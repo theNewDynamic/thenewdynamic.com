@@ -1,0 +1,7 @@
+{{ $data := dict "_type" "blockNotice"
+	"copyHTML" .Inner
+}}
+{{ with $.Get "title" }}
+	{{ $data = merge $data (dict "title" ($.Page.RenderString .)) }}
+{{ end }}
+<div id="shortcode">{{ jsonify $data }}</div>

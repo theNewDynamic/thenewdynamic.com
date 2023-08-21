@@ -1,0 +1,6 @@
+{{ $url := . }}
+{{ if not (in $url "http") }}
+  {{ $url = print "https://" . }}
+{{ end }}
+
+{{ return $url }}

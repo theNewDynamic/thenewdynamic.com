@@ -1,0 +1,28 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+{{ $pages := slice }}
+{{ $pages = $pages | append . }}
+{{ with $.Translations }}
+  {{ range . }}
+    {{ $pages = $pages | append . }}
+  {{ end }}
+  {{ with $pages }}
+    {{ $translations := slice }}
+    {{ $id := slice }}
+    {{ range . }}
+      {{ $translations = $translations | append (dict
+        "_key" .Lang
+        "_type" "internationalizedArrayReferenceValue"
+        "value" (partial "transformers/ref" .)
+      ) }}
+      {{ $id = $id | append (partial "func/GetID" .) }}
+    {{ end }}
+    {{ with $translations }}
+      {{ $s.SetInMap "data" "_type" "translation.metadata" }}
+      {{ $s.SetInMap "data" "schemaTypes" (slice "page") }}
+      {{ $s.SetInMap "data" "translations" . }}
+      {{ $s.SetInMap "data" "_id" (delimit $id "-" | md5) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $s.Get "data" }}

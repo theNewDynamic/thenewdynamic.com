@@ -1,0 +1,10 @@
+{{ $entries := slice }}
+{{ with site.Taxonomies.subjects }}
+  {{ range . }}
+    {{ if ne .Page.Title "None" }}
+      {{ $entries = $entries | append (partial "transformers/category" .Page) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

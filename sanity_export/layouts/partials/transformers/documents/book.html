@@ -1,0 +1,77 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $s.Set "data" (dict 
+  "_id" .File.UniqueID
+  "slug" (dict
+    "_type" "slug"
+    "current" (.Slug | default (partial "transformers/slug" .Title))
+  )
+  "_type" "book"
+  "publishedAt" .Date
+  "title" .Title
+)}}
+{{ with .Params.subtitle }}
+  {{ $s.SetInMap "data" "subtitle" . }}
+{{ end }}
+{{ with .Params.editions }}
+  {{ $editions := slice }}
+  {{ range . }}
+    {{ with partial "func/GetEditionID" (dict
+      "book" $
+      "edition" .
+    ) }}
+      {{ $editions = $editions | append (dict
+        "_type" "reference"
+        "_ref" .  
+      ) }}
+    {{ end }}
+  {{ end }}
+  {{ $s.SetInMap "data" "editions" $editions }}
+{{ end }}
+
+{{ with where site.RegularPages "Type" "review" }}
+  {{ with where . ".Params.book" $.File.Path }}
+    {{ $reviews := slice }}
+    {{ range . }}
+      {{ $reviews = $reviews | append (dict
+        "_type" "reference"
+        "_ref" .File.UniqueID  
+      ) }}
+    {{ end }}
+    {{ $s.SetInMap "data" "reviews" $reviews }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.short_description }}
+  {{ $s.SetInMap "data" "description" . }}
+{{ end }}
+
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+{{ with .Params.genre }}
+  {{ with index . 0 }}
+    {{ $id := partial "func/GetTermID" (dict "taxonomy" "genre" "term" .) }}
+    {{ $s.SetInMap "data" "genre" (dict
+      "_type" "reference"
+      "_ref" $id
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.series }}
+  {{ with index . 0 }}
+    {{ if ne . "None" }}
+      {{ with partial "func/GetSeriesPage" . }}
+        {{ $s.SetInMap "data" "series" (dict
+          "_type" "reference"
+          "_ref" .File.UniqueID  
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $s.Get "data" }}

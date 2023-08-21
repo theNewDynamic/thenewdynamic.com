@@ -1,0 +1,12 @@
+{{ $id := ""}}
+{{ with .File }}
+  {{ $id = print .UniqueID .Lang | md5 }}
+{{ else }}
+  {{ $id = md5 (jsonify .) }}
+{{ end }}
+
+{{ if .Draft }}
+  {{ $id = print "drafts." $id }}
+{{ end }}
+
+{{ return $id }}

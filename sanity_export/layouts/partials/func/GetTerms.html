@@ -1,0 +1,42 @@
+{{/*
+  Retrieves the terms of a given taxonomy and create then for export to sanity
+  Description
+
+  @author @regisphilibert
+
+  @context Map
+    String (.taxonomy)
+    String (.type)
+
+  @access private
+
+  @returns Type
+*/}}
+{{ $entries := slice }}
+{{ range index site.Taxonomies $.taxonomy }}
+    {{ $slug := partial "func/GetSlug" .Page }}
+    {{ $id := partial "func/GetTermID" (dict
+      "taxonomy" $.taxonomy
+      "term" $slug
+    ) }}
+    {{ $term := dict
+      "title" (singularize .Page.Title)
+      "_id" $id
+      "_type" $.type
+      "slug" (dict
+        "_type" "slug"
+        "current" $slug
+      ) 
+    }}
+    {{ if eq $.type "taxonomyEventType" }}
+      {{ with .Page.Params.description }}
+        {{ $term = merge $term (dict "descriptionHTML" .) }}
+      {{ end }}
+      {{ with .Page.Content }}
+        {{ $term = merge $term (dict "bodyHTML" .) }}
+      {{ end }}
+    {{ end }}
+    {{ $entries = $entries | append $term }}
+
+  {{ end }}
+  {{ return $entries }}

@@ -1,0 +1,7 @@
+{{ $term := .term }}
+{{ if eq .term "Nonfiction" }}
+  {{ $term = "Non Fiction" }}
+{{ end }}
+{{ $key := urlize $term }}
+
+{{ return (print  .taxonomy $key | md5) }}

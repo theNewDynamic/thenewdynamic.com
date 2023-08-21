@@ -1,0 +1,18 @@
+{{ $slug := "" }}
+{{ with $.File }}
+  {{ $slug = .TranslationBaseName  }}
+  {{ if eq $slug "_index" }}
+    {{ $slug = path.BaseName .Dir }}
+  {{ end }}
+{{ else }}
+  {{/* Some pages like taxonomy terms do not hold .File */}}
+  {{ $slug =  path.BaseName $.Page.RelPermalink }}
+{{ end }}
+
+{{ with $.Slug }}
+  {{ $slug = . }}
+{{ end }}
+
+{{ $slug = partial "func/Slugify" $slug }}
+
+{{ return $slug }}

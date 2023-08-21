@@ -1,0 +1,49 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base.html" .) }}
+
+{{ $s.SetInMap "data" "_type" "post" }}
+
+{{ with .Params.description }}
+  {{ $s.SetInMap "data" "descriptionHTML" ($.Page.RenderString .) }}
+{{ end }}
+
+{{ with .Date }}
+  {{ $s.SetInMap "data" "publishedAt" . }}
+{{ end }}
+
+{{ with .Params.images }}
+  {{ with index . 0 }}
+    {{ with partial "transformers/image" . }}
+      {{ $s.SetInMap "data" "imageMain" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $.GetTerms "subjects" }}
+  {{ $categories := slice }}
+  {{ range . }}
+    {{ $categories = $categories | append (dict
+      "_type" "reference"
+      "_ref" (partial "func/GetTermID" (dict "taxonomy" "subjects" "term" .Page.Title))  
+    ) }}
+  {{ end }}
+  {{ $s.SetInMap "data" "taxonomySubjects" $categories }}
+{{ end }}
+
+{{ $source := dict }}
+{{ with .Params.link_to_original }}
+  {{ $source = merge $source (dict "href" .) }}
+{{ end }}
+{{ with .Params.source }}
+  {{ $source = merge $source (dict "source_name" .) }}
+{{ end }}
+{{ with $source }}
+  {{ $s.SetInMap "data" "source" . }}
+{{ end }}
+
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+
+{{ return $s.Get "data" }}

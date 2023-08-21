@@ -1,0 +1,28 @@
+{{ $blocks := slice }}
+{{ $blocks_in := slice }}
+{{ $include := slice 
+  "section-image"
+  "section-video"
+}}
+{{ with where .blocks "layout" "in" $include }}
+  {{ $blocks_in = $blocks_in | append . }}
+{{ end }}
+
+{{ range $blocks_in }}
+  {{ $layout := .layout }}
+  {{/* Modify layout if needed 
+  {{ if eq $layout "section-image" "section-video" "featured-item" "cta-section" }}
+    {{ $layout = "section" }}
+  {{ end }}
+  {{ if eq $layout "featured-links-grid" }}
+    {{ $layout = "links_grid" }}
+  {{ end }}
+  */}}
+  {{ $template := printf "transformers/blocks/%s" $layout }}
+  {{ $blocks = $blocks | append (partial $template (dict
+    "Page" $.Page
+    "block" .
+  )) }}
+{{ end }}
+
+{{ return $blocks }}

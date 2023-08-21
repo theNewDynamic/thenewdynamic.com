@@ -1,0 +1,7 @@
+{{ $entries := slice }}
+
+{{ with where site.RegularPages "Type" "media" }}
+  {{ $entries = $entries | append (apply . "partial" "transformers/documents/media" ".") }}
+{{ end }}
+
+{{ return $entries }}

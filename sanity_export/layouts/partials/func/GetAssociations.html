@@ -1,0 +1,8 @@
+{{ $associations := slice }}
+{{ if eq $.Type "in-residence" }}
+  {{ $associations = $associations | append "resident" }}
+{{ end }}
+{{ if eq $.Type "staff" }}
+  {{ $associations = $associations | append "staff" }}
+{{ end }}
+{{ return $associations }}

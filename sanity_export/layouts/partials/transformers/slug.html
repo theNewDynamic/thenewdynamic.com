@@ -1,0 +1,6 @@
+{{ $slug := partial "func/GetSlug" $ }}
+
+{{ return (dict
+  "_type" "slug"
+  "current" $slug
+) }}

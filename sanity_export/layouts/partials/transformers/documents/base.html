@@ -1,0 +1,9 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $s.SetInMap "data" "title" .Title }}
+{{ $s.SetInMap "data" "_id" (partial "func/GetID" $) }}
+
+{{ $s.SetInMap "data" "slug" (partial "transformers/slug" .) }}
+
+{{ return $s.Get "data" }}

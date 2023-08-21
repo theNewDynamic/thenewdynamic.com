@@ -1,0 +1,3 @@
+{{ $html := .Inner }}
+{{- $json := dict "html" $html | merge (dict "_type" "blockHTML") -}}
+<div id="shortcode">{{ jsonify $json }}</div>

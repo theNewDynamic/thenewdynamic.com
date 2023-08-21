@@ -1,0 +1,7 @@
+{{ $page := dict }}
+{{ $path := printf "/series/%s" . }}
+{{ with site.GetPage $path }}
+  {{ $page = . }}
+{{ end }}
+
+{{ return $page }}

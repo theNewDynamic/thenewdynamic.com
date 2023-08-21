@@ -1,0 +1,7 @@
+{{ $entries := slice }}
+
+{{ with where site.AllPages "Type" "book" }}
+  {{ $entries = $entries | append (apply . "partial" "transformers/documents/book" ".") }}
+{{ end }}
+
+{{ return $entries }}

@@ -1,0 +1,48 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+{{ $type := "media" }}
+{{ $s.SetInMap "data" "_type" $type }}
+{{ $s.SetInMap "data" "title" .Title }}
+{{ $s.SetInMap "data" "_id" (partial "func/GetID" $) }}
+{{ with partial "func/GetAssociation" . }}
+  {{ $s.SetInMap "data" "association" . }}
+{{ end }}
+
+{{ $s.SetInMap "data" "slug" (partial "transformers/slug" .) }}
+
+
+{{ with .Params.description }}
+  {{ $s.SetInMap "data" "descriptionHTML" ($.Page.RenderString .) }}
+{{ end }}
+
+{{ with .Date }}
+  {{ $s.SetInMap "data" "publishedAt" . }}
+{{ end }}
+
+{{ $body := .Content }}
+{{ with .Params.embed }}
+  {{ $body = print $body "\n" . }}
+{{ end }}
+{{ with $body }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+{{ with .Params.images }}
+  {{ with index . 0 }}
+    {{ with partial "transformers/imageObject" . }}
+      {{ $image := . }}
+      {{ with $.Params.image_credit }}
+        {{ $image = merge $image (dict "caption" .) }}
+      {{ end }}
+      {{ $s.SetInMap "data" "image" $image }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.seo }}
+  {{ with partial "transformers/seo" . }}
+    {{ $s.SetInMap "data" "seo" . }}
+  {{ end }}
+{{ end }}
+
+{{ return $s.Get "data" }}

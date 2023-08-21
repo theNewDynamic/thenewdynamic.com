@@ -1,0 +1,38 @@
+{{ $entries := slice }}
+{{ $venues := slice }}
+{{ $ids := slice }}
+{{ with where site.RegularPages "Type" "venues"}}
+  {{ range . }}
+    {{ $venue := merge .Params.venue (dict "name" .Title) }}
+    {{ $id := partial "func/GetVenueID" $venue }}
+      {{ if not (in $ids $id) }}
+        {{ $venues = $venues | append $venue }}
+        {{ $ids = $ids | append $id }}
+      {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ with where site.RegularPages "Type" "event" }}
+  {{ range . }}
+    {{ with $venue := .Params.venue }}
+      {{ with .name }}
+        {{ $id := partial "func/GetVenueID" $venue }}
+        {{ if not (in $ids $id) }}
+          {{ $venues = $venues | append $venue }}
+          {{ $ids = $ids | append $id }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $venues }}
+  {{ range $index, $venue := . }}
+    {{ if false }}
+    {{ warnf "%#v %#v %#v" $index .name (partial "func/GetVenueID" $venue) }}
+    {{ end }}
+    {{ $entries = $entries | append (partial "transformers/venue" .) }}
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

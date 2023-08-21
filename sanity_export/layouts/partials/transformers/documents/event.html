@@ -1,0 +1,54 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $s.Set "data" (dict 
+  "_id" .File.UniqueID
+  "slug" (dict
+    "_type" "slug"
+    "current" (.Slug | default (urlize .Title))
+  )
+  "_type" "event"
+  "time_start" .Date
+)}}
+{{ with .Title }}
+  {{ $title := replace . "_" "" }}
+  {{ $title = replace . "*" "" }}
+  {{ $s.SetInMap "data" "title" $title }}
+{{ end }}
+{{ with .Params.subtitle }}
+  {{ $s.SetInMap "data" "subtitle" . }}
+{{ end }}
+
+{{ with .Params.description }}
+  {{ $s.SetInMap "data" "bodyHTML" ($.RenderString .) }}
+{{ end }}
+
+{{ $venue := dict }}
+{{ with .Params.venue }}
+  {{ $venue = . }}
+{{ end }}
+
+{{ with .Params.related_venue }}
+  {{ with site.GetPage . }}
+    {{ $venue = merge .Params.venue (dict "name" .Title) }}
+  {{ end }}
+{{ end }}
+
+{{ with $venue }}
+  {{ with .name }}
+    {{ with partial "func/GetVenueID" $venue }}
+      {{ $s.SetInMap "data" "venue" (dict
+        "_type" "reference"
+        "_ref" .
+      ) }}
+    {{ end }}
+  {{ end }}
+
+{{ end }}
+{{ with .Params.images }}
+  {{ with index . 0 }}
+    {{ $s.SetInMap "data" "imageMain" (partial "transformers/image" .) }}
+  {{ end }}
+{{ end }}
+
+{{ return $s.Get "data" }}

@@ -1,0 +1,19 @@
+{{ $terms := slice "Fiction" "Non Fiction" }}
+{{ $taxo := "genre" }}
+{{ $entries := slice }}
+
+{{ range $label := $terms }}
+  {{ $key := lower . }}
+  {{ $id := partial "func/GetTermID" (dict "taxonomy" $taxo "term" $key) }}
+  {{ $entries = $entries | append (dict
+    "title" $label
+    "_type" "taxonomyGenre"
+    "_id" $id
+    "slug" (dict
+      "_type" "slug"
+      "current" (urlize $key)
+    )
+  ) }}
+{{ end }}
+
+{{ return $entries }}

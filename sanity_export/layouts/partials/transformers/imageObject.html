@@ -1,0 +1,28 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+{{ $file := "" }}
+{{ $caption := "" }}
+{{ $skip_assets := site.Params.skip_assets }}
+{{ if (not $skip_assets) }}
+  {{ if reflect.IsMap $ }}
+    {{ $file = .file | default .image }}
+    {{ with $.caption }}
+      {{ $caption = . }}
+    {{ end }}
+  {{ else }}
+    {{ $file = $ }}
+  {{ end }}
+  
+  {{ with $file }}
+    {{ with $caption }}
+      {{ $s.SetInMap "data" "caption" . }}
+    {{ end }}
+    {{ with partialCached "transformers/image" . . }}
+      {{ range $k, $v := . }}
+        {{ $s.SetInMap "data" $k $v }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $s.Get "data" }}

@@ -14,7 +14,13 @@
 		"dev:netlify": "netlify dev -l",
 		"clean": "rm -rf public/ static/dist resources",
 		"deploy": "npm run prod:hugo",
-		"start": "npm run dev:hugo"
+		"start": "npm run dev:hugo",
+		"gen:build": "bin/hugo* -s sanity_export --cleanDestinationDir --quiet -F",
+		"gen": "bin/hugo* --quiet -F -D -s sanity_export --cleanDestinationDir && node sanity_export/cms/pt && cat sanity_export/public/index.json | json2nd > ./sanit_export.ndjson",
+		"export:test": "node sanity_export/cms/migration/test",
+		"export": "cd sanity_export/cms && sanity dataset import ../../sanit_export.ndjson production --allow-failing-assets --replace",
+		"export:missing": "cd sanity_export/cms && sanity dataset import ../../sanit_export.ndjson production --allow-failing-assets --missings",
+		"dataset:delete": "cd sanity_export/cms && sanity dataset delete production"
 	},
 	"dependencies": {
 		"autoprefixer": "^9.7.3",

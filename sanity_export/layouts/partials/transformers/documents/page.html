@@ -1,0 +1,42 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base.html" .) }}
+
+{{ $s.SetInMap "data" "_type" "page" }}
+
+{{ with partial "func/GetLocalizationKeys" . }}
+  {{ range $key, $value := . }}
+    {{ $s.SetInMap "data" $key . }}
+  {{ end }}
+{{ end }}
+
+{{ $s.Set "hero" dict  }}
+
+{{ with .Params.description }}
+  {{ $s.SetInMap "data" "descriptionHTML" . }}
+  {{ $s.SetInMap "hero" "copyHTML" . }}
+{{ end }}
+{{ with .Params.hero.text }}
+  {{ $s.SetInMap "hero" "title" . }}
+{{ end }}
+
+{{ with ($s.Get "hero") }}
+  {{ $s.SetInMap "data" "hero" . }}
+{{ end }}
+
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" ($.Page.RenderString .) }}
+{{ end }}
+
+{{ $seo := dict }}
+{{ with .Params.seo }}
+  {{ $seo = partial "transformers/seo" . }}
+{{ end }}
+{{ with .Params.private }}
+  {{ $seo = merge $seo (dict "private" .) }}
+{{ end }}
+
+{{ with $seo }}
+  {{ $s.SetInMap "data" "seo" . }}
+{{ end }}
+
+{{ return $s.Get "data" }}

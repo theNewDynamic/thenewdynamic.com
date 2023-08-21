@@ -1,0 +1,41 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+{{ with .block }}
+  {{ with .title }}
+    {{ $s.SetInMap "data" "title" . }}
+  {{ end }}
+  {{ $media_type := "" }}
+  {{ with .image }}
+    {{ with partial "transformers/image" . }}
+      {{ $s.SetInMap "data" "image" . }}
+      {{ $media_type = "image" }}
+    {{ end }}
+  {{ end }}
+
+  {{ with .video_id }}
+    {{ $media_type = "video" }}
+    {{ $s.SetInMap "data" "video_id" . }}
+  {{ end }}
+  {{ with .video_page }}
+    {{ with partial "transformers/ref" . }}
+      {{ $media_type = "video" }}
+      {{ $s.SetInMap "data" "video" . }}
+    {{ end }}
+  {{ end }}
+  {{ $s.SetInMap "data" "media_type" $media_type }}
+  {{ with .caption }}
+    {{ $s.SetInMap "data" "copyHTML" ($.Page.RenderString .) }}
+  {{ end }}
+  {{ with .media_position }}
+    {{ $s.SetInMap "data" "media_position" (lower .) }}
+  {{ end }}
+  {{ with .ctas }}
+    {{ with partial "transformers/links" . }}
+      {{ $s.SetInMap "data" "links" .  }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $s.SetInMap "data" "_type" "blocks/section" }}
+
+{{ return $s.Get "data" }}

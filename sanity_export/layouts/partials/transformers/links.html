@@ -1,0 +1,12 @@
+{{ $links := slice }}
+{{ with . }}
+  {{ if reflect.IsSlice . }}
+    {{ range $link := . }}
+      {{ with .url }}
+        {{ $links = $links | append (partial "transformers/link" $link) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $links }}

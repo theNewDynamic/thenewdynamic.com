@@ -1,0 +1,79 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (partial "transformers/documents/base.html" .) }}
+
+{{ $s.SetInMap "data" "_type" "person" }}
+{{ with partial "func/GetAssociations" . }}
+  {{ $s.SetInMap "data" "associations" . }}
+{{ end }}
+{{ $title := .Title }}
+{{ $position := "" }}
+{{ if eq .Type "staff" }}
+  {{ $delimiter := ", " }}
+  {{ if in .Title " - " }}
+    {{ $delimiter = " - " }}
+  {{ end }}
+   {{ with split $title $delimiter }}
+    {{ $title = index . 0 }}
+    {{ with index . 1 }}
+      {{ $position = . }}
+    {{ end }}
+   {{ end }}
+{{ end }}
+{{ $first_name := "" }}
+{{ $last_name := "" }}
+{{ with .Params.first_name }}
+  {{ $first_name = . }}
+{{ end }}
+
+{{ with .Params.last_name }}
+  {{ $last_name = . }}
+  {{ with $first_name }}{{ else }}
+    {{ if ne $.Title $last_name }}
+      {{ $first_name = replace $.Title (print " " .) "" }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ $last_name = index (last 1 (split $title " ")) 0 }}
+  {{ $first_name = replace $title (print " " $last_name) "" }}
+{{ end }}
+
+{{ with $position }}
+  {{ $s.SetInMap "data" "position" . }}
+{{ end }}
+{{ $s.SetInMap "data" "title" $title }}
+{{ $s.SetInMap "data" "first_name" $first_name }}
+{{ $s.SetInMap "data" "last_name" $last_name }}
+
+
+{{ with .Params.images }}
+  {{ with index . 0 }}
+    {{ with partial "transformers/imageObject" . }}
+      {{ $image := . }}
+      {{ with $.Params.image_credit }}
+        {{ $image = merge $image (dict "caption" .) }}
+      {{ end }}
+      {{ $s.SetInMap "data" "image" $image }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+{{ with .Params.description }}
+  {{ $s.SetInMap "data" "descriptionHTML" . }}
+{{ end }}
+
+{{ with .Content }}
+  {{ $s.SetInMap "data" "bodyHTML" . }}
+{{ end }}
+
+{{ with .Params.academic_year }}
+  {{ $s.SetInMap "data" "academic_year" (trim . " ") }}
+{{ end }}
+
+{{ with .Params.chair }}
+  {{ with partial "transformers/ref" . }}
+    {{ $s.SetInMap "data" "chair" . }}
+  {{ end }}
+{{ end }}
+
+{{ return $s.Get "data" }}

@@ -1,0 +1,11 @@
+{{ $entries := slice }}
+{{ with site.Taxonomies.series }}
+  {{ range . }}
+    {{ if ne .Page.Title "None" }}
+      {{ $entries = $entries | append (partial "transformers/documents/series" .Page) }}
+    {{ end }}
+
+  {{ end }}
+{{ end }}
+
+{{ return $entries }}

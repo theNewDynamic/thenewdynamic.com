@@ -1,0 +1,7 @@
+{{ $entries := slice }}
+
+{{ with partialCached "func/GetHugoPersons" "GetHugoPersons" }}
+  {{ $entries = $entries | append (apply . "partial" "transformers/documents/person" ".") }}
+{{ end }}
+
+{{ return $entries }}

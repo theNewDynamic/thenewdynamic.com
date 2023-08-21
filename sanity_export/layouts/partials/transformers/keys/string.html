@@ -1,0 +1,12 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ with .keys }}
+  {{ range $key := . }}
+    {{ with index $.object . }}
+      {{ $s.SetInMap "data" $key . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $s.Get "data" }}

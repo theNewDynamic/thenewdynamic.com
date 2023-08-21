@@ -1,0 +1,3 @@
+{{ $id := (or .Get "id" .Get 0) | default "contact" }}
+{{- $json := dict "id" $id | merge (dict "_type" "blockForm") -}}
+<div id="shortcode">{{ jsonify $json }}</div>

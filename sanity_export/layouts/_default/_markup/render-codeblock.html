@@ -1,0 +1,10 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (dict "_type" "code") }}
+
+{{ with .Type }}
+  {{ $s.SetInMap "data" "language" . }}
+{{ end }}
+{{ with .Inner }}
+  {{ $s.SetInMap "data" "code" . }}
+{{ end }}
+<div id="codeblock">{{ jsonify ($s.Get "data") }}</div>

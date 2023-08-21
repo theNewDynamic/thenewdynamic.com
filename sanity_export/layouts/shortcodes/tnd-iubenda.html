@@ -1,0 +1,18 @@
+{{ $id := .Get 0 | default "privacy-policy" }}
+{{ $api_key := "51314614" }}
+{{ if eq $.Page.Lang "fr" }}
+  {{ $api_key = "93149670" }}
+{{ end }}
+{{ $domain := "https://www.iubenda.com/api/" }}
+{{ $path := "" }}
+{{ $endpoints := `
+  'privacy-policy': 'privacy-policy/%s'
+  'cookie-policy': 'privacy-policy/%s/cookie-policy'
+  'terms-and-conditions': 'terms-and-conditions/%s'
+  ` | transform.Unmarshal }}
+{{ with index $endpoints $id }}
+  {{ $path = printf . $api_key }}
+{{ end }}
+{{ $url := print $domain $path }}
+{{- $json := dict "url" $url "_type" "blockIubenda" -}}
+<div id="shortcode">{{ jsonify $json }}</div>

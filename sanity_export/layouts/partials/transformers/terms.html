@@ -1,0 +1,31 @@
+{{/*
+  tems
+  Takes a taxonomy name and a page, and return the terms from this taxonomy associated to the page
+  in the form of a Sanity reference.
+
+  @author @regisphilibert
+
+  @context Map
+    (Page) .Page
+    (String) .taxonomy
+
+  @access private
+
+  @returns Slice of Maps
+*/}}
+{{ $terms := slice }}
+{{ with $.Page.GetTerms $.taxonomy }}
+  {{ range . }}
+    {{ $slug := partial "func/GetSlug" .Page }}
+    {{ $id := partial "func/GetTermID" (dict
+      "taxonomy" $.taxonomy
+      "term" $slug
+    ) }}
+    {{ $terms = $terms | append (dict
+      "_type" "reference"
+      "_ref" $id
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{ return $terms }}

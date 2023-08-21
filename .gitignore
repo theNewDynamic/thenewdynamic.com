@@ -36,3 +36,4 @@ resources/_gen/assets/css
 .netlify
 .hugo_build.lock
 bin/hugo_*
+node_modules

@@ -1,0 +1,45 @@
+{{ $singletons := slice
+  "home"
+  "siteSettings"
+}}
+{{ $entries := slice }}
+{{ $s := newScratch }}
+{{ if in $singletons "home" }}
+  {{ $s.Set "data" dict }}
+  {{ $s.SetInMap "data" "_type" "home" }}
+  {{ $s.SetInMap "data" "_id" "home" }}
+  {{ with site.GetPage "/_index.md" }}
+    {{ $s.SetInMap "data" "title" .Title }}
+    {{ with .Params.description }}
+      {{ $s.SetInMap "data" "descriptionHTML" . }}
+    {{ end }}
+    {{ with .Params.images }}
+      {{ with index . 0 }}
+        {{ with partial "transformers/imageObject" . }}
+          {{ $image := . }}
+          {{ $s.SetInMap "data" "image" $image }}
+          {{ $s.SetInMap "data" "hero" (dict
+            "image" $image
+          )  }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $entries = $entries | append ($s.Get "data") }}
+  {{ end }}
+{{ end }}
+
+{{ if in $singletons "siteSettings" }}
+  {{ $s.Set "data" dict }}
+  {{ $s.SetInMap "data" "_type" "siteSettings" }}
+  {{ $s.SetInMap "data" "_id" "siteSettings" }}
+
+  {{ $s.SetInMap "data" "title_en" "the New Dynamic" }}
+  {{ $s.SetInMap "data" "title_fr" "the New Dynamic" }}
+  {{ $s.SetInMap "data" "description_enHTML" "Since 2002 we’ve built websites for organizations large and small. We pride ourselves on our human-centered approach to working with clients, and bringing integrity to every detail of our work." }}
+  {{ $s.SetInMap "data" "description_frHTML" "Depuis 2002 nous construisons des sites web pour des organisations de toutes tailles. Nous somme fière de l'approche humaine avec laquelle nous travaillons avec tous nos clients. Nous faisons preuve d'intégrité en tout point."  }}
+  {{ $s.SetInMap "data" "statement_enHTML" "Welcome to The New Dynamic. <br />We Design, Build and Manage <em>Better Faster Websites</em>" }}
+  {{ $s.SetInMap "data" "statement_frHTML" "Bienvenue dans la nouvelle dynamique. <br />On designe, on bâtit, on maintient<br> des sites <em>plus performants, plus rapides</em>." }}
+  {{ $entries = $entries | append ($s.Get "data") }}
+{{ end }}
+
+{{ return $entries }}

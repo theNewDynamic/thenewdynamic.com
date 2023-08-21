@@ -1,0 +1,63 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+{{ $s.SetInMap "data" "_id" "home" }}
+{{ $s.SetInMap "data" "_type" "home" }}
+{{ $s.SetInMap "data" "title" "Home Page" }}
+{{ with .Params.seo }}
+  {{ $s.SetInMap "data" "seo" (partial "transformers/seo" .) }}
+{{ end }}
+{{ $banner := `{
+  "_type": "blocks/banner",
+  "_key": "4c199e8a365e",
+  "copy": [
+    {
+      "_key": "8c23c0c4cdec",
+      "children": [
+        {
+          "_type": "span",
+          "marks": [],
+          "text": "Free and easy tax filing is now available on Providers. ",
+          "_key": "31d3f40e0f930"
+        },
+        {
+          "_type": "span",
+          "marks": [
+            "b46a51b51632"
+          ],
+          "text": "Learn more",
+          "_key": "31d3f40e0f931"
+        },
+        {
+          "_type": "span",
+          "marks": [],
+          "text": ".",
+          "_key": "31d3f40e0f932"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b46a51b51632",
+          "_type": "link",
+          "href": "/blog/free-tax-filing/"
+        }
+      ],
+      "_type": "block",
+      "style": "normal"
+    }
+  ],
+  "enabled": true
+}` }}
+{{ $blocks := slice (unmarshal $banner) }}
+{{ with .Params.blocks }}
+  {{ with where . "layout" "in" (slice "alternating" "home-hero" "home-download") }}
+    {{ range . }}
+      {{ with partial (printf "transformers/blocks/%s" .layout) . }}
+        {{ $blocks = $blocks | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $s.SetInMap "data" "blocks" $blocks }}
+
+{{ return $s.Get "data" }}

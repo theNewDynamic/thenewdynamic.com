@@ -1,0 +1,10 @@
+{{ $image := dict }}
+{{ $domain := site.Params.domain | default site.BaseURL }}
+{{ if not (in . "%") }}
+  {{ $image = dict
+    "_type" "image"
+    "_sanityAsset" (printf "image@%s%s" $domain .)
+  }}
+{{ end }}
+
+{{ return $image }}

@@ -1,0 +1,18 @@
+{{ $entries := slice }}
+{{ $pages :=  where site.AllPages "Type" "page"  }}
+{{ with where site.AllPages "Type" "info" }}
+  {{ $pages = $pages | append . }}
+{{ end }}
+{{ with $pages }}
+  {{ with where . "Kind" "page" }}
+    {{ range . }}
+      {{ $entries = $entries | append (partial "transformers/documents/page" .) }}
+      {{ if eq .Lang "en" }}
+        {{ with partial "transformers/documents/translationMetadata" . }}
+          {{ $entries = $entries | append . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $entries }}

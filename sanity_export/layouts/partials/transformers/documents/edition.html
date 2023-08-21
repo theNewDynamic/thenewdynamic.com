@@ -1,0 +1,26 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ with partial "func/GetEditionID" $ }}
+  {{ $s.SetInMap "data" "_id" . }}
+{{ end }}
+{{ $s.SetInMap "data" "_type" "bookEdition"  }}
+{{ with $edition := .edition }}
+  {{ range $key := slice "binding" "label" "isbn" "asin" "apple_id" "publisher" }}
+    {{ with index $edition . }}
+      {{ $s.SetInMap "data" $key . }}
+    {{ end }}
+  {{ end }}
+
+  {{ with .description }}
+    {{ $s.SetInMap "data" "descriptionHTML" ($.book.RenderString .) }}
+  {{ end }}
+
+  {{ with .cover_image }}
+    {{ $s.SetInMap "data" "image" (partial "transformers/image" . .) }}
+  {{ end }}
+
+{{ end }}
+
+
+{{ return $s.Get "data" }}

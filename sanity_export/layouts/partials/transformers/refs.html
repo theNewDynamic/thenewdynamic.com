@@ -1,0 +1,8 @@
+{{ $rels := slice }}
+{{ range . }}
+  {{ with partialCached "transformers/ref" . . }}
+    {{ $rels = $rels | append . }}
+  {{ end }}
+{{ end }}
+
+{{ return $rels }}

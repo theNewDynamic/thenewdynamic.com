@@ -1,0 +1,10 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ with .url }}
+  {{ $s.SetInMap "data" "url" . }}
+{{ end }}
+{{ with .copy }}
+  {{ $s.SetInMap "data" "copy" . }}
+{{ end }}
+{{ return $s.Get "data" }}

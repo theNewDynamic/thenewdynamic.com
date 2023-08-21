@@ -1,0 +1,12 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (dict
+  "_type" "taxonomyPostsCategory"
+) }}
+
+{{ $s.SetInMap "data" "title" .Title }}
+{{ $s.SetInMap "data" "_id" (partial "func/GetTermID" (dict
+  "taxonomy" "category"
+  "term" .Title
+)) }}
+
+{{ return $s.Get "data" }}

@@ -1,0 +1,13 @@
+{{- $s := newScratch -}}
+{{- $s.Set "data" dict -}}
+{{- with .Get "src" -}}
+ {{- $s.SetInMap "data" "image" . -}}
+{{- end -}}
+{{- with .Get "caption" -}}
+  {{- $s.SetInMap "data" "caption" . -}}
+{{- end -}}
+{{- with partial "transformers/imageObject" -}}
+  <div id="figure">{{ jsonify (. | merge (dict "_type" "image")) }}</div>
+{{- end -}}
+
+

@@ -1,0 +1,13 @@
+{{ $gallery := slice }}
+{{ with index . 0 }}
+  {{ with .slices }}
+    {{ range $slide := . }}
+      {{ with .image }}
+        {{ with partial "transformers/imageObject" $slide }}
+          {{ $gallery = $gallery | append . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $gallery }}

@@ -1,0 +1,15 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" (dict
+  "_type" "taxonomySeries"
+) }}
+
+{{ with partial "func/GetSeriesPage" .Title }}
+  {{ $s.SetInMap "data" "title" .Title }}
+  {{ $s.SetInMap "data" "_id" .File.UniqueID }}
+  {{ $s.SetInMap "data" "slug" (dict
+    "_type" "slug"
+    "current" $.Title
+  ) }}
+{{ end }}
+
+{{ return $s.Get "data" }}

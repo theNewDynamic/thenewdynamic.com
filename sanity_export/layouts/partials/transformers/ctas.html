@@ -1,0 +1,21 @@
+{{ $ctas := slice }}
+{{ with .ctas }}
+{{ range . }}
+  {{ $cta := dict }}
+  {{ with .title }}
+    {{ with partial "func/ParseString" (dict "Page" $.Page "string" .) }}
+      {{ $cta = merge $cta (dict "copy" .) }}
+    {{ end }}
+  {{ end }}
+  {{ with .link }}
+    {{ with partial "func/ParseString" (dict "Page" $.Page "string" .) }}
+      {{ $cta = merge $cta (dict "url" .) }}
+    {{ end }}
+  {{ end }}
+  {{ with $cta }}
+    {{ $ctas = $ctas | append . }}
+  {{ end }}
+{{ end }}
+{{ end }}
+
+{{ return $ctas }}

@@ -1,0 +1,69 @@
+baseUrl: 'https://www.thenewdynamic.com'
+removeAccents: true
+#taxonomies:
+#  series: series
+#  category: categories
+disableKinds:
+- sitemap
+- section
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+outputs:
+  home:
+  - json
+  - yaml
+cascade:
+- _target:
+    kind: page
+    path: /**
+  _build:
+    render: never
+caches:
+  getresource:
+    maxAge: 0
+outputFormats:
+  yaml:
+    mediaType: 'application/yaml'
+languages:
+  en:
+    languageName: English
+    weight: 1
+  fr:
+    languageName: Français
+    weight: 2
+module:
+  mounts:
+  - source: content/en
+    target: content
+    lang: en
+  - source: content/fr
+    target: content
+    lang: fr
+  - source: ../content/en
+    target: content
+    lang: en
+    excludeFiles:
+    - /cms.md
+    # - _index.md
+  - source: ../content/fr
+    target: content
+    lang: fr
+    # In case some files breaks the import:
+    excludeFiles:
+    # - /somefile.md
+  - source: layouts
+    target: layouts
+  - source: data
+    target: data
+  - source: ../data
+    target: data
+
+taxonomies:
+  subjects: subjects
+
+params:
+  domain: 'https://www.thenewdynamic.com'
+  #skip_assets: true
+  #skip_relationships: true

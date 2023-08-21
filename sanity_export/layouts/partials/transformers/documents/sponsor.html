@@ -1,0 +1,27 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $s.SetInMap "data" "title" .Title }}
+{{ $s.SetInMap "data" "_id" (partial "func/GetID" $) }}
+{{ $s.SetInMap "data" "_type" "sponsor" }}
+
+{{ with .Params.link }}
+  {{ $s.SetInMap "data" "link" . }}
+{{ end }}
+{{ with .Params.description }}
+  {{ $s.SetInMap "data" "description" . }}
+{{ end }}
+
+{{ with .Params.images }}
+  {{ with index . 0 }}
+    {{ with partial "transformers/imageObject" . }}
+      {{ $image := . }}
+      {{ with $.Params.image_credit }}
+        {{ $image = merge $image (dict "caption" .) }}
+      {{ end }}
+      {{ $s.SetInMap "data" "image" $image }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $s.Get "data" }}

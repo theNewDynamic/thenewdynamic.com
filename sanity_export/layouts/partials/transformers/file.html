@@ -1,0 +1,21 @@
+{{ $file := dict }}
+{{ $domain := site.Params.domain | default site.BaseURL }}
+{{ $skip_assets := site.Params.skip_assets }}
+{{ if and (not (in . "%")) (not $skip_assets) }}
+  {{ $src := . }}
+  {{ if in $src "http" }}
+    {{ $src = . }}
+  {{ else }}
+  {{ if in $src "/uploads" }}
+    {{ $src = replace $src  "/uploads" ""}}
+  {{ end }}
+  {{ $src = print $domain $src }}
+    {{ end }}
+  {{ $src = trim $src "/" }}
+  {{ $file = dict
+    "_type" "file"
+    "_sanityAsset" (print "file@" $src)
+  }}
+{{ end }}
+
+{{ return $file }}
