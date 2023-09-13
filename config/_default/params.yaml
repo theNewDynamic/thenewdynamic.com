@@ -48,7 +48,7 @@ tnd_headers:
           script-src: 
             - self
             - unsafe-eval
-            - https://cdn.usefathom.com 
+            - https://plausible.io 
             - https://identity.netlify.com 
             - https://unpkg.com
           prefetch-src: 
@@ -59,15 +59,14 @@ tnd_headers:
             - none
           img-src: 
             - self 
-            - https://thenewdynamic.imgix.net 
-            - https://img3.usefathom.com
+            - https://thenewdynamic.imgix.net             
           font-src: 
             - self
           base-uri: 
             - none
           connect-src: 
             - self
-            - https://cdn.usefathom.com
+            - https://plausible.io
           report-uri:
             - https://thenewdynamic.report-uri.com/r/d/csp/enforce
       - field: Strict-Transport-Security
