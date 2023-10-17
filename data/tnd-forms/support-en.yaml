@@ -3,6 +3,9 @@ title: Need Help?
 redirect: /thank-you/
 formspree_id: mrgjkwpj
 submit: Get in touch
+recaptcha: 
+  version: 3
+  key: 6LdgnKsoAAAAAPmXc1b0-upn6ejilTSr3IL7JCaz
 fields:
   - name: name
     required: true
